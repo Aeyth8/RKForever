@@ -358,7 +358,6 @@ void MainLoop() {
 }
 
 void RocketForeverMainThread() {
-	InitConsole();
 	InitHooks();
 	InitMaps();
 	InitGUI();
