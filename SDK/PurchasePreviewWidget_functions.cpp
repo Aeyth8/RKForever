@@ -108,11 +108,11 @@ void UPurchasePreviewWidget_C::BndEvt__PurchaseGeneric_K2Node_ComponentBoundEven
 // Function PurchasePreviewWidget.PurchasePreviewWidget_C.SetOfferAndTier
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UItemLoadResponse*                Param_ItemLoadResponse                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_UseDirectPurchase                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UItemLoadResponse*                ItemLoadResponse_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseDirectPurchase_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPurchasePreviewWidget_C::SetOfferAndTier(class UItemLoadResponse* Param_ItemLoadResponse, bool Param_UseDirectPurchase, class UMarinerPlayableCharacter* Param_Character)
+void UPurchasePreviewWidget_C::SetOfferAndTier(class UItemLoadResponse* ItemLoadResponse_0, bool UseDirectPurchase_0, class UMarinerPlayableCharacter* Character_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -121,9 +121,9 @@ void UPurchasePreviewWidget_C::SetOfferAndTier(class UItemLoadResponse* Param_It
 
 	Params::PurchasePreviewWidget_C_SetOfferAndTier Parms{};
 
-	Parms.Param_ItemLoadResponse = Param_ItemLoadResponse;
-	Parms.Param_UseDirectPurchase = Param_UseDirectPurchase;
-	Parms.Param_Character = Param_Character;
+	Parms.ItemLoadResponse_0 = ItemLoadResponse_0;
+	Parms.UseDirectPurchase_0 = UseDirectPurchase_0;
+	Parms.Character_0 = Character_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

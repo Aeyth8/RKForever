@@ -40,9 +40,9 @@ void ACharacterCustomizationPedestalInterior_C::ExecuteUbergraph_CharacterCustom
 // Function CharacterCustomizationPedestalInterior.CharacterCustomizationPedestalInterior_C.AttachToTheChar
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AMarinerCharacterLite*            Param_LoadedChar                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AMarinerCharacterLite*            LoadedChar_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ACharacterCustomizationPedestalInterior_C::AttachToTheChar(class AMarinerCharacterLite* Param_LoadedChar)
+void ACharacterCustomizationPedestalInterior_C::AttachToTheChar(class AMarinerCharacterLite* LoadedChar_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,7 +51,7 @@ void ACharacterCustomizationPedestalInterior_C::AttachToTheChar(class AMarinerCh
 
 	Params::CharacterCustomizationPedestalInterior_C_AttachToTheChar Parms{};
 
-	Parms.Param_LoadedChar = Param_LoadedChar;
+	Parms.LoadedChar_0 = LoadedChar_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

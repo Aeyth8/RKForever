@@ -49,7 +49,7 @@ public:
 	class UPlayerName_C*                          PlayerName5;                                       // 0x0580(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UMarinerUniformGridPanel*               PlayerNamePanel;                                   // 0x0588(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          HaveInitializedSelections;                         // 0x0590(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1FDC[0x7];                                     // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_591[0x7];                                      // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             ActivateMenuBack;                                  // 0x0598(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
@@ -81,7 +81,7 @@ public:
 	void UpdateKnockoutBotsSelection();
 	void Handle_Map_Settings_Menu_Changed(const class FString& Desired_Map_Name, const class FString& Desired_Mode_Name, int32 Desired_Bots_Selection, int32 DesiredBotsDifficulty);
 	bool HandleInput(EMarinerInputActions InInput);
-	void ChangeBotOptionVisibility(ESlateVisibility Param_Visibility);
+	void ChangeBotOptionVisibility(ESlateVisibility Visibility_0);
 	void MapLoadNameToMapName(const class FString& MapLoadName, class FString* MapName, bool* bValid);
 	void UpdateSelectionsFromGameState();
 	void Fill_Map_Selection();

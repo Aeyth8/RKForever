@@ -1595,7 +1595,7 @@ struct FMarinerLawnDartRocketSpawningInfo final
 {
 public:
 	int32                                         SocketIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class AActor>                     RocketTemplate;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerLawnDartRocketSpawningInfo) == 0x000008, "Wrong alignment on FMarinerLawnDartRocketSpawningInfo");
@@ -1609,11 +1609,11 @@ struct FMarinerRootMotionMoveToDynamicForceNotifyInfo final
 {
 public:
 	EMarinerMotionNotificationType                NotifyType;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ActorToDamage;                                     // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FHitResult                             HitResult;                                         // 0x0010(0x0088)(BlueprintVisible, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bFinalNotification;                                // 0x0098(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134C[0x7];                                     // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionMoveToDynamicForceNotifyInfo) == 0x000008, "Wrong alignment on FMarinerRootMotionMoveToDynamicForceNotifyInfo");
 static_assert(sizeof(FMarinerRootMotionMoveToDynamicForceNotifyInfo) == 0x0000A0, "Wrong size on FMarinerRootMotionMoveToDynamicForceNotifyInfo");
@@ -1641,7 +1641,7 @@ struct FMarinerRootMotionSource : public FRootMotionSource
 {
 public:
 	bool                                          bCanOverrideMegablast;                             // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134D[0x7];                                     // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionSource) == 0x000010, "Wrong alignment on FMarinerRootMotionSource");
 static_assert(sizeof(FMarinerRootMotionSource) == 0x0000A0, "Wrong size on FMarinerRootMotionSource");
@@ -1654,7 +1654,7 @@ struct alignas(0x10) FMarinerRootMotionSource_MoveAlongSpline : public FMarinerR
 {
 public:
 	int32                                         AssignedSplineID;                                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134E[0x4];                                     // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 #pragma pack(pop)
 static_assert(alignof(FMarinerRootMotionSource_MoveAlongSpline) == 0x000010, "Wrong alignment on FMarinerRootMotionSource_MoveAlongSpline");
@@ -1668,7 +1668,7 @@ struct FMarinerRootMotionSource_MoveAlongSpline_ArenaReturn final : public FMari
 public:
 	class UCurveFloat*                            CharacterMovementStartCurve;                       // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            CharacterMovementEndCurve;                         // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134F[0x28];                                    // 0x00B8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x28];                                      // 0x00B8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionSource_MoveAlongSpline_ArenaReturn) == 0x000010, "Wrong alignment on FMarinerRootMotionSource_MoveAlongSpline_ArenaReturn");
 static_assert(sizeof(FMarinerRootMotionSource_MoveAlongSpline_ArenaReturn) == 0x0000E0, "Wrong size on FMarinerRootMotionSource_MoveAlongSpline_ArenaReturn");
@@ -1734,7 +1734,7 @@ public:
 	float                                         MaximumPitch;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreYaw;                                        // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnorePitch;                                      // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1350[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         VelocityToFacingWeight;                            // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerSpringArmOrientBehindOwnerProperties) == 0x000004, "Wrong alignment on FMarinerSpringArmOrientBehindOwnerProperties");
@@ -1782,10 +1782,10 @@ public:
 	int32                                         BotDifficulty;                                     // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowJoining;                                     // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLoadTransition;                                   // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1351[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMediaSource*                           MovieToPlay;                                       // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCanSkipMovieOnceLoaded;                           // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1352[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerServerTravelConfig) == 0x000008, "Wrong alignment on FMarinerServerTravelConfig");
 static_assert(sizeof(FMarinerServerTravelConfig) == 0x000040, "Wrong size on FMarinerServerTravelConfig");
@@ -1805,7 +1805,7 @@ struct FMarinerActivateDevicePayload final
 public:
 	class AMarinerCharacter*                      CharacterInstigator;                               // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         EnsureReplicationByte;                             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1353[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerActivateDevicePayload) == 0x000008, "Wrong alignment on FMarinerActivateDevicePayload");
 static_assert(sizeof(FMarinerActivateDevicePayload) == 0x000010, "Wrong size on FMarinerActivateDevicePayload");
@@ -1882,7 +1882,7 @@ public:
 	int32                                         Value;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Name;                                              // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsFloat;                                          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1354[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPlayerStat) == 0x000004, "Wrong alignment on FPlayerStat");
 static_assert(sizeof(FPlayerStat) == 0x000010, "Wrong size on FPlayerStat");
@@ -1897,7 +1897,7 @@ struct FMarinerPressAnyKeyMessageBoxData final
 public:
 	bool                                          bAllowGamepad;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowMouse;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1355[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKey>                           Exceptions;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FKey>                           MenuActionExceptions;                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
@@ -1914,11 +1914,11 @@ struct FMarinerSpringArmCameraLagProperties final
 {
 public:
 	bool                                          bEnableCameraLag;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1356[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CameraLagSpeed;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CameraLagMaxDistance;                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableCameraRotationLag;                          // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1357[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CameraRotationLagSpeed;                            // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerSpringArmCameraLagProperties) == 0x000004, "Wrong alignment on FMarinerSpringArmCameraLagProperties");
@@ -1936,12 +1936,12 @@ struct FMarinerCameraPerspective final
 public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMarinerCameraPerspectiveType                 Perspective;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1358[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FieldOfView;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1359[0x4];                                     // 0x0010(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x4];                                       // 0x0010(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0014(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	EMarinerSpringArmMode                         ThirdPersonArmMode;                                // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135A[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ThirdPersonCameraArmLength;                        // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ThirdPersonCameraOrientationOffset;                // 0x002C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                ThirdPersonCameraSocketOffsetTranslation;          // 0x0038(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1951,11 +1951,11 @@ public:
 	class UCurveFloat*                            ThirdPersonCameraArmLengthCurve;                   // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            FieldOfViewByPitchCurve;                           // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUsePawnControlRotation;                           // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135B[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ThirdPersonCameraRelativeTranslation;              // 0x0074(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMarinerSpringArmOrientBehindOwnerProperties OrientBehindOwnerProperties;                       // 0x0080(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMarinerSpringArmCameraLagProperties   LagProperties;                                     // 0x0090(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135C[0x4];                                     // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerCameraPerspective) == 0x000008, "Wrong alignment on FMarinerCameraPerspective");
 static_assert(sizeof(FMarinerCameraPerspective) == 0x0000A8, "Wrong size on FMarinerCameraPerspective");
@@ -2008,11 +2008,11 @@ struct FMarinerUIItemButtonData final
 public:
 	struct FMangoItem                             Item;                                              // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	EMarinerCurrencyType                          CurrencyType;                                      // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135D[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CurrencyAmount;                                    // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ParentLevel;                                       // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFreeTier;                                         // 0x005C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135E[0x13];                                    // 0x005D(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D[0x13];                                      // 0x005D(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerUIItemButtonData) == 0x000008, "Wrong alignment on FMarinerUIItemButtonData");
 static_assert(sizeof(FMarinerUIItemButtonData) == 0x000070, "Wrong size on FMarinerUIItemButtonData");
@@ -2042,7 +2042,7 @@ static_assert(offsetof(FMarinerCharacterImpact, ImpactPoint) == 0x000018, "Membe
 struct alignas(0x08) FTagDelegateBinding final
 {
 public:
-	uint8                                         Pad_135F[0x10];                                    // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TWeakObjectPtr<class UAbilitySystemComponent> ComponentBoundTo;                                  // 0x0010(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FTagDelegateBinding) == 0x000008, "Wrong alignment on FTagDelegateBinding");
@@ -2056,7 +2056,7 @@ struct FMarinerRootMotionSource_SlowToStop final : public FMarinerRootMotionSour
 public:
 	class UCurveFloat*                            DecelerationCurve;                                 // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartingCharacterSpeed;                            // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1360[0x4];                                     // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionSource_SlowToStop) == 0x000010, "Wrong alignment on FMarinerRootMotionSource_SlowToStop");
 static_assert(sizeof(FMarinerRootMotionSource_SlowToStop) == 0x0000B0, "Wrong size on FMarinerRootMotionSource_SlowToStop");
@@ -2080,7 +2080,7 @@ struct FArtifactImprovementUIData final
 {
 public:
 	float                                         ImprovementNumber;                                 // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1361[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ImprovementSymbol;                                 // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 RichTextStyleDefault;                              // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 RichTextStyleHighlight;                            // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2111,7 +2111,7 @@ public:
 	float                                         JumpZVelocity;                                     // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         JumpSameDirectionLateralSpeed;                     // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         JumpDifferentDirectionLateralSpeed;                // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1362[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            DirectionChangeMomentumPreservationCurve;          // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            JumpGravityScalarCurve;                            // 0x0018(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAkAudioEvent*                          JumpAudioEvent;                                    // 0x0020(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2131,7 +2131,7 @@ struct FSteamStoreAppDetailsResult final
 {
 public:
 	bool                                          Success;                                           // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1363[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSteamStoreAppDetailsData              Data;                                              // 0x0008(0x0048)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSteamStoreAppDetailsResult) == 0x000008, "Wrong alignment on FSteamStoreAppDetailsResult");
@@ -2144,7 +2144,7 @@ static_assert(offsetof(FSteamStoreAppDetailsResult, Data) == 0x000008, "Member '
 struct alignas(0x08) FMangoNativePurchasePendingCallbacks final
 {
 public:
-	uint8                                         Pad_1364[0x20];                                    // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMangoNativePurchasePendingCallbacks) == 0x000008, "Wrong alignment on FMangoNativePurchasePendingCallbacks");
 static_assert(sizeof(FMangoNativePurchasePendingCallbacks) == 0x000020, "Wrong size on FMangoNativePurchasePendingCallbacks");
@@ -2156,7 +2156,7 @@ struct FMarinerGameplayTaskPooledComponentBinding final
 public:
 	class USceneComponent*                        Component;                                         // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                   TaskComponentID;                                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1365[0x10];                                    // 0x0010(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerGameplayTaskPooledComponentBinding) == 0x000008, "Wrong alignment on FMarinerGameplayTaskPooledComponentBinding");
 static_assert(sizeof(FMarinerGameplayTaskPooledComponentBinding) == 0x000020, "Wrong size on FMarinerGameplayTaskPooledComponentBinding");
@@ -2213,7 +2213,7 @@ struct FProjectileType final
 public:
 	TSubclassOf<class AMarinerProjectile>         ProjectileType;                                    // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PoolSize;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1366[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AMarinerProjectile*>             ProjectilePool;                                    // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FProjectileType) == 0x000008, "Wrong alignment on FProjectileType");
@@ -2228,23 +2228,23 @@ struct FHUDBarIconState final
 {
 public:
 	bool                                          bHasBackgroundImage;                               // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1367[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               BackgroundImage;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 BackgroundColor;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasGlowBehindImage;                               // 0x0014(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1368[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               GlowBehindImage;                                   // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 GlowBehindColor;                                   // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasIconImage;                                     // 0x0024(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1369[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               IconImage;                                         // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture*                               AlternateIconImage;                                // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 IconColor;                                         // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasGlowInFrontImage;                              // 0x003C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_136A[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               GlowInFrontImage;                                  // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 GlowInFrontColor;                                  // 0x0048(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_136B[0x4];                                     // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FHUDBarIconState) == 0x000008, "Wrong alignment on FHUDBarIconState");
 static_assert(sizeof(FHUDBarIconState) == 0x000050, "Wrong size on FHUDBarIconState");
@@ -2286,7 +2286,7 @@ struct FOverlappingCharacterInfo final
 public:
 	class AMarinerCharacter*                      OverlappingCharacter;                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AuthoritativeOverlapStartTimeStamp;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_136C[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOverlappingCharacterInfo) == 0x000008, "Wrong alignment on FOverlappingCharacterInfo");
 static_assert(sizeof(FOverlappingCharacterInfo) == 0x000010, "Wrong size on FOverlappingCharacterInfo");
@@ -2298,7 +2298,7 @@ static_assert(offsetof(FOverlappingCharacterInfo, AuthoritativeOverlapStartTimeS
 struct alignas(0x08) FMarinerMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_136D[0x28];                                    // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMoveUpdateDynamics) == 0x000008, "Wrong alignment on FMarinerMoveUpdateDynamics");
 static_assert(sizeof(FMarinerMoveUpdateDynamics) == 0x000028, "Wrong size on FMarinerMoveUpdateDynamics");
@@ -2316,7 +2316,7 @@ static_assert(sizeof(FMarinerRootMotionMoveUpdateDynamics) == 0x000028, "Wrong s
 struct FMarinerRootMotionMoveUpdateDynamics_LerpToSpeed final : public FMarinerRootMotionMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_136E[0x20];                                    // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x20];                                      // 0x0028(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionMoveUpdateDynamics_LerpToSpeed) == 0x000008, "Wrong alignment on FMarinerRootMotionMoveUpdateDynamics_LerpToSpeed");
 static_assert(sizeof(FMarinerRootMotionMoveUpdateDynamics_LerpToSpeed) == 0x000048, "Wrong size on FMarinerRootMotionMoveUpdateDynamics_LerpToSpeed");
@@ -2327,7 +2327,7 @@ struct FMarinerCharacterFallbackReturnData final
 {
 public:
 	EMarinerCharacterFallbackReturnState          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_136F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TimeRemainingInCurrentState;                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerCharacterFallbackReturnData) == 0x000004, "Wrong alignment on FMarinerCharacterFallbackReturnData");
@@ -2341,18 +2341,18 @@ struct FArenaReturnState final
 {
 public:
 	EMarinerArenaReturnState                      UpcomingState;                                     // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1370[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector_NetQuantizeNormal              KnockOutDirection;                                 // 0x0004(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bKnockOutWasMegablast;                             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1371[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacter*                      KnockOutInstigator;                                // 0x0018(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturningToArenaRootMotionSourceID;                // 0x0020(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1372[0x14];                                    // 0x0024(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x14];                                      // 0x0024(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               ReturningToArenaEffectComponent;                   // 0x0038(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMarinerCharacterFallbackReturnData    FallbackReturnData;                                // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1373[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	EMarinerArenaReturnState                      CurrentState;                                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1374[0x1F];                                    // 0x0051(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x1F];                                      // 0x0051(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FArenaReturnState) == 0x000008, "Wrong alignment on FArenaReturnState");
 static_assert(sizeof(FArenaReturnState) == 0x000070, "Wrong size on FArenaReturnState");
@@ -2390,7 +2390,7 @@ public:
 	EMarinerAchievement                           Achievement;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMangoStatGroupType                           StatGroup;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMangoStatType                                StatType;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1375[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 StatMetric;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRetroactiveProfileAchievementData) == 0x000008, "Wrong alignment on FRetroactiveProfileAchievementData");
@@ -2405,9 +2405,9 @@ static_assert(offsetof(FRetroactiveProfileAchievementData, StatMetric) == 0x0000
 struct FMarinerMatSwapJob final
 {
 public:
-	uint8                                         Pad_1376[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMeshComponent*                         Mesh;                                              // 0x0008(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1377[0x8];                                     // 0x0010(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInterface*>             Materials;                                         // 0x0018(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 };
 static_assert(alignof(FMarinerMatSwapJob) == 0x000008, "Wrong alignment on FMarinerMatSwapJob");
@@ -2449,12 +2449,12 @@ struct FMarinerAchievementSetData final
 {
 public:
 	EMarinerAchievement                           AchievementSetStatID;                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1378[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   AchievementSetStat;                                // 0x0004(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1379[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMarinerAchievementData>        Achievements;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	bool                                          bMaxRule;                                          // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_137A[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerAchievementSetData) == 0x000008, "Wrong alignment on FMarinerAchievementSetData");
 static_assert(sizeof(FMarinerAchievementSetData) == 0x000028, "Wrong size on FMarinerAchievementSetData");
@@ -2468,19 +2468,19 @@ static_assert(offsetof(FMarinerAchievementSetData, bMaxRule) == 0x000020, "Membe
 struct FMarinerMessageBoxBaseData
 {
 public:
-	uint8                                         Pad_137B[0x10];                                    // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UMarinerMessageBoxBase>     WidgetOverride;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UMarinerMessageBoxPrompts>  Prompts;                                           // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMarinerPressAnyKeyMessageBoxData      PressAnyKeyData;                                   // 0x0020(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	EMarinerMessageBoxPriority                    Priority;                                          // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMarinerMessageBoxLifetime                    Lifetime;                                          // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_137C[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(struct FKey& KeyPressed)>      ConfirmCallback;                                   // 0x004C(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_137D[0x14];                                    // 0x005C(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x14];                                      // 0x005C(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(struct FKey& KeyPressed)>      SecondaryCallback;                                 // 0x0070(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_137E[0x10];                                    // 0x0080(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_80[0x10];                                      // 0x0080(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(struct FKey& KeyPressed)>      CancelCallback;                                    // 0x0090(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_137F[0x10];                                    // 0x00A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A0[0x10];                                      // 0x00A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMessageBoxBaseData) == 0x000008, "Wrong alignment on FMarinerMessageBoxBaseData");
 static_assert(sizeof(FMarinerMessageBoxBaseData) == 0x0000B0, "Wrong size on FMarinerMessageBoxBaseData");
@@ -2530,10 +2530,10 @@ static_assert(offsetof(FMarinerMessageBoxOfferListData, OfferSelectedCallback) =
 struct alignas(0x10) FPooledActorSpawnInfo final
 {
 public:
-	uint8                                         Pad_1380[0x48];                                    // 0x0000(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Owner;                                             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APawn*                                  Instigator;                                        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1381[0x8];                                     // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPooledActorSpawnInfo) == 0x000010, "Wrong alignment on FPooledActorSpawnInfo");
 static_assert(sizeof(FPooledActorSpawnInfo) == 0x000060, "Wrong size on FPooledActorSpawnInfo");
@@ -2551,7 +2551,7 @@ public:
 	int32                                         LODThreshold;                                      // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  SkeletonGuid;                                      // 0x0044(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FGuid                                  VirtualBoneGuid;                                   // 0x0054(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1382[0x34];                                    // 0x0064(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x34];                                      // 0x0064(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerAnimNode_CopyAnimCurves) == 0x000008, "Wrong alignment on FMarinerAnimNode_CopyAnimCurves");
 static_assert(sizeof(FMarinerAnimNode_CopyAnimCurves) == 0x000098, "Wrong size on FMarinerAnimNode_CopyAnimCurves");
@@ -2638,7 +2638,7 @@ static_assert(offsetof(FArtifactEventEffects, GrantedAbilities) == 0x000010, "Me
 struct FArtifactEventPayload final
 {
 public:
-	uint8                                         Pad_1383[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FArtifactEventPayload) == 0x000001, "Wrong alignment on FArtifactEventPayload");
 static_assert(sizeof(FArtifactEventPayload) == 0x000001, "Wrong size on FArtifactEventPayload");
@@ -2664,14 +2664,14 @@ struct FMarinerArtifactUIData final : public FTableRowBase
 {
 public:
 	int32                                         SortID;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1384[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ArtifactName;                                      // 0x0010(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FText                                   Description;                                       // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FText                                   DetailedDescription;                               // 0x0040(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FText                                   LoreDescription;                                   // 0x0058(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FArtifactImprovementUIData>     ImprovementUIData;                                 // 0x0070(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	int32                                         Level;                                             // 0x0080(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1385[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture2D>              ButtonIcon;                                        // 0x0088(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMarinerLootCardDataAsset> LootCard;                                          // 0x00B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMarinerRarityDataAsset> Rarity;                                            // 0x00D8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2700,9 +2700,9 @@ public:
 	class UCurveVector*                           TranslationCurve;                                  // 0x0020(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveVector*                           RotationCurve;                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLoop;                                             // 0x0030(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1386[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StartTimeOffset;                                   // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1387[0x8];                                     // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerComponentMoveData) == 0x000008, "Wrong alignment on FMarinerComponentMoveData");
 static_assert(sizeof(FMarinerComponentMoveData) == 0x000040, "Wrong size on FMarinerComponentMoveData");
@@ -2720,7 +2720,7 @@ struct alignas(0x10) FMarinerComponentMoveDataSet final
 {
 public:
 	TArray<struct FMarinerComponentMoveData>      MoveData;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1388[0x30];                                    // 0x0010(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x30];                                      // 0x0010(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerComponentMoveDataSet) == 0x000010, "Wrong alignment on FMarinerComponentMoveDataSet");
 static_assert(sizeof(FMarinerComponentMoveDataSet) == 0x000040, "Wrong size on FMarinerComponentMoveDataSet");
@@ -2731,7 +2731,7 @@ static_assert(offsetof(FMarinerComponentMoveDataSet, MoveData) == 0x000000, "Mem
 struct alignas(0x08) FMarinerNewsLookup final
 {
 public:
-	uint8                                         Pad_1389[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerNewsLookup) == 0x000008, "Wrong alignment on FMarinerNewsLookup");
 static_assert(sizeof(FMarinerNewsLookup) == 0x000010, "Wrong size on FMarinerNewsLookup");
@@ -2769,7 +2769,7 @@ struct FMarinerBotTypeInfo final
 public:
 	TMap<EBotDifficultyLevel, class UMarinerBotDifficultyData*> DifficultyOverrides;                               // 0x0000(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	float                                         RandomSpawnWeight;                                 // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_138A[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerBotTypeInfo) == 0x000008, "Wrong alignment on FMarinerBotTypeInfo");
 static_assert(sizeof(FMarinerBotTypeInfo) == 0x000058, "Wrong size on FMarinerBotTypeInfo");
@@ -2816,7 +2816,7 @@ struct FCameraShakeParameter final
 {
 public:
 	float                                         MaximumDamage;                                     // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_138B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UCameraShake>               ShakeType;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FCameraShakeParameter) == 0x000008, "Wrong alignment on FCameraShakeParameter");
@@ -2829,7 +2829,7 @@ static_assert(offsetof(FCameraShakeParameter, ShakeType) == 0x000008, "Member 'F
 struct alignas(0x08) FMarinerMatSwapData final
 {
 public:
-	uint8                                         Pad_138C[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMatSwapData) == 0x000008, "Wrong alignment on FMarinerMatSwapData");
 static_assert(sizeof(FMarinerMatSwapData) == 0x000018, "Wrong size on FMarinerMatSwapData");
@@ -2839,7 +2839,7 @@ static_assert(sizeof(FMarinerMatSwapData) == 0x000018, "Wrong size on FMarinerMa
 struct FAnalogFireState final
 {
 public:
-	uint8                                         Pad_138D[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Threshold;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAnalogFireState) == 0x000004, "Wrong alignment on FAnalogFireState");
@@ -2852,7 +2852,7 @@ struct FMarinerRocketTrophySpawnerData final
 {
 public:
 	float                                         TimeStampStarted;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_138E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           SpawnNewTrophyTimer;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class AMarinerRocketTrophySpawner> RocketTrophySpawner;                               // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2909,7 +2909,7 @@ public:
 	float                                         SplatStartTimestamp;                               // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AccruedSplatTime;                                  // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsSplatActive;                                    // 0x002C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_138F[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMegablastSplatState) == 0x000004, "Wrong alignment on FMarinerMegablastSplatState");
 static_assert(sizeof(FMarinerMegablastSplatState) == 0x000030, "Wrong size on FMarinerMegablastSplatState");
@@ -2949,7 +2949,7 @@ struct FMarinerCone final
 {
 public:
 	float                                         HalfAngle;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1390[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Length;                                            // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerCone) == 0x000004, "Wrong alignment on FMarinerCone");
@@ -2984,20 +2984,20 @@ public:
 	float                                         KnockedoutHoldTime;                                // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxKnockedOutHoldDistance;                         // 0x0014(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FallbackTeleportDelayTime;                         // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1391[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            CharacterMoveStartCurve;                           // 0x0020(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            CharacterMoveEndCurve;                             // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CharacterEndArenaReturnRotationBlendTime;          // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1392[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerCharacterMontage*               KnockedOutAnimation;                               // 0x0038(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UParticleSystem*                        ReturningToArenaEffect;                            // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturningToArenaEffectUniformScale;                // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1393[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystem*                        ReturnedToArenaEffect;                             // 0x0050(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PathfindingCollisionShapeInflation;                // 0x0058(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FirstPersonReturnCameraTransitionBlendTime;        // 0x005C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FirstPersonReturnCameraTransitionStartTime;        // 0x0060(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1394[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerCameraPerspective              KnockoutCameraPerspective;                         // 0x0068(0x00A8)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMarinerCameraPerspective              ArenaReturnCameraPerspective;                      // 0x0110(0x00A8)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -3045,7 +3045,7 @@ public:
 	struct FMarinerLinearColorStates              Colors;                                            // 0x0088(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bEnabledForGamepad;                                // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnabledForKBM;                                    // 0x00B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1395[0x6];                                     // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   NarrationText;                                     // 0x00C0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerPromptIconData) == 0x000008, "Wrong alignment on FMarinerPromptIconData");
@@ -3062,17 +3062,17 @@ struct FMarinerPromptData final
 {
 public:
 	EMarinerInputActions                          InputAction;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1396[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   DisplayText;                                       // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bShowForGamepad;                                   // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowForKBM;                                       // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bKBMIsClickable;                                   // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bKBMShowKey;                                       // 0x0023(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMarinerPromptInputDisplay                    InputDisplay;                                      // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1397[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerPromptIconData                 IconData;                                          // 0x0028(0x00D8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	class UObject*                                CustomInputWidget;                                 // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1398[0x10];                                    // 0x0108(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_108[0x10];                                     // 0x0108(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerPromptData) == 0x000008, "Wrong alignment on FMarinerPromptData");
 static_assert(sizeof(FMarinerPromptData) == 0x000118, "Wrong size on FMarinerPromptData");
@@ -3115,7 +3115,7 @@ public:
 	struct FSlateBrush                            Icon;                                              // 0x00E0(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	float                                         Timer;                                             // 0x0168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowLoadSpinner;                                  // 0x016C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1399[0x3];                                     // 0x016D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMessageBoxData) == 0x000008, "Wrong alignment on FMarinerMessageBoxData");
 static_assert(sizeof(FMarinerMessageBoxData) == 0x000170, "Wrong size on FMarinerMessageBoxData");
@@ -3131,7 +3131,7 @@ struct FMarinerCustomDropdownEditConfirmation final
 {
 public:
 	bool                                          bHasEditConfirmation;                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerMessageBoxData                 DefaultEditMessageBox;                             // 0x0008(0x0170)(Edit, BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TMap<int32, struct FMarinerMessageBoxData>    CustomEditMessageBox;                              // 0x0178(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
@@ -3148,7 +3148,7 @@ struct FMarinerDamageThresholdEvent final
 public:
 	float                                         DamageThreshold;                                   // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bKillsObject;                                      // 0x0004(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139B[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerDamageThresholdEvent) == 0x000004, "Wrong alignment on FMarinerDamageThresholdEvent");
 static_assert(sizeof(FMarinerDamageThresholdEvent) == 0x000008, "Wrong size on FMarinerDamageThresholdEvent");
@@ -3163,7 +3163,7 @@ public:
 	bool                                          bIsAdjustmentTrace;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHadBlockingHit;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsBlockingHitOnTargetComponent;                   // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139C[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                TraceStart;                                        // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                TraceEnd;                                          // 0x0010(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ImpactPoint;                                       // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3232,13 +3232,13 @@ struct FMarinerDamageEvent final : public FDamageEvent
 {
 public:
 	bool                                          bIsAOEDamage;                                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139D[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                DamageOrigin;                                      // 0x0014(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector_NetQuantizeNormal              DamageDirection;                                   // 0x0020(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139E[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FHitResult>                     ComponentHits;                                     // 0x0030(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bDirectHitOnCharacter;                             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139F[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             ClosestComponentHit;                               // 0x0044(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	float                                         ClosestHitDistanceFromEpicenter;                   // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMarinerDamageDebugRecord*              DebugRecord;                                       // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3289,7 +3289,7 @@ static_assert(offsetof(FMarinerControllerConfigurationLocalization, Configuratio
 struct alignas(0x04) FMarinerDamageNumberState final
 {
 public:
-	uint8                                         Pad_13A0[0x1C];                                    // 0x0000(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1C];                                       // 0x0000(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerDamageNumberState) == 0x000004, "Wrong alignment on FMarinerDamageNumberState");
 static_assert(sizeof(FMarinerDamageNumberState) == 0x00001C, "Wrong size on FMarinerDamageNumberState");
@@ -3299,7 +3299,7 @@ static_assert(sizeof(FMarinerDamageNumberState) == 0x00001C, "Wrong size on FMar
 struct alignas(0x08) FMarinerDynamicServerMove final
 {
 public:
-	uint8                                         Pad_13A1[0xB0];                                    // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerDynamicServerMove) == 0x000008, "Wrong alignment on FMarinerDynamicServerMove");
 static_assert(sizeof(FMarinerDynamicServerMove) == 0x0000B0, "Wrong size on FMarinerDynamicServerMove");
@@ -3324,20 +3324,20 @@ struct FExplosionEffectsData final
 public:
 	float                                         Lifetime;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMarinerExplosionVisibilityRule               VisibilityRule;                                    // 0x0004(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13A2[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystem*                        ParticleSystem;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterial*                              Material;                                          // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           MaterialColor;                                     // 0x0018(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaterialFresnel;                                   // 0x0028(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaterialOpacity;                                   // 0x002C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          MaterialIntersection;                              // 0x0030(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13A3[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaterialIntersectionDistance;                      // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture*                               MaterialTexture;                                   // 0x0038(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaterialTextureTile;                               // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          MaterialClipOut;                                   // 0x0044(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          MaterialInvertClipMask;                            // 0x0045(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13A4[0x2];                                     // 0x0046(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FExplosionEffectsData) == 0x000008, "Wrong alignment on FExplosionEffectsData");
 static_assert(sizeof(FExplosionEffectsData) == 0x000048, "Wrong size on FExplosionEffectsData");
@@ -3375,7 +3375,7 @@ static_assert(offsetof(FSurfaceEffectsData, ParticleComponent) == 0x000010, "Mem
 struct alignas(0x08) FGameGriefData final
 {
 public:
-	uint8                                         Pad_13A5[0x8];                                     // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGameGriefData) == 0x000008, "Wrong alignment on FGameGriefData");
 static_assert(sizeof(FGameGriefData) == 0x000008, "Wrong size on FGameGriefData");
@@ -3399,7 +3399,7 @@ struct FBotSpawnGlobalParameters final
 {
 public:
 	TSubclassOf<class AMarinerCharacter>          DefaultPawnClass;                                  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13A6[0x20];                                    // 0x0008(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x20];                                       // 0x0008(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FBotSpawnGlobalParameters) == 0x000008, "Wrong alignment on FBotSpawnGlobalParameters");
 static_assert(sizeof(FBotSpawnGlobalParameters) == 0x000028, "Wrong size on FBotSpawnGlobalParameters");
@@ -3410,7 +3410,7 @@ static_assert(offsetof(FBotSpawnGlobalParameters, DefaultPawnClass) == 0x000000,
 struct FMarinerMoveUpdate_TeleportDynamics final : public FMarinerMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_13A7[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMoveUpdate_TeleportDynamics) == 0x000008, "Wrong alignment on FMarinerMoveUpdate_TeleportDynamics");
 static_assert(sizeof(FMarinerMoveUpdate_TeleportDynamics) == 0x000040, "Wrong size on FMarinerMoveUpdate_TeleportDynamics");
@@ -3422,7 +3422,7 @@ struct FBotSpawnParameters final
 public:
 	TSubclassOf<class AMarinerAIController>       ControllerClass;                                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AMarinerCharacter>          PawnClass;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13A8[0x8];                                     // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FBotSpawnParameters) == 0x000008, "Wrong alignment on FBotSpawnParameters");
 static_assert(sizeof(FBotSpawnParameters) == 0x000018, "Wrong size on FBotSpawnParameters");
@@ -3462,7 +3462,7 @@ struct FMarinerGameplayAbilityBinding final
 {
 public:
 	EMarinerInputActions                          Action;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13A9[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UMarinerAbility>            GameplayAbilityClass;                              // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerGameplayAbilityBinding) == 0x000008, "Wrong alignment on FMarinerGameplayAbilityBinding");
@@ -3475,7 +3475,7 @@ static_assert(offsetof(FMarinerGameplayAbilityBinding, GameplayAbilityClass) == 
 struct FMarinerGameplayAbilityTargetData_Aim final : public FGameplayAbilityTargetData
 {
 public:
-	uint8                                         Pad_13AA[0x4];                                     // 0x0008(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x4];                                        // 0x0008(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector_NetQuantize                    AimOrigin;                                         // 0x000C(0x000C)(BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector_NetQuantizeNormal              AimDirection;                                      // 0x0018(0x000C)(BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector_NetQuantize100                 InputVector;                                       // 0x0024(0x000C)(BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -3507,7 +3507,7 @@ static_assert(sizeof(FMarinerGameplayAttributeData) == 0x000010, "Wrong size on 
 struct FMarinerPredictiveGameplayAttributeData final : public FMarinerGameplayAttributeData
 {
 public:
-	uint8                                         Pad_13AB[0x18];                                    // 0x0010(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x18];                                      // 0x0010(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerPredictiveGameplayAttributeData) == 0x000008, "Wrong alignment on FMarinerPredictiveGameplayAttributeData");
 static_assert(sizeof(FMarinerPredictiveGameplayAttributeData) == 0x000028, "Wrong size on FMarinerPredictiveGameplayAttributeData");
@@ -3519,7 +3519,7 @@ struct FMultiProjectileSpawnData final
 public:
 	struct FTransform                             Transform;                                         // 0x0000(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         DelaySpawnPathTime;                                // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13AC[0xC];                                     // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMultiProjectileSpawnData) == 0x000010, "Wrong alignment on FMultiProjectileSpawnData");
 static_assert(sizeof(FMultiProjectileSpawnData) == 0x000040, "Wrong size on FMultiProjectileSpawnData");
@@ -3568,7 +3568,7 @@ public:
 	TSubclassOf<class AEmitterCameraLensEffectBase> FirstPersonCameraEffect;                           // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterialInterface*                     NewMaterial;                                       // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ChangeMaterialFlags;                               // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13AD[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UForceFeedbackEffect*                   InitialForceFeedback;                              // 0x0048(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerGameplayCueCharacterEffectData) == 0x000008, "Wrong alignment on FMarinerGameplayCueCharacterEffectData");
@@ -3584,10 +3584,10 @@ struct FMarinerGameplayCueEffectData final
 {
 public:
 	bool                                          bSpawnEffectsAttached;                             // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13AE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   AttachSocketName;                                  // 0x0004(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMarinerGameplayCueEffectOrientation          EffectOrientation;                                 // 0x000C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13AF[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystem*                        ParticleEffect;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAkAudioEvent*                          AudioEvent;                                        // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UForceFeedbackEffect*                   ForceFeedback;                                     // 0x0020(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3608,7 +3608,7 @@ struct FPlaylistInfo final
 public:
 	bool                                          bIsRanked;                                         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsPvEOnly;                                        // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B0[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 EventId;                                           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPlaylistInfo) == 0x000008, "Wrong alignment on FPlaylistInfo");
@@ -3624,7 +3624,7 @@ struct FImportantThrowTarget final
 public:
 	class AActor*                                 ThrowTargetActor;                                  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TargetForTeamIndex;                                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B1[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FImportantThrowTarget) == 0x000008, "Wrong alignment on FImportantThrowTarget");
 static_assert(sizeof(FImportantThrowTarget) == 0x000010, "Wrong size on FImportantThrowTarget");
@@ -3662,7 +3662,7 @@ public:
 	class FString                                 OperatingSystemName;                               // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MangoRealm;                                        // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsDedicated;                                      // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B2[0x7];                                     // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGameServerDebugInfo) == 0x000008, "Wrong alignment on FGameServerDebugInfo");
 static_assert(sizeof(FGameServerDebugInfo) == 0x0000A8, "Wrong size on FGameServerDebugInfo");
@@ -3683,7 +3683,7 @@ static_assert(offsetof(FGameServerDebugInfo, bIsDedicated) == 0x0000A0, "Member 
 struct alignas(0x08) FMarinerConsoleSettings final
 {
 public:
-	uint8                                         Pad_13B3[0x98];                                    // 0x0000(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x98];                                       // 0x0000(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerConsoleSettings) == 0x000008, "Wrong alignment on FMarinerConsoleSettings");
 static_assert(sizeof(FMarinerConsoleSettings) == 0x000098, "Wrong size on FMarinerConsoleSettings");
@@ -3694,7 +3694,7 @@ struct FMarinerGrapplingHookCableAttachData final
 {
 public:
 	EMarinerGrapplingHookAttachMode               AttachMode;                                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B4[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacter*                      AttachCharacter;                                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USceneComponent*                        AttachComponent;                                   // 0x0010(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AttachSocketName;                                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3711,7 +3711,7 @@ static_assert(offsetof(FMarinerGrapplingHookCableAttachData, AttachSocketName) =
 struct alignas(0x04) FMarinerGridPanelSlot final
 {
 public:
-	uint8                                         Pad_13B5[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerGridPanelSlot) == 0x000004, "Wrong alignment on FMarinerGridPanelSlot");
 static_assert(sizeof(FMarinerGridPanelSlot) == 0x000010, "Wrong size on FMarinerGridPanelSlot");
@@ -3721,7 +3721,7 @@ static_assert(sizeof(FMarinerGridPanelSlot) == 0x000010, "Wrong size on FMariner
 struct alignas(0x08) FMarinerInputActionList final
 {
 public:
-	uint8                                         Pad_13B6[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerInputActionList) == 0x000008, "Wrong alignment on FMarinerInputActionList");
 static_assert(sizeof(FMarinerInputActionList) == 0x000010, "Wrong size on FMarinerInputActionList");
@@ -3753,7 +3753,7 @@ public:
 	struct FKey                                   Key;                                               // 0x0008(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   DisplayNameOverride;                               // 0x0020(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	EMarinerKeyboardKeySize                       KeySize;                                           // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B7[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            IconOverride;                                      // 0x0040(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerKBMKeyOverrides) == 0x000008, "Wrong alignment on FMarinerKBMKeyOverrides");
@@ -3823,7 +3823,7 @@ struct FMarinerInputActionMapping final : public FTableRowBase
 {
 public:
 	EMarinerInputActions                          InputAction;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B8[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKey>                           Keys;                                              // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FMarinerKeySet>                 KeySets;                                           // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
@@ -3841,7 +3841,7 @@ public:
 	class FName                                   EngineId;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKey                                   Key;                                               // 0x0010(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsPositive;                                       // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B9[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerAxisConfiguration) == 0x000008, "Wrong alignment on FMarinerAxisConfiguration");
 static_assert(sizeof(FMarinerAxisConfiguration) == 0x000030, "Wrong size on FMarinerAxisConfiguration");
@@ -3859,7 +3859,7 @@ public:
 	bool                                          bShift;                                            // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCtrl;                                             // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAlt;                                              // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13BA[0x5];                                     // 0x002B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerActionConfiguration) == 0x000008, "Wrong alignment on FMarinerActionConfiguration");
 static_assert(sizeof(FMarinerActionConfiguration) == 0x000030, "Wrong size on FMarinerActionConfiguration");
@@ -3876,7 +3876,7 @@ struct FMarinerControllerConfiguration final : public FTableRowBase
 public:
 	EMarinerInputActions                          InputAction;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsAxisInput;                                      // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13BB[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKey>                           ConsoleKeys;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerControllerConfiguration) == 0x000008, "Wrong alignment on FMarinerControllerConfiguration");
@@ -3891,7 +3891,7 @@ struct FMarinerInputBindings final : public FTableRowBase
 {
 public:
 	EMarinerInputActions                          InputAction;                                       // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13BC[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            PCIcon;                                            // 0x0010(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerInputBindings) == 0x000008, "Wrong alignment on FMarinerInputBindings");
@@ -3931,9 +3931,9 @@ struct FMarinerItemInteractionDashParameters final
 {
 public:
 	float                                         DashTargetConeHalfAngle;                           // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13BD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DashSpeed;                                         // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13BE[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerCharacterMontage*               DashAnimation;                                     // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerItemInteractionDashParameters) == 0x000008, "Wrong alignment on FMarinerItemInteractionDashParameters");
@@ -3997,7 +3997,7 @@ public:
 	struct FSlateBrush                            FreeLockBrush;                                     // 0x0020(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            PaidLockBrush;                                     // 0x00A8(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FMarinerUIItemSizes                    ItemSizes;                                         // 0x0130(0x0011)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13BF[0x3];                                     // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerUIItemSizeDefinitions          SizeDefinitions;                                   // 0x0144(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         MaxColumns;                                        // 0x015C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxRows;                                           // 0x0160(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4005,7 +4005,7 @@ public:
 	float                                         HeightOffset;                                      // 0x0168(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bExcludeEmptyLevels;                               // 0x016C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowPaidGroups;                                   // 0x016D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C0[0x2];                                     // 0x016E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16E[0x2];                                      // 0x016E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerItemLevelGroupData) == 0x000008, "Wrong alignment on FMarinerItemLevelGroupData");
 static_assert(sizeof(FMarinerItemLevelGroupData) == 0x000170, "Wrong size on FMarinerItemLevelGroupData");
@@ -4091,11 +4091,11 @@ public:
 	struct FSlateBrush                            HoveredImage;                                      // 0x0088(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            PressedImage;                                      // 0x0110(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bApplyColors;                                      // 0x0198(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C1[0x3];                                     // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           IdleColor;                                         // 0x019C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           HoveredColor;                                      // 0x01AC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           PressedColor;                                      // 0x01BC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C2[0x4];                                     // 0x01CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerLayeredButtonImageProperties) == 0x000008, "Wrong alignment on FMarinerLayeredButtonImageProperties");
 static_assert(sizeof(FMarinerLayeredButtonImageProperties) == 0x0001D0, "Wrong size on FMarinerLayeredButtonImageProperties");
@@ -4113,7 +4113,7 @@ struct FMarinerLayeredButtonImageStates final
 {
 public:
 	bool                                          bImageAllowed;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerLayeredButtonImageProperties   NormalEnabled;                                     // 0x0008(0x01D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FMarinerLayeredButtonImageProperties   NormalDisabled;                                    // 0x01D8(0x01D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FMarinerLayeredButtonImageProperties   SelectedEnabled;                                   // 0x03A8(0x01D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
@@ -4133,7 +4133,7 @@ struct FMarinerLayeredButtonTextProperties final
 {
 public:
 	bool                                          bApplyColors;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C4[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            IdleColor;                                         // 0x0008(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FSlateColor                            HoveredColor;                                      // 0x0030(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FSlateColor                            PressedColor;                                      // 0x0058(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
@@ -4169,7 +4169,7 @@ struct FMarinerMessageBoxPurchaseData final : public FMarinerMessageBoxBaseData
 public:
 	class FString                                 OfferId;                                           // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPremium;                                          // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C5[0x7];                                     // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMessageBoxPurchaseData) == 0x000008, "Wrong alignment on FMarinerMessageBoxPurchaseData");
 static_assert(sizeof(FMarinerMessageBoxPurchaseData) == 0x0000C8, "Wrong size on FMarinerMessageBoxPurchaseData");
@@ -4248,7 +4248,7 @@ static_assert(offsetof(FMarinerMessageText, Text3) == 0x000030, "Member 'FMarine
 struct alignas(0x08) FPlaylistSetup final
 {
 public:
-	uint8                                         Pad_13C6[0x20];                                    // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPlaylistSetup) == 0x000008, "Wrong alignment on FPlaylistSetup");
 static_assert(sizeof(FPlaylistSetup) == 0x000020, "Wrong size on FPlaylistSetup");
@@ -4294,7 +4294,7 @@ public:
 	class UMeshComponent*                         MeshToSwapTo;                                      // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MeshVisibilityOverlapDuration;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        UniqueId;                                          // 0x000C(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C7[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMeshSwapReplicationData_Apply) == 0x000008, "Wrong alignment on FMarinerMeshSwapReplicationData_Apply");
 static_assert(sizeof(FMarinerMeshSwapReplicationData_Apply) == 0x000010, "Wrong size on FMarinerMeshSwapReplicationData_Apply");
@@ -4358,7 +4358,7 @@ public:
 	struct FSlateBrush                            TabBrush;                                          // 0x0008(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bEnableText;                                       // 0x0090(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableWidgetSlot;                                 // 0x0091(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C8[0x6];                                     // 0x0092(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMenuStackButtonState) == 0x000008, "Wrong alignment on FMarinerMenuStackButtonState");
 static_assert(sizeof(FMarinerMenuStackButtonState) == 0x000098, "Wrong size on FMarinerMenuStackButtonState");
@@ -4430,7 +4430,7 @@ public:
 	class FText                                   DisplayText;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bShowForGamepad;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowForKBM;                                       // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C9[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMessageBoxPrompt) == 0x000008, "Wrong alignment on FMarinerMessageBoxPrompt");
 static_assert(sizeof(FMarinerMessageBoxPrompt) == 0x000020, "Wrong size on FMarinerMessageBoxPrompt");
@@ -4444,7 +4444,7 @@ struct FMessageWidgetData final
 {
 public:
 	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13CA[0x8];                                     // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMessageWidgetData) == 0x000008, "Wrong alignment on FMessageWidgetData");
 static_assert(sizeof(FMessageWidgetData) == 0x000010, "Wrong size on FMessageWidgetData");
@@ -4468,7 +4468,7 @@ struct FMessageWidgetPoolData final
 public:
 	TSubclassOf<class UUserWidget>                MessageWidgetType;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         WidgetPoolSize;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13CB[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMessageWidgetPoolData) == 0x000008, "Wrong alignment on FMessageWidgetPoolData");
 static_assert(sizeof(FMessageWidgetPoolData) == 0x000010, "Wrong size on FMessageWidgetPoolData");
@@ -4493,7 +4493,7 @@ static_assert(offsetof(FModeSummaryPanel, Brush) == 0x000018, "Member 'FModeSumm
 struct alignas(0x08) FMarinerGameplayEffectMoveUpdateData final
 {
 public:
-	uint8                                         Pad_13CC[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerGameplayEffectMoveUpdateData) == 0x000008, "Wrong alignment on FMarinerGameplayEffectMoveUpdateData");
 static_assert(sizeof(FMarinerGameplayEffectMoveUpdateData) == 0x000018, "Wrong size on FMarinerGameplayEffectMoveUpdateData");
@@ -4503,7 +4503,7 @@ static_assert(sizeof(FMarinerGameplayEffectMoveUpdateData) == 0x000018, "Wrong s
 struct alignas(0x08) FMarinerMoveUpdateDatum final
 {
 public:
-	uint8                                         Pad_13CD[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMoveUpdateDatum) == 0x000008, "Wrong alignment on FMarinerMoveUpdateDatum");
 static_assert(sizeof(FMarinerMoveUpdateDatum) == 0x000018, "Wrong size on FMarinerMoveUpdateDatum");
@@ -4513,9 +4513,9 @@ static_assert(sizeof(FMarinerMoveUpdateDatum) == 0x000018, "Wrong size on FMarin
 struct FMarinerMoveUpdate final
 {
 public:
-	uint8                                         Pad_13CE[0x1];                                     // 0x0000(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         ID;                                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13CF[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ServerConsumptionTimestamp;                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FramesOfCollectedMoveUpdates;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ClientReceivedTimestamp;                           // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4524,15 +4524,15 @@ public:
 	bool                                          bClientSentToServer;                               // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWantsApplicationOnServer;                         // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMoveUpdateApplied;                                // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D0[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B[0x5];                                       // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMarinerMoveUpdateDatum>        CustomMoveUpdateData;                              // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FName>                           RootMotionRemoveNames;                             // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FMarinerGameplayEffectMoveUpdateData> GameplayEffects;                                   // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FVector_NetQuantize10                  ImpulseVelocity;                                   // 0x0070(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D1[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerPlayerState*                    MegablastInstigatingPlayerState;                   // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         ImpulseFlags;                                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D2[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         HostileImpulseMagnitudeSquared;                    // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerMoveUpdate) == 0x000008, "Wrong alignment on FMarinerMoveUpdate");
@@ -4560,11 +4560,11 @@ struct FMarinerThrowItemPayload final
 {
 public:
 	EMarinerItemSlot                              SlotToReleaseFrom;                                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TWeakObjectPtr<class AMarinerItem>            ItemOwner;                                         // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsThrownItemDropped;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         EnsureReplicationByte;                             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_13D4[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerThrowItemPayload) == 0x000004, "Wrong alignment on FMarinerThrowItemPayload");
 static_assert(sizeof(FMarinerThrowItemPayload) == 0x000010, "Wrong size on FMarinerThrowItemPayload");
@@ -4589,7 +4589,7 @@ static_assert(offsetof(FMarinerUICharacterAbilityData, CharacterAbilitiesUIData)
 struct alignas(0x08) FMarinerGameplayEffectPendingRemoval final
 {
 public:
-	uint8                                         Pad_13D5[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerGameplayEffectPendingRemoval) == 0x000008, "Wrong alignment on FMarinerGameplayEffectPendingRemoval");
 static_assert(sizeof(FMarinerGameplayEffectPendingRemoval) == 0x000018, "Wrong size on FMarinerGameplayEffectPendingRemoval");
@@ -4599,7 +4599,7 @@ static_assert(sizeof(FMarinerGameplayEffectPendingRemoval) == 0x000018, "Wrong s
 struct FMarinerMoveUpdate_ApplyRecoveryDynamics final : public FMarinerMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_13D6[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMoveUpdate_ApplyRecoveryDynamics) == 0x000008, "Wrong alignment on FMarinerMoveUpdate_ApplyRecoveryDynamics");
 static_assert(sizeof(FMarinerMoveUpdate_ApplyRecoveryDynamics) == 0x000030, "Wrong size on FMarinerMoveUpdate_ApplyRecoveryDynamics");
@@ -4609,7 +4609,7 @@ static_assert(sizeof(FMarinerMoveUpdate_ApplyRecoveryDynamics) == 0x000030, "Wro
 struct FMarinerMoveUpdate_SwapActiveMeshDynamics final : public FMarinerMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_13D7[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMoveUpdate_SwapActiveMeshDynamics) == 0x000008, "Wrong alignment on FMarinerMoveUpdate_SwapActiveMeshDynamics");
 static_assert(sizeof(FMarinerMoveUpdate_SwapActiveMeshDynamics) == 0x000040, "Wrong size on FMarinerMoveUpdate_SwapActiveMeshDynamics");
@@ -4645,7 +4645,7 @@ static_assert(offsetof(FMarinerMessageBoxNativePurchaseData, Description) == 0x0
 struct alignas(0x08) FMarinerNewsCallbackData final
 {
 public:
-	uint8                                         Pad_13D8[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerNewsCallbackData) == 0x000008, "Wrong alignment on FMarinerNewsCallbackData");
 static_assert(sizeof(FMarinerNewsCallbackData) == 0x000010, "Wrong size on FMarinerNewsCallbackData");
@@ -4675,7 +4675,7 @@ public:
 	class FText                                   Header;                                            // 0x00B0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TArray<struct FMarinerMessageBoxOptionListInfo> Options;                                           // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bAlignVertical;                                    // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13D9[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMessageBoxOptionListData) == 0x000008, "Wrong alignment on FMarinerMessageBoxOptionListData");
 static_assert(sizeof(FMarinerMessageBoxOptionListData) == 0x0000E0, "Wrong size on FMarinerMessageBoxOptionListData");
@@ -4689,7 +4689,7 @@ struct FRewardCurrencyTier final
 {
 public:
 	int32                                         MinAmount;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            Icon;                                              // 0x0008(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRewardCurrencyTier) == 0x000008, "Wrong alignment on FRewardCurrencyTier");
@@ -4717,13 +4717,13 @@ struct FMarinerPlatformText final
 public:
 	class FText                                   TextDefault;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bHasPCOverride;                                    // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DB[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   TextPC;                                            // 0x0020(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bHasXB1Override;                                   // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DC[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   TextXB1;                                           // 0x0040(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bHasPS4Override;                                   // 0x0058(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DD[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   TextPS4;                                           // 0x0060(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerPlatformText) == 0x000008, "Wrong alignment on FMarinerPlatformText");
@@ -4742,12 +4742,12 @@ struct FCommonDamageNotificationData final
 {
 public:
 	uint8                                         SpecialQualifiers;                                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DE[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UDamageType>                DamageTypeClass;                                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector_NetQuantize                    DamageImpulse;                                     // 0x0010(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DamageApplied;                                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DamageBlocked;                                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13DF[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCommonDamageNotificationData) == 0x000008, "Wrong alignment on FCommonDamageNotificationData");
 static_assert(sizeof(FCommonDamageNotificationData) == 0x000028, "Wrong size on FCommonDamageNotificationData");
@@ -4777,7 +4777,7 @@ struct FMarinerBotClassSkinPairing final
 public:
 	TSubclassOf<class APawn>                      PawnClass;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SelectedSkinIndex;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E0[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerBotClassSkinPairing) == 0x000008, "Wrong alignment on FMarinerBotClassSkinPairing");
 static_assert(sizeof(FMarinerBotClassSkinPairing) == 0x000010, "Wrong size on FMarinerBotClassSkinPairing");
@@ -4792,11 +4792,11 @@ public:
 	int32                                         SelectedSkinIndex;                                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SelectedMegablastTrail;                            // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SelectedReturnTrail;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E1[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 SelectedTotemPartsList;                            // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FMarinerBotClassSkinPairing>    AvaliableBotSkinDataList;                          // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         ReplicationByte;                                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_13E2[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerBotFakeProfileIndices) == 0x000008, "Wrong alignment on FMarinerBotFakeProfileIndices");
 static_assert(sizeof(FMarinerBotFakeProfileIndices) == 0x000038, "Wrong size on FMarinerBotFakeProfileIndices");
@@ -4827,7 +4827,7 @@ struct FPreGameReadyReplicationData final
 public:
 	class UAnimMontage*                           ReadyEmote;                                        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Counter;                                           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E3[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPreGameReadyReplicationData) == 0x000008, "Wrong alignment on FPreGameReadyReplicationData");
 static_assert(sizeof(FPreGameReadyReplicationData) == 0x000010, "Wrong size on FPreGameReadyReplicationData");
@@ -4870,7 +4870,7 @@ public:
 	class FString                                 MangoId;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMarinerGameOutcome                           GameOutcome;                                       // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E4[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMatchEndLocalPlayer) == 0x000008, "Wrong alignment on FMatchEndLocalPlayer");
 static_assert(sizeof(FMatchEndLocalPlayer) == 0x000018, "Wrong size on FMatchEndLocalPlayer");
@@ -4907,7 +4907,7 @@ public:
 	bool                                          bHasExploded;                                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDirectHit;                                        // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPhysicalSurface                              SurfaceType;                                       // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E5[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector_NetQuantize                    ExplosionEffectLocation;                           // 0x0004(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ExplosionEffectOrientation;                        // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class UPrimitiveComponent>     HitComponent;                                      // 0x001C(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4929,7 +4929,7 @@ struct FMarinerProjectileData final
 {
 public:
 	float                                         ProjectileLife;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UMarinerDamageType>         ImpactDamage;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UMarinerDamageType>         DetonationDamage;                                  // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4970,12 +4970,12 @@ struct FMarinerProjectileFastOverlapListenerData final
 public:
 	struct FMarinerProjectileFastOverlapListenerHandle Handle;                                            // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class AActor>                  Listener;                                          // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E7[0x10];                                    // 0x000C(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x10];                                       // 0x000C(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Location;                                          // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               Rotation;                                          // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E8[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CollectionToCollideAgainst;                        // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13E9[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerProjectileFastOverlapListenerData) == 0x000004, "Wrong alignment on FMarinerProjectileFastOverlapListenerData");
 static_assert(sizeof(FMarinerProjectileFastOverlapListenerData) == 0x000040, "Wrong size on FMarinerProjectileFastOverlapListenerData");
@@ -4991,10 +4991,10 @@ struct FMarinerFluxProjectileStateData final
 {
 public:
 	EMarinerFluxProjectileState                   StateType;                                         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Priority;                                          // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCanFallbackTo;                                    // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EB[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerFluxProjectileStateData) == 0x000004, "Wrong alignment on FMarinerFluxProjectileStateData");
 static_assert(sizeof(FMarinerFluxProjectileStateData) == 0x00000C, "Wrong size on FMarinerFluxProjectileStateData");
@@ -5008,7 +5008,7 @@ struct FMarinerProjectileImpulseBatch final
 {
 public:
 	float                                         BatchingTimeWindow;                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BatchID;                                           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            BatchImpulseCurve;                                 // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FMarinerProjectileImpulseBatchMember> BatchMembers;                                      // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
@@ -5016,7 +5016,7 @@ public:
 	float                                         CumulativeImpulseMagnitude;                        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bExpired;                                          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSelfInflicted;                                    // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13ED[0x6];                                     // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerProjectileImpulseBatch) == 0x000008, "Wrong alignment on FMarinerProjectileImpulseBatch");
 static_assert(sizeof(FMarinerProjectileImpulseBatch) == 0x000048, "Wrong size on FMarinerProjectileImpulseBatch");
@@ -5034,11 +5034,11 @@ static_assert(offsetof(FMarinerProjectileImpulseBatch, bSelfInflicted) == 0x0000
 struct FMarinerProjectileModifier final : public FFastArraySerializerItem
 {
 public:
-	uint8                                         Pad_13EE[0x8];                                     // 0x000C(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x8];                                        // 0x000C(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LifetimeMultiplier;                                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SpeedMultiplier;                                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GravityMultiplier;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13EF[0x4];                                     // 0x0020(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20[0x4];                                       // 0x0020(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerProjectileModifier) == 0x000004, "Wrong alignment on FMarinerProjectileModifier");
 static_assert(sizeof(FMarinerProjectileModifier) == 0x000024, "Wrong size on FMarinerProjectileModifier");
@@ -5052,7 +5052,7 @@ struct FMarinerProjectileModifierArray final : public FFastArraySerializer
 {
 public:
 	TArray<struct FMarinerProjectileModifier>     Items;                                             // 0x0108(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F0[0x8];                                     // 0x0118(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerProjectileModifierArray) == 0x000008, "Wrong alignment on FMarinerProjectileModifierArray");
 static_assert(sizeof(FMarinerProjectileModifierArray) == 0x000120, "Wrong size on FMarinerProjectileModifierArray");
@@ -5079,9 +5079,9 @@ struct FMarinerStickToObjectReplicationData final
 {
 public:
 	uint8                                         EnableId;                                          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             ObjectHitData;                                     // 0x0004(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_13F2[0x4];                                     // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerStickToObjectReplicationData) == 0x000004, "Wrong alignment on FMarinerStickToObjectReplicationData");
 static_assert(sizeof(FMarinerStickToObjectReplicationData) == 0x000090, "Wrong size on FMarinerStickToObjectReplicationData");
@@ -5113,7 +5113,7 @@ struct FProjectionParameters final
 {
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FOV;                                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ViewOffset;                                        // 0x0008(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ViewInvariantScale;                                // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5180,7 +5180,7 @@ struct FMarinerMessageBoxQuestRewardData final : public FMarinerMessageBoxBaseDa
 public:
 	struct FMangoQuestReward                      QuestReward;                                       // 0x00B0(0x00C8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bPreviouslyOwned;                                  // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F4[0x7];                                     // 0x0179(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerMessageBoxQuestRewardData) == 0x000008, "Wrong alignment on FMarinerMessageBoxQuestRewardData");
 static_assert(sizeof(FMarinerMessageBoxQuestRewardData) == 0x000180, "Wrong size on FMarinerMessageBoxQuestRewardData");
@@ -5215,7 +5215,7 @@ static_assert(offsetof(FMarinerRocketTotemCollection, Companion) == 0x000030, "M
 struct FMarinerRootMotionMoveUpdateDynamics_ConstantForce final : public FMarinerRootMotionMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_13F5[0x38];                                    // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionMoveUpdateDynamics_ConstantForce) == 0x000008, "Wrong alignment on FMarinerRootMotionMoveUpdateDynamics_ConstantForce");
 static_assert(sizeof(FMarinerRootMotionMoveUpdateDynamics_ConstantForce) == 0x000060, "Wrong size on FMarinerRootMotionMoveUpdateDynamics_ConstantForce");
@@ -5225,7 +5225,7 @@ static_assert(sizeof(FMarinerRootMotionMoveUpdateDynamics_ConstantForce) == 0x00
 struct FMarinerRootMotionMoveUpdateDynamics_MoveToDynamicForce final : public FMarinerRootMotionMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_13F6[0x50];                                    // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionMoveUpdateDynamics_MoveToDynamicForce) == 0x000008, "Wrong alignment on FMarinerRootMotionMoveUpdateDynamics_MoveToDynamicForce");
 static_assert(sizeof(FMarinerRootMotionMoveUpdateDynamics_MoveToDynamicForce) == 0x000078, "Wrong size on FMarinerRootMotionMoveUpdateDynamics_MoveToDynamicForce");
@@ -5235,7 +5235,7 @@ static_assert(sizeof(FMarinerRootMotionMoveUpdateDynamics_MoveToDynamicForce) ==
 struct FMarinerRootMotionMoveUpdateDynamics_SlowToStop final : public FMarinerRootMotionMoveUpdateDynamics
 {
 public:
-	uint8                                         Pad_13F7[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionMoveUpdateDynamics_SlowToStop) == 0x000008, "Wrong alignment on FMarinerRootMotionMoveUpdateDynamics_SlowToStop");
 static_assert(sizeof(FMarinerRootMotionMoveUpdateDynamics_SlowToStop) == 0x000040, "Wrong size on FMarinerRootMotionMoveUpdateDynamics_SlowToStop");
@@ -5258,7 +5258,7 @@ public:
 	struct FVector                                PositionAtOne;                                     // 0x00B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FNonQuantizedRotator                   RotationAtOne;                                     // 0x00C4(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            LerpCurve;                                         // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F8[0x8];                                     // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionSource_LerpBetweenPoints) == 0x000010, "Wrong alignment on FMarinerRootMotionSource_LerpBetweenPoints");
 static_assert(sizeof(FMarinerRootMotionSource_LerpBetweenPoints) == 0x0000E0, "Wrong size on FMarinerRootMotionSource_LerpBetweenPoints");
@@ -5278,9 +5278,9 @@ public:
 	float                                         TargetVelocityMagnitude;                           // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ExtendedDurationOnStop;                            // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMarinerLerpToSpeedRootMotionPolicy           LerpTowardsTargetPolicy;                           // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13F9[0xB];                                     // 0x00B5(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B5[0xB];                                       // 0x00B5(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PreviousWeightedRatioRootMotionCompleted;          // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_13FA[0xC];                                     // 0x00C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C4[0xC];                                       // 0x00C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionSource_LerpToSpeed) == 0x000010, "Wrong alignment on FMarinerRootMotionSource_LerpToSpeed");
 static_assert(sizeof(FMarinerRootMotionSource_LerpToSpeed) == 0x0000D0, "Wrong size on FMarinerRootMotionSource_LerpToSpeed");
@@ -5308,7 +5308,7 @@ struct FMarinerRootMotionSource_MoveAlongSplineWithRotation final : public FMari
 {
 public:
 	class UCurveFloat*                            RotationProgressCurve;                             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FB[0x18];                                    // 0x00B8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x18];                                      // 0x00B8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionSource_MoveAlongSplineWithRotation) == 0x000010, "Wrong alignment on FMarinerRootMotionSource_MoveAlongSplineWithRotation");
 static_assert(sizeof(FMarinerRootMotionSource_MoveAlongSplineWithRotation) == 0x0000D0, "Wrong size on FMarinerRootMotionSource_MoveAlongSplineWithRotation");
@@ -5320,7 +5320,7 @@ struct FMarinerRootMotionSource_StopAllMomentum final : public FMarinerRootMotio
 {
 public:
 	EStopAllMomentumDeactivationMode              DeactivationMode;                                  // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FC[0xF];                                     // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerRootMotionSource_StopAllMomentum) == 0x000010, "Wrong alignment on FMarinerRootMotionSource_StopAllMomentum");
 static_assert(sizeof(FMarinerRootMotionSource_StopAllMomentum) == 0x0000B0, "Wrong size on FMarinerRootMotionSource_StopAllMomentum");
@@ -5369,7 +5369,7 @@ public:
 	struct FVector_NetQuantize                    LocalPosition;                                     // 0x0000(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector_NetQuantize                    LocalCustomTangent;                                // 0x000C(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESplinePointType                              Type;                                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FD[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerReplicatedSplinePoint) == 0x000004, "Wrong alignment on FMarinerReplicatedSplinePoint");
 static_assert(sizeof(FMarinerReplicatedSplinePoint) == 0x00001C, "Wrong size on FMarinerReplicatedSplinePoint");
@@ -5383,16 +5383,16 @@ struct FMarinerSplineReplicationData final
 {
 public:
 	int32                                         SplineID;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FE[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SplineLocalToWorld;                                // 0x0010(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         SplineDuration;                                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsSplineClosedLoop;                               // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDoesSplineHaveStationaryEndpoints;                // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13FF[0x2];                                     // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector_NetQuantizeNormal              SplineDefaultUpVector;                             // 0x0048(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1400[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMarinerReplicatedSplinePoint>  SplinePoints;                                      // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1401[0x8];                                     // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerSplineReplicationData) == 0x000010, "Wrong alignment on FMarinerSplineReplicationData");
 static_assert(sizeof(FMarinerSplineReplicationData) == 0x000070, "Wrong size on FMarinerSplineReplicationData");
@@ -5453,7 +5453,7 @@ public:
 	EMarinerPickupState                           CurrentState;                                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bHasSpawnedAllPickups;                             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         EnsureReplicationByte;                             // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1402[0x5];                                     // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerSynchronousPickupsPayload) == 0x000008, "Wrong alignment on FMarinerSynchronousPickupsPayload");
 static_assert(sizeof(FMarinerSynchronousPickupsPayload) == 0x000028, "Wrong size on FMarinerSynchronousPickupsPayload");
@@ -5469,15 +5469,15 @@ struct FMarinerTakeHitInfo final
 {
 public:
 	float                                         ActualDamage;                                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1403[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 DamageTypeClass;                                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class AMarinerCharacter>       PawnInstigator;                                    // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class AActor>                  DamageCauser;                                      // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DamageEventClassID;                                // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bKilled : 1;                                       // 0x0024(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1404[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         EnsureReplicationByte;                             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1405[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDamageEvent                           GeneralDamageEvent;                                // 0x0030(0x0010)(NativeAccessSpecifierPrivate)
 	struct FPointDamageEvent                      PointDamageEvent;                                  // 0x0040(0x00A8)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	struct FRadialDamageEvent                     RadialDamageEvent;                                 // 0x00E8(0x0040)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
@@ -5511,11 +5511,11 @@ struct FMarinerThrowItemReleasePayload final
 {
 public:
 	EMarinerItemSlot                              SlotToReleaseFrom;                                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1406[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector_NetQuantize                    ThrowReleaseRelativeLocation;                      // 0x0004(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector_NetQuantize                    ThrowVelocity;                                     // 0x0010(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         EnsureReplicationByte;                             // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1407[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerThrowItemReleasePayload) == 0x000004, "Wrong alignment on FMarinerThrowItemReleasePayload");
 static_assert(sizeof(FMarinerThrowItemReleasePayload) == 0x000020, "Wrong size on FMarinerThrowItemReleasePayload");
@@ -5531,7 +5531,7 @@ struct FMarinerBindingTypeData final
 public:
 	class FName                                   BindingName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsActionBinding;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1408[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AxisScalar;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMarinerBindingTypeData) == 0x000004, "Wrong alignment on FMarinerBindingTypeData");
@@ -5560,7 +5560,7 @@ struct FMarinerPlatformIconData final
 public:
 	struct FSlateBrush                            Icon;                                              // 0x0000(0x0088)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	bool                                          IsConsole;                                         // 0x0088(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1409[0x7];                                     // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerPlatformIconData) == 0x000008, "Wrong alignment on FMarinerPlatformIconData");
 static_assert(sizeof(FMarinerPlatformIconData) == 0x000090, "Wrong size on FMarinerPlatformIconData");
@@ -5574,7 +5574,7 @@ struct FMarinerUITeamData final
 public:
 	class FText                                   TeamName;                                          // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
 	struct FColor                                 TeamColor;                                         // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_140A[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMarinerUITeamData) == 0x000008, "Wrong alignment on FMarinerUITeamData");
 static_assert(sizeof(FMarinerUITeamData) == 0x000020, "Wrong size on FMarinerUITeamData");
@@ -5616,9 +5616,9 @@ static_assert(offsetof(FMarinerWeaponReloadReplicationData, ReloadAnimationNonce
 struct FWidgetPoolType final
 {
 public:
-	uint8                                         Pad_140B[0x18];                                    // 0x0000(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UUserWidget*>                    WidgetPool;                                        // 0x0018(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140C[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWidgetPoolType) == 0x000008, "Wrong alignment on FWidgetPoolType");
 static_assert(sizeof(FWidgetPoolType) == 0x000030, "Wrong size on FWidgetPoolType");
@@ -5646,7 +5646,7 @@ static_assert(offsetof(FWidgetPoolData, Owner) == 0x000010, "Member 'FWidgetPool
 struct FMarinerWorldUIPlayerData final
 {
 public:
-	uint8                                         Pad_140D[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerPlayerState*                    PlayerState;                                       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AMarinerPlayerStateCharacterSpawner*    Spawner;                                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AMarinerRocketTotem*                    Totem;                                             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

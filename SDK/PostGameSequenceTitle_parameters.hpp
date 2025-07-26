@@ -19,14 +19,14 @@ namespace SDK::Params
 struct PostGameSequenceTitle_C_SetTitle final
 {
 public:
-	class FText                                   Param_Title;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   Title_0;                                           // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_GetWidgetActive_ReturnValue;              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2237[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PostGameSequenceTitle_C_SetTitle) == 0x000008, "Wrong alignment on PostGameSequenceTitle_C_SetTitle");
 static_assert(sizeof(PostGameSequenceTitle_C_SetTitle) == 0x000028, "Wrong size on PostGameSequenceTitle_C_SetTitle");
-static_assert(offsetof(PostGameSequenceTitle_C_SetTitle, Param_Title) == 0x000000, "Member 'PostGameSequenceTitle_C_SetTitle::Param_Title' has a wrong offset!");
+static_assert(offsetof(PostGameSequenceTitle_C_SetTitle, Title_0) == 0x000000, "Member 'PostGameSequenceTitle_C_SetTitle::Title_0' has a wrong offset!");
 static_assert(offsetof(PostGameSequenceTitle_C_SetTitle, CallFunc_GetWidgetActive_ReturnValue) == 0x000018, "Member 'PostGameSequenceTitle_C_SetTitle::CallFunc_GetWidgetActive_ReturnValue' has a wrong offset!");
 static_assert(offsetof(PostGameSequenceTitle_C_SetTitle, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'PostGameSequenceTitle_C_SetTitle::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 

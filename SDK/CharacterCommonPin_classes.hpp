@@ -43,21 +43,21 @@ public:
 	bool                                          InNameViewCone;                                    // 0x0479(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsEnemyOwner;                                      // 0x047A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsReturningToArena;                                // 0x047B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21BA[0x4];                                     // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerPlayerState*                    PlayerStateReference;                              // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           LastInteractionTimer;                              // 0x0488(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasDamage;                                         // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21BB[0x7];                                     // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_491[0x7];                                      // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           LastDamageShortTimer;                              // 0x0498(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasActionText;                                     // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ForcedOn;                                          // 0x04A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21BC[0x6];                                     // 0x04A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A2[0x6];                                      // 0x04A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           LastDamageLongTimer;                               // 0x04A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         RenderScalarValue;                                 // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21BD[0x4];                                     // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MatchState;                                        // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          IsMegablasted;                                     // 0x04C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21BE[0x3];                                     // 0x04C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C9[0x3];                                      // 0x04C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              GameModePanelDefaultSize;                          // 0x04CC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              PinPointDefaultSize;                               // 0x04D4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              GameModePanelDefaultPosition;                      // 0x04DC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -83,7 +83,7 @@ public:
 	void SetIcon(const struct FSlateBrush& Brush, bool bForcesPinVisible, bool bImageCanDim);
 	void Construct();
 	void ClearIcon();
-	void SetGameModeWidget(TSubclassOf<class UMarinerPinGameModeWidget> Param_GameModeWidget, class AMarinerPlayerState* PlayerState);
+	void SetGameModeWidget(TSubclassOf<class UMarinerPinGameModeWidget> GameModeWidget_0, class AMarinerPlayerState* PlayerState);
 	void ClearGameModeWidget();
 	void OnCharacterArenaReturnStateChanged(EMarinerArenaReturnState PreviousState, EMarinerArenaReturnState NewState);
 	void OnHasLineOfSightToActorChanged(bool bHasLineOfSight);
@@ -115,7 +115,7 @@ public:
 	void SetGameModeWidgetScale(float NewScalar, float ActionTextExtraSpace);
 	void SaveGameModeWidgetScale();
 	void SetActionTextFontSize(int32 FontSize);
-	void SetGutterWidgetTextVisibility(bool Param_IsVisible);
+	void SetGutterWidgetTextVisibility(bool IsVisible_0);
 	void OnPlayerStateTeamChanged(class AMarinerPlayerState* PlayerState);
 	void OnSmallPortraitFinishLoad(struct FSlateBrush& LoadedPortrait);
 	void GetMatchStatus(bool* CanPlayMessages);

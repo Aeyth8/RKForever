@@ -131,11 +131,11 @@ public:
 	struct FVector                                Location;                                          // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CubeSize;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          DrawPersistentLines;                               // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109C[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Duration;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LineThickness;                                     // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoInitializeVolumes;                            // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109D[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_Debug_DrawVolumesAroundPoint) == 0x000004, "Wrong alignment on DonNavigationManager_Debug_DrawVolumesAroundPoint");
 static_assert(sizeof(DonNavigationManager_Debug_DrawVolumesAroundPoint) == 0x000020, "Wrong size on DonNavigationManager_Debug_DrawVolumesAroundPoint");
@@ -153,7 +153,7 @@ struct DonNavigationManager_Debug_DrawVoxelCollisionProfile final
 public:
 	class UPrimitiveComponent*                    MeshOrPrimitive;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDrawPersistent;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109E[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Duration;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(DonNavigationManager_Debug_DrawVoxelCollisionProfile) == 0x000008, "Wrong alignment on DonNavigationManager_Debug_DrawVoxelCollisionProfile");
@@ -169,13 +169,13 @@ struct DonNavigationManager_FindPathSolution_StressTesting final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Destination;                                       // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        PathSolutionRaw;                                   // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        PathSolutionOptimized;                             // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FDoNNavigationQueryParams              QueryParams;                                       // 0x0038(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FDoNNavigationDebugParams              DebugParams;                                       // 0x0058(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0064(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A0[0x3];                                     // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_FindPathSolution_StressTesting) == 0x000008, "Wrong alignment on DonNavigationManager_FindPathSolution_StressTesting");
 static_assert(sizeof(DonNavigationManager_FindPathSolution_StressTesting) == 0x000068, "Wrong size on DonNavigationManager_FindPathSolution_StressTesting");
@@ -196,12 +196,12 @@ public:
 	struct FVector                                Origin;                                            // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Distance;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFoundValidResult;                                 // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A1[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxDesiredAltitude;                                // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxZAngularDispacement;                            // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxAttempts;                                       // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0028(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A2[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_FindRandomPointAroundOriginInNavWorld) == 0x000008, "Wrong alignment on DonNavigationManager_FindRandomPointAroundOriginInNavWorld");
 static_assert(sizeof(DonNavigationManager_FindRandomPointAroundOriginInNavWorld) == 0x000038, "Wrong size on DonNavigationManager_FindRandomPointAroundOriginInNavWorld");
@@ -222,7 +222,7 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Distance;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFoundValidResult;                                 // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A3[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxDesiredAltitude;                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxZAngularDispacement;                            // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxAttempts;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -245,7 +245,7 @@ struct DonNavigationManager_HasTask final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A4[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_HasTask) == 0x000008, "Wrong alignment on DonNavigationManager_HasTask");
 static_assert(sizeof(DonNavigationManager_HasTask) == 0x000010, "Wrong size on DonNavigationManager_HasTask");
@@ -262,10 +262,10 @@ public:
 	struct FVector                                End;                                               // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FHitResult                             OutHit;                                            // 0x0020(0x0088)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bFindInitialOverlaps;                              // 0x00A8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A5[0x3];                                     // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CollisionShapeInflation;                           // 0x00AC(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00B0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A6[0x7];                                     // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_IsDirectPathLineSweep) == 0x000008, "Wrong alignment on DonNavigationManager_IsDirectPathLineSweep");
 static_assert(sizeof(DonNavigationManager_IsDirectPathLineSweep) == 0x0000B8, "Wrong size on DonNavigationManager_IsDirectPathLineSweep");
@@ -288,7 +288,7 @@ public:
 	TArray<class AActor*>                         ActorsToIgnore;                                    // 0x00A0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bFindInitialOverlaps;                              // 0x00B0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00B1(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A7[0x6];                                     // 0x00B2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_IsDirectPathLineTrace) == 0x000008, "Wrong alignment on DonNavigationManager_IsDirectPathLineTrace");
 static_assert(sizeof(DonNavigationManager_IsDirectPathLineTrace) == 0x0000B8, "Wrong size on DonNavigationManager_IsDirectPathLineTrace");
@@ -309,10 +309,10 @@ public:
 	struct FVector                                End;                                               // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FHitResult                             OutHit;                                            // 0x0020(0x0088)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bFindInitialOverlaps;                              // 0x00A8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A8[0x3];                                     // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CollisionShapeInflation;                           // 0x00AC(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00B0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A9[0x7];                                     // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_IsDirectPathSweep) == 0x000008, "Wrong alignment on DonNavigationManager_IsDirectPathSweep");
 static_assert(sizeof(DonNavigationManager_IsDirectPathSweep) == 0x0000B8, "Wrong size on DonNavigationManager_IsDirectPathSweep");
@@ -332,7 +332,7 @@ public:
 	struct FVector                                Location;                                          // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LineTraceHeight;                                   // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10AA[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_IsLocationBeneathLandscape) == 0x000004, "Wrong alignment on DonNavigationManager_IsLocationBeneathLandscape");
 static_assert(sizeof(DonNavigationManager_IsLocationBeneathLandscape) == 0x000014, "Wrong size on DonNavigationManager_IsLocationBeneathLandscape");
@@ -347,7 +347,7 @@ struct DonNavigationManager_IsLocationWithinNavigableWorld final
 public:
 	struct FVector                                DesiredLocation;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10AB[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_IsLocationWithinNavigableWorld) == 0x000004, "Wrong alignment on DonNavigationManager_IsLocationWithinNavigableWorld");
 static_assert(sizeof(DonNavigationManager_IsLocationWithinNavigableWorld) == 0x000010, "Wrong size on DonNavigationManager_IsLocationWithinNavigableWorld");
@@ -362,7 +362,7 @@ public:
 	class UPrimitiveComponent*                    Mesh;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BoundsScaleFactor;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10AC[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_IsMeshBoundsWithinNavigableWorld) == 0x000008, "Wrong alignment on DonNavigationManager_IsMeshBoundsWithinNavigableWorld");
 static_assert(sizeof(DonNavigationManager_IsMeshBoundsWithinNavigableWorld) == 0x000010, "Wrong size on DonNavigationManager_IsMeshBoundsWithinNavigableWorld");
@@ -397,7 +397,7 @@ public:
 	bool                                          bForceSynchronousExecution;                        // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDrawDebug;                                        // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x002A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10AD[0x5];                                     // 0x002B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_ScheduleDynamicCollisionUpdate) == 0x000008, "Wrong alignment on DonNavigationManager_ScheduleDynamicCollisionUpdate");
 static_assert(sizeof(DonNavigationManager_ScheduleDynamicCollisionUpdate) == 0x000030, "Wrong size on DonNavigationManager_ScheduleDynamicCollisionUpdate");
@@ -422,7 +422,7 @@ public:
 	struct FVector                                Destination;                                       // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ShowDebugData;                                     // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10AE[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_SchedulePathfindingTaskSimple) == 0x000008, "Wrong alignment on DonNavigationManager_SchedulePathfindingTaskSimple");
 static_assert(sizeof(DonNavigationManager_SchedulePathfindingTaskSimple) == 0x000018, "Wrong size on DonNavigationManager_SchedulePathfindingTaskSimple");
@@ -440,10 +440,10 @@ public:
 	struct FVector                                Source;                                            // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Destination;                                       // 0x001C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Reset;                                             // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10AF[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDoNNavigationDebugParams              DebugParams;                                       // 0x002C(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FColor                                 LineColor;                                         // 0x0038(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10B0[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DonNavigationManager_VisualizeNAVResult) == 0x000008, "Wrong alignment on DonNavigationManager_VisualizeNAVResult");
 static_assert(sizeof(DonNavigationManager_VisualizeNAVResult) == 0x000040, "Wrong size on DonNavigationManager_VisualizeNAVResult");

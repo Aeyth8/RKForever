@@ -23,16 +23,16 @@ struct OfferPurchaseButton_C_ExecuteUbergraph_OfferPurchaseButton final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2366[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerLayeredButton*                  K2Node_CustomEvent_Instance;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerAsyncUIFlowHandler*             CallFunc_Get_ReturnValue;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAsyncFlowOffers_C*                     K2Node_DynamicCast_AsAsync_Flow_Offers;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2367[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0028(0x0018)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2368[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0048(0x0018)()
 	struct FMangoPurchaseOffer                    K2Node_CustomEvent_PurchaseOffer;                  // 0x0060(0x00D8)()
 	class UMarinerPlayableCharacter*              K2Node_CustomEvent_Character;                      // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -70,12 +70,12 @@ struct OfferPurchaseButton_C_SetOffer final
 {
 public:
 	struct FMangoPurchaseOffer                    PurchaseOffer;                                     // 0x0000(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UMarinerPlayableCharacter*              Param_Character;                                   // 0x00D8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerPlayableCharacter*              Character_0;                                       // 0x00D8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(OfferPurchaseButton_C_SetOffer) == 0x000008, "Wrong alignment on OfferPurchaseButton_C_SetOffer");
 static_assert(sizeof(OfferPurchaseButton_C_SetOffer) == 0x0000E0, "Wrong size on OfferPurchaseButton_C_SetOffer");
 static_assert(offsetof(OfferPurchaseButton_C_SetOffer, PurchaseOffer) == 0x000000, "Member 'OfferPurchaseButton_C_SetOffer::PurchaseOffer' has a wrong offset!");
-static_assert(offsetof(OfferPurchaseButton_C_SetOffer, Param_Character) == 0x0000D8, "Member 'OfferPurchaseButton_C_SetOffer::Param_Character' has a wrong offset!");
+static_assert(offsetof(OfferPurchaseButton_C_SetOffer, Character_0) == 0x0000D8, "Member 'OfferPurchaseButton_C_SetOffer::Character_0' has a wrong offset!");
 
 // Function OfferPurchaseButton.OfferPurchaseButton_C.GetAssets
 // 0x00D0 (0x00D0 - 0x0000)

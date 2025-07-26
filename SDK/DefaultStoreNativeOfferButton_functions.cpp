@@ -20,9 +20,9 @@ namespace SDK
 // Function DefaultStoreNativeOfferButton.DefaultStoreNativeOfferButton_C.SetNativeOffer
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FMangoNativeOffer                Param_Nativeoffer                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FMangoNativeOffer                Nativeoffer_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UDefaultStoreNativeOfferButton_C::SetNativeOffer(const struct FMangoNativeOffer& Param_Nativeoffer)
+void UDefaultStoreNativeOfferButton_C::SetNativeOffer(const struct FMangoNativeOffer& Nativeoffer_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UDefaultStoreNativeOfferButton_C::SetNativeOffer(const struct FMangoNativeO
 
 	Params::DefaultStoreNativeOfferButton_C_SetNativeOffer Parms{};
 
-	Parms.Param_Nativeoffer = std::move(Param_Nativeoffer);
+	Parms.Nativeoffer_0 = std::move(Nativeoffer_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

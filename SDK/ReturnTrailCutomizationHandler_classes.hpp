@@ -39,7 +39,7 @@ public:
 	void OnSkinApplied(class UMarinerSkinCollectionDataAsset* SkinCollection);
 	void MenuExited();
 	void ApplyProfileSkinToCharacter();
-	void MenuEntered(class UMarinerPlayableCharacter* Param_CurrentPlayableCharacter);
+	void MenuEntered(class UMarinerPlayableCharacter* CurrentPlayableCharacter_0);
 	void ReceiveBeginPlay();
 	void BndEvt__MegaBlastEmitterComponent_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature(class FName EventName, float EmitterTime, const struct FVector& Location, const struct FVector& Velocity);
 	void LoadFinished_08E36DDD420F8510B865A6ADA5E99471(const TArray<class UAssetLoadResponse*>& LoadedAssetResponse);

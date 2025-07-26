@@ -44,12 +44,12 @@ class UMarinerGameUserSettings* UUICommon_C::GetUserSettings(class UObject* __Wo
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int32                                   NumColumns                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Row                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Column                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUICommon_C::ConvertCharacterIndexToRowCol(int32 NumColumns, int32 Param_Index, class UObject* __WorldContext, int32* Row, int32* Column)
+void UUICommon_C::ConvertCharacterIndexToRowCol(int32 NumColumns, int32 Index_0, class UObject* __WorldContext, int32* Row, int32* Column)
 {
 	static class UFunction* Func = nullptr;
 
@@ -59,7 +59,7 @@ void UUICommon_C::ConvertCharacterIndexToRowCol(int32 NumColumns, int32 Param_In
 	Params::UICommon_C_ConvertCharacterIndexToRowCol Parms{};
 
 	Parms.NumColumns = NumColumns;
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);

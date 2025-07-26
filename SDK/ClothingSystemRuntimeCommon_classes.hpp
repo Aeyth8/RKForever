@@ -47,7 +47,7 @@ public:
 	TArray<class FName>                           UsedBoneNames;                                     // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 UsedBoneIndices;                                   // 0x0088(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         ReferenceBoneIndex;                                // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4C[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClothingAssetCustomData*               CustomData;                                        // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -78,7 +78,7 @@ class UClothLODDataBase : public UObject
 public:
 	class UClothPhysicalMeshDataBase*             PhysicalMeshData;                                  // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FClothCollisionData                    CollisionData;                                     // 0x0030(0x0040)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4D[0x20];                                    // 0x0070(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x20];                                      // 0x0070(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

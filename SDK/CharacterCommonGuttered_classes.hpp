@@ -39,10 +39,10 @@ public:
 	class UImage*                                 WhiteCircleRing;                                   // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          StunActive;                                        // 0x0488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          PostStunActive;                                    // 0x0489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_258E[0x6];                                     // 0x048A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48A[0x6];                                      // 0x048A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            IconBrush;                                         // 0x0490(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          IsEnemy;                                           // 0x0518(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_258F[0x7];                                     // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_519[0x7];                                      // 0x0519(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CharacterBrush;                                    // 0x0520(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
 	UMulticastInlineDelegateProperty_             OnIconRefresh;                                     // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
@@ -50,11 +50,11 @@ public:
 	void OnIconRefresh__DelegateSignature();
 	void PopulateTeam(class AMarinerCharacter* Character);
 	void SetCirclePinRenderAngle(float RenderAngle);
-	void SetIconBrush(const struct FSlateBrush& Param_IconBrush);
+	void SetIconBrush(const struct FSlateBrush& IconBrush_0);
 	void PlayFlashAnimation();
-	void SetCharacterBrush(const struct FSlateBrush& Param_CharacterBrush);
+	void SetCharacterBrush(const struct FSlateBrush& CharacterBrush_0);
 	void RefreshIcon();
-	void SetGameModeWidget(class UClass* Param_GameModeWidget, class AMarinerPlayerState* PlayerState);
+	void SetGameModeWidget(class UClass* GameModeWidget_0, class AMarinerPlayerState* PlayerState);
 
 public:
 	static class UClass* StaticClass()

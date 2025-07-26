@@ -20,10 +20,10 @@ namespace SDK
 // Function ActivePlayersRow.ActivePlayersRow_C.SetPlayerName
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Param_PlayerName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class FString                           PlayerName_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    IsLocalPlayer                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UActivePlayersRow_C::SetPlayerName(const class FString& Param_PlayerName, bool IsLocalPlayer)
+void UActivePlayersRow_C::SetPlayerName(const class FString& PlayerName_0, bool IsLocalPlayer)
 {
 	static class UFunction* Func = nullptr;
 
@@ -32,7 +32,7 @@ void UActivePlayersRow_C::SetPlayerName(const class FString& Param_PlayerName, b
 
 	Params::ActivePlayersRow_C_SetPlayerName Parms{};
 
-	Parms.Param_PlayerName = std::move(Param_PlayerName);
+	Parms.PlayerName_0 = std::move(PlayerName_0);
 	Parms.IsLocalPlayer = IsLocalPlayer;
 
 	UObject::ProcessEvent(Func, &Parms);

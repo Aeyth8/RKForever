@@ -58,10 +58,10 @@ void ABP_MarinerGameState_C::OnOvertimeUIBegin__DelegateSignature()
 // Function BP_MarinerGameState.BP_MarinerGameState_C.OnExtraTimeChange__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsInExtraTime                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// ExtraTimeStates                         Param_ExtraTimeState                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsInExtraTime_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ExtraTimeStates                         ExtraTimeState_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MarinerGameState_C::OnExtraTimeChange__DelegateSignature(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState)
+void ABP_MarinerGameState_C::OnExtraTimeChange__DelegateSignature(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -70,8 +70,8 @@ void ABP_MarinerGameState_C::OnExtraTimeChange__DelegateSignature(bool Param_IsI
 
 	Params::BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature Parms{};
 
-	Parms.Param_IsInExtraTime = Param_IsInExtraTime;
-	Parms.Param_ExtraTimeState = Param_ExtraTimeState;
+	Parms.IsInExtraTime_0 = IsInExtraTime_0;
+	Parms.ExtraTimeState_0 = ExtraTimeState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -382,10 +382,10 @@ void ABP_MarinerGameState_C::HitchLoop()
 // Function BP_MarinerGameState.BP_MarinerGameState_C.OnExtraTimeChange_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsInExtraTime                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// ExtraTimeStates                         Param_ExtraTimeState                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsInExtraTime_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ExtraTimeStates                         ExtraTimeState_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MarinerGameState_C::OnExtraTimeChange_Event(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState)
+void ABP_MarinerGameState_C::OnExtraTimeChange_Event(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -394,8 +394,8 @@ void ABP_MarinerGameState_C::OnExtraTimeChange_Event(bool Param_IsInExtraTime, E
 
 	Params::BP_MarinerGameState_C_OnExtraTimeChange_Event Parms{};
 
-	Parms.Param_IsInExtraTime = Param_IsInExtraTime;
-	Parms.Param_ExtraTimeState = Param_ExtraTimeState;
+	Parms.IsInExtraTime_0 = IsInExtraTime_0;
+	Parms.ExtraTimeState_0 = ExtraTimeState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -440,10 +440,10 @@ void ABP_MarinerGameState_C::MulticastEnableExtraTimeTimer(bool IsEnabled, float
 // Function BP_MarinerGameState.BP_MarinerGameState_C.MulticastSetExtraTime
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsInExtraTime                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// ExtraTimeStates                         Param_ExtraTimeState                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsInExtraTime_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ExtraTimeStates                         ExtraTimeState_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MarinerGameState_C::MulticastSetExtraTime(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState)
+void ABP_MarinerGameState_C::MulticastSetExtraTime(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -452,8 +452,8 @@ void ABP_MarinerGameState_C::MulticastSetExtraTime(bool Param_IsInExtraTime, Ext
 
 	Params::BP_MarinerGameState_C_MulticastSetExtraTime Parms{};
 
-	Parms.Param_IsInExtraTime = Param_IsInExtraTime;
-	Parms.Param_ExtraTimeState = Param_ExtraTimeState;
+	Parms.IsInExtraTime_0 = IsInExtraTime_0;
+	Parms.ExtraTimeState_0 = ExtraTimeState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -462,10 +462,10 @@ void ABP_MarinerGameState_C::MulticastSetExtraTime(bool Param_IsInExtraTime, Ext
 // Function BP_MarinerGameState.BP_MarinerGameState_C.ServerSetExtraTime
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsInExtraTime                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// ExtraTimeStates                         Param_ExtraTimeState                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsInExtraTime_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// ExtraTimeStates                         ExtraTimeState_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MarinerGameState_C::ServerSetExtraTime(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState)
+void ABP_MarinerGameState_C::ServerSetExtraTime(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -474,8 +474,8 @@ void ABP_MarinerGameState_C::ServerSetExtraTime(bool Param_IsInExtraTime, ExtraT
 
 	Params::BP_MarinerGameState_C_ServerSetExtraTime Parms{};
 
-	Parms.Param_IsInExtraTime = Param_IsInExtraTime;
-	Parms.Param_ExtraTimeState = Param_ExtraTimeState;
+	Parms.IsInExtraTime_0 = IsInExtraTime_0;
+	Parms.ExtraTimeState_0 = ExtraTimeState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

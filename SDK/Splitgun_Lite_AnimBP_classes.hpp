@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "E_ItemActivationTypes_structs.hpp"
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "DodgeDirections_structs.hpp"
 #include "Mariner_structs.hpp"
 #include "Mariner_classes.hpp"
-#include "DodgeDirections_structs.hpp"
+#include "E_ItemActivationTypes_structs.hpp"
 
 
 namespace SDK
@@ -68,7 +68,7 @@ public:
 	class UAnimSequenceBase*                      PG_Victory_Idle;                                   // 0x0E38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CharacterLockedIn;                                 // 0x0E40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Won;                                               // 0x0E41(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_232F[0x6];                                     // 0x0E42(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E42[0x6];                                      // 0x0E42(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimSequenceBase*                      PG_MythicTransition;                               // 0x0E48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_AnimatedProp_C*                     Prop;                                              // 0x0E50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMesh*                          PropMesh;                                          // 0x0E58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -93,7 +93,7 @@ public:
 	void Anim_SpawnProp(class USkeletalMesh* SkeletalMesh, class UAnimSequence* Animation, class FName Socket, bool LoopAnim);
 	void Anim_PregameEmote(int32 Number);
 	void OnGameOutcomeDetermined(bool bHasWonOrDraw);
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void OnCharacterLockedIn();
 
 public:

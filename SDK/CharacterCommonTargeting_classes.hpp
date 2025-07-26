@@ -40,7 +40,7 @@ public:
 	void WidgetAnimationEvt_LockOnConfirmation_K2Node_WidgetAnimationEvent_2();
 	void WidgetAnimationEvt_LockOnComplete_K2Node_WidgetAnimationEvent_1();
 	void WidgetAnimationEvt_LockOnStart_K2Node_WidgetAnimationEvent_0();
-	void CompleteLockOn(class AMarinerCharacter* Param_LockedCharacter);
+	void CompleteLockOn(class AMarinerCharacter* LockedCharacter_0);
 	void LoopLockOn();
 	void StartLockOn();
 	void EndLockOn();

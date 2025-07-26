@@ -25,7 +25,7 @@ class UClothConfigNv final : public UClothConfigBase
 {
 public:
 	EClothingWindMethod                           WindMethod;                                        // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D54[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClothConstraintSetup                  VerticalConstraintConfig;                          // 0x002C(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FClothConstraintSetup                  HorizontalConstraintConfig;                        // 0x003C(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FClothConstraintSetup                  BendConstraintConfig;                              // 0x004C(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
@@ -47,13 +47,13 @@ public:
 	float                                         GravityScale;                                      // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                GravityOverride;                                   // 0x00D8(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseGravityOverride;                               // 0x00E4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D55[0x3];                                     // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TetherStiffness;                                   // 0x00E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TetherLimit;                                       // 0x00EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionThickness;                                // 0x00F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AnimDriveSpringStiffness;                          // 0x00F4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AnimDriveDamperStiffness;                          // 0x00F8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D56[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -101,7 +101,7 @@ class UClothingAssetNv final : public UClothingAssetCommon
 {
 public:
 	struct FClothConfig                           ClothConfig;                                       // 0x00A8(0x00D4)(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D57[0x4];                                     // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FClothLODData>                  LODData;                                           // 0x0180(0x0010)(ZeroConstructor, Deprecated, NativeAccessSpecifierPublic)
 
 public:
@@ -141,7 +141,7 @@ static_assert(sizeof(UClothingSimulationFactoryNv) == 0x000028, "Wrong size on U
 class UClothingSimulationInteractorNv final : public UClothingSimulationInteractor
 {
 public:
-	uint8                                         Pad_1D58[0x10];                                    // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void DisableGravityOverride();

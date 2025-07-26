@@ -23,11 +23,11 @@ namespace SDK
 class UGameplayTask : public UObject
 {
 public:
-	uint8                                         Pad_D8C[0x8];                                      // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   InstanceName;                                      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D8D[0x2];                                      // 0x0038(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x2];                                       // 0x0038(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	ETaskResourceOverlapPolicy                    ResourceOverlapPolicy;                             // 0x003A(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D8E[0x25];                                     // 0x003B(0x0025)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B[0x25];                                      // 0x003B(0x0025)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameplayTask*                          ChildTask;                                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -58,7 +58,7 @@ class UGameplayTask_TimeLimitedExecution final : public UGameplayTask
 public:
 	UMulticastInlineDelegateProperty_             OnFinished;                                        // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	UMulticastInlineDelegateProperty_             OnTimeExpired;                                     // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D8F[0x10];                                     // 0x0088(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_88[0x10];                                      // 0x0088(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -80,13 +80,13 @@ static_assert(offsetof(UGameplayTask_TimeLimitedExecution, OnTimeExpired) == 0x0
 class UGameplayTasksComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_D90[0xC];                                      // 0x00B0(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         BitPad_38 : 1;                                     // 0x00BC(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         Pad_B0[0xC];                                       // 0x00B0(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         BitPad_BC_0 : 1;                                   // 0x00BC(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
 	uint8                                         bIsNetDirty : 1;                                   // 0x00BC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D91[0x3];                                      // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UGameplayTask*>                  SimulatedTasks;                                    // 0x00C0(0x0010)(Net, ZeroConstructor, RepNotify, Protected, NativeAccessSpecifierProtected)
 	TArray<class UGameplayTask*>                  TaskPriorityQueue;                                 // 0x00D0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D92[0x10];                                     // 0x00E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E0[0x10];                                      // 0x00E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UGameplayTask*>                  TickingTasks;                                      // 0x00F0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<class UGameplayTask*>                  KnownTasks;                                        // 0x0100(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
 	UMulticastInlineDelegateProperty_             OnClaimedResourcesChange;                          // 0x0110(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
@@ -159,11 +159,11 @@ class UGameplayTask_SpawnActor final : public UGameplayTask
 public:
 	UMulticastInlineDelegateProperty_             Success;                                           // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	UMulticastInlineDelegateProperty_             DidNotSpawn;                                       // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D99[0x18];                                     // 0x0088(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_88[0x18];                                      // 0x0088(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class AActor>                     ClassToSpawn;                                      // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	static class UGameplayTask_SpawnActor* SpawnActor(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, TSubclassOf<class AActor> Param_Class, bool bSpawnOnlyOnAuthority);
+	static class UGameplayTask_SpawnActor* SpawnActor(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, TSubclassOf<class AActor> Class_0, bool bSpawnOnlyOnAuthority);
 
 	bool BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor);
 	void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);
@@ -190,7 +190,7 @@ class UGameplayTask_WaitDelay final : public UGameplayTask
 {
 public:
 	UMulticastInlineDelegateProperty_             OnFinish;                                          // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9C[0x8];                                      // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UGameplayTask_WaitDelay* TaskWaitDelay(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, float Time, const uint8 Priority);
@@ -218,9 +218,9 @@ class UGameplayTaskResource : public UObject
 public:
 	int32                                         ManualResourceID;                                  // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int8                                          AutoResourceID;                                    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D9E[0x3];                                      // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bManuallySetID : 1;                                // 0x0030(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D9F[0x7];                                      // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

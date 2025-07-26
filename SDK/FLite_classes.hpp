@@ -43,7 +43,7 @@ static_assert(offsetof(AFLiteAudioActor, AudioComponent) == 0x000218, "Member 'A
 class URawAudioComponent final : public UAkAudioInputComponent
 {
 public:
-	uint8                                         Pad_10B3[0x40];                                    // 0x03E0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E0[0x40];                                     // 0x03E0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

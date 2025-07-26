@@ -27,7 +27,7 @@ public:
 	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1ED2[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(SK_TotemPet_SpaceShip_AnimBP_C_ExecuteUbergraph_SK_TotemPet_SpaceShip_AnimBP) == 0x000008, "Wrong alignment on SK_TotemPet_SpaceShip_AnimBP_C_ExecuteUbergraph_SK_TotemPet_SpaceShip_AnimBP");
@@ -56,11 +56,11 @@ static_assert(offsetof(SK_TotemPet_SpaceShip_AnimBP_C_BlueprintUpdateAnimation, 
 struct SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph final
 {
 public:
-	struct FPoseLink                              Param_AnimGraph;                                   // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
 static_assert(alignof(SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph");
 static_assert(sizeof(SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph");
-static_assert(offsetof(SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph, Param_AnimGraph) == 0x000000, "Member 'SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph::Param_AnimGraph' has a wrong offset!");
+static_assert(offsetof(SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'SK_TotemPet_SpaceShip_AnimBP_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 }
 

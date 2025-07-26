@@ -22,7 +22,7 @@ struct NativePurchaseMessageBox_C_ExecuteUbergraph_NativePurchaseMessageBox fina
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D1A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerMessageBoxNativePurchaseData   CallFunc_GetData_ReturnValue;                      // 0x0008(0x01A0)(ConstParm, ContainsInstancedReference)
 };
 static_assert(alignof(NativePurchaseMessageBox_C_ExecuteUbergraph_NativePurchaseMessageBox) == 0x000008, "Wrong alignment on NativePurchaseMessageBox_C_ExecuteUbergraph_NativePurchaseMessageBox");

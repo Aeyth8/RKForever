@@ -26,7 +26,7 @@ struct PurchasePreviewWidget_C_ExecuteUbergraph_PurchasePreviewWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2350[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerLayeredButton*                  K2Node_ComponentBoundEvent_Instance_1;             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerLayeredButton*                  K2Node_ComponentBoundEvent_Instance;               // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -63,10 +63,10 @@ static_assert(offsetof(PurchasePreviewWidget_C_BndEvt__PurchaseGeneric_K2Node_Co
 struct PurchasePreviewWidget_C_SetOfferAndTier final
 {
 public:
-	class UItemLoadResponse*                      Param_ItemLoadResponse;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_UseDirectPurchase;                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2351[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMarinerPlayableCharacter*              Param_Character;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UItemLoadResponse*                      ItemLoadResponse_0;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseDirectPurchase_0;                               // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMarinerPlayableCharacter*              Character_0;                                       // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_ItemLoadResponse_ReturnValue;    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -75,9 +75,9 @@ public:
 };
 static_assert(alignof(PurchasePreviewWidget_C_SetOfferAndTier) == 0x000008, "Wrong alignment on PurchasePreviewWidget_C_SetOfferAndTier");
 static_assert(sizeof(PurchasePreviewWidget_C_SetOfferAndTier) == 0x000020, "Wrong size on PurchasePreviewWidget_C_SetOfferAndTier");
-static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, Param_ItemLoadResponse) == 0x000000, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::Param_ItemLoadResponse' has a wrong offset!");
-static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, Param_UseDirectPurchase) == 0x000008, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::Param_UseDirectPurchase' has a wrong offset!");
-static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, Param_Character) == 0x000010, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::Param_Character' has a wrong offset!");
+static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, ItemLoadResponse_0) == 0x000000, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::ItemLoadResponse_0' has a wrong offset!");
+static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, UseDirectPurchase_0) == 0x000008, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::UseDirectPurchase_0' has a wrong offset!");
+static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, Character_0) == 0x000010, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::Character_0' has a wrong offset!");
 static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000018, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000019, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(PurchasePreviewWidget_C_SetOfferAndTier, CallFunc_NotEqual_ItemLoadResponse_ReturnValue) == 0x00001A, "Member 'PurchasePreviewWidget_C_SetOfferAndTier::CallFunc_NotEqual_ItemLoadResponse_ReturnValue' has a wrong offset!");
@@ -90,31 +90,31 @@ struct PurchasePreviewWidget_C_Populate final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2352[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerFrontEndGlobals*                CallFunc_GetFrontEndGlobals_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerCMSItemDataAsset*               K2Node_DynamicCast_AsMariner_CMSItem_Data_Asset;   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2353[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerStoreGlobals*                   CallFunc_GetStoreGlobals_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Populate_ReturnValue;                     // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2354[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetOfferButtonText_ReturnValue;           // 0x0030(0x0018)(ConstParm)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2355[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x004C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2356[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0060(0x0028)()
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2357[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0090(0x0018)()
 	class FText                                   CallFunc_GetOfferTypeName_OutOfferName;            // 0x00A8(0x0018)()
 	bool                                          CallFunc_GetOfferTypeName_ReturnValue;             // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable_1;                              // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2358[0x6];                                     // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00C8(0x0040)(HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable;                              // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0110(0x0010)(ZeroConstructor, ReferenceParm)
@@ -125,15 +125,15 @@ public:
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x015B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2359[0x4];                                     // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoInventoryManager*                 CallFunc_Get_ReturnValue;                          // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsOfferOwned_ReturnValue;                 // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_235A[0x6];                                     // 0x016A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16A[0x6];                                      // 0x016A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable_1;                            // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                K2Node_Select_Default_1;                           // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Populate_ReturnValue_2;                   // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_235B[0x7];                                     // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0188(0x0088)()
 	bool                                          CallFunc_Populate_ReturnValue_3;                   // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -187,15 +187,15 @@ public:
 	class UMarinerFrontEndGlobals*                CallFunc_GetFrontEndGlobals_ReturnValue;           // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerStoreGlobals*                   CallFunc_GetStoreGlobals_ReturnValue;              // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_235C[0x4];                                     // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetOfferTypeName_OutOfferName;            // 0x0108(0x0018)()
 	bool                                          CallFunc_GetOfferTypeName_ReturnValue;             // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_235D[0x6];                                     // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0128(0x0040)(HasGetValueTypeHash)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_235E[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetOfferName_ReturnValue;                 // 0x0178(0x0018)()
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0190(0x0040)(HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x01D0(0x0040)(HasGetValueTypeHash)
@@ -236,16 +236,16 @@ public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_235F[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DateTimeDateTime_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2360[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue;    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DateTimeDateTime_ReturnValue;        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2361[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetTotalSeconds_ReturnValue;              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2362[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_FormatEventTimeRemaining_ReturnValue;     // 0x0038(0x0018)()
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

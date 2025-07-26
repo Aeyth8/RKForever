@@ -37,7 +37,7 @@ struct DailyRewardWidget_C_ExecuteUbergraph_DailyRewardWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20A5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(DailyRewardWidget_C_ExecuteUbergraph_DailyRewardWidget) == 0x000008, "Wrong alignment on DailyRewardWidget_C_ExecuteUbergraph_DailyRewardWidget");
@@ -50,31 +50,31 @@ static_assert(offsetof(DailyRewardWidget_C_ExecuteUbergraph_DailyRewardWidget, C
 struct DailyRewardWidget_C_PopulateReward final
 {
 public:
-	struct FMangoLoginReward                      Param_LoginReward;                                 // 0x0000(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FMangoLoginReward                      LoginReward_0;                                     // 0x0000(0x00D8)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          IsActiveReward;                                    // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A6[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UMarinerLayeredButton* Instance)> K2Node_CreateDelegate_OutputDelegate;              // 0x00DC(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A7[0x3];                                     // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoQuestManager*                     CallFunc_Get_ReturnValue;                          // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoLoginReward                      CallFunc_GetLoginQuestSelectedReward_OutLoginReward; // 0x00F8(0x00D8)()
 	bool                                          CallFunc_GetLoginQuestSelectedReward_ReturnValue;  // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A8[0x7];                                     // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x01D8(0x0040)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0218(0x0010)(ZeroConstructor, ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0228(0x0018)()
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A9[0x7];                                     // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0248(0x0040)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0288(0x0010)(ZeroConstructor, ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0298(0x0018)()
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20AA[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x02B8(0x0018)()
 };
 static_assert(alignof(DailyRewardWidget_C_PopulateReward) == 0x000008, "Wrong alignment on DailyRewardWidget_C_PopulateReward");
 static_assert(sizeof(DailyRewardWidget_C_PopulateReward) == 0x0002D0, "Wrong size on DailyRewardWidget_C_PopulateReward");
-static_assert(offsetof(DailyRewardWidget_C_PopulateReward, Param_LoginReward) == 0x000000, "Member 'DailyRewardWidget_C_PopulateReward::Param_LoginReward' has a wrong offset!");
+static_assert(offsetof(DailyRewardWidget_C_PopulateReward, LoginReward_0) == 0x000000, "Member 'DailyRewardWidget_C_PopulateReward::LoginReward_0' has a wrong offset!");
 static_assert(offsetof(DailyRewardWidget_C_PopulateReward, IsActiveReward) == 0x0000D8, "Member 'DailyRewardWidget_C_PopulateReward::IsActiveReward' has a wrong offset!");
 static_assert(offsetof(DailyRewardWidget_C_PopulateReward, K2Node_CreateDelegate_OutputDelegate) == 0x0000DC, "Member 'DailyRewardWidget_C_PopulateReward::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(DailyRewardWidget_C_PopulateReward, Temp_bool_Variable) == 0x0000EC, "Member 'DailyRewardWidget_C_PopulateReward::Temp_bool_Variable' has a wrong offset!");
@@ -99,11 +99,11 @@ public:
 	bool                                          IsActive;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20AB[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20AC[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0038(0x0028)()
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

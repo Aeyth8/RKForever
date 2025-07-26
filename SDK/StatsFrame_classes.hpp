@@ -43,17 +43,17 @@ public:
 public:
 	void ExecuteUbergraph_StatsFrame(int32 EntryPoint);
 	void BndEvt__Bound_PlayerPostGameWidget_K2Node_ComponentBoundEvent_0_OnSelectionIndexChangedEvent__DelegateSignature(int32 SelectedIndex);
-	void PopulatePlayerStats(const struct FMatchEnd& MatchEndData, const struct FMatchEndPlayer& MatchEndPlayerData, bool bIsLocalPlayer, bool bIsClientTeam, int32 Param_Rank);
+	void PopulatePlayerStats(const struct FMatchEnd& MatchEndData, const struct FMatchEndPlayer& MatchEndPlayerData, bool bIsLocalPlayer, bool bIsClientTeam, int32 Rank_0);
 	void PopulatePlayer(const struct FMatchEnd& MatchEnd, const struct FMatchEndPlayer& MatchEndPlayer, bool IsLocalPlayer, bool IsClientTeam);
 	void PopulateEmpty(bool IsClientTeam);
 	void SetBackground(bool IsClientTeam);
-	void SetPlayerName(const class FText& Param_PlayerName, bool IsLocalPlayer, EMarinerGameOutcome GameOutcome);
+	void SetPlayerName(const class FText& PlayerName_0, bool IsLocalPlayer, EMarinerGameOutcome GameOutcome);
 	void SetIcon(const struct FMatchEndPlayer& MatchEndPlayer);
 	void SetStats(const struct FMatchEnd& MatchEnd, const struct FMatchEndPlayer& MatchEndPlayer, bool IsLocalPlayer);
-	void SetCharacterLevel(int32 Param_CharacterLevel, bool IsLocalPlayer, bool IsClientTeam, bool IsRanked);
+	void SetCharacterLevel(int32 CharacterLevel_0, bool IsLocalPlayer, bool IsClientTeam, bool IsRanked);
 	void OnLoadSmallPortrait(struct FSlateBrush& Brush);
 	void GetColor(bool IsLocalPlayer, EMarinerGameOutcome GameOutcome, struct FSlateColor* Color);
-	void SetRank(int32 Param_Rank, bool IsRankedSession);
+	void SetRank(int32 Rank_0, bool IsRankedSession);
 
 public:
 	static class UClass* StaticClass()

@@ -63,7 +63,7 @@ public:
 	void PopulateRocketparts(int32 RocketParts);
 	void PopulateItem(const struct FMangoItem& Item, int32 DupRocketpartsValue);
 	void PopulateNativeOffer(const struct FMangoNativeOffer& Nativeoffer);
-	void PopulateDuplicateAssets(int32 Param_PartsValue);
+	void PopulateDuplicateAssets(int32 PartsValue_0);
 	void PopulateItemType(const struct FMangoItem& Item);
 	void PopulateProgressionReward(const struct FMangoRewards& Reward);
 	void PopulateBlastPassReward(int32 BlastBarProgress);

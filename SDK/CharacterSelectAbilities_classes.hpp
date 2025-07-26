@@ -28,12 +28,12 @@ public:
 	class UCharacterAbility_C*                    WeaponSecondary;                                   // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCharacterAbility_C*                    WeaponSpecial;                                     // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          InputHeld;                                         // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F70[0x7];                                     // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerPlayableCharacter*              Character;                                         // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool Populate();
-	void SetCharacter(class UMarinerPlayableCharacter* Param_Character);
+	void SetCharacter(class UMarinerPlayableCharacter* Character_0);
 	bool HandleInput(EMarinerInputActions InInput);
 
 public:

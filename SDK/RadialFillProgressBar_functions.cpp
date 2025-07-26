@@ -60,9 +60,9 @@ void URadialFillProgressBar_C::PreConstruct(bool IsDesignTime)
 // Function RadialFillProgressBar.RadialFillProgressBar_C.Set Progress
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Param_Progress                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Progress_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void URadialFillProgressBar_C::Set_Progress(float Param_Progress)
+void URadialFillProgressBar_C::Set_Progress(float Progress_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -71,7 +71,7 @@ void URadialFillProgressBar_C::Set_Progress(float Param_Progress)
 
 	Params::RadialFillProgressBar_C_Set_Progress Parms{};
 
-	Parms.Param_Progress = Param_Progress;
+	Parms.Progress_0 = Progress_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -80,9 +80,9 @@ void URadialFillProgressBar_C::Set_Progress(float Param_Progress)
 // Function RadialFillProgressBar.RadialFillProgressBar_C.Get Progress
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Param_Progress                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Progress_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void URadialFillProgressBar_C::Get_Progress(float* Param_Progress)
+void URadialFillProgressBar_C::Get_Progress(float* Progress_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -93,8 +93,8 @@ void URadialFillProgressBar_C::Get_Progress(float* Param_Progress)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Progress != nullptr)
-		*Param_Progress = Parms.Param_Progress;
+	if (Progress_0 != nullptr)
+		*Progress_0 = Parms.Progress_0;
 }
 
 }

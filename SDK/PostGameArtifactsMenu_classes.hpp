@@ -30,7 +30,7 @@ public:
 	class UHorizontalBox*                         RootPanel;                                         // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<struct FMangoItemResult>               LevelUpArtifacts;                                  // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	float                                         ArtifactPresentTimer;                              // 0x0510(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22BB[0x4];                                     // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_514[0x4];                                      // 0x0514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMangoLevelRewardItem>          UnlockedArtifacts;                                 // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int32                                         ProgressPresentationsComplete;                     // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         StartingArtifactLevel;                             // 0x052C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

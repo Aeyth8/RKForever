@@ -40,7 +40,7 @@ public:
 	void BndEvt__Button_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__Button_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void SetBundleOfferToShow(const struct FMangoNativeOffer& InOffer, bool CanPurchase, bool Param_AllowMouseInteraction);
+	void SetBundleOfferToShow(const struct FMangoNativeOffer& InOffer, bool CanPurchase, bool AllowMouseInteraction_0);
 	bool Populate();
 
 public:

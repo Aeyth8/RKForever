@@ -37,13 +37,13 @@ public:
 	class USizeBox*                               RootSizeBox;                                       // 0x2FD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UMarinerPlayableCharacter*              Character;                                         // 0x2FD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Premium;                                           // 0x2FE0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2365[0x7];                                     // 0x2FE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2FE1[0x7];                                     // 0x2FE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoPurchaseOffer                    Offer;                                             // 0x2FE8(0x00D8)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_OfferPurchaseButton(int32 EntryPoint);
 	void BeginOfferPurchase(class UMarinerLayeredButton* Instance);
-	void SetOffer(const struct FMangoPurchaseOffer& PurchaseOffer, class UMarinerPlayableCharacter* Param_Character);
+	void SetOffer(const struct FMangoPurchaseOffer& PurchaseOffer, class UMarinerPlayableCharacter* Character_0);
 
 	struct FMarinerLayeredButtonAssets GetAssets() const;
 

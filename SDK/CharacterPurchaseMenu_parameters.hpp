@@ -25,45 +25,45 @@ struct CharacterPurchaseMenu_C_ExecuteUbergraph_CharacterPurchaseMenu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2011[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	class UMarinerAsyncUIFlowHandler*             CallFunc_Get_ReturnValue;                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bToSubLayer;                          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2012[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAsyncCharacterSpawner_C*               K2Node_DynamicCast_AsAsync_Character_Spawner;      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_bFromSubMenu;                         // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2013[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerAsyncUIFlowHandler*             CallFunc_Get_ReturnValue_1;                        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoInventoryManager*                 CallFunc_Get_ReturnValue_2;                        // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAsyncCharacterSpawner_C*               K2Node_DynamicCast_AsAsync_Character_Spawner_1;    // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x0051(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2014[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_OfferId;                        // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FMangoOrderDetails                     K2Node_CustomEvent_OrderDetails;                   // 0x0068(0x0050)(ConstParm)
 	class UMangoInventoryManager*                 CallFunc_Get_ReturnValue_3;                        // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_RemoveSelf_ReturnValue;                   // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2015[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UMarinerAnimatedWidget* Instance, EWidgetAnimationState NewState)> K2Node_CreateDelegate_OutputDelegate;              // 0x00C4(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2016[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerAnimatedWidget*                 K2Node_CustomEvent_Instance;                       // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EWidgetAnimationState                         K2Node_CustomEvent_NewState;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsCharacterActiveBlastPassReward_IsReward; // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2017[0x1];                                     // 0x00E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E3[0x1];                                       // 0x00E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(bool bWasSuccessful, const class FString& OfferId, struct FMangoOrderDetails& OrderDetails)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x00E4(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2018[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UMarinerLayeredButton*                  K2Node_ComponentBoundEvent_Instance_1;             // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerAsyncUIFlowHandler*             CallFunc_Get_ReturnValue_4;                        // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue_5;                        // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAsyncFlowOffers_C*                     K2Node_DynamicCast_AsAsync_Flow_Offers;            // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2019[0x7];                                     // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoBlastPassDefinition              CallFunc_TryGetActiveBlastPassDefinition_OutDefinition; // 0x0130(0x0068)()
 	bool                                          CallFunc_TryGetActiveBlastPassDefinition_ReturnValue; // 0x0198(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_201A[0x7];                                     // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerPlayableCharacter*              K2Node_CustomEvent_Character;                      // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerLayeredButton*                  K2Node_ComponentBoundEvent_Instance;               // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -122,11 +122,11 @@ static_assert(offsetof(CharacterPurchaseMenu_C_BndEvt__PromotionButton_K2Node_Co
 struct CharacterPurchaseMenu_C_PopulateCharacter final
 {
 public:
-	class UMarinerPlayableCharacter*              Param_Character;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerPlayableCharacter*              Character_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(CharacterPurchaseMenu_C_PopulateCharacter) == 0x000008, "Wrong alignment on CharacterPurchaseMenu_C_PopulateCharacter");
 static_assert(sizeof(CharacterPurchaseMenu_C_PopulateCharacter) == 0x000008, "Wrong size on CharacterPurchaseMenu_C_PopulateCharacter");
-static_assert(offsetof(CharacterPurchaseMenu_C_PopulateCharacter, Param_Character) == 0x000000, "Member 'CharacterPurchaseMenu_C_PopulateCharacter::Param_Character' has a wrong offset!");
+static_assert(offsetof(CharacterPurchaseMenu_C_PopulateCharacter, Character_0) == 0x000000, "Member 'CharacterPurchaseMenu_C_PopulateCharacter::Character_0' has a wrong offset!");
 
 // Function CharacterPurchaseMenu.CharacterPurchaseMenu_C.BndEvt__BlastPassButton_K2Node_ComponentBoundEvent_0_OnLayeredButtonEvent__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -158,7 +158,7 @@ struct CharacterPurchaseMenu_C_OnStorePurchaseComplete final
 {
 public:
 	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_201B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 OfferId;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	struct FMangoOrderDetails                     OrderDetails;                                      // 0x0018(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -213,9 +213,9 @@ struct CharacterPurchaseMenu_C_UpdatePrompts final
 {
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_201C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerLinearColorStates              K2Node_MakeStruct_MarinerLinearColorStates;        // 0x0004(0x0030)(NoDestructor)
-	uint8                                         Pad_201D[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0038(0x0088)()
 	struct FMarinerLinearColorStates              K2Node_MakeStruct_MarinerLinearColorStates_1;      // 0x00C0(0x0030)(NoDestructor)
 	struct FMarinerPromptIconData                 K2Node_MakeStruct_MarinerPromptIconData;           // 0x00F0(0x00D8)()
@@ -226,7 +226,7 @@ public:
 	struct FMarinerPromptData                     K2Node_MakeStruct_MarinerPromptData_2;             // 0x0558(0x0118)()
 	bool                                          CallFunc_AddHostPrompt_ReturnValue;                // 0x0670(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ClearHostPrompts_ReturnValue;             // 0x0671(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_201E[0x6];                                     // 0x0672(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_672[0x6];                                      // 0x0672(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerPromptData                     K2Node_Select_Default;                             // 0x0678(0x0118)(ConstParm)
 	bool                                          CallFunc_AddHostPrompt_ReturnValue_1;              // 0x0790(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -252,20 +252,20 @@ static_assert(offsetof(CharacterPurchaseMenu_C_UpdatePrompts, CallFunc_AddHostPr
 struct CharacterPurchaseMenu_C_GetCharacterPurchaseOffer final
 {
 public:
-	class UMarinerPlayableCharacter*              Param_Character;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerPlayableCharacter*              Character_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoPurchaseOffer                    PurchaseOffer;                                     // 0x0008(0x00D8)(Parm, OutParm)
 	bool                                          IsValid;                                           // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_201F[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoPurchasableCharacter             CallFunc_GetPurchasableCharacter_OutPurchaseCharacter; // 0x00F0(0x00F0)()
 	bool                                          CallFunc_GetPurchasableCharacter_ReturnValue;      // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2020[0x7];                                     // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E1[0x7];                                      // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoPurchaseOffer                    CallFunc_GetPurchaseOfferById_OutPurchaseOffer;    // 0x01E8(0x00D8)()
 	bool                                          CallFunc_GetPurchaseOfferById_ReturnValue;         // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(CharacterPurchaseMenu_C_GetCharacterPurchaseOffer) == 0x000008, "Wrong alignment on CharacterPurchaseMenu_C_GetCharacterPurchaseOffer");
 static_assert(sizeof(CharacterPurchaseMenu_C_GetCharacterPurchaseOffer) == 0x0002C8, "Wrong size on CharacterPurchaseMenu_C_GetCharacterPurchaseOffer");
-static_assert(offsetof(CharacterPurchaseMenu_C_GetCharacterPurchaseOffer, Param_Character) == 0x000000, "Member 'CharacterPurchaseMenu_C_GetCharacterPurchaseOffer::Param_Character' has a wrong offset!");
+static_assert(offsetof(CharacterPurchaseMenu_C_GetCharacterPurchaseOffer, Character_0) == 0x000000, "Member 'CharacterPurchaseMenu_C_GetCharacterPurchaseOffer::Character_0' has a wrong offset!");
 static_assert(offsetof(CharacterPurchaseMenu_C_GetCharacterPurchaseOffer, PurchaseOffer) == 0x000008, "Member 'CharacterPurchaseMenu_C_GetCharacterPurchaseOffer::PurchaseOffer' has a wrong offset!");
 static_assert(offsetof(CharacterPurchaseMenu_C_GetCharacterPurchaseOffer, IsValid) == 0x0000E0, "Member 'CharacterPurchaseMenu_C_GetCharacterPurchaseOffer::IsValid' has a wrong offset!");
 static_assert(offsetof(CharacterPurchaseMenu_C_GetCharacterPurchaseOffer, CallFunc_Get_ReturnValue) == 0x0000E8, "Member 'CharacterPurchaseMenu_C_GetCharacterPurchaseOffer::CallFunc_Get_ReturnValue' has a wrong offset!");
@@ -280,13 +280,13 @@ struct CharacterPurchaseMenu_C_IsCharacterActiveBlastPassReward final
 {
 public:
 	bool                                          IsReward;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2021[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetPathName_ReturnValue;                  // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue_1;                        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoItem                             CallFunc_TryGetCMSItemByAssetPath_OutItem;         // 0x0028(0x0050)()
 	bool                                          CallFunc_TryGetCMSItemByAssetPath_ReturnValue;     // 0x0078(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2022[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetBlastPassItemTier_OutTier;             // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetBlastPassItemTier_OutIsPaid;           // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GetBlastPassItemTier_ReturnValue;         // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

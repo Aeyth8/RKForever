@@ -23,19 +23,19 @@ namespace SDK::Params
 struct ItemProgressionWidget_C_SetItemUnlock final
 {
 public:
-	struct FMangoProgressionCharacterItemUnlock   Param_ItemUnlock;                                  // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          Param_IsOwned;                                     // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_236E[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UItemLoadResponse*                      Param_ItemLoadResponse;                            // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMangoProgressionCharacterItemUnlock   ItemUnlock_0;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          IsOwned_0;                                         // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UItemLoadResponse*                      ItemLoadResponse_0;                                // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_MangoProgressionCharacterItemUnlock_ReturnValue; // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(ItemProgressionWidget_C_SetItemUnlock) == 0x000008, "Wrong alignment on ItemProgressionWidget_C_SetItemUnlock");
 static_assert(sizeof(ItemProgressionWidget_C_SetItemUnlock) == 0x000030, "Wrong size on ItemProgressionWidget_C_SetItemUnlock");
-static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, Param_ItemUnlock) == 0x000000, "Member 'ItemProgressionWidget_C_SetItemUnlock::Param_ItemUnlock' has a wrong offset!");
-static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, Param_IsOwned) == 0x000018, "Member 'ItemProgressionWidget_C_SetItemUnlock::Param_IsOwned' has a wrong offset!");
-static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, Param_ItemLoadResponse) == 0x000020, "Member 'ItemProgressionWidget_C_SetItemUnlock::Param_ItemLoadResponse' has a wrong offset!");
+static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, ItemUnlock_0) == 0x000000, "Member 'ItemProgressionWidget_C_SetItemUnlock::ItemUnlock_0' has a wrong offset!");
+static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, IsOwned_0) == 0x000018, "Member 'ItemProgressionWidget_C_SetItemUnlock::IsOwned_0' has a wrong offset!");
+static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, ItemLoadResponse_0) == 0x000020, "Member 'ItemProgressionWidget_C_SetItemUnlock::ItemLoadResponse_0' has a wrong offset!");
 static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000028, "Member 'ItemProgressionWidget_C_SetItemUnlock::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, CallFunc_NotEqual_MangoProgressionCharacterItemUnlock_ReturnValue) == 0x000029, "Member 'ItemProgressionWidget_C_SetItemUnlock::CallFunc_NotEqual_MangoProgressionCharacterItemUnlock_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ItemProgressionWidget_C_SetItemUnlock, CallFunc_BooleanOR_ReturnValue) == 0x00002A, "Member 'ItemProgressionWidget_C_SetItemUnlock::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
@@ -46,26 +46,26 @@ struct ItemProgressionWidget_C_Populate final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_236F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerCMSItemDataAsset*               K2Node_DynamicCast_AsMariner_CMSItem_Data_Asset;   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2370[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable_1;                            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoPlayerManager*                    CallFunc_Get_ReturnValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameGlobals*                    CallFunc_GetGameGlobals_ReturnValue;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2371[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0048(0x0088)()
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00D0(0x0040)(HasGetValueTypeHash)
 	class UMarinerPlayableCharacter*              CallFunc_GetCharacterDataByEngineID_ReturnValue;   // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2372[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerSkinCollectionDataAsset*        CallFunc_GetDefaultSkinForCharacter_SkinCollection; // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UMarinerSkinCollectionDataAsset> CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue; // 0x0128(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2373[0x7];                                     // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetCMSNameForSkinCollection_ReturnValue;  // 0x0158(0x0018)(ConstParm)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0170(0x0040)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x01B0(0x0010)(ZeroConstructor, ReferenceParm)

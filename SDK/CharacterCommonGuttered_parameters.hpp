@@ -26,11 +26,11 @@ public:
 	class AMarinerCharacter*                      Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMarinerPlayerState*                    K2Node_DynamicCast_AsMariner_Player_State;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2590[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetTeamIndex_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMarinerHostility                             CallFunc_TryAndGetHostilityRelativeToLocalPlayer_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetMarinerTeamColorbyHostility_bIsValid;  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2591[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 CallFunc_GetMarinerTeamColorbyHostility_ReturnValue; // 0x001C(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -61,11 +61,11 @@ static_assert(offsetof(CharacterCommonGuttered_C_SetCirclePinRenderAngle, Render
 struct CharacterCommonGuttered_C_SetIconBrush final
 {
 public:
-	struct FSlateBrush                            Param_IconBrush;                                   // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSlateBrush                            IconBrush_0;                                       // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(CharacterCommonGuttered_C_SetIconBrush) == 0x000008, "Wrong alignment on CharacterCommonGuttered_C_SetIconBrush");
 static_assert(sizeof(CharacterCommonGuttered_C_SetIconBrush) == 0x000088, "Wrong size on CharacterCommonGuttered_C_SetIconBrush");
-static_assert(offsetof(CharacterCommonGuttered_C_SetIconBrush, Param_IconBrush) == 0x000000, "Member 'CharacterCommonGuttered_C_SetIconBrush::Param_IconBrush' has a wrong offset!");
+static_assert(offsetof(CharacterCommonGuttered_C_SetIconBrush, IconBrush_0) == 0x000000, "Member 'CharacterCommonGuttered_C_SetIconBrush::IconBrush_0' has a wrong offset!");
 
 // Function CharacterCommonGuttered.CharacterCommonGuttered_C.PlayFlashAnimation
 // 0x0008 (0x0008 - 0x0000)
@@ -83,11 +83,11 @@ static_assert(offsetof(CharacterCommonGuttered_C_PlayFlashAnimation, CallFunc_Pl
 struct CharacterCommonGuttered_C_SetCharacterBrush final
 {
 public:
-	struct FSlateBrush                            Param_CharacterBrush;                              // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSlateBrush                            CharacterBrush_0;                                  // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(CharacterCommonGuttered_C_SetCharacterBrush) == 0x000008, "Wrong alignment on CharacterCommonGuttered_C_SetCharacterBrush");
 static_assert(sizeof(CharacterCommonGuttered_C_SetCharacterBrush) == 0x000088, "Wrong size on CharacterCommonGuttered_C_SetCharacterBrush");
-static_assert(offsetof(CharacterCommonGuttered_C_SetCharacterBrush, Param_CharacterBrush) == 0x000000, "Member 'CharacterCommonGuttered_C_SetCharacterBrush::Param_CharacterBrush' has a wrong offset!");
+static_assert(offsetof(CharacterCommonGuttered_C_SetCharacterBrush, CharacterBrush_0) == 0x000000, "Member 'CharacterCommonGuttered_C_SetCharacterBrush::CharacterBrush_0' has a wrong offset!");
 
 // Function CharacterCommonGuttered.CharacterCommonGuttered_C.RefreshIcon
 // 0x00A0 (0x00A0 - 0x0000)
@@ -115,14 +115,14 @@ static_assert(offsetof(CharacterCommonGuttered_C_RefreshIcon, CallFunc_IsValid_R
 struct CharacterCommonGuttered_C_SetGameModeWidget final
 {
 public:
-	class UClass*                                 Param_GameModeWidget;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GameModeWidget_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMarinerPlayerState*                    PlayerState;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerPinGameModeWidget*              CallFunc_GetClassDefaultObject_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerPinGameModeWidget*              CallFunc_CreateGameModeWidget_WidgetInstance;      // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(CharacterCommonGuttered_C_SetGameModeWidget) == 0x000008, "Wrong alignment on CharacterCommonGuttered_C_SetGameModeWidget");
 static_assert(sizeof(CharacterCommonGuttered_C_SetGameModeWidget) == 0x000020, "Wrong size on CharacterCommonGuttered_C_SetGameModeWidget");
-static_assert(offsetof(CharacterCommonGuttered_C_SetGameModeWidget, Param_GameModeWidget) == 0x000000, "Member 'CharacterCommonGuttered_C_SetGameModeWidget::Param_GameModeWidget' has a wrong offset!");
+static_assert(offsetof(CharacterCommonGuttered_C_SetGameModeWidget, GameModeWidget_0) == 0x000000, "Member 'CharacterCommonGuttered_C_SetGameModeWidget::GameModeWidget_0' has a wrong offset!");
 static_assert(offsetof(CharacterCommonGuttered_C_SetGameModeWidget, PlayerState) == 0x000008, "Member 'CharacterCommonGuttered_C_SetGameModeWidget::PlayerState' has a wrong offset!");
 static_assert(offsetof(CharacterCommonGuttered_C_SetGameModeWidget, CallFunc_GetClassDefaultObject_ReturnValue) == 0x000010, "Member 'CharacterCommonGuttered_C_SetGameModeWidget::CallFunc_GetClassDefaultObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(CharacterCommonGuttered_C_SetGameModeWidget, CallFunc_CreateGameModeWidget_WidgetInstance) == 0x000018, "Member 'CharacterCommonGuttered_C_SetGameModeWidget::CallFunc_CreateGameModeWidget_WidgetInstance' has a wrong offset!");

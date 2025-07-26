@@ -55,8 +55,8 @@ public:
 	void BP_OnEntered(bool bFromSubMenu);
 	void PopulateRankProgress(const struct FMangoPlaylistResult& PlaylistProgression);
 	void ConsumeNextReward(bool* IsValid);
-	void HasRewardItems(bool* Param_HasRewardItems);
-	void HasCurrency(bool* Param_HasCurrency);
+	void HasRewardItems(bool* HasRewardItems_0);
+	void HasCurrency(bool* HasCurrency_0);
 
 public:
 	static class UClass* StaticClass()

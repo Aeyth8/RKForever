@@ -22,7 +22,7 @@ struct MapDataSmall_C_ExecuteUbergraph_MapDataSmall final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1341[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetGameModeText_ReturnValue;              // 0x0008(0x0018)()
 	class FText                                   CallFunc_GetArenaNameText_ReturnValue;             // 0x0020(0x0018)()
 };
@@ -39,11 +39,11 @@ struct MapDataSmall_C_GetGameModeText final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1342[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
 	class UMarinerModeGlobals*                    CallFunc_GetModeGlobals_ReturnValue;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TryAndGetMangoModeFromCurrentMode_bIsValid; // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1343[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoMode                             CallFunc_TryAndGetMangoModeFromCurrentMode_ReturnValue; // 0x0048(0x0058)(ConstParm)
 	class FText                                   K2Node_Select_Default;                             // 0x00A0(0x0018)()
 };
@@ -64,14 +64,14 @@ struct MapDataSmall_C_GetArenaNameText final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1344[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
 	bool                                          CallFunc_GetMarinerGlobals_IsValid;                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1345[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGlobals*                        CallFunc_GetMarinerGlobals_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMapGlobals*                     CallFunc_GetMapGlobals_ReturnValue;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TryAndGetMangoMapFromCurrentMap_bIsValid; // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1346[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoMap                              CallFunc_TryAndGetMangoMapFromCurrentMap_ReturnValue; // 0x0058(0x0060)(ConstParm)
 	class FText                                   K2Node_Select_Default;                             // 0x00B8(0x0018)()
 };

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_ItemActivationTypes_structs.hpp"
-#include "Mariner_structs.hpp"
 #include "DodgeDirections_structs.hpp"
+#include "Mariner_structs.hpp"
 
 
 namespace SDK::Params

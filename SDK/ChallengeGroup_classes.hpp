@@ -41,7 +41,7 @@ public:
 	void ClearChallenges();
 	void DummyCallback(struct FKey& KeyPressed);
 	void RefreshChallenge(struct FMangoQuestDescription& Quest);
-	void GetChallenge(EMangoQuestSlot Param_Slot, class UChallengeButton_C** Widget);
+	void GetChallenge(EMangoQuestSlot Slot_0, class UChallengeButton_C** Widget);
 	void UpdateHeader();
 	void AddOrRefreshChallenge(struct FMangoQuestDescription& Quest, bool AllowInput);
 

@@ -61,9 +61,9 @@ void UOfferPurchaseButton_C::BeginOfferPurchase(class UMarinerLayeredButton* Ins
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FMangoPurchaseOffer              PurchaseOffer                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UOfferPurchaseButton_C::SetOffer(const struct FMangoPurchaseOffer& PurchaseOffer, class UMarinerPlayableCharacter* Param_Character)
+void UOfferPurchaseButton_C::SetOffer(const struct FMangoPurchaseOffer& PurchaseOffer, class UMarinerPlayableCharacter* Character_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -73,7 +73,7 @@ void UOfferPurchaseButton_C::SetOffer(const struct FMangoPurchaseOffer& Purchase
 	Params::OfferPurchaseButton_C_SetOffer Parms{};
 
 	Parms.PurchaseOffer = std::move(PurchaseOffer);
-	Parms.Param_Character = Param_Character;
+	Parms.Character_0 = Character_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

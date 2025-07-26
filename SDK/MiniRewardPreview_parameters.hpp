@@ -23,7 +23,7 @@ struct MiniRewardPreview_C_Init_CurrencyReward final
 public:
 	int32                                         CurrencyNum;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bPremium;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2159[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   NewLocalVar_0;                                     // 0x0008(0x0018)(Edit, BlueprintVisible)
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0020(0x0018)()
 };
@@ -40,7 +40,7 @@ struct MiniRewardPreview_C_InitBlastPassReward final
 {
 public:
 	float                                         BlastPassPips;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_215A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_FloatToText_ReturnValue;             // 0x0008(0x0018)()
 };
 static_assert(alignof(MiniRewardPreview_C_InitBlastPassReward) == 0x000008, "Wrong alignment on MiniRewardPreview_C_InitBlastPassReward");

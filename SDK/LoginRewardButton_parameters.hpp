@@ -25,11 +25,11 @@ struct LoginRewardButton_C_ExecuteUbergraph_LoginRewardButton final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(bool bWasSuccessful, EMangoQuestSlot SlotId, struct FMangoQuestDescription& NewQuest)> K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2135[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoQuestManager*                     CallFunc_Get_ReturnValue;                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMangoQuestSlot                               K2Node_CustomEvent_SlotId;                         // 0x0021(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2136[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 K2Node_CustomEvent_NewQuest;                       // 0x0028(0x0118)(ConstParm)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -52,7 +52,7 @@ struct LoginRewardButton_C_ClaimReward final
 public:
 	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMangoQuestSlot                               SlotId;                                            // 0x0001(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2137[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 NewQuest;                                          // 0x0008(0x0118)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(LoginRewardButton_C_ClaimReward) == 0x000008, "Wrong alignment on LoginRewardButton_C_ClaimReward");
@@ -69,11 +69,11 @@ public:
 	int32                                         CallFunc_IsClaimable_Progress;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_IsClaimable_Goal;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsClaimable_IsClaimable;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2138[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0040)(HasGetValueTypeHash)
 	int32                                         CallFunc_Min_ReturnValue;                          // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2139[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0060(0x0040)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00A0(0x0010)(ZeroConstructor, ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B0(0x0018)()
@@ -97,8 +97,8 @@ struct LoginRewardButton_C_IsClaimable final
 public:
 	int32                                         Progress;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Goal;                                              // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_IsClaimable;                                 // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_213A[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          IsClaimable_0;                                     // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoQuestManager*                     CallFunc_Get_ReturnValue;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoQuestDescription                 CallFunc_GetQuestDescriptionBySlotId_ReturnValue;  // 0x0018(0x0118)()
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -107,7 +107,7 @@ static_assert(alignof(LoginRewardButton_C_IsClaimable) == 0x000008, "Wrong align
 static_assert(sizeof(LoginRewardButton_C_IsClaimable) == 0x000138, "Wrong size on LoginRewardButton_C_IsClaimable");
 static_assert(offsetof(LoginRewardButton_C_IsClaimable, Progress) == 0x000000, "Member 'LoginRewardButton_C_IsClaimable::Progress' has a wrong offset!");
 static_assert(offsetof(LoginRewardButton_C_IsClaimable, Goal) == 0x000004, "Member 'LoginRewardButton_C_IsClaimable::Goal' has a wrong offset!");
-static_assert(offsetof(LoginRewardButton_C_IsClaimable, Param_IsClaimable) == 0x000008, "Member 'LoginRewardButton_C_IsClaimable::Param_IsClaimable' has a wrong offset!");
+static_assert(offsetof(LoginRewardButton_C_IsClaimable, IsClaimable_0) == 0x000008, "Member 'LoginRewardButton_C_IsClaimable::IsClaimable_0' has a wrong offset!");
 static_assert(offsetof(LoginRewardButton_C_IsClaimable, CallFunc_Get_ReturnValue) == 0x000010, "Member 'LoginRewardButton_C_IsClaimable::CallFunc_Get_ReturnValue' has a wrong offset!");
 static_assert(offsetof(LoginRewardButton_C_IsClaimable, CallFunc_GetQuestDescriptionBySlotId_ReturnValue) == 0x000018, "Member 'LoginRewardButton_C_IsClaimable::CallFunc_GetQuestDescriptionBySlotId_ReturnValue' has a wrong offset!");
 static_assert(offsetof(LoginRewardButton_C_IsClaimable, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000130, "Member 'LoginRewardButton_C_IsClaimable::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");

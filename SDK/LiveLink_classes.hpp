@@ -31,7 +31,7 @@ public:
 	ELiveLinkAxis                                 AxisX;                                             // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ELiveLinkAxis                                 AxisY;                                             // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ELiveLinkAxis                                 AxisZ;                                             // 0x002A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_DB8[0x15];                                     // 0x002B(0x0015)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x15];                                      // 0x002B(0x0015)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -72,7 +72,7 @@ class ULiveLinkBasicFrameInterpolationProcessor : public ULiveLinkFrameInterpola
 {
 public:
 	bool                                          bInterpolatePropertyValues;                        // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DB9[0x17];                                     // 0x0029(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x17];                                      // 0x0029(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -114,14 +114,14 @@ public:
 	static class FText GetSourceType(struct FLiveLinkSourceHandle& SourceHandle);
 	static TSubclassOf<class ULiveLinkRole> GetSpecificLiveLinkSubjectRole(const struct FLiveLinkSubjectKey& SubjectKey);
 	static void GetTransformByIndex(struct FSubjectFrameHandle& SubjectFrameHandle, int32 TransformIndex, struct FLiveLinkTransform* LiveLinkTransform);
-	static void GetTransformByName(struct FSubjectFrameHandle& SubjectFrameHandle, class FName Param_TransformName, struct FLiveLinkTransform* LiveLinkTransform);
+	static void GetTransformByName(struct FSubjectFrameHandle& SubjectFrameHandle, class FName TransformName_0, struct FLiveLinkTransform* LiveLinkTransform);
 	static bool HasParent(struct FLiveLinkTransform& LiveLinkTransform);
 	static bool IsSourceStillValid(struct FLiveLinkSourceHandle& SourceHandle);
 	static int32 NumberOfTransforms(struct FSubjectFrameHandle& SubjectFrameHandle);
 	static void ParentBoneSpaceTransform(struct FLiveLinkTransform& LiveLinkTransform, struct FTransform* Transform);
 	static bool RemoveSource(struct FLiveLinkSourceHandle& SourceHandle);
-	static void TransformName(struct FLiveLinkTransform& LiveLinkTransform, class FName* Param_Name);
-	static void TransformNames(struct FSubjectFrameHandle& SubjectFrameHandle, TArray<class FName>* Param_TransformNames);
+	static void TransformName(struct FLiveLinkTransform& LiveLinkTransform, class FName* Name_0);
+	static void TransformNames(struct FSubjectFrameHandle& SubjectFrameHandle, TArray<class FName>* TransformNames_0);
 
 	bool IsLiveLinkSubjectEnabled(const struct FLiveLinkSubjectName& SubjectName);
 	bool IsSpecificLiveLinkSubjectEnabled(const struct FLiveLinkSubjectKey& SubjectKey, bool bForThisFrame);
@@ -145,7 +145,7 @@ static_assert(sizeof(ULiveLinkBlueprintLibrary) == 0x000028, "Wrong size on ULiv
 class ULiveLinkAnimationFrameInterpolationProcessor final : public ULiveLinkBasicFrameInterpolationProcessor
 {
 public:
-	uint8                                         Pad_DCC[0x10];                                     // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -166,7 +166,7 @@ class ULiveLinkAnimationRoleToTransform final : public ULiveLinkFrameTranslator
 {
 public:
 	class FName                                   BoneName;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_DCD[0x10];                                     // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -187,7 +187,7 @@ static_assert(offsetof(ULiveLinkAnimationRoleToTransform, BoneName) == 0x000028,
 class ULiveLinkAnimationVirtualSubject final : public ULiveLinkVirtualSubject
 {
 public:
-	uint8                                         Pad_DCE[0x8];                                      // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -208,7 +208,7 @@ class ULiveLinkComponent final : public UActorComponent
 {
 public:
 	UMulticastInlineDelegateProperty_             OnLiveLinkUpdated;                                 // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DCF[0x10];                                     // 0x00C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C0[0x10];                                      // 0x00C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void GetAvailableSubjectNames(TArray<class FName>* SubjectNames);
@@ -239,7 +239,7 @@ public:
 	class FName                                   ActorTransformBone;                                // 0x00B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bModifyActorTransform;                             // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetRelativeLocation;                              // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DD3[0xE];                                      // 0x00C2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C2[0xE];                                       // 0x00C2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -284,7 +284,7 @@ static_assert(offsetof(ULiveLinkInstance, CurrentRetargetAsset) == 0x000268, "Me
 class ULiveLinkMessageBusFinder final : public UObject
 {
 public:
-	uint8                                         Pad_DD4[0x58];                                     // 0x0028(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x58];                                      // 0x0028(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static void ConnectToProvider(struct FProviderPollResult& Provider, struct FLiveLinkSourceHandle* SourceHandle);
@@ -372,7 +372,7 @@ static_assert(sizeof(ULiveLinkRetargetAsset) == 0x000028, "Wrong size on ULiveLi
 class ULiveLinkRemapAsset final : public ULiveLinkRetargetAsset
 {
 public:
-	uint8                                         Pad_DD6[0xA0];                                     // 0x0028(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0xA0];                                      // 0x0028(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FName GetRemappedBoneName(class FName BoneName) const;
@@ -409,7 +409,7 @@ public:
 	struct FLinearColor                           InvalidColor;                                      // 0x0088(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         TextSizeSource;                                    // 0x0098(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         TextSizeSubject;                                   // 0x0099(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DD7[0x6];                                      // 0x009A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -442,7 +442,7 @@ class ULiveLinkTimeSynchronizationSource final : public UTimeSynchronizationSour
 {
 public:
 	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0030(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DD8[0x48];                                     // 0x0038(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x48];                                      // 0x0038(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

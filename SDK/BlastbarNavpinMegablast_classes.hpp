@@ -37,7 +37,7 @@ public:
 	class UMaterialInterface*                     EnemyMat;                                          // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          OldIsEnemeny;                                      // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsEnemy;                                           // 0x0451(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_259E[0x6];                                     // 0x0452(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_452[0x6];                                      // 0x0452(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UTexture2D*>                     ShrapnelMeterTextures;                             // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UTexture2D*>                     ShrapnelMaskTextures;                              // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UImage*>                         ShrapnelSprites;                                   // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)

@@ -40,11 +40,11 @@ void UServerListElement_C::ExecuteUbergraph_ServerListElement(int32 EntryPoint)
 // Function ServerListElement.ServerListElement_C.OnServerWidgetCreated
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             Param_Name                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FText                             Name_0                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class FText                             Ping                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class FText                             Param_PlayerCount                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FText                             PlayerCount_0                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UServerListElement_C::OnServerWidgetCreated(const class FText& Param_Name, const class FText& Ping, const class FText& Param_PlayerCount)
+void UServerListElement_C::OnServerWidgetCreated(const class FText& Name_0, const class FText& Ping, const class FText& PlayerCount_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -53,9 +53,9 @@ void UServerListElement_C::OnServerWidgetCreated(const class FText& Param_Name, 
 
 	Params::ServerListElement_C_OnServerWidgetCreated Parms{};
 
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.Ping = std::move(Ping);
-	Parms.Param_PlayerCount = std::move(Param_PlayerCount);
+	Parms.PlayerCount_0 = std::move(PlayerCount_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

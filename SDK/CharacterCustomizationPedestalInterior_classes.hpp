@@ -28,16 +28,16 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         RotationResetTimeline_NewTrack_0_F7ECA4734BE7E1B33D4844A32E89B41D; // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            RotationResetTimeline__Direction_F7ECA4734BE7E1B33D4844A32E89B41D; // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_232C[0x3];                                     // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     RotationResetTimeline;                             // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ResetRotatingComplete;                             // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_232D[0x7];                                     // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacterLite*                  LoadedChar;                                        // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               StartRotPosition;                                  // 0x0250(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_CharacterCustomizationPedestalInterior(int32 EntryPoint);
-	void AttachToTheChar(class AMarinerCharacterLite* Param_LoadedChar);
+	void AttachToTheChar(class AMarinerCharacterLite* LoadedChar_0);
 	void Reset_Rotation();
 	void RotationResetTimeline__FinishedFunc();
 	void RotationResetTimeline__UpdateFunc();

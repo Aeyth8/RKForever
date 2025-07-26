@@ -25,7 +25,7 @@ public:
 	class UImage*                                 Modebackermaterial;                                // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 PanelImage;                                        // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             PanelText;                                         // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         Index_ModeSummaryPanel_C;                          // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetUpPanel(class UMarinerModeDataAsset* GameModeData);
@@ -46,7 +46,7 @@ static_assert(offsetof(UModeSummaryPanel_C, Modebacker) == 0x000230, "Member 'UM
 static_assert(offsetof(UModeSummaryPanel_C, Modebackermaterial) == 0x000238, "Member 'UModeSummaryPanel_C::Modebackermaterial' has a wrong offset!");
 static_assert(offsetof(UModeSummaryPanel_C, PanelImage) == 0x000240, "Member 'UModeSummaryPanel_C::PanelImage' has a wrong offset!");
 static_assert(offsetof(UModeSummaryPanel_C, PanelText) == 0x000248, "Member 'UModeSummaryPanel_C::PanelText' has a wrong offset!");
-static_assert(offsetof(UModeSummaryPanel_C, Index_ModeSummaryPanel_C) == 0x000250, "Member 'UModeSummaryPanel_C::Index_ModeSummaryPanel_C' has a wrong offset!");
+static_assert(offsetof(UModeSummaryPanel_C, Index_0) == 0x000250, "Member 'UModeSummaryPanel_C::Index_0' has a wrong offset!");
 
 }
 

@@ -34,7 +34,7 @@ public:
 	float                                         CallFunc_Fraction_ReturnValue_1;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_221A[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0058(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable_1;                          // 0x0068(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable_1;                            // 0x0078(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)

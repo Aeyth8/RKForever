@@ -20,7 +20,7 @@ struct StackManagerContentScrollBox_C_ExecuteUbergraph_StackManagerContentScroll
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2107[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(StackManagerContentScrollBox_C_ExecuteUbergraph_StackManagerContentScrollBox) == 0x000008, "Wrong alignment on StackManagerContentScrollBox_C_ExecuteUbergraph_StackManagerContentScrollBox");

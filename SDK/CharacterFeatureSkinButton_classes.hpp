@@ -29,7 +29,7 @@ public:
 	class UCharacterSkinButton_C*                 CharacterSkinButton;                               // 0x2F98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UButton*                                HitArea;                                           // 0x2FA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULoadingSpinner_Simplified_C*           LoadingSpinner_Simplified;                         // 0x2FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_CharacterFeatureSkinButton_C;                 // 0x2FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x2FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UUnviewedItemWidget_C*                  UnviewedWidget;                                    // 0x2FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
@@ -58,7 +58,7 @@ static_assert(offsetof(UCharacterFeatureSkinButton_C, Border) == 0x002F90, "Memb
 static_assert(offsetof(UCharacterFeatureSkinButton_C, CharacterSkinButton) == 0x002F98, "Member 'UCharacterFeatureSkinButton_C::CharacterSkinButton' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureSkinButton_C, HitArea) == 0x002FA0, "Member 'UCharacterFeatureSkinButton_C::HitArea' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureSkinButton_C, LoadingSpinner_Simplified) == 0x002FA8, "Member 'UCharacterFeatureSkinButton_C::LoadingSpinner_Simplified' has a wrong offset!");
-static_assert(offsetof(UCharacterFeatureSkinButton_C, Name_CharacterFeatureSkinButton_C) == 0x002FB0, "Member 'UCharacterFeatureSkinButton_C::Name_CharacterFeatureSkinButton_C' has a wrong offset!");
+static_assert(offsetof(UCharacterFeatureSkinButton_C, Name_0) == 0x002FB0, "Member 'UCharacterFeatureSkinButton_C::Name_0' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureSkinButton_C, UnviewedWidget) == 0x002FB8, "Member 'UCharacterFeatureSkinButton_C::UnviewedWidget' has a wrong offset!");
 
 }

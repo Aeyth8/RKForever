@@ -535,9 +535,9 @@ void UCharacterCustomization_C::InitActors()
 // Function CharacterCustomization.CharacterCustomization_C.GetLocalProfile
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FMangoProfile                    Param_LocalProfile                                     (Parm, OutParm)
+// struct FMangoProfile                    LocalProfile_0                                         (Parm, OutParm)
 
-void UCharacterCustomization_C::GetLocalProfile(struct FMangoProfile* Param_LocalProfile) const
+void UCharacterCustomization_C::GetLocalProfile(struct FMangoProfile* LocalProfile_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -548,8 +548,8 @@ void UCharacterCustomization_C::GetLocalProfile(struct FMangoProfile* Param_Loca
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_LocalProfile != nullptr)
-		*Param_LocalProfile = std::move(Parms.Param_LocalProfile);
+	if (LocalProfile_0 != nullptr)
+		*LocalProfile_0 = std::move(Parms.LocalProfile_0);
 }
 
 }

@@ -40,7 +40,7 @@ public:
 	struct FSlateBrush                            ReturnValue;                                       // 0x0010(0x0088)(Parm, OutParm, ReturnParm)
 	class UMarinerCMSItemWithIcon*                K2Node_DynamicCast_AsMariner_CMSItem_with_Icon;    // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2388[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_GetBrushFromCMSItem_ReturnValue;          // 0x00A8(0x0088)(ConstParm)
 };
 static_assert(alignof(CMSItemButton_C_GetIconBrush) == 0x000008, "Wrong alignment on CMSItemButton_C_GetIconBrush");
@@ -62,7 +62,7 @@ public:
 	class UMarinerGameGlobals*                    CallFunc_GetGameGlobals_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerArtifactDataAsset*              K2Node_DynamicCast_AsMariner_Artifact_Data_Asset;  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2389[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerPlayableCharacter*              CallFunc_GetCharacterDataBySoftClass_ReturnValue;  // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0030(0x0028)()
 };

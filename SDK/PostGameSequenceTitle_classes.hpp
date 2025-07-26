@@ -30,7 +30,7 @@ public:
 	bool                                          AllowedVisible;                                    // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void SetTitle(const class FText& Param_Title);
+	void SetTitle(const class FText& Title_0);
 	bool Populate();
 	void HideTitle();
 

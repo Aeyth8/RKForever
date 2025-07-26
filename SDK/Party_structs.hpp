@@ -183,7 +183,7 @@ enum class ESocialSubsystem : uint8
 struct alignas(0x08) FOnlinePartyRepDataBase
 {
 public:
-	uint8                                         Pad_F2E[0x18];                                     // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOnlinePartyRepDataBase) == 0x000008, "Wrong alignment on FOnlinePartyRepDataBase");
 static_assert(sizeof(FOnlinePartyRepDataBase) == 0x000018, "Wrong size on FOnlinePartyRepDataBase");
@@ -223,11 +223,11 @@ static_assert(offsetof(FPartyPlatformSessionInfo, OwnerPrimaryId) == 0x000018, "
 struct FPartyRepData final : public FOnlinePartyRepDataBase
 {
 public:
-	uint8                                         Pad_F2F[0x8];                                      // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPartyPrivacySettings                  PrivacySettings;                                   // 0x0020(0x0003)(NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F30[0x35];                                     // 0x0023(0x0035)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23[0x35];                                      // 0x0023(0x0035)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPartyPlatformSessionInfo>      PlatformSessions;                                  // 0x0058(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F31[0x18];                                     // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPartyRepData) == 0x000008, "Wrong alignment on FPartyRepData");
 static_assert(sizeof(FPartyRepData) == 0x000080, "Wrong size on FPartyRepData");
@@ -250,15 +250,15 @@ static_assert(offsetof(FUserPlatform, PlatformStr) == 0x000000, "Member 'FUserPl
 struct FPartyMemberRepData final : public FOnlinePartyRepDataBase
 {
 public:
-	uint8                                         Pad_F32[0x8];                                      // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUserPlatform                          Platform;                                          // 0x0020(0x0010)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F33[0x30];                                     // 0x0030(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PlatformUniqueId;                                  // 0x0060(0x0028)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F34[0x30];                                     // 0x0088(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_88[0x30];                                      // 0x0088(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PlatformSessionId;                                 // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F35[0x30];                                     // 0x00C8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C8[0x30];                                      // 0x00C8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	ECrossplayPreference                          CrossplayPreference;                               // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F36[0x37];                                     // 0x00F9(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x37];                                      // 0x00F9(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPartyMemberRepData) == 0x000008, "Wrong alignment on FPartyMemberRepData");
 static_assert(sizeof(FPartyMemberRepData) == 0x000130, "Wrong size on FPartyMemberRepData");
@@ -273,9 +273,9 @@ struct FSocialChatChannelConfig final
 {
 public:
 	class USocialUser*                            SocialUser;                                        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F37[0x10];                                     // 0x0008(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USocialChatChannel*>             ListenChannels;                                    // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F38[0x18];                                     // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSocialChatChannelConfig) == 0x000008, "Wrong alignment on FSocialChatChannelConfig");
 static_assert(sizeof(FSocialChatChannelConfig) == 0x000040, "Wrong size on FSocialChatChannelConfig");

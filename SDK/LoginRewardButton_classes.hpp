@@ -43,7 +43,7 @@ public:
 	void ClaimReward(bool bWasSuccessful, const EMangoQuestSlot SlotId, const struct FMangoQuestDescription& NewQuest);
 	void Construct();
 	void Init();
-	void IsClaimable(int32* Progress, int32* Goal, bool* Param_IsClaimable);
+	void IsClaimable(int32* Progress, int32* Goal, bool* IsClaimable_0);
 
 	struct FMarinerLayeredButtonAssets GetAssets() const;
 

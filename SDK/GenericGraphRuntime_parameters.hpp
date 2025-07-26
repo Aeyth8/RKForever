@@ -20,7 +20,7 @@ struct GenericGraph_GetNodesByLevel final
 {
 public:
 	int32                                         Level;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1164[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UGenericGraphNode*>              Nodes;                                             // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GenericGraph_GetNodesByLevel) == 0x000008, "Wrong alignment on GenericGraph_GetNodesByLevel");

@@ -23,17 +23,17 @@ struct ServerList_C_ExecuteUbergraph_ServerList final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22EF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerPromptData                     K2Node_MakeStruct_MarinerPromptData;               // 0x0008(0x0118)()
 	bool                                          CallFunc_AddHostPrompt_ReturnValue;                // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_22F0[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UWidgetAnimation*                 K2Node_Event_Animation;                            // 0x0130(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_bFromSubMenu;                         // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_RemoveSelf_ReturnValue;                   // 0x013A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ClearHostPrompts_ReturnValue;             // 0x013B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_22F1[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x0140(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(ServerList_C_ExecuteUbergraph_ServerList) == 0x000008, "Wrong alignment on ServerList_C_ExecuteUbergraph_ServerList");

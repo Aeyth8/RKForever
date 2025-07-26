@@ -27,22 +27,22 @@ struct ChallengeButton_C_ExecuteUbergraph_ChallengeButton final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2176[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0010(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0020(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable_1;                            // 0x0030(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable_1;                          // 0x0040(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2177[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerBasePlayerController*           CallFunc_TryAndGetLocalPlayerController_ReturnValue; // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_PostEvent_ReturnValue_1;                  // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2178[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoQuestDescription                 K2Node_CustomEvent_Quest_1;                        // 0x0070(0x0118)()
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HandleInput_ReturnValue;                  // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2179[0x7];                                     // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 K2Node_CustomEvent_Quest;                          // 0x0198(0x0118)()
 };
 static_assert(alignof(ChallengeButton_C_ExecuteUbergraph_ChallengeButton) == 0x000008, "Wrong alignment on ChallengeButton_C_ExecuteUbergraph_ChallengeButton");
@@ -92,7 +92,7 @@ public:
 	struct FMangoQuestDescription                 Quest;                                             // 0x0000(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          AllowInput;                                        // 0x0118(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsDismissable_CanDismiss;                 // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_217A[0x2];                                     // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11A[0x2];                                      // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(bool bWasSuccessful, EMangoQuestSlot SlotId, struct FMangoQuestDescription& NewQuest)> K2Node_CreateDelegate_OutputDelegate;              // 0x011C(0x0010)(ZeroConstructor, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x012C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x012D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -105,17 +105,17 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0162(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_217B[0x5];                                     // 0x0163(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_163[0x5];                                      // 0x0163(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_TextFromStringTable_ReturnValue;          // 0x0168(0x0018)()
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_217C[0x5];                                     // 0x0183(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_183[0x5];                                      // 0x0183(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue_1;                        // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoQuestReward                      CallFunc_GetQuestReward_OutQuestReward;            // 0x0190(0x00C8)()
 	bool                                          CallFunc_GetQuestReward_ReturnValue;               // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_217D[0x6];                                     // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuest                            CallFunc_GetQuest_OutQuest;                        // 0x0260(0x0068)()
 	bool                                          CallFunc_GetQuest_ReturnValue;                     // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -155,7 +155,7 @@ public:
 	struct FLinearColor                           OutColor;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_217E[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ChallengeButton_C_GetBackgroundColor) == 0x000004, "Wrong alignment on ChallengeButton_C_GetBackgroundColor");
@@ -170,24 +170,24 @@ static_assert(offsetof(ChallengeButton_C_GetBackgroundColor, CallFunc_SelectColo
 struct ChallengeButton_C_OnQuestDismissStarted final
 {
 public:
-	EMangoQuestSlot                               Param_Slot;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_217F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EMangoQuestSlot                               Slot_0;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0004(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2180[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuStackLayer*                 CallFunc_GetOwningLayer_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMarinerBasePlayerController*           CallFunc_TryAndGetLocalPlayerController_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UChallengeMenu_C*                       K2Node_DynamicCast_AsChallenge_Menu;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2181[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0040(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2182[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ChallengeButton_C_OnQuestDismissStarted) == 0x000008, "Wrong alignment on ChallengeButton_C_OnQuestDismissStarted");
 static_assert(sizeof(ChallengeButton_C_OnQuestDismissStarted) == 0x000058, "Wrong size on ChallengeButton_C_OnQuestDismissStarted");
-static_assert(offsetof(ChallengeButton_C_OnQuestDismissStarted, Param_Slot) == 0x000000, "Member 'ChallengeButton_C_OnQuestDismissStarted::Param_Slot' has a wrong offset!");
+static_assert(offsetof(ChallengeButton_C_OnQuestDismissStarted, Slot_0) == 0x000000, "Member 'ChallengeButton_C_OnQuestDismissStarted::Slot_0' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestDismissStarted, Temp_delegate_Variable) == 0x000004, "Member 'ChallengeButton_C_OnQuestDismissStarted::Temp_delegate_Variable' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestDismissStarted, CallFunc_GetOwningLayer_ReturnValue) == 0x000018, "Member 'ChallengeButton_C_OnQuestDismissStarted::CallFunc_GetOwningLayer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestDismissStarted, CallFunc_TryAndGetLocalPlayerController_ReturnValue) == 0x000020, "Member 'ChallengeButton_C_OnQuestDismissStarted::CallFunc_TryAndGetLocalPlayerController_ReturnValue' has a wrong offset!");
@@ -204,8 +204,8 @@ struct ChallengeButton_C_OnQuestDismissCompleted final
 {
 public:
 	bool                                          WasSuccessful;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	EMangoQuestSlot                               Param_Slot;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2183[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	EMangoQuestSlot                               Slot_0;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 Quest;                                             // 0x0008(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class UMarinerMenuStackLayer*                 CallFunc_GetOwningLayer_ReturnValue;               // 0x0120(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UChallengeMenu_C*                       K2Node_DynamicCast_AsChallenge_Menu;               // 0x0128(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -215,7 +215,7 @@ public:
 static_assert(alignof(ChallengeButton_C_OnQuestDismissCompleted) == 0x000008, "Wrong alignment on ChallengeButton_C_OnQuestDismissCompleted");
 static_assert(sizeof(ChallengeButton_C_OnQuestDismissCompleted) == 0x000138, "Wrong size on ChallengeButton_C_OnQuestDismissCompleted");
 static_assert(offsetof(ChallengeButton_C_OnQuestDismissCompleted, WasSuccessful) == 0x000000, "Member 'ChallengeButton_C_OnQuestDismissCompleted::WasSuccessful' has a wrong offset!");
-static_assert(offsetof(ChallengeButton_C_OnQuestDismissCompleted, Param_Slot) == 0x000001, "Member 'ChallengeButton_C_OnQuestDismissCompleted::Param_Slot' has a wrong offset!");
+static_assert(offsetof(ChallengeButton_C_OnQuestDismissCompleted, Slot_0) == 0x000001, "Member 'ChallengeButton_C_OnQuestDismissCompleted::Slot_0' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestDismissCompleted, Quest) == 0x000008, "Member 'ChallengeButton_C_OnQuestDismissCompleted::Quest' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestDismissCompleted, CallFunc_GetOwningLayer_ReturnValue) == 0x000120, "Member 'ChallengeButton_C_OnQuestDismissCompleted::CallFunc_GetOwningLayer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestDismissCompleted, K2Node_DynamicCast_AsChallenge_Menu) == 0x000128, "Member 'ChallengeButton_C_OnQuestDismissCompleted::K2Node_DynamicCast_AsChallenge_Menu' has a wrong offset!");
@@ -231,7 +231,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2184[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ChallengeButton_C_ReinitFromDismiss) == 0x000008, "Wrong alignment on ChallengeButton_C_ReinitFromDismiss");
@@ -248,18 +248,18 @@ struct ChallengeButton_C_IsDismissable final
 {
 public:
 	bool                                          CanDismiss;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2185[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoQuestManager*                     CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2186[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_DateTimeFromIsoString_Result;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DateTimeFromIsoString_ReturnValue;        // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2187[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue;    // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsQuestSlotBeingDismissed_ReturnValue;    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2188[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetTotalSeconds_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -307,11 +307,11 @@ struct ChallengeButton_C_OnQuestRewardClaimed final
 public:
 	bool                                          WasSuccessful;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMangoQuestSlot                               SlotId;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2189[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMangoQuestDescription                 Param_QuestDesc;                                   // 0x0008(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMangoQuestDescription                 QuestDesc_0;                                       // 0x0008(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class UMangoAchievementsManager*              CallFunc_Get_ReturnValue;                          // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_218A[0x7];                                     // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoAchievementsManager*              CallFunc_Get_ReturnValue_1;                        // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -320,7 +320,7 @@ static_assert(alignof(ChallengeButton_C_OnQuestRewardClaimed) == 0x000008, "Wron
 static_assert(sizeof(ChallengeButton_C_OnQuestRewardClaimed) == 0x000140, "Wrong size on ChallengeButton_C_OnQuestRewardClaimed");
 static_assert(offsetof(ChallengeButton_C_OnQuestRewardClaimed, WasSuccessful) == 0x000000, "Member 'ChallengeButton_C_OnQuestRewardClaimed::WasSuccessful' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestRewardClaimed, SlotId) == 0x000001, "Member 'ChallengeButton_C_OnQuestRewardClaimed::SlotId' has a wrong offset!");
-static_assert(offsetof(ChallengeButton_C_OnQuestRewardClaimed, Param_QuestDesc) == 0x000008, "Member 'ChallengeButton_C_OnQuestRewardClaimed::Param_QuestDesc' has a wrong offset!");
+static_assert(offsetof(ChallengeButton_C_OnQuestRewardClaimed, QuestDesc_0) == 0x000008, "Member 'ChallengeButton_C_OnQuestRewardClaimed::QuestDesc_0' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestRewardClaimed, CallFunc_Get_ReturnValue) == 0x000120, "Member 'ChallengeButton_C_OnQuestRewardClaimed::CallFunc_Get_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestRewardClaimed, K2Node_SwitchEnum_CmpSuccess) == 0x000128, "Member 'ChallengeButton_C_OnQuestRewardClaimed::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(ChallengeButton_C_OnQuestRewardClaimed, CallFunc_Get_ReturnValue_1) == 0x000130, "Member 'ChallengeButton_C_OnQuestRewardClaimed::CallFunc_Get_ReturnValue_1' has a wrong offset!");
@@ -353,19 +353,19 @@ struct ChallengeButton_C_HandleInput final
 public:
 	EMarinerInputActions                          InInput;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_218B[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameInstance*                   CallFunc_GetMarinerGameInstance_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HandleInput_ReturnValue;                  // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_218C[0x1];                                     // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(struct FKey& KeyPressed)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void(struct FKey& KeyPressed)>      K2Node_CreateDelegate_OutputDelegate_1;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_IsDismissable_CanDismiss;                 // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_218D[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerMessageBoxData                 K2Node_MakeStruct_MarinerMessageBoxData;           // 0x0038(0x0170)(ContainsInstancedReference)
 	bool                                          CallFunc_IsClaimable_CanClaim;                     // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_218E[0x7];                                     // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoQuestManager*                     CallFunc_Get_ReturnValue;                          // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ChallengeButton_C_HandleInput) == 0x000008, "Wrong alignment on ChallengeButton_C_HandleInput");

@@ -23,11 +23,11 @@ namespace SDK
 class UNinjaHeadBand_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_24AD[0x8];                                     // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FAnimNode_Root                         AnimGraphNode_Root_257ED90D4DFF23599A998190A70F0A1C; // 0x0278(0x0030)()
 	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_0EDFEA5549C75325B7108E85E323EEB9; // 0x02A8(0x0020)()
-	uint8                                         Pad_24AE[0x8];                                     // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimNode_Trail                        AnimGraphNode_Trail_C73DB3F6444C9B66A0BCB4BD2C07110B; // 0x02D0(0x0260)()
 	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_108DC29947433805F27478B7C3F84DBF; // 0x0530(0x0020)()
 	struct FAnimNode_Trail                        AnimGraphNode_Trail_E097996747C3884F808FEBBCAA85C798; // 0x0550(0x0260)()
@@ -36,7 +36,7 @@ public:
 	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_2FC9E50D4C25F375614116B41771C5A5; // 0x0930(0x0108)()
 
 public:
-	void AnimGraph(struct FPoseLink* Param_AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void ExecuteUbergraph_NinjaHeadBand_AnimBP(int32 EntryPoint);
 
 public:

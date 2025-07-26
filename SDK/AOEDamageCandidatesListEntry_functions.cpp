@@ -20,9 +20,9 @@ namespace SDK
 // Function AOEDamageCandidatesListEntry.AOEDamageCandidatesListEntry_C.OnAOEDamageCandidatesListEntryClicked__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Param_ActorName                                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             ActorName_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UAOEDamageCandidatesListEntry_C::OnAOEDamageCandidatesListEntryClicked__DelegateSignature(const class FText& Param_ActorName)
+void UAOEDamageCandidatesListEntry_C::OnAOEDamageCandidatesListEntryClicked__DelegateSignature(const class FText& ActorName_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UAOEDamageCandidatesListEntry_C::OnAOEDamageCandidatesListEntryClicked__Del
 
 	Params::AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature Parms{};
 
-	Parms.Param_ActorName = std::move(Param_ActorName);
+	Parms.ActorName_0 = std::move(ActorName_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

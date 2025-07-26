@@ -26,7 +26,7 @@ public:
 	class UTextBlock*                             ActionText;                                        // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void PopulateActionText(const class FText& Param_ActionText);
+	void PopulateActionText(const class FText& ActionText_0);
 	void PopulateTeam(class AMarinerCharacter* Character);
 
 public:

@@ -22,7 +22,7 @@ namespace SDK
 class UMovieSceneGeometryCacheSection final : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneGeometryCacheParams         Params;                                            // 0x00E0(0x0040)(Edit, NativeAccessSpecifierPublic)
+	struct FMovieSceneGeometryCacheParams         Params_0;                                          // 0x00E0(0x0040)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -36,7 +36,7 @@ public:
 };
 static_assert(alignof(UMovieSceneGeometryCacheSection) == 0x000008, "Wrong alignment on UMovieSceneGeometryCacheSection");
 static_assert(sizeof(UMovieSceneGeometryCacheSection) == 0x000120, "Wrong size on UMovieSceneGeometryCacheSection");
-static_assert(offsetof(UMovieSceneGeometryCacheSection, Params) == 0x0000E0, "Member 'UMovieSceneGeometryCacheSection::Params' has a wrong offset!");
+static_assert(offsetof(UMovieSceneGeometryCacheSection, Params_0) == 0x0000E0, "Member 'UMovieSceneGeometryCacheSection::Params_0' has a wrong offset!");
 
 // Class GeometryCacheTracks.MovieSceneGeometryCacheTrack
 // 0x0010 (0x0068 - 0x0058)

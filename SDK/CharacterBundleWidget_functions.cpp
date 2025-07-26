@@ -54,9 +54,9 @@ void UCharacterBundleWidget_C::Construct()
 // Function CharacterBundleWidget.CharacterBundleWidget_C.PopulateCharacter
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCharacterBundleWidget_C::PopulateCharacter(class UMarinerPlayableCharacter* Param_Character)
+void UCharacterBundleWidget_C::PopulateCharacter(class UMarinerPlayableCharacter* Character_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -65,7 +65,7 @@ void UCharacterBundleWidget_C::PopulateCharacter(class UMarinerPlayableCharacter
 
 	Params::CharacterBundleWidget_C_PopulateCharacter Parms{};
 
-	Parms.Param_Character = Param_Character;
+	Parms.Character_0 = Character_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

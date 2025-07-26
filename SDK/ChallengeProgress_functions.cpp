@@ -138,10 +138,10 @@ void UChallengeProgress_C::SetProgress(int32 CurrentProgress, int32 MaxProgress)
 // Function ChallengeProgress.ChallengeProgress_C.Init
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FMangoQuestDescription           Param_QuestDesc                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FMangoQuestDescription           QuestDesc_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                                    AllowInput                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UChallengeProgress_C::Init(struct FMangoQuestDescription& Param_QuestDesc, bool AllowInput)
+void UChallengeProgress_C::Init(struct FMangoQuestDescription& QuestDesc_0, bool AllowInput)
 {
 	static class UFunction* Func = nullptr;
 
@@ -150,12 +150,12 @@ void UChallengeProgress_C::Init(struct FMangoQuestDescription& Param_QuestDesc, 
 
 	Params::ChallengeProgress_C_Init Parms{};
 
-	Parms.Param_QuestDesc = std::move(Param_QuestDesc);
+	Parms.QuestDesc_0 = std::move(QuestDesc_0);
 	Parms.AllowInput = AllowInput;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_QuestDesc = std::move(Parms.Param_QuestDesc);
+	QuestDesc_0 = std::move(Parms.QuestDesc_0);
 }
 
 
@@ -207,9 +207,9 @@ void UChallengeProgress_C::UpdateResetPanelVisibility()
 // struct FMangoQuestDescription           QuestGoal                                              (BlueprintVisible, BlueprintReadOnly, Parm)
 // TDelegate<void(const struct FMangoQuestDescription& Quest)>AnimationCompleteEvent1                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
 // TDelegate<void(const struct FMangoQuestDescription& Quest)>AnimationCompleteEvent2                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-// TDelegate<void(const struct FMangoQuestDescription& Quest)>Param_ChallengeCompleteEvent                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+// TDelegate<void(const struct FMangoQuestDescription& Quest)>ChallengeCompleteEvent_0                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
 
-void UChallengeProgress_C::AnimateToGoal(const struct FMangoQuestDescription& QuestGoal, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent1, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent2, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& Param_ChallengeCompleteEvent)
+void UChallengeProgress_C::AnimateToGoal(const struct FMangoQuestDescription& QuestGoal, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent1, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent2, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& ChallengeCompleteEvent_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -221,7 +221,7 @@ void UChallengeProgress_C::AnimateToGoal(const struct FMangoQuestDescription& Qu
 	Parms.QuestGoal = std::move(QuestGoal);
 	Parms.AnimationCompleteEvent1 = AnimationCompleteEvent1;
 	Parms.AnimationCompleteEvent2 = AnimationCompleteEvent2;
-	Parms.Param_ChallengeCompleteEvent = Param_ChallengeCompleteEvent;
+	Parms.ChallengeCompleteEvent_0 = ChallengeCompleteEvent_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

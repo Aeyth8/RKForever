@@ -46,7 +46,7 @@ public:
 	void RefreshEquippedIcons();
 	void BP_OnExited(bool bToSubLayer);
 	void OnProfileUpdated();
-	void PopulateCharacter(class UCharacterCustomization_C* Param_ParentMenu);
+	void PopulateCharacter(class UCharacterCustomization_C* ParentMenu_0);
 	void BndEvt__ReturnTrail_K2Node_ComponentBoundEvent_28_OnLayeredButtonEvent__DelegateSignature(class UMarinerLayeredButton* Instance);
 	void OnUnhovered(class UMarinerLayeredButton* Instance);
 	void OnHovered(class UMarinerLayeredButton* Instance, bool bFromKeyboard, bool bFromMouse);
@@ -58,7 +58,7 @@ public:
 	bool HandleInput(EMarinerInputActions InInput);
 	void UpdatePrompts();
 	void HandleCharacterProgressionButton(class UMarinerPlayableCharacter* Character);
-	void GetCharacterProfileProgression(class UMarinerPlayableCharacter* Character, bool* bProgressionFound, struct FMangoCharacterProgression* Param_Progression);
+	void GetCharacterProfileProgression(class UMarinerPlayableCharacter* Character, bool* bProgressionFound, struct FMangoCharacterProgression* Progression_0);
 
 public:
 	static class UClass* StaticClass()

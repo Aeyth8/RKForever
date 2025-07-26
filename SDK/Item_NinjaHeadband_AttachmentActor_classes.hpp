@@ -30,12 +30,12 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         Timeline_0_ScaleMask_E6C8622646CFC478BE77929AF34CC010; // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Timeline_0__Direction_E6C8622646CFC478BE77929AF34CC010; // 0x0244(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C4[0x3];                                     // 0x0245(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_245[0x3];                                      // 0x0245(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Timeline_0;                                        // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               SkeletalMeshDynamicMat;                            // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ActivationFX_Triggered;                            // 0x0258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsActive;                                          // 0x0259(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24C5[0x6];                                     // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25A[0x6];                                      // 0x025A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystem*                        DodgeDistortion_FX;                                // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

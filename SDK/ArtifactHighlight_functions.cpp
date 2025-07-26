@@ -20,12 +20,12 @@ namespace SDK
 // Function ArtifactHighlight.ArtifactHighlight_C.SetArtifact
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMarinerArtifactDataAsset*        Param_Artifact                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UItemLoadResponse*                Param_ItemLoadResponse                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerArtifactDataAsset*        Artifact_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UItemLoadResponse*                ItemLoadResponse_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TSoftClassPtr<class UClass>             CurrentCharacterClass                                  (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// bool                                    Param_AllowState                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    AllowState_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UArtifactHighlight_C::SetArtifact(class UMarinerArtifactDataAsset* Param_Artifact, class UItemLoadResponse* Param_ItemLoadResponse, TSoftClassPtr<class UClass> CurrentCharacterClass, bool Param_AllowState)
+void UArtifactHighlight_C::SetArtifact(class UMarinerArtifactDataAsset* Artifact_0, class UItemLoadResponse* ItemLoadResponse_0, TSoftClassPtr<class UClass> CurrentCharacterClass, bool AllowState_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -34,10 +34,10 @@ void UArtifactHighlight_C::SetArtifact(class UMarinerArtifactDataAsset* Param_Ar
 
 	Params::ArtifactHighlight_C_SetArtifact Parms{};
 
-	Parms.Param_Artifact = Param_Artifact;
-	Parms.Param_ItemLoadResponse = Param_ItemLoadResponse;
+	Parms.Artifact_0 = Artifact_0;
+	Parms.ItemLoadResponse_0 = ItemLoadResponse_0;
 	Parms.CurrentCharacterClass = CurrentCharacterClass;
-	Parms.Param_AllowState = Param_AllowState;
+	Parms.AllowState_0 = AllowState_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

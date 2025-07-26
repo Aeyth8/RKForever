@@ -64,9 +64,9 @@ void UStatsFrame_C::BndEvt__Bound_PlayerPostGameWidget_K2Node_ComponentBoundEven
 // struct FMatchEndPlayer                  MatchEndPlayerData                                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    bIsLocalPlayer                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    bIsClientTeam                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Param_Rank                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Rank_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStatsFrame_C::PopulatePlayerStats(const struct FMatchEnd& MatchEndData, const struct FMatchEndPlayer& MatchEndPlayerData, bool bIsLocalPlayer, bool bIsClientTeam, int32 Param_Rank)
+void UStatsFrame_C::PopulatePlayerStats(const struct FMatchEnd& MatchEndData, const struct FMatchEndPlayer& MatchEndPlayerData, bool bIsLocalPlayer, bool bIsClientTeam, int32 Rank_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -79,7 +79,7 @@ void UStatsFrame_C::PopulatePlayerStats(const struct FMatchEnd& MatchEndData, co
 	Parms.MatchEndPlayerData = std::move(MatchEndPlayerData);
 	Parms.bIsLocalPlayer = bIsLocalPlayer;
 	Parms.bIsClientTeam = bIsClientTeam;
-	Parms.Param_Rank = Param_Rank;
+	Parms.Rank_0 = Rank_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -154,11 +154,11 @@ void UStatsFrame_C::SetBackground(bool IsClientTeam)
 // Function StatsFrame.StatsFrame_C.SetPlayerName
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Param_PlayerName                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             PlayerName_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    IsLocalPlayer                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // EMarinerGameOutcome                     GameOutcome                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStatsFrame_C::SetPlayerName(const class FText& Param_PlayerName, bool IsLocalPlayer, EMarinerGameOutcome GameOutcome)
+void UStatsFrame_C::SetPlayerName(const class FText& PlayerName_0, bool IsLocalPlayer, EMarinerGameOutcome GameOutcome)
 {
 	static class UFunction* Func = nullptr;
 
@@ -167,7 +167,7 @@ void UStatsFrame_C::SetPlayerName(const class FText& Param_PlayerName, bool IsLo
 
 	Params::StatsFrame_C_SetPlayerName Parms{};
 
-	Parms.Param_PlayerName = std::move(Param_PlayerName);
+	Parms.PlayerName_0 = std::move(PlayerName_0);
 	Parms.IsLocalPlayer = IsLocalPlayer;
 	Parms.GameOutcome = GameOutcome;
 
@@ -222,12 +222,12 @@ void UStatsFrame_C::SetStats(const struct FMatchEnd& MatchEnd, const struct FMat
 // Function StatsFrame.StatsFrame_C.SetCharacterLevel
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_CharacterLevel                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CharacterLevel_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsLocalPlayer                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    IsClientTeam                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    IsRanked                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UStatsFrame_C::SetCharacterLevel(int32 Param_CharacterLevel, bool IsLocalPlayer, bool IsClientTeam, bool IsRanked)
+void UStatsFrame_C::SetCharacterLevel(int32 CharacterLevel_0, bool IsLocalPlayer, bool IsClientTeam, bool IsRanked)
 {
 	static class UFunction* Func = nullptr;
 
@@ -236,7 +236,7 @@ void UStatsFrame_C::SetCharacterLevel(int32 Param_CharacterLevel, bool IsLocalPl
 
 	Params::StatsFrame_C_SetCharacterLevel Parms{};
 
-	Parms.Param_CharacterLevel = Param_CharacterLevel;
+	Parms.CharacterLevel_0 = CharacterLevel_0;
 	Parms.IsLocalPlayer = IsLocalPlayer;
 	Parms.IsClientTeam = IsClientTeam;
 	Parms.IsRanked = IsRanked;
@@ -296,10 +296,10 @@ void UStatsFrame_C::GetColor(bool IsLocalPlayer, EMarinerGameOutcome GameOutcome
 // Function StatsFrame.StatsFrame_C.SetRank
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_Rank                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Rank_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsRankedSession                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UStatsFrame_C::SetRank(int32 Param_Rank, bool IsRankedSession)
+void UStatsFrame_C::SetRank(int32 Rank_0, bool IsRankedSession)
 {
 	static class UFunction* Func = nullptr;
 
@@ -308,7 +308,7 @@ void UStatsFrame_C::SetRank(int32 Param_Rank, bool IsRankedSession)
 
 	Params::StatsFrame_C_SetRank Parms{};
 
-	Parms.Param_Rank = Param_Rank;
+	Parms.Rank_0 = Rank_0;
 	Parms.IsRankedSession = IsRankedSession;
 
 	UObject::ProcessEvent(Func, &Parms);

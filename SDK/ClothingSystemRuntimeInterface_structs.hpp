@@ -64,7 +64,7 @@ struct FClothCollisionPrim_Convex final
 public:
 	TArray<struct FPlane>                         Planes;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         BoneIndex;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D13[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FClothCollisionPrim_Convex) == 0x000008, "Wrong alignment on FClothCollisionPrim_Convex");
 static_assert(sizeof(FClothCollisionPrim_Convex) == 0x000018, "Wrong size on FClothCollisionPrim_Convex");
@@ -95,10 +95,10 @@ struct FPointWeightMap final
 public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         CurrentTarget;                                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D14[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 Values;                                            // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bEnabled;                                          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D15[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPointWeightMap) == 0x000008, "Wrong alignment on FPointWeightMap");
 static_assert(sizeof(FPointWeightMap) == 0x000028, "Wrong size on FPointWeightMap");

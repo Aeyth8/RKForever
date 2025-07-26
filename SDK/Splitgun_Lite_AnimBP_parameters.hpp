@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_ItemActivationTypes_structs.hpp"
 #include "Engine_structs.hpp"
-#include "DodgeDirections_structs.hpp"
 #include "Mariner_structs.hpp"
+#include "DodgeDirections_structs.hpp"
+#include "E_ItemActivationTypes_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -29,21 +29,21 @@ public:
 	TDelegate<void(class AActor* DestroyedActor)> K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          K2Node_Event_bHasWonOrDraw;                        // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsAnyMontagePlaying_ReturnValue;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2330[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Number_1;                             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UMarinerSkinCollectionDataAsset* SkinCollection)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x001C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2331[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMesh*                          K2Node_Event_SkeletalMesh;                         // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequence*                          K2Node_Event_Animation;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_Event_Socket;                               // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_LoopAnim;                             // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2332[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 CallFunc_GetOwningComponent_ReturnValue;           // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 CallFunc_GetOwningComponent_ReturnValue_1;         // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0060(0x0030)(IsPlainOldData, NoDestructor)
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2333[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_AnimatedProp_C*                     CallFunc_FinishSpawningActor_ReturnValue;          // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EDodgeDirections                              K2Node_Event_DodgeCardinalDirection;               // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -52,12 +52,12 @@ public:
 	TDelegate<void(class UAnimMontage* Montage)>  K2Node_CreateDelegate_OutputDelegate_2;            // 0x00AC(0x0010)(ZeroConstructor, NoDestructor)
 	E_ItemActivationTypes                         K2Node_Event_ItemUseType;                          // 0x00BC(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2334[0x2];                                     // 0x00BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BE[0x2];                                       // 0x00BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwningActor_ReturnValue;               // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerSkinCollectionDataAsset*        K2Node_CustomEvent_SkinCollection;                 // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMarinerCharacterLite*                  K2Node_DynamicCast_AsMariner_Character_Lite;       // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2335[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 K2Node_CustomEvent_DestroyedActor;                 // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Event_Character;                            // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Event_Number;                               // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -231,11 +231,11 @@ static_assert(offsetof(Splitgun_Lite_AnimBP_C_OnGameOutcomeDetermined, bHasWonOr
 struct Splitgun_Lite_AnimBP_C_AnimGraph final
 {
 public:
-	struct FPoseLink                              Param_AnimGraph;                                   // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
 static_assert(alignof(Splitgun_Lite_AnimBP_C_AnimGraph) == 0x000008, "Wrong alignment on Splitgun_Lite_AnimBP_C_AnimGraph");
 static_assert(sizeof(Splitgun_Lite_AnimBP_C_AnimGraph) == 0x000010, "Wrong size on Splitgun_Lite_AnimBP_C_AnimGraph");
-static_assert(offsetof(Splitgun_Lite_AnimBP_C_AnimGraph, Param_AnimGraph) == 0x000000, "Member 'Splitgun_Lite_AnimBP_C_AnimGraph::Param_AnimGraph' has a wrong offset!");
+static_assert(offsetof(Splitgun_Lite_AnimBP_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'Splitgun_Lite_AnimBP_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 }
 

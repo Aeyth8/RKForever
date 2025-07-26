@@ -20,9 +20,9 @@ namespace SDK
 // Function CharacterCommonActionText.CharacterCommonActionText_C.PopulateActionText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Param_ActionText                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             ActionText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UCharacterCommonActionText_C::PopulateActionText(const class FText& Param_ActionText)
+void UCharacterCommonActionText_C::PopulateActionText(const class FText& ActionText_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UCharacterCommonActionText_C::PopulateActionText(const class FText& Param_A
 
 	Params::CharacterCommonActionText_C_PopulateActionText Parms{};
 
-	Parms.Param_ActionText = std::move(Param_ActionText);
+	Parms.ActionText_0 = std::move(ActionText_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

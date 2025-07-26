@@ -182,9 +182,9 @@ void URewardPreviewWidget_C::PopulateNativeOffer(const struct FMangoNativeOffer&
 // Function RewardPreviewWidget.RewardPreviewWidget_C.PopulateDuplicateAssets
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Param_PartsValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PartsValue_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void URewardPreviewWidget_C::PopulateDuplicateAssets(int32 Param_PartsValue)
+void URewardPreviewWidget_C::PopulateDuplicateAssets(int32 PartsValue_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -193,7 +193,7 @@ void URewardPreviewWidget_C::PopulateDuplicateAssets(int32 Param_PartsValue)
 
 	Params::RewardPreviewWidget_C_PopulateDuplicateAssets Parms{};
 
-	Parms.Param_PartsValue = Param_PartsValue;
+	Parms.PartsValue_0 = PartsValue_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

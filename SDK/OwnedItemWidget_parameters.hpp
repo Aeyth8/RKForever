@@ -21,11 +21,11 @@ struct OwnedItemWidget_C_Populate final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Populate_ReturnValue;                     // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2363[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_TextFromStringTable_ReturnValue;          // 0x0008(0x0018)()
 	class UMarinerCMSItemDataAsset*               K2Node_DynamicCast_AsMariner_CMSItem_Data_Asset;   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2364[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0030(0x0018)()
 };
 static_assert(alignof(OwnedItemWidget_C_Populate) == 0x000008, "Wrong alignment on OwnedItemWidget_C_Populate");
@@ -42,13 +42,13 @@ static_assert(offsetof(OwnedItemWidget_C_Populate, CallFunc_TextToUpper_ReturnVa
 struct OwnedItemWidget_C_SetOwnedItem final
 {
 public:
-	class UItemLoadResponse*                      Param_ItemLoadResponse;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_IsOwned;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UItemLoadResponse*                      ItemLoadResponse_0;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOwned_0;                                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(OwnedItemWidget_C_SetOwnedItem) == 0x000008, "Wrong alignment on OwnedItemWidget_C_SetOwnedItem");
 static_assert(sizeof(OwnedItemWidget_C_SetOwnedItem) == 0x000010, "Wrong size on OwnedItemWidget_C_SetOwnedItem");
-static_assert(offsetof(OwnedItemWidget_C_SetOwnedItem, Param_ItemLoadResponse) == 0x000000, "Member 'OwnedItemWidget_C_SetOwnedItem::Param_ItemLoadResponse' has a wrong offset!");
-static_assert(offsetof(OwnedItemWidget_C_SetOwnedItem, Param_IsOwned) == 0x000008, "Member 'OwnedItemWidget_C_SetOwnedItem::Param_IsOwned' has a wrong offset!");
+static_assert(offsetof(OwnedItemWidget_C_SetOwnedItem, ItemLoadResponse_0) == 0x000000, "Member 'OwnedItemWidget_C_SetOwnedItem::ItemLoadResponse_0' has a wrong offset!");
+static_assert(offsetof(OwnedItemWidget_C_SetOwnedItem, IsOwned_0) == 0x000008, "Member 'OwnedItemWidget_C_SetOwnedItem::IsOwned_0' has a wrong offset!");
 
 }
 

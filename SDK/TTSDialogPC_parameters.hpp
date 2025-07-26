@@ -20,7 +20,7 @@ struct TTSDialogPC_C_ExecuteUbergraph_TTSDialogPC final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27B5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0008(0x0018)()
 };
 static_assert(alignof(TTSDialogPC_C_ExecuteUbergraph_TTSDialogPC) == 0x000008, "Wrong alignment on TTSDialogPC_C_ExecuteUbergraph_TTSDialogPC");

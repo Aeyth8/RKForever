@@ -170,9 +170,9 @@ void UCharacterFeaturesMenu_C::OnProfileUpdated()
 // Function CharacterFeaturesMenu.CharacterFeaturesMenu_C.PopulateCharacter
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCharacterCustomization_C*        Param_ParentMenu                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCharacterCustomization_C*        ParentMenu_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCharacterFeaturesMenu_C::PopulateCharacter(class UCharacterCustomization_C* Param_ParentMenu)
+void UCharacterFeaturesMenu_C::PopulateCharacter(class UCharacterCustomization_C* ParentMenu_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -181,7 +181,7 @@ void UCharacterFeaturesMenu_C::PopulateCharacter(class UCharacterCustomization_C
 
 	Params::CharacterFeaturesMenu_C_PopulateCharacter Parms{};
 
-	Parms.Param_ParentMenu = Param_ParentMenu;
+	Parms.ParentMenu_0 = ParentMenu_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -409,9 +409,9 @@ void UCharacterFeaturesMenu_C::HandleCharacterProgressionButton(class UMarinerPl
 // Parameters:
 // class UMarinerPlayableCharacter*        Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bProgressionFound                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FMangoCharacterProgression       Param_Progression                                      (Parm, OutParm)
+// struct FMangoCharacterProgression       Progression_0                                          (Parm, OutParm)
 
-void UCharacterFeaturesMenu_C::GetCharacterProfileProgression(class UMarinerPlayableCharacter* Character, bool* bProgressionFound, struct FMangoCharacterProgression* Param_Progression)
+void UCharacterFeaturesMenu_C::GetCharacterProfileProgression(class UMarinerPlayableCharacter* Character, bool* bProgressionFound, struct FMangoCharacterProgression* Progression_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -427,8 +427,8 @@ void UCharacterFeaturesMenu_C::GetCharacterProfileProgression(class UMarinerPlay
 	if (bProgressionFound != nullptr)
 		*bProgressionFound = Parms.bProgressionFound;
 
-	if (Param_Progression != nullptr)
-		*Param_Progression = std::move(Parms.Param_Progression);
+	if (Progression_0 != nullptr)
+		*Progression_0 = std::move(Parms.Progression_0);
 }
 
 }

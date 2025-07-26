@@ -27,7 +27,7 @@ public:
 	struct FSlateColor                            RemotePlayerColor;                                 // 0x0260(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void SetPlayerName(const class FString& Param_PlayerName, bool IsLocalPlayer);
+	void SetPlayerName(const class FString& PlayerName_0, bool IsLocalPlayer);
 
 public:
 	static class UClass* StaticClass()

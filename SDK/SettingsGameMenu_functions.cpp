@@ -627,9 +627,9 @@ void USettingsGameMenu_C::GetMesssageBoxManager(class UMarinerMessageBoxManager*
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // EMarinerCrossplayState                  CrossplayState                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsGameMenu_C::CrossplayStateToComboIndex(EMarinerCrossplayState CrossplayState, int32* Param_Index)
+void USettingsGameMenu_C::CrossplayStateToComboIndex(EMarinerCrossplayState CrossplayState, int32* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -642,18 +642,18 @@ void USettingsGameMenu_C::CrossplayStateToComboIndex(EMarinerCrossplayState Cros
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 }
 
 
 // Function SettingsGameMenu.SettingsGameMenu_C.ComboIndexToCrossplayState
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMarinerCrossplayState                  CrossplayState                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsGameMenu_C::ComboIndexToCrossplayState(int32 Param_Index, EMarinerCrossplayState* CrossplayState)
+void USettingsGameMenu_C::ComboIndexToCrossplayState(int32 Index_0, EMarinerCrossplayState* CrossplayState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -662,7 +662,7 @@ void USettingsGameMenu_C::ComboIndexToCrossplayState(int32 Param_Index, EMariner
 
 	Params::SettingsGameMenu_C_ComboIndexToCrossplayState Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

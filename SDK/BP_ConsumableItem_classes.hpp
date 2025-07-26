@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ItemBoxPayload_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ItemBoxTypes_structs.hpp"
+#include "ItemBoxPayload_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "BP_MarinerItem_classes.hpp"
 #include "Mariner_structs.hpp"
+#include "BP_MarinerItem_classes.hpp"
+#include "ItemBoxTypes_structs.hpp"
 #include "AkAudio_structs.hpp"
 
 
@@ -30,17 +30,17 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ConsumableItem_C;                // 0x06A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	float                                         AnimateSpawn_Progress_D79DC263437152A3ADD47391A466C08E; // 0x06A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            AnimateSpawn__Direction_D79DC263437152A3ADD47391A466C08E; // 0x06AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_278E[0x3];                                     // 0x06AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6AD[0x3];                                      // 0x06AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     AnimateSpawn;                                      // 0x06B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                ItemBoxScale;                                      // 0x06B8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_278F[0x4];                                     // 0x06C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C4[0x4];                                      // 0x06C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FItemBoxPayload                        ItemBoxRepPayload;                                 // 0x06C8(0x0020)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCurrentlyInItemBox;                              // 0x06E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsOnSpawnPoint;                                    // 0x06E9(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2790[0x6];                                     // 0x06EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6EA[0x6];                                      // 0x06EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMesh*                            ItemBoxMesh;                                       // 0x06F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnableDynamicCollisionsOnPickup;                   // 0x06F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2791[0x7];                                     // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6F9[0x7];                                      // 0x06F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystem*                        ItemBoxThrusterEmitter;                            // 0x0700(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                ItemBoxThrusterOffset;                             // 0x0708(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ItemBoxThrusterRotation;                           // 0x0714(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)

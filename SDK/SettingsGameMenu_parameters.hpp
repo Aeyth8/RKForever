@@ -27,7 +27,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_20DB[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoPlayerManager*                    CallFunc_Get_ReturnValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerSettingBase*                    K2Node_ComponentBoundEvent_Instance;               // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoId                               CallFunc_GetMangoId_ReturnValue;                   // 0x0038(0x0010)(ConstParm, HasGetValueTypeHash)
@@ -37,30 +37,30 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0018)()
 	class UMarinerSettingCheckBox*                K2Node_ComponentBoundEvent_CheckBox_5;             // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bIsChecked_2;           // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20DC[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerSettingCheckBox*                K2Node_ComponentBoundEvent_CheckBox_4;             // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_1;            // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetBuildNumber_ReturnValue;               // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetShowNetworkInformation_ReturnValue;    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetChecked_ReturnValue;                   // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20DD[0x6];                                     // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_2;            // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerSettingCheckBox*                K2Node_ComponentBoundEvent_CheckBox_3;             // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bIsChecked_1;           // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20DE[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_3;            // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMarinerCrossplayState                        CallFunc_GetCrossplayState_ReturnValue;            // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20DF[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetP4Changelist_ReturnValue;              // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_CrossplayStateToComboIndex_Index;         // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20E0[0x4];                                     // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0130(0x0018)()
 	EPlayerInputType                              K2Node_Event_InputType;                            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20E1[0x7];                                     // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue_1;                        // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetCMSVersion_ReturnValue;                // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -75,24 +75,24 @@ public:
 	class FString                                 CallFunc_GetMangoRealm_ReturnValue;                // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UMarinerSettingCheckBox*                K2Node_ComponentBoundEvent_CheckBox_1;             // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ComponentBoundEvent_bIsChecked;             // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20E2[0x7];                                     // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0208(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_5;            // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetPartyIsPrivate_ReturnValue;            // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20E3[0x7];                                     // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x0238(0x0018)()
 	bool                                          CallFunc_SetChecked_ReturnValue_1;                 // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20E4[0x7];                                     // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerSettingCheckBox*                K2Node_ComponentBoundEvent_CheckBox;               // 0x0258(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerSettingComboBox*                K2Node_ComponentBoundEvent_ComboBox_2;             // 0x0260(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_6;            // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_7;            // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetShowInGameIcons_ReturnValue;           // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20E5[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerSettingSlider*                  K2Node_ComponentBoundEvent_Slider;                 // 0x0280(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetChecked_ReturnValue_2;                 // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20E6[0x3];                                     // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_289[0x3];                                      // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_ComponentBoundEvent_Value;                  // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_8;            // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_SelectedIndex_2;        // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -105,11 +105,11 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_SelectedIndex_1;        // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bFromSubMenu;                         // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMarinerCrossplayState                        CallFunc_ComboIndexToCrossplayState_CrossplayState; // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20E7[0x6];                                     // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C2[0x6];                                      // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_10;           // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue_11;           // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMarinerCrossplayState                        CallFunc_GetCrossplayState_ReturnValue_1;          // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20E8[0x7];                                     // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerSettingComboBox*                K2Node_ComponentBoundEvent_ComboBox;               // 0x02E0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_CrossplayStateToComboIndex_Index_1;       // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_SelectedIndex;          // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -424,13 +424,13 @@ struct SettingsGameMenu_C_HandleInput final
 public:
 	EMarinerInputActions                          InInput;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20E9[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameInstance*                   CallFunc_GetMarinerGameInstance_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20EA[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(struct FKey& KeyPressed)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void(struct FKey& KeyPressed)>      K2Node_CreateDelegate_OutputDelegate_1;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_20EB[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerMessageBoxData                 K2Node_MakeStruct_MarinerMessageBoxData;           // 0x0038(0x0170)(ContainsInstancedReference)
 	bool                                          CallFunc_HandleInput_ReturnValue;                  // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -464,7 +464,7 @@ struct SettingsGameMenu_C_SetLanguage final
 {
 public:
 	int32                                         Selection;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20EC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuGlobals*                    CallFunc_GetMenuGlobals_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameUserSettings*               CallFunc_GetUserSettings_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -565,7 +565,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameInstance*                   K2Node_DynamicCast_AsMariner_Game_Instance;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20ED[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMessageBoxManager*              CallFunc_GetMessageBoxManager_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(SettingsGameMenu_C_GetMesssageBoxManager) == 0x000008, "Wrong alignment on SettingsGameMenu_C_GetMesssageBoxManager");
@@ -582,14 +582,14 @@ struct SettingsGameMenu_C_CrossplayStateToComboIndex final
 {
 public:
 	EMarinerCrossplayState                        CrossplayState;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_20EE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Param_Index;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(SettingsGameMenu_C_CrossplayStateToComboIndex) == 0x000004, "Wrong alignment on SettingsGameMenu_C_CrossplayStateToComboIndex");
 static_assert(sizeof(SettingsGameMenu_C_CrossplayStateToComboIndex) == 0x00000C, "Wrong size on SettingsGameMenu_C_CrossplayStateToComboIndex");
 static_assert(offsetof(SettingsGameMenu_C_CrossplayStateToComboIndex, CrossplayState) == 0x000000, "Member 'SettingsGameMenu_C_CrossplayStateToComboIndex::CrossplayState' has a wrong offset!");
-static_assert(offsetof(SettingsGameMenu_C_CrossplayStateToComboIndex, Param_Index) == 0x000004, "Member 'SettingsGameMenu_C_CrossplayStateToComboIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(SettingsGameMenu_C_CrossplayStateToComboIndex, Index_0) == 0x000004, "Member 'SettingsGameMenu_C_CrossplayStateToComboIndex::Index_0' has a wrong offset!");
 static_assert(offsetof(SettingsGameMenu_C_CrossplayStateToComboIndex, K2Node_SwitchEnum_CmpSuccess) == 0x000008, "Member 'SettingsGameMenu_C_CrossplayStateToComboIndex::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function SettingsGameMenu.SettingsGameMenu_C.ComboIndexToCrossplayState
@@ -597,14 +597,14 @@ static_assert(offsetof(SettingsGameMenu_C_CrossplayStateToComboIndex, K2Node_Swi
 struct SettingsGameMenu_C_ComboIndexToCrossplayState final
 {
 public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMarinerCrossplayState                        CrossplayState;                                    // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsPlatformPC_ReturnValue;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(SettingsGameMenu_C_ComboIndexToCrossplayState) == 0x000004, "Wrong alignment on SettingsGameMenu_C_ComboIndexToCrossplayState");
 static_assert(sizeof(SettingsGameMenu_C_ComboIndexToCrossplayState) == 0x000008, "Wrong size on SettingsGameMenu_C_ComboIndexToCrossplayState");
-static_assert(offsetof(SettingsGameMenu_C_ComboIndexToCrossplayState, Param_Index) == 0x000000, "Member 'SettingsGameMenu_C_ComboIndexToCrossplayState::Param_Index' has a wrong offset!");
+static_assert(offsetof(SettingsGameMenu_C_ComboIndexToCrossplayState, Index_0) == 0x000000, "Member 'SettingsGameMenu_C_ComboIndexToCrossplayState::Index_0' has a wrong offset!");
 static_assert(offsetof(SettingsGameMenu_C_ComboIndexToCrossplayState, CrossplayState) == 0x000004, "Member 'SettingsGameMenu_C_ComboIndexToCrossplayState::CrossplayState' has a wrong offset!");
 static_assert(offsetof(SettingsGameMenu_C_ComboIndexToCrossplayState, K2Node_SwitchInteger_CmpSuccess) == 0x000005, "Member 'SettingsGameMenu_C_ComboIndexToCrossplayState::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(SettingsGameMenu_C_ComboIndexToCrossplayState, CallFunc_IsPlatformPC_ReturnValue) == 0x000006, "Member 'SettingsGameMenu_C_ComboIndexToCrossplayState::CallFunc_IsPlatformPC_ReturnValue' has a wrong offset!");

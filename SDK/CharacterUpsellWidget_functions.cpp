@@ -74,10 +74,10 @@ void CharacterUpsellWidget::UCharacterUpsellWidget_C::Construct()
 // Function CharacterUpsellWidget.CharacterUpsellWidget_C.PopulateCharacter
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             DescFmt                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void CharacterUpsellWidget::UCharacterUpsellWidget_C::PopulateCharacter(class UMarinerPlayableCharacter* Param_Character, const class FText& DescFmt)
+void CharacterUpsellWidget::UCharacterUpsellWidget_C::PopulateCharacter(class UMarinerPlayableCharacter* Character_0, const class FText& DescFmt)
 {
 	static class UFunction* Func = nullptr;
 
@@ -86,7 +86,7 @@ void CharacterUpsellWidget::UCharacterUpsellWidget_C::PopulateCharacter(class UM
 
 	Params::CharacterUpsellWidget_C_PopulateCharacter Parms{};
 
-	Parms.Param_Character = Param_Character;
+	Parms.Character_0 = Character_0;
 	Parms.DescFmt = std::move(DescFmt);
 
 	UObject::ProcessEvent(Func, &Parms);

@@ -74,9 +74,9 @@ void UCharacterCommonGuttered_C::SetCirclePinRenderAngle(float RenderAngle)
 // Function CharacterCommonGuttered.CharacterCommonGuttered_C.SetIconBrush
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateBrush                      Param_IconBrush                                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSlateBrush                      IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UCharacterCommonGuttered_C::SetIconBrush(const struct FSlateBrush& Param_IconBrush)
+void UCharacterCommonGuttered_C::SetIconBrush(const struct FSlateBrush& IconBrush_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -85,7 +85,7 @@ void UCharacterCommonGuttered_C::SetIconBrush(const struct FSlateBrush& Param_Ic
 
 	Params::CharacterCommonGuttered_C_SetIconBrush Parms{};
 
-	Parms.Param_IconBrush = std::move(Param_IconBrush);
+	Parms.IconBrush_0 = std::move(IconBrush_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -108,9 +108,9 @@ void UCharacterCommonGuttered_C::PlayFlashAnimation()
 // Function CharacterCommonGuttered.CharacterCommonGuttered_C.SetCharacterBrush
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateBrush                      Param_CharacterBrush                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSlateBrush                      CharacterBrush_0                                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UCharacterCommonGuttered_C::SetCharacterBrush(const struct FSlateBrush& Param_CharacterBrush)
+void UCharacterCommonGuttered_C::SetCharacterBrush(const struct FSlateBrush& CharacterBrush_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -119,7 +119,7 @@ void UCharacterCommonGuttered_C::SetCharacterBrush(const struct FSlateBrush& Par
 
 	Params::CharacterCommonGuttered_C_SetCharacterBrush Parms{};
 
-	Parms.Param_CharacterBrush = std::move(Param_CharacterBrush);
+	Parms.CharacterBrush_0 = std::move(CharacterBrush_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -142,10 +142,10 @@ void UCharacterCommonGuttered_C::RefreshIcon()
 // Function CharacterCommonGuttered.CharacterCommonGuttered_C.SetGameModeWidget
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           Param_GameModeWidget                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           GameModeWidget_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AMarinerPlayerState*              PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCharacterCommonGuttered_C::SetGameModeWidget(class UClass* Param_GameModeWidget, class AMarinerPlayerState* PlayerState)
+void UCharacterCommonGuttered_C::SetGameModeWidget(class UClass* GameModeWidget_0, class AMarinerPlayerState* PlayerState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -154,7 +154,7 @@ void UCharacterCommonGuttered_C::SetGameModeWidget(class UClass* Param_GameModeW
 
 	Params::CharacterCommonGuttered_C_SetGameModeWidget Parms{};
 
-	Parms.Param_GameModeWidget = Param_GameModeWidget;
+	Parms.GameModeWidget_0 = GameModeWidget_0;
 	Parms.PlayerState = PlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);

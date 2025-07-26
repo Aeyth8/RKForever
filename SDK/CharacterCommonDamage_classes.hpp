@@ -25,7 +25,7 @@ public:
 	class UArrowWidget_C*                         Arrow;                                             // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UBlastBarElement_C*                     BlastBarElement;                                   // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	EMarinerHostility                             Team;                                              // 0x0428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2587[0x3];                                     // 0x0429(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_429[0x3];                                      // 0x0429(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LastDamage;                                        // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

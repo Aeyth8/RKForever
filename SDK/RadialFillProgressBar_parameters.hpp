@@ -22,7 +22,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2059[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(RadialFillProgressBar_C_ExecuteUbergraph_RadialFillProgressBar) == 0x000008, "Wrong alignment on RadialFillProgressBar_C_ExecuteUbergraph_RadialFillProgressBar");
@@ -48,13 +48,13 @@ static_assert(offsetof(RadialFillProgressBar_C_PreConstruct, IsDesignTime) == 0x
 struct RadialFillProgressBar_C_Set_Progress final
 {
 public:
-	float                                         Param_Progress;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_205A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Progress_0;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(RadialFillProgressBar_C_Set_Progress) == 0x000008, "Wrong alignment on RadialFillProgressBar_C_Set_Progress");
 static_assert(sizeof(RadialFillProgressBar_C_Set_Progress) == 0x000010, "Wrong size on RadialFillProgressBar_C_Set_Progress");
-static_assert(offsetof(RadialFillProgressBar_C_Set_Progress, Param_Progress) == 0x000000, "Member 'RadialFillProgressBar_C_Set_Progress::Param_Progress' has a wrong offset!");
+static_assert(offsetof(RadialFillProgressBar_C_Set_Progress, Progress_0) == 0x000000, "Member 'RadialFillProgressBar_C_Set_Progress::Progress_0' has a wrong offset!");
 static_assert(offsetof(RadialFillProgressBar_C_Set_Progress, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000008, "Member 'RadialFillProgressBar_C_Set_Progress::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
 
 // Function RadialFillProgressBar.RadialFillProgressBar_C.Get Progress
@@ -62,11 +62,11 @@ static_assert(offsetof(RadialFillProgressBar_C_Set_Progress, CallFunc_GetDynamic
 struct RadialFillProgressBar_C_Get_Progress final
 {
 public:
-	float                                         Param_Progress;                                    // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Progress_0;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(RadialFillProgressBar_C_Get_Progress) == 0x000004, "Wrong alignment on RadialFillProgressBar_C_Get_Progress");
 static_assert(sizeof(RadialFillProgressBar_C_Get_Progress) == 0x000004, "Wrong size on RadialFillProgressBar_C_Get_Progress");
-static_assert(offsetof(RadialFillProgressBar_C_Get_Progress, Param_Progress) == 0x000000, "Member 'RadialFillProgressBar_C_Get_Progress::Param_Progress' has a wrong offset!");
+static_assert(offsetof(RadialFillProgressBar_C_Get_Progress, Progress_0) == 0x000000, "Member 'RadialFillProgressBar_C_Get_Progress::Progress_0' has a wrong offset!");
 
 }
 

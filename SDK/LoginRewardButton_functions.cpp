@@ -94,9 +94,9 @@ void ULoginRewardButton_C::Init()
 // Parameters:
 // int32                                   Progress                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Goal                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsClaimable                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsClaimable_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ULoginRewardButton_C::IsClaimable(int32* Progress, int32* Goal, bool* Param_IsClaimable)
+void ULoginRewardButton_C::IsClaimable(int32* Progress, int32* Goal, bool* IsClaimable_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -113,8 +113,8 @@ void ULoginRewardButton_C::IsClaimable(int32* Progress, int32* Goal, bool* Param
 	if (Goal != nullptr)
 		*Goal = Parms.Goal;
 
-	if (Param_IsClaimable != nullptr)
-		*Param_IsClaimable = Parms.Param_IsClaimable;
+	if (IsClaimable_0 != nullptr)
+		*IsClaimable_0 = Parms.IsClaimable_0;
 }
 
 

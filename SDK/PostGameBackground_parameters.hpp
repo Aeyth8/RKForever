@@ -24,24 +24,24 @@ struct PostGameBackground_C_ExecuteUbergraph_PostGameBackground final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22B7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMapGlobals*                     CallFunc_GetMapGlobals_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameInstance*                   K2Node_DynamicCast_AsMariner_Game_Instance;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_22B8[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMenuSequence*                   CallFunc_GetActiveSequence_ReturnValue;            // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FGuid, struct FMangoMap>          CallFunc_GetMaps_ReturnValue;                      // 0x0040(0x0050)(ConstParm, ZeroConstructor)
 	class UMarinerPostGameSequence*               K2Node_DynamicCast_AsMariner_Post_Game_Sequence;   // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_22B9[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMatchEnd                              CallFunc_GetMatchEndData_ReturnValue;              // 0x00A0(0x0068)(ConstParm)
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0108(0x0088)()
 	struct FMangoMap                              CallFunc_Map_Find_Value;                           // 0x0190(0x0060)()
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_22BA[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture2D>              CallFunc_GetSoftImage_ReturnValue;                 // 0x01F8(0x0028)(ConstParm, HasGetValueTypeHash)
 };
 static_assert(alignof(PostGameBackground_C_ExecuteUbergraph_PostGameBackground) == 0x000008, "Wrong alignment on PostGameBackground_C_ExecuteUbergraph_PostGameBackground");

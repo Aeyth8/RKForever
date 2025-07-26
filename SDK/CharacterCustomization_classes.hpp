@@ -73,7 +73,7 @@ public:
 	void OnPracticePopupCancel(struct FKey& KeyPressed);
 	void InitActors();
 
-	void GetLocalProfile(struct FMangoProfile* Param_LocalProfile) const;
+	void GetLocalProfile(struct FMangoProfile* LocalProfile_0) const;
 
 public:
 	static class UClass* StaticClass()

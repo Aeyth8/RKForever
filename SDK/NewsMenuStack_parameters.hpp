@@ -24,12 +24,12 @@ struct NewsMenuStack_C_ExecuteUbergraph_NewsMenuStack final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bFromSubMenu;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_210E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsNewsLoaded_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_210F[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2110[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerMenuStackManagerSetup          K2Node_MakeStruct_MarinerMenuStackManagerSetup;    // 0x0028(0x0028)(NoDestructor, ContainsInstancedReference)
 };
 static_assert(alignof(NewsMenuStack_C_ExecuteUbergraph_NewsMenuStack) == 0x000008, "Wrong alignment on NewsMenuStack_C_ExecuteUbergraph_NewsMenuStack");
@@ -63,11 +63,11 @@ public:
 	TDelegate<void(class UMarinerMenuStackButton* ButtonInstance, int32 StackIndex)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0018(0x0010)(ZeroConstructor, NoDestructor)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNewsCount_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2111[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoNews                             CallFunc_GetNewsAtIndex_ReturnValue;               // 0x0038(0x0048)(ConstParm)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2112[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuStackButton*                CallFunc_AddStack_ReturnValue;                     // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(NewsMenuStack_C_ConstructNewsStacks) == 0x000008, "Wrong alignment on NewsMenuStack_C_ConstructNewsStacks");
@@ -88,11 +88,11 @@ static_assert(offsetof(NewsMenuStack_C_ConstructNewsStacks, CallFunc_AddStack_Re
 struct NewsMenuStack_C_ShowLoading final
 {
 public:
-	bool                                          Param_IsVisible;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsVisible_0;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(NewsMenuStack_C_ShowLoading) == 0x000001, "Wrong alignment on NewsMenuStack_C_ShowLoading");
 static_assert(sizeof(NewsMenuStack_C_ShowLoading) == 0x000001, "Wrong size on NewsMenuStack_C_ShowLoading");
-static_assert(offsetof(NewsMenuStack_C_ShowLoading, Param_IsVisible) == 0x000000, "Member 'NewsMenuStack_C_ShowLoading::Param_IsVisible' has a wrong offset!");
+static_assert(offsetof(NewsMenuStack_C_ShowLoading, IsVisible_0) == 0x000000, "Member 'NewsMenuStack_C_ShowLoading::IsVisible_0' has a wrong offset!");
 
 // Function NewsMenuStack.NewsMenuStack_C.OnNewsStackActivated
 // 0x0070 (0x0070 - 0x0000)
@@ -101,11 +101,11 @@ struct NewsMenuStack_C_OnNewsStackActivated final
 public:
 	class UMarinerMenuStackButton*                Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         StackIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2113[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoPlayerManager*                    CallFunc_Get_ReturnValue;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue_1;                        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetNewsViewed_ReturnValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2114[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoNews                             CallFunc_GetNewsAtIndex_ReturnValue;               // 0x0028(0x0048)(ConstParm)
 };
 static_assert(alignof(NewsMenuStack_C_OnNewsStackActivated) == 0x000008, "Wrong alignment on NewsMenuStack_C_OnNewsStackActivated");
@@ -128,7 +128,7 @@ public:
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMenuStackLayer*                 CallFunc_GetLayerByClass_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_RequestImage_ReturnValue;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2115[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNewsMenu_C*                            K2Node_DynamicCast_AsNews_Menu;                    // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };

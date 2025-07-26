@@ -39,7 +39,7 @@ public:
 	bool                                          AllowState;                                        // 0x04A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void SetArtifact(class UMarinerArtifactDataAsset* Param_Artifact, class UItemLoadResponse* Param_ItemLoadResponse, TSoftClassPtr<class UClass> CurrentCharacterClass, bool Param_AllowState);
+	void SetArtifact(class UMarinerArtifactDataAsset* Artifact_0, class UItemLoadResponse* ItemLoadResponse_0, TSoftClassPtr<class UClass> CurrentCharacterClass, bool AllowState_0);
 	bool Populate();
 
 public:

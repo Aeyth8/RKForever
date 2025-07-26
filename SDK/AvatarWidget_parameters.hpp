@@ -23,14 +23,14 @@ struct AvatarWidget_C_ExecuteUbergraph_AvatarWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2329[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0008(0x0070)(ConstParm)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_232A[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0084(0x0038)(IsPlainOldData, NoDestructor)
-	uint8                                         Pad_232B[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x00C0(0x0070)(ConstParm)
 };
 static_assert(alignof(AvatarWidget_C_ExecuteUbergraph_AvatarWidget) == 0x000008, "Wrong alignment on AvatarWidget_C_ExecuteUbergraph_AvatarWidget");

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "ItemBoxTypes_structs.hpp"
 #include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,9 +26,9 @@ struct Shared_Artifact_Ability_27_C_ExecuteUbergraph_Shared_Artifact_Ability_27 
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Is_Allowed_by_Game_Mode_IsAllowed;        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_279E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_279F[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0020(0x0030)(IsPlainOldData, NoDestructor)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0050(0x0010)(ZeroConstructor, NoDestructor)
 	struct FGameplayAbilityActorInfo              K2Node_Event_ActorInfo;                            // 0x0060(0x0040)(ContainsInstancedReference)
@@ -37,18 +37,18 @@ public:
 	class AMarinerCharacter*                      CallFunc_GetAvatarCharacterFromActorInfo_ReturnValue; // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_DoesSlotContainItem_ReturnValue;          // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27A0[0x6];                                     // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   CallFunc_GetRandomItem_RandomItem;                 // 0x00B8(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27A1[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 CallFunc_Conv_SoftClassReferenceToClass_ReturnValue; // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 K2Node_ClassDynamicCast_AsBP_Consumable_Item;      // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27A2[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_ConsumableItem_C*                   CallFunc_FinishSpawningActor_ReturnValue;          // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AuthorityTryReceiveItem_ReturnValue;      // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27A3[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0118(0x0008)(NoDestructor, HasGetValueTypeHash)
 	class AMarinerCharacter*                      CallFunc_GetAvatarCharacterFromActorInfo_ReturnValue_1; // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -96,7 +96,7 @@ public:
 	int32                                         CallFunc_GetAbilityLevel_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EEvaluateCurveTableResult                     CallFunc_EvaluateCurveTableRow_OutResult;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A4[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_EvaluateCurveTableRow_OutXY;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -120,20 +120,20 @@ public:
 	TArray<TSoftClassPtr<class UClass>>           CallFunc_Map_Values_Values;                        // 0x0080(0x0010)(ZeroConstructor, ReferenceParm)
 	class AMarinerGameState*                      K2Node_DynamicCast_AsMariner_Game_State;           // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27A5[0x3];                                     // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsRanked_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27A6[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A7[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<EItemBoxTypes, TSoftClassPtr<class UClass>> CallFunc_GetGlobalItemMap_ItemMap;                 // 0x00B0(0x0050)(ZeroConstructor)
 	TSoftClassPtr<class UClass>                   CallFunc_Array_Get_Item;                           // 0x0100(0x0028)(HasGetValueTypeHash)
 	TArray<TSoftClassPtr<class UClass>>           CallFunc_Map_Values_Values_1;                      // 0x0128(0x0010)(ZeroConstructor, ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_RandomIntegerInRange_ReturnValue_1;       // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27A8[0x4];                                     // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   CallFunc_Array_Get_Item_1;                         // 0x0148(0x0028)(HasGetValueTypeHash)
 };
 static_assert(alignof(Shared_Artifact_Ability_27_C_GetRandomItem) == 0x000008, "Wrong alignment on Shared_Artifact_Ability_27_C_GetRandomItem");
@@ -162,7 +162,7 @@ struct Shared_Artifact_Ability_27_C_Is_Allowed_by_Game_Mode final
 {
 public:
 	bool                                          IsAllowed;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27A9[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_MarinerGameState_C*                 K2Node_DynamicCast_AsBP_Mariner_Game_State;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

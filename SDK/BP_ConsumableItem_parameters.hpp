@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Mariner_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ItemBoxTypes_structs.hpp"
 #include "ItemBoxPayload_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AkAudio_structs.hpp"
 
 
@@ -26,17 +26,17 @@ struct BP_ConsumableItem_C_ExecuteUbergraph_BP_ConsumableItem final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2792[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0008(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0018(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable_1;                            // 0x0028(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable_1;                          // 0x0038(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	TDelegate<void(EMarinerRealityState OldReality, EMarinerRealityState NewReality)> K2Node_CreateDelegate_OutputDelegate;              // 0x0048(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2793[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_PostEventAtLocation_ReturnValue;          // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2794[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerRealityObjectManager*           CallFunc_GetRealityManager_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMarinerRealityState                          CallFunc_GetCurrentReality_ReturnValue;            // 0x007C(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -44,7 +44,7 @@ public:
 	EMarinerRealityState                          K2Node_CustomEvent_NewReality;                     // 0x007E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShouldItemUsePool_ReturnValue;            // 0x007F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_PostEvent_ReturnValue_1;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2795[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerRealityObjectManager*           CallFunc_GetRealityManager_ReturnValue_1;          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_ConsumableItem_C_ExecuteUbergraph_BP_ConsumableItem) == 0x000008, "Wrong alignment on BP_ConsumableItem_C_ExecuteUbergraph_BP_ConsumableItem");
@@ -86,7 +86,7 @@ struct BP_ConsumableItem_C_ResetStaticMesh final
 {
 public:
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2796[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_ConsumableItem_C_ResetStaticMesh) == 0x000008, "Wrong alignment on BP_ConsumableItem_C_ResetStaticMesh");
@@ -101,10 +101,10 @@ struct BP_ConsumableItem_C_ServerSetItemBoxType final
 public:
 	EItemBoxTypes                                 ItemBoxType;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2797[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FItemBoxPayload                        K2Node_MakeStruct_ItemBoxPayload;                  // 0x0008(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2798[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetActorScale3D_ReturnValue;              // 0x002C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FItemBoxPayload                        K2Node_MakeStruct_ItemBoxPayload_1;                // 0x0038(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

@@ -56,8 +56,8 @@ public:
 	bool HandleInput(EMarinerInputActions InInput);
 	void RestoreDefaultsConfirm(struct FKey& KeyPressed);
 	void DummyCallback(struct FKey& KeyPressed);
-	void AimAssistStateToIndex(EMarinerAimAssistState AimAssistState, int32* Param_Index);
-	void IndexToAimAssistState(int32 Param_Index, EMarinerAimAssistState* AimAssistState);
+	void AimAssistStateToIndex(EMarinerAimAssistState AimAssistState, int32* Index_0);
+	void IndexToAimAssistState(int32 Index_0, EMarinerAimAssistState* AimAssistState);
 
 public:
 	static class UClass* StaticClass()

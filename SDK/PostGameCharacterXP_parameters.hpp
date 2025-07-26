@@ -24,23 +24,23 @@ struct PostGameCharacterXP_C_ExecuteUbergraph_PostGameCharacterXP final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2286[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasRewardItems_HasRewardItems;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2287[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_RemoveSelf_ReturnValue;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ConsumeNextReward_IsValid;                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2288[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoReward                           CallFunc_ConsumeNextReward_OutReward;              // 0x0028(0x0040)()
 	bool                                          CallFunc_RemoveSelf_ReturnValue_1;                 // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2289[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0078(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0090(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_228A[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_3;              // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -51,31 +51,31 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x00F0(0x0010)(ZeroConstructor, NoDestructor)
 	class UPostGameSequence_C*                    K2Node_DynamicCast_AsPost_Game_Sequence;           // 0x0100(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_228B[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_2;            // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue_1;             // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMenuSequence*                   CallFunc_GetActiveSequence_ReturnValue_1;          // 0x0120(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerPostGameSequence*               K2Node_DynamicCast_AsMariner_Post_Game_Sequence;   // 0x0128(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_228C[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerPostGameData                   CallFunc_GetLocalPlayerPostGameData_ReturnValue;   // 0x0138(0x0358)(ConstParm)
 	TArray<struct FMangoReward>                   CallFunc_ParseMangoRewards_OutParsedRewards;       // 0x0490(0x0010)(ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable_1;                          // 0x04A0(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable_1;                            // 0x04B0(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable_2;                          // 0x04C0(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	int32                                         CallFunc_PostEvent_ReturnValue_1;                  // 0x04D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_228D[0x4];                                     // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D4[0x4];                                      // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable_2;                            // 0x04D8(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable_3;                          // 0x04E8(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	int32                                         CallFunc_PostEvent_ReturnValue_2;                  // 0x04F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_228E[0x4];                                     // 0x04FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FC[0x4];                                      // 0x04FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue_2;             // 0x0500(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bFromSubMenu;                         // 0x0508(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_228F[0x7];                                     // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_509[0x7];                                      // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuSequence*                   CallFunc_GetActiveSequence_ReturnValue_2;          // 0x0510(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerPostGameSequence*               K2Node_DynamicCast_AsMariner_Post_Game_Sequence_1; // 0x0518(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2290[0x7];                                     // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_521[0x7];                                      // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_4;              // 0x0528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMarinerPostGameData                   CallFunc_GetLocalPlayerPostGameData_ReturnValue_1; // 0x0530(0x0358)(ConstParm)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable_3;                            // 0x0888(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
@@ -147,7 +147,7 @@ struct PostGameCharacterXP_C_PopulatePostGameCharacterXp final
 {
 public:
 	bool                                          Init;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2291[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerPostGameData                   PostGameData;                                      // 0x0008(0x0358)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(PostGameCharacterXP_C_PopulatePostGameCharacterXp) == 0x000008, "Wrong alignment on PostGameCharacterXP_C_PopulatePostGameCharacterXp");
@@ -161,11 +161,11 @@ struct PostGameCharacterXP_C_ConsumeNextReward final
 {
 public:
 	bool                                          IsValid;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2292[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoReward                           OutReward;                                         // 0x0008(0x0040)(Parm, OutParm)
 	struct FMangoReward                           RewardToUse;                                       // 0x0048(0x0040)(Edit, BlueprintVisible)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2293[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoReward                           CallFunc_Array_Get_Item;                           // 0x0090(0x0040)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -183,14 +183,14 @@ static_assert(offsetof(PostGameCharacterXP_C_ConsumeNextReward, CallFunc_Greater
 struct PostGameCharacterXP_C_HasRewardItems final
 {
 public:
-	bool                                          Param_HasRewardItems;                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2294[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          HasRewardItems_0;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(PostGameCharacterXP_C_HasRewardItems) == 0x000004, "Wrong alignment on PostGameCharacterXP_C_HasRewardItems");
 static_assert(sizeof(PostGameCharacterXP_C_HasRewardItems) == 0x00000C, "Wrong size on PostGameCharacterXP_C_HasRewardItems");
-static_assert(offsetof(PostGameCharacterXP_C_HasRewardItems, Param_HasRewardItems) == 0x000000, "Member 'PostGameCharacterXP_C_HasRewardItems::Param_HasRewardItems' has a wrong offset!");
+static_assert(offsetof(PostGameCharacterXP_C_HasRewardItems, HasRewardItems_0) == 0x000000, "Member 'PostGameCharacterXP_C_HasRewardItems::HasRewardItems_0' has a wrong offset!");
 static_assert(offsetof(PostGameCharacterXP_C_HasRewardItems, CallFunc_Array_Length_ReturnValue) == 0x000004, "Member 'PostGameCharacterXP_C_HasRewardItems::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(PostGameCharacterXP_C_HasRewardItems, CallFunc_Greater_IntInt_ReturnValue) == 0x000008, "Member 'PostGameCharacterXP_C_HasRewardItems::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
 

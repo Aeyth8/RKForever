@@ -24,7 +24,7 @@ struct CharacterBundleWidget_C_ExecuteUbergraph_CharacterBundleWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F1B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(CharacterBundleWidget_C_ExecuteUbergraph_CharacterBundleWidget) == 0x000008, "Wrong alignment on CharacterBundleWidget_C_ExecuteUbergraph_CharacterBundleWidget");
@@ -37,7 +37,7 @@ static_assert(offsetof(CharacterBundleWidget_C_ExecuteUbergraph_CharacterBundleW
 struct CharacterBundleWidget_C_PopulateCharacter final
 {
 public:
-	class UMarinerPlayableCharacter*              Param_Character;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerPlayableCharacter*              Character_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoTxnManager*                       CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UMarinerLayeredButton* Instance)> K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
 	class UMarinerFrontEndGlobals*                CallFunc_GetFrontEndGlobals_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -46,14 +46,14 @@ public:
 	class FText                                   CallFunc_GetDisplayPriceForNativeOfferId_ReturnValue; // 0x00F0(0x0018)()
 	struct FSlateBrush                            CallFunc_GetImage_ImageBrushOut;                   // 0x0108(0x0088)()
 	bool                                          CallFunc_GetImage_ReturnValue;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F1C[0x7];                                     // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_ParseSpecialCharacters_Output;            // 0x0198(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x01A8(0x0018)()
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x01C0(0x0018)()
 };
 static_assert(alignof(CharacterBundleWidget_C_PopulateCharacter) == 0x000008, "Wrong alignment on CharacterBundleWidget_C_PopulateCharacter");
 static_assert(sizeof(CharacterBundleWidget_C_PopulateCharacter) == 0x0001D8, "Wrong size on CharacterBundleWidget_C_PopulateCharacter");
-static_assert(offsetof(CharacterBundleWidget_C_PopulateCharacter, Param_Character) == 0x000000, "Member 'CharacterBundleWidget_C_PopulateCharacter::Param_Character' has a wrong offset!");
+static_assert(offsetof(CharacterBundleWidget_C_PopulateCharacter, Character_0) == 0x000000, "Member 'CharacterBundleWidget_C_PopulateCharacter::Character_0' has a wrong offset!");
 static_assert(offsetof(CharacterBundleWidget_C_PopulateCharacter, CallFunc_Get_ReturnValue) == 0x000008, "Member 'CharacterBundleWidget_C_PopulateCharacter::CallFunc_Get_ReturnValue' has a wrong offset!");
 static_assert(offsetof(CharacterBundleWidget_C_PopulateCharacter, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'CharacterBundleWidget_C_PopulateCharacter::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(CharacterBundleWidget_C_PopulateCharacter, CallFunc_GetFrontEndGlobals_ReturnValue) == 0x000020, "Member 'CharacterBundleWidget_C_PopulateCharacter::CallFunc_GetFrontEndGlobals_ReturnValue' has a wrong offset!");

@@ -80,7 +80,7 @@ static_assert(sizeof(UClothingSimulationFactory) == 0x000028, "Wrong size on UCl
 class UClothingSimulationInteractor : public UObject
 {
 public:
-	uint8                                         Pad_1D16[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClothConfigUpdated();
@@ -112,7 +112,7 @@ public:
 	int32                                         NumFixedVerts;                                     // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxBoneWeights;                                    // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint32>                                SelfCollisionIndices;                              // 0x0080(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D17[0x50];                                    // 0x0090(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0x50];                                      // 0x0090(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

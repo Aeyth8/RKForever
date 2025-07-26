@@ -26,10 +26,10 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             OnPreroundCountdownChange;                         // 0x08E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         PreroundTimerRemainingTime;                        // 0x08F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2592[0x4];                                     // 0x08F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F4[0x4];                                      // 0x08F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           PreroundStartTimerHandle;                          // 0x08F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         PreroundTimerMaxTimeToSendUpdates;                 // 0x0900(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2593[0x4];                                     // 0x0904(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_904[0x4];                                      // 0x0904(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           GameTimer;                                         // 0x0908(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:

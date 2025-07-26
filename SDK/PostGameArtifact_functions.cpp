@@ -278,9 +278,9 @@ void UPostGameArtifact_C::GetArtifactImprovementText(float ImprovementNumber, co
 // Function PostGameArtifact.PostGameArtifact_C.Get Artifact Progress Bar
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UArtifactProgressBar_C*           Param_ArtifactProgressBar                              (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UArtifactProgressBar_C*           ArtifactProgressBar_0                                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPostGameArtifact_C::Get_Artifact_Progress_Bar(class UArtifactProgressBar_C** Param_ArtifactProgressBar)
+void UPostGameArtifact_C::Get_Artifact_Progress_Bar(class UArtifactProgressBar_C** ArtifactProgressBar_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -291,8 +291,8 @@ void UPostGameArtifact_C::Get_Artifact_Progress_Bar(class UArtifactProgressBar_C
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ArtifactProgressBar != nullptr)
-		*Param_ArtifactProgressBar = Parms.Param_ArtifactProgressBar;
+	if (ArtifactProgressBar_0 != nullptr)
+		*ArtifactProgressBar_0 = Parms.ArtifactProgressBar_0;
 }
 
 }

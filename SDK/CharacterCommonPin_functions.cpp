@@ -342,10 +342,10 @@ void UCharacterCommonPin_C::ClearIcon()
 // Function CharacterCommonPin.CharacterCommonPin_C.SetGameModeWidget
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSubclassOf<class UMarinerPinGameModeWidget>Param_GameModeWidget                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// TSubclassOf<class UMarinerPinGameModeWidget>GameModeWidget_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // class AMarinerPlayerState*              PlayerState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCharacterCommonPin_C::SetGameModeWidget(TSubclassOf<class UMarinerPinGameModeWidget> Param_GameModeWidget, class AMarinerPlayerState* PlayerState)
+void UCharacterCommonPin_C::SetGameModeWidget(TSubclassOf<class UMarinerPinGameModeWidget> GameModeWidget_0, class AMarinerPlayerState* PlayerState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -354,7 +354,7 @@ void UCharacterCommonPin_C::SetGameModeWidget(TSubclassOf<class UMarinerPinGameM
 
 	Params::CharacterCommonPin_C_SetGameModeWidget Parms{};
 
-	Parms.Param_GameModeWidget = Param_GameModeWidget;
+	Parms.GameModeWidget_0 = GameModeWidget_0;
 	Parms.PlayerState = PlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -885,9 +885,9 @@ void UCharacterCommonPin_C::SetActionTextFontSize(int32 FontSize)
 // Function CharacterCommonPin.CharacterCommonPin_C.SetGutterWidgetTextVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsVisible                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UCharacterCommonPin_C::SetGutterWidgetTextVisibility(bool Param_IsVisible)
+void UCharacterCommonPin_C::SetGutterWidgetTextVisibility(bool IsVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -896,7 +896,7 @@ void UCharacterCommonPin_C::SetGutterWidgetTextVisibility(bool Param_IsVisible)
 
 	Params::CharacterCommonPin_C_SetGutterWidgetTextVisibility Parms{};
 
-	Parms.Param_IsVisible = Param_IsVisible;
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

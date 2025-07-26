@@ -24,7 +24,7 @@ struct LobbyBeaconClient_ClientLoginComplete final
 public:
 	struct FUniqueNetIdRepl                       InUniqueId;                                        // 0x0000(0x0028)(ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWasSuccessful;                                    // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F58[0x7];                                      // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LobbyBeaconClient_ClientLoginComplete) == 0x000008, "Wrong alignment on LobbyBeaconClient_ClientLoginComplete");
 static_assert(sizeof(LobbyBeaconClient_ClientLoginComplete) == 0x000030, "Wrong size on LobbyBeaconClient_ClientLoginComplete");

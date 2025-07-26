@@ -23,7 +23,7 @@ struct ServerListElement_C_ExecuteUbergraph_ServerListElement final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2132[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0008(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0028(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
@@ -50,15 +50,15 @@ static_assert(offsetof(ServerListElement_C_ExecuteUbergraph_ServerListElement, C
 struct ServerListElement_C_OnServerWidgetCreated final
 {
 public:
-	class FText                                   Param_Name;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FText                                   Name_0;                                            // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class FText                                   Ping;                                              // 0x0018(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class FText                                   Param_PlayerCount;                                 // 0x0030(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FText                                   PlayerCount_0;                                     // 0x0030(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(ServerListElement_C_OnServerWidgetCreated) == 0x000008, "Wrong alignment on ServerListElement_C_OnServerWidgetCreated");
 static_assert(sizeof(ServerListElement_C_OnServerWidgetCreated) == 0x000048, "Wrong size on ServerListElement_C_OnServerWidgetCreated");
-static_assert(offsetof(ServerListElement_C_OnServerWidgetCreated, Param_Name) == 0x000000, "Member 'ServerListElement_C_OnServerWidgetCreated::Param_Name' has a wrong offset!");
+static_assert(offsetof(ServerListElement_C_OnServerWidgetCreated, Name_0) == 0x000000, "Member 'ServerListElement_C_OnServerWidgetCreated::Name_0' has a wrong offset!");
 static_assert(offsetof(ServerListElement_C_OnServerWidgetCreated, Ping) == 0x000018, "Member 'ServerListElement_C_OnServerWidgetCreated::Ping' has a wrong offset!");
-static_assert(offsetof(ServerListElement_C_OnServerWidgetCreated, Param_PlayerCount) == 0x000030, "Member 'ServerListElement_C_OnServerWidgetCreated::Param_PlayerCount' has a wrong offset!");
+static_assert(offsetof(ServerListElement_C_OnServerWidgetCreated, PlayerCount_0) == 0x000030, "Member 'ServerListElement_C_OnServerWidgetCreated::PlayerCount_0' has a wrong offset!");
 
 // Function ServerListElement.ServerListElement_C.HandleInput
 // 0x0003 (0x0003 - 0x0000)

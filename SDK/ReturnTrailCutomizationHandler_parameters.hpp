@@ -25,16 +25,16 @@ struct ReturnTrailCutomizationHandler_C_ExecuteUbergraph_ReturnTrailCutomization
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_205D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UAssetLoadResponse*>             K2Node_CustomEvent_LoadedAssetResponse;            // 0x0008(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(TArray<class UAssetLoadResponse*>& LoadedAssetResponse)> K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor)
 	TArray<class UAssetLoadResponse*>             Temp_object_Variable;                              // 0x0028(0x0010)(ZeroConstructor, ReferenceParm)
 	class UObject*                                Temp_object_Variable_1;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_205E[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerSkinCollectionDataAsset*        K2Node_DynamicCast_AsMariner_Skin_Collection_Data_Asset; // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_205F[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_ComponentBoundEvent_EventName;              // 0x0054(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_ComponentBoundEvent_EmitterTime;            // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_ComponentBoundEvent_Location;               // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -45,28 +45,28 @@ public:
 	class FString                                 CallFunc_Conv_SoftClassReferenceToString_ReturnValue; // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UClass*                                 K2Node_ClassDynamicCast_AsMariner_Character_Lite;  // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2060[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	bool                                          CallFunc_LoadCharacter_ReturnValue;                // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2061[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerLoadEngineAsset*                CallFunc_LoadEngineAssets_ReturnValue;             // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2062[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoPlayerManager*                    CallFunc_Get_ReturnValue;                          // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoProfile                          CallFunc_GetMangoProfile_ReturnValue;              // 0x00E0(0x02E0)(ConstParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x03C0(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x03D0(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2063[0x4];                                     // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UMarinerSkinCollectionDataAsset> CallFunc_GetEquippedSkinForProfile_ReturnValue;    // 0x03E8(0x0028)(HasGetValueTypeHash)
 	class UMangoPlayerManager*                    CallFunc_Get_ReturnValue_1;                        // 0x0410(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoProfile                          CallFunc_GetMangoProfile_ReturnValue_1;            // 0x0418(0x02E0)(ConstParm)
 	TSoftObjectPtr<class UMarinerSkinCollectionDataAsset> CallFunc_GetEquippedSkinForProfile_ReturnValue_1;  // 0x06F8(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0721(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2064[0x2];                                     // 0x0722(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_722[0x2];                                      // 0x0722(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UMarinerSkinCollectionDataAsset* SkinCollection)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0724(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2065[0x4];                                     // 0x0734(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_734[0x4];                                      // 0x0734(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerSkinCollectionDataAsset*        K2Node_CustomEvent_SkinCollection;                 // 0x0738(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 CallFunc_GetCharacterMesh_ReturnValue;             // 0x0740(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AWindDirectionalSource*                 K2Node_DynamicCast_AsWind_Directional_Source;      // 0x0748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -75,7 +75,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0752(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0753(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0754(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2066[0x3];                                     // 0x0755(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_755[0x3];                                      // 0x0755(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_2;            // 0x0758(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0768(0x0010)(ZeroConstructor, NoDestructor)
 };
@@ -142,11 +142,11 @@ static_assert(offsetof(ReturnTrailCutomizationHandler_C_OnSkinApplied, SkinColle
 struct ReturnTrailCutomizationHandler_C_MenuEntered final
 {
 public:
-	class UMarinerPlayableCharacter*              Param_CurrentPlayableCharacter;                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerPlayableCharacter*              CurrentPlayableCharacter_0;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ReturnTrailCutomizationHandler_C_MenuEntered) == 0x000008, "Wrong alignment on ReturnTrailCutomizationHandler_C_MenuEntered");
 static_assert(sizeof(ReturnTrailCutomizationHandler_C_MenuEntered) == 0x000008, "Wrong size on ReturnTrailCutomizationHandler_C_MenuEntered");
-static_assert(offsetof(ReturnTrailCutomizationHandler_C_MenuEntered, Param_CurrentPlayableCharacter) == 0x000000, "Member 'ReturnTrailCutomizationHandler_C_MenuEntered::Param_CurrentPlayableCharacter' has a wrong offset!");
+static_assert(offsetof(ReturnTrailCutomizationHandler_C_MenuEntered, CurrentPlayableCharacter_0) == 0x000000, "Member 'ReturnTrailCutomizationHandler_C_MenuEntered::CurrentPlayableCharacter_0' has a wrong offset!");
 
 // Function ReturnTrailCutomizationHandler.ReturnTrailCutomizationHandler_C.BndEvt__MegaBlastEmitterComponent_K2Node_ComponentBoundEvent_0_ParticleSpawnSignature__DelegateSignature
 // 0x0024 (0x0024 - 0x0000)
@@ -201,7 +201,7 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0090(0x0010)(ZeroConstructor, ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A0(0x0018)()
 	bool                                          CallFunc_GetAkComponent_ComponentCreated;          // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2067[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_GetAkComponent_ReturnValue;               // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

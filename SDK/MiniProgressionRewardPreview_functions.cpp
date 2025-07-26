@@ -200,9 +200,9 @@ void UMiniProgressionRewardPreview_C::PopulateProgressionReward(const struct FMa
 // Function MiniProgressionRewardPreview.MiniProgressionRewardPreview_C.PopulateUIItemData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FMarinerUIItemButtonData         Param_UIItemButtonData                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FMarinerUIItemButtonData         UIItemButtonData_0                                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UMiniProgressionRewardPreview_C::PopulateUIItemData(const struct FMarinerUIItemButtonData& Param_UIItemButtonData)
+void UMiniProgressionRewardPreview_C::PopulateUIItemData(const struct FMarinerUIItemButtonData& UIItemButtonData_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -211,7 +211,7 @@ void UMiniProgressionRewardPreview_C::PopulateUIItemData(const struct FMarinerUI
 
 	Params::MiniProgressionRewardPreview_C_PopulateUIItemData Parms{};
 
-	Parms.Param_UIItemButtonData = std::move(Param_UIItemButtonData);
+	Parms.UIItemButtonData_0 = std::move(UIItemButtonData_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

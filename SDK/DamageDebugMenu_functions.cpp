@@ -316,9 +316,9 @@ ESlateVisibility UDamageDebugMenu_C::GetAOEOnlyLegendFieldVisibility()
 // Function DamageDebugMenu.DamageDebugMenu_C.SetSelectedDamageDebugRecordInfoWidget
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UUserWidget*                      Param_SelectedDamageDebugRecordInfo                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      SelectedDamageDebugRecordInfo_0                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDamageDebugMenu_C::SetSelectedDamageDebugRecordInfoWidget(class UUserWidget* Param_SelectedDamageDebugRecordInfo)
+void UDamageDebugMenu_C::SetSelectedDamageDebugRecordInfoWidget(class UUserWidget* SelectedDamageDebugRecordInfo_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -327,7 +327,7 @@ void UDamageDebugMenu_C::SetSelectedDamageDebugRecordInfoWidget(class UUserWidge
 
 	Params::DamageDebugMenu_C_SetSelectedDamageDebugRecordInfoWidget Parms{};
 
-	Parms.Param_SelectedDamageDebugRecordInfo = Param_SelectedDamageDebugRecordInfo;
+	Parms.SelectedDamageDebugRecordInfo_0 = SelectedDamageDebugRecordInfo_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

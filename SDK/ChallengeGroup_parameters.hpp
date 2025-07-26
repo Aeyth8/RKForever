@@ -24,7 +24,7 @@ struct ChallengeGroup_C_ExecuteUbergraph_ChallengeGroup final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_216A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -52,7 +52,7 @@ struct ChallengeGroup_C_AddChallenge final
 public:
 	struct FMangoQuestDescription                 Quest;                                             // 0x0000(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          AllowInput;                                        // 0x0118(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_216B[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UChallengeButton_C*                     ButtonInstance;                                    // 0x0120(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UChallengeButton_C*                     CallFunc_Create_ReturnValue;                       // 0x0128(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0130(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -83,16 +83,16 @@ struct ChallengeGroup_C_RefreshChallenge final
 public:
 	struct FMangoQuestDescription                 Quest;                                             // 0x0000(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	int32                                         Temp_int_Variable;                                 // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_216C[0x4];                                     // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0120(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_216D[0x4];                                     // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UChallengeButton_C*                     K2Node_DynamicCast_AsChallenge_Button;             // 0x0130(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_216E[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_216F[0x3];                                     // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -114,24 +114,24 @@ static_assert(offsetof(ChallengeGroup_C_RefreshChallenge, CallFunc_EqualEqual_By
 struct ChallengeGroup_C_GetChallenge final
 {
 public:
-	EMangoQuestSlot                               Param_Slot;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2170[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	EMangoQuestSlot                               Slot_0;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UChallengeButton_C*                     Widget;                                            // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2171[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UChallengeButton_C*                     K2Node_DynamicCast_AsChallenge_Button;             // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2172[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(ChallengeGroup_C_GetChallenge) == 0x000008, "Wrong alignment on ChallengeGroup_C_GetChallenge");
 static_assert(sizeof(ChallengeGroup_C_GetChallenge) == 0x000040, "Wrong size on ChallengeGroup_C_GetChallenge");
-static_assert(offsetof(ChallengeGroup_C_GetChallenge, Param_Slot) == 0x000000, "Member 'ChallengeGroup_C_GetChallenge::Param_Slot' has a wrong offset!");
+static_assert(offsetof(ChallengeGroup_C_GetChallenge, Slot_0) == 0x000000, "Member 'ChallengeGroup_C_GetChallenge::Slot_0' has a wrong offset!");
 static_assert(offsetof(ChallengeGroup_C_GetChallenge, Widget) == 0x000008, "Member 'ChallengeGroup_C_GetChallenge::Widget' has a wrong offset!");
 static_assert(offsetof(ChallengeGroup_C_GetChallenge, Temp_int_Variable) == 0x000010, "Member 'ChallengeGroup_C_GetChallenge::Temp_int_Variable' has a wrong offset!");
 static_assert(offsetof(ChallengeGroup_C_GetChallenge, CallFunc_GetChildrenCount_ReturnValue) == 0x000014, "Member 'ChallengeGroup_C_GetChallenge::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
@@ -151,7 +151,7 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2173[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -172,7 +172,7 @@ struct ChallengeGroup_C_AddOrRefreshChallenge final
 public:
 	struct FMangoQuestDescription                 Quest;                                             // 0x0000(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          AllowInput;                                        // 0x0118(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2174[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UChallengeButton_C*                     CallFunc_AddChallenge_ButtonInstance;              // 0x0120(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UChallengeButton_C*                     CallFunc_GetChallenge_Widget;                      // 0x0128(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

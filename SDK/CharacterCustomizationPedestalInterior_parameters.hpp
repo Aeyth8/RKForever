@@ -22,7 +22,7 @@ struct CharacterCustomizationPedestalInterior_C_ExecuteUbergraph_CharacterCustom
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_232E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacterLite*                  K2Node_CustomEvent_LoadedChar;                     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_RLerp_ReturnValue;                        // 0x001C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -41,11 +41,11 @@ static_assert(offsetof(CharacterCustomizationPedestalInterior_C_ExecuteUbergraph
 struct CharacterCustomizationPedestalInterior_C_AttachToTheChar final
 {
 public:
-	class AMarinerCharacterLite*                  Param_LoadedChar;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AMarinerCharacterLite*                  LoadedChar_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(CharacterCustomizationPedestalInterior_C_AttachToTheChar) == 0x000008, "Wrong alignment on CharacterCustomizationPedestalInterior_C_AttachToTheChar");
 static_assert(sizeof(CharacterCustomizationPedestalInterior_C_AttachToTheChar) == 0x000008, "Wrong size on CharacterCustomizationPedestalInterior_C_AttachToTheChar");
-static_assert(offsetof(CharacterCustomizationPedestalInterior_C_AttachToTheChar, Param_LoadedChar) == 0x000000, "Member 'CharacterCustomizationPedestalInterior_C_AttachToTheChar::Param_LoadedChar' has a wrong offset!");
+static_assert(offsetof(CharacterCustomizationPedestalInterior_C_AttachToTheChar, LoadedChar_0) == 0x000000, "Member 'CharacterCustomizationPedestalInterior_C_AttachToTheChar::LoadedChar_0' has a wrong offset!");
 
 }
 

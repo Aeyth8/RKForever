@@ -45,17 +45,17 @@ struct ScoreResultsValue_C_PopulateFromMatchEnd final
 {
 public:
 	struct FMatchEnd                              MatchEnd;                                          // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Param_TeamIndex;                                   // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex_0;                                       // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayerTeam;                                      // 0x006C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMarinerGameOutcome                           TeamOutcome;                                       // 0x006D(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_221B[0x2];                                     // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_221C[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_221D[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMatchEndTeam                          CallFunc_Array_Get_Item;                           // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	TMap<struct FGuid, struct FMangoMode>         CallFunc_GetModes_ReturnValue;                     // 0x0098(0x0050)(ConstParm, ZeroConstructor)
@@ -67,7 +67,7 @@ public:
 static_assert(alignof(ScoreResultsValue_C_PopulateFromMatchEnd) == 0x000008, "Wrong alignment on ScoreResultsValue_C_PopulateFromMatchEnd");
 static_assert(sizeof(ScoreResultsValue_C_PopulateFromMatchEnd) == 0x000148, "Wrong size on ScoreResultsValue_C_PopulateFromMatchEnd");
 static_assert(offsetof(ScoreResultsValue_C_PopulateFromMatchEnd, MatchEnd) == 0x000000, "Member 'ScoreResultsValue_C_PopulateFromMatchEnd::MatchEnd' has a wrong offset!");
-static_assert(offsetof(ScoreResultsValue_C_PopulateFromMatchEnd, Param_TeamIndex) == 0x000068, "Member 'ScoreResultsValue_C_PopulateFromMatchEnd::Param_TeamIndex' has a wrong offset!");
+static_assert(offsetof(ScoreResultsValue_C_PopulateFromMatchEnd, TeamIndex_0) == 0x000068, "Member 'ScoreResultsValue_C_PopulateFromMatchEnd::TeamIndex_0' has a wrong offset!");
 static_assert(offsetof(ScoreResultsValue_C_PopulateFromMatchEnd, IsPlayerTeam) == 0x00006C, "Member 'ScoreResultsValue_C_PopulateFromMatchEnd::IsPlayerTeam' has a wrong offset!");
 static_assert(offsetof(ScoreResultsValue_C_PopulateFromMatchEnd, TeamOutcome) == 0x00006D, "Member 'ScoreResultsValue_C_PopulateFromMatchEnd::TeamOutcome' has a wrong offset!");
 static_assert(offsetof(ScoreResultsValue_C_PopulateFromMatchEnd, Temp_int_Loop_Counter_Variable) == 0x000070, "Member 'ScoreResultsValue_C_PopulateFromMatchEnd::Temp_int_Loop_Counter_Variable' has a wrong offset!");
@@ -91,12 +91,12 @@ public:
 	bool                                          bWin;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bPlayerTeam;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          NewLocalVar_0;                                     // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_221E[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMenuSequence*                   CallFunc_GetActiveSequence_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerPostGameSequence*               K2Node_DynamicCast_AsMariner_Post_Game_Sequence;   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_221F[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMatchEnd                              CallFunc_GetMatchEndData_ReturnValue;              // 0x0028(0x0068)(ConstParm)
 	EGameModeEnums                                CallFunc_GetGameModeViaMatchEnd_GameMode;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

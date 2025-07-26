@@ -34,11 +34,11 @@ struct ModeSummary_C_GetGameModeText final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
 	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F67[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0020(0x0018)()
 	class UMarinerModeGlobals*                    CallFunc_GetModeGlobals_ReturnValue;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TryAndGetMangoModeFromCurrentMode_bIsValid; // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F68[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoMode                             CallFunc_TryAndGetMangoModeFromCurrentMode_ReturnValue; // 0x0048(0x0058)(ConstParm)
 	class FText                                   K2Node_Select_Default;                             // 0x00A0(0x0018)()
 };
@@ -62,11 +62,11 @@ public:
 	class UMarinerGameInstance*                   K2Node_DynamicCast_AsMariner_Game_Instance;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GetCurrentModeData_bIsValid;              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F69[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerModeDataAsset*                  CallFunc_GetCurrentModeData_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerVoiceOverManager*               CallFunc_GetVoiceOverManager_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TryAndGetMangoModeFromCurrentMode_bIsValid; // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F6A[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoMode                             CallFunc_TryAndGetMangoModeFromCurrentMode_ReturnValue; // 0x0038(0x0058)(ConstParm)
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_GetGameModeText_ReturnValue;              // 0x0098(0x0018)()
@@ -92,13 +92,13 @@ static_assert(offsetof(ModeSummary_C_Initialize, CallFunc_PlayAnimation_ReturnVa
 struct ModeSummary_C_InitializeCustom final
 {
 public:
-	class FText                                   Param_GameModeText;                                // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   GameModeText_0;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UMarinerModeDataAsset*                  GameModeData;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ModeSummary_C_InitializeCustom) == 0x000008, "Wrong alignment on ModeSummary_C_InitializeCustom");
 static_assert(sizeof(ModeSummary_C_InitializeCustom) == 0x000028, "Wrong size on ModeSummary_C_InitializeCustom");
-static_assert(offsetof(ModeSummary_C_InitializeCustom, Param_GameModeText) == 0x000000, "Member 'ModeSummary_C_InitializeCustom::Param_GameModeText' has a wrong offset!");
+static_assert(offsetof(ModeSummary_C_InitializeCustom, GameModeText_0) == 0x000000, "Member 'ModeSummary_C_InitializeCustom::GameModeText_0' has a wrong offset!");
 static_assert(offsetof(ModeSummary_C_InitializeCustom, GameModeData) == 0x000018, "Member 'ModeSummary_C_InitializeCustom::GameModeData' has a wrong offset!");
 static_assert(offsetof(ModeSummary_C_InitializeCustom, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'ModeSummary_C_InitializeCustom::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 

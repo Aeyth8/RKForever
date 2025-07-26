@@ -39,7 +39,7 @@ public:
 public:
 	void ExecuteUbergraph_CharacterPurchaseMenu(int32 EntryPoint);
 	void BndEvt__PromotionButton_K2Node_ComponentBoundEvent_1_OnLayeredButtonEvent__DelegateSignature(class UMarinerLayeredButton* Instance);
-	void PopulateCharacter(class UMarinerPlayableCharacter* Param_Character);
+	void PopulateCharacter(class UMarinerPlayableCharacter* Character_0);
 	void BndEvt__BlastPassButton_K2Node_ComponentBoundEvent_0_OnLayeredButtonEvent__DelegateSignature(class UMarinerLayeredButton* Instance);
 	void OnStateChanged(class UMarinerAnimatedWidget* Instance, EWidgetAnimationState NewState);
 	void OnStorePurchaseComplete(const bool bWasSuccessful, const class FString& OfferId, const struct FMangoOrderDetails& OrderDetails);
@@ -47,7 +47,7 @@ public:
 	void BP_OnExited(bool bToSubLayer);
 	bool HandleInput(EMarinerInputActions InInput);
 	void UpdatePrompts();
-	void GetCharacterPurchaseOffer(class UMarinerPlayableCharacter* Param_Character, struct FMangoPurchaseOffer* PurchaseOffer, bool* IsValid);
+	void GetCharacterPurchaseOffer(class UMarinerPlayableCharacter* Character_0, struct FMangoPurchaseOffer* PurchaseOffer, bool* IsValid);
 	void IsCharacterActiveBlastPassReward(bool* IsReward);
 	void PopulateAvailable();
 	void PopulateBlastPass();

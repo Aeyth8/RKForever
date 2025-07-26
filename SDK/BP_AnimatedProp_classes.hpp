@@ -25,7 +25,7 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetAndPlay(class USkeletalMesh* Param_SkeletalMesh, class UAnimSequence* Animation, bool LoopAnim);
+	void SetAndPlay(class USkeletalMesh* SkeletalMesh_0, class UAnimSequence* Animation, bool LoopAnim);
 
 public:
 	static class UClass* StaticClass()

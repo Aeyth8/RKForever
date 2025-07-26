@@ -48,7 +48,7 @@ public:
 	void ExecuteUbergraph_CharacterUpsellWidget(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
 	void Construct();
-	void PopulateCharacter(class UMarinerPlayableCharacter* Param_Character, const class FText& DescFmt);
+	void PopulateCharacter(class UMarinerPlayableCharacter* Character_0, const class FText& DescFmt);
 	void GetPurchaseOffer(struct FMangoNativeOffer* Nativeoffer);
 
 	struct FMarinerLayeredButtonAssets GetAssets() const;

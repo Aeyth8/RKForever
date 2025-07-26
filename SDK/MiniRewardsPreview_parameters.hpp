@@ -39,7 +39,7 @@ public:
 	struct FMangoQuest                            Quest;                                             // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UMiniRewardPreview_C*                   CallFunc_Create_ReturnValue;                       // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2156[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -61,7 +61,7 @@ public:
 	struct FMangoQuestReward                      QuestReward;                                       // 0x0000(0x00C8)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UMiniRewardPreview_C*                   CallFunc_Create_ReturnValue;                       // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2157[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MiniRewardsPreview_C_PopulateRocketFuelReward) == 0x000008, "Wrong alignment on MiniRewardsPreview_C_PopulateRocketFuelReward");
@@ -79,7 +79,7 @@ public:
 	struct FMangoQuestReward                      QuestRewards;                                      // 0x0000(0x00C8)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UMiniRewardPreview_C*                   CallFunc_Create_ReturnValue;                       // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2158[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MiniRewardsPreview_C_Populate_Rocket_Parts_Reward) == 0x000008, "Wrong alignment on MiniRewardsPreview_C_Populate_Rocket_Parts_Reward");

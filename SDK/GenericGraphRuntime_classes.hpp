@@ -22,14 +22,14 @@ namespace SDK
 class UGenericGraph final : public UObject
 {
 public:
-	class FString                                 Name_GenericGraph;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name_0;                                            // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UGenericGraphNode>          NodeType;                                          // 0x0038(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UGenericGraphEdge>          EdgeType;                                          // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  GraphTags;                                         // 0x0048(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<class UGenericGraphNode*>              RootNodes;                                         // 0x0068(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class UGenericGraphNode*>              AllNodes;                                          // 0x0078(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bEdgeEnabled;                                      // 0x0088(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1163[0x7];                                     // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void GetNodesByLevel(int32 Level, TArray<class UGenericGraphNode*>* Nodes);
@@ -49,7 +49,7 @@ public:
 };
 static_assert(alignof(UGenericGraph) == 0x000008, "Wrong alignment on UGenericGraph");
 static_assert(sizeof(UGenericGraph) == 0x000090, "Wrong size on UGenericGraph");
-static_assert(offsetof(UGenericGraph, Name_GenericGraph) == 0x000028, "Member 'UGenericGraph::Name_GenericGraph' has a wrong offset!");
+static_assert(offsetof(UGenericGraph, Name_0) == 0x000028, "Member 'UGenericGraph::Name_0' has a wrong offset!");
 static_assert(offsetof(UGenericGraph, NodeType) == 0x000038, "Member 'UGenericGraph::NodeType' has a wrong offset!");
 static_assert(offsetof(UGenericGraph, EdgeType) == 0x000040, "Member 'UGenericGraph::EdgeType' has a wrong offset!");
 static_assert(offsetof(UGenericGraph, GraphTags) == 0x000048, "Member 'UGenericGraph::GraphTags' has a wrong offset!");

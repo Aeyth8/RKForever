@@ -23,7 +23,7 @@ struct CharacterCommonTargeting_C_ExecuteUbergraph_CharacterCommonTargeting fina
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25C4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMarinerCharacter*                      K2Node_CustomEvent_LockedCharacter;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -36,7 +36,7 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_25C5[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class AMarinerCharacter* ShiftingCharacter, EMarinerRealityState EnteringReality, bool bCharacterIsLocal)> K2Node_CreateDelegate_OutputDelegate;              // 0x0040(0x0010)(ZeroConstructor, NoDestructor)
 };
 static_assert(alignof(CharacterCommonTargeting_C_ExecuteUbergraph_CharacterCommonTargeting) == 0x000008, "Wrong alignment on CharacterCommonTargeting_C_ExecuteUbergraph_CharacterCommonTargeting");
@@ -76,11 +76,11 @@ static_assert(offsetof(CharacterCommonTargeting_C_CustomEvent_0, bCharacterIsLoc
 struct CharacterCommonTargeting_C_CompleteLockOn final
 {
 public:
-	class AMarinerCharacter*                      Param_LockedCharacter;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AMarinerCharacter*                      LockedCharacter_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(CharacterCommonTargeting_C_CompleteLockOn) == 0x000008, "Wrong alignment on CharacterCommonTargeting_C_CompleteLockOn");
 static_assert(sizeof(CharacterCommonTargeting_C_CompleteLockOn) == 0x000008, "Wrong size on CharacterCommonTargeting_C_CompleteLockOn");
-static_assert(offsetof(CharacterCommonTargeting_C_CompleteLockOn, Param_LockedCharacter) == 0x000000, "Member 'CharacterCommonTargeting_C_CompleteLockOn::Param_LockedCharacter' has a wrong offset!");
+static_assert(offsetof(CharacterCommonTargeting_C_CompleteLockOn, LockedCharacter_0) == 0x000000, "Member 'CharacterCommonTargeting_C_CompleteLockOn::LockedCharacter_0' has a wrong offset!");
 
 // Function CharacterCommonTargeting.CharacterCommonTargeting_C.SetArrowColors
 // 0x0034 (0x0034 - 0x0000)
@@ -89,7 +89,7 @@ struct CharacterCommonTargeting_C_SetArrowColors final
 public:
 	bool                                          LockedOn;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_25C6[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0024(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

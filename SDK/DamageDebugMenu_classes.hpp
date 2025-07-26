@@ -33,7 +33,7 @@ public:
 	class UTextBlock*                             TextBlock_1145;                                    // 0x0518(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<class UMarinerDamageDebugRecord*>      DamageDebugArchive;                                // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int32                                         SelectedDamageDebugRecordIndex;                    // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1317[0x4];                                     // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_534[0x4];                                      // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnDamageDebugRecordEntryClicked;                   // 0x0538(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UUserWidget*                            SelectedDamageDebugRecordInfo;                     // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -54,7 +54,7 @@ public:
 	void CreateDamageDebugRecordEntry(class UMarinerDamageDebugRecord*& DamageRecord, int32 DamageRecordIndex);
 	ESlateVisibility GetLegendGridVisibility();
 	ESlateVisibility GetAOEOnlyLegendFieldVisibility();
-	void SetSelectedDamageDebugRecordInfoWidget(class UUserWidget* Param_SelectedDamageDebugRecordInfo);
+	void SetSelectedDamageDebugRecordInfoWidget(class UUserWidget* SelectedDamageDebugRecordInfo_0);
 
 public:
 	static class UClass* StaticClass()

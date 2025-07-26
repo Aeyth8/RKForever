@@ -20,9 +20,9 @@ namespace SDK
 // Function PostGameSequenceTitle.PostGameSequenceTitle_C.SetTitle
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Param_Title                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             Title_0                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UPostGameSequenceTitle_C::SetTitle(const class FText& Param_Title)
+void UPostGameSequenceTitle_C::SetTitle(const class FText& Title_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void UPostGameSequenceTitle_C::SetTitle(const class FText& Param_Title)
 
 	Params::PostGameSequenceTitle_C_SetTitle Parms{};
 
-	Parms.Param_Title = std::move(Param_Title);
+	Parms.Title_0 = std::move(Title_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

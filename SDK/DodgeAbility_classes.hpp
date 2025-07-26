@@ -33,50 +33,50 @@ public:
 	float                                         DodgeInPlaceVerticalStrength;                      // 0x0704(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AMarinerProjectile*>             OverlappedProjectiles;                             // 0x0708(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
 	int32                                         DodgedRockets;                                     // 0x0718(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24F0[0x4];                                     // 0x071C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71C[0x4];                                      // 0x071C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             UpdateRocketsDodged;                               // 0x0720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UClass*                                 NinjaHeadbandAbilityClass;                         // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NinjaHeadbandActive;                               // 0x0738(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24F1[0x3];                                     // 0x0739(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_739[0x3];                                      // 0x0739(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CollisionCheckRadiusScalar;                        // 0x073C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CollisionCheckHeightScalar;                        // 0x0740(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsingMegablastCooldownReductionArtifact;         // 0x0744(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24F2[0x3];                                     // 0x0745(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_745[0x3];                                      // 0x0745(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MegablastArtifactCooldownReduction;                // 0x0748(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24F3[0x4];                                     // 0x074C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_74C[0x4];                                      // 0x074C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         AbilitiesToEndOnDodge;                             // 0x0750(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                          DodgeInPlace;                                      // 0x0760(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24F4[0x7];                                     // 0x0761(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_761[0x7];                                      // 0x0761(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerFastArenaBounds*                ArenaBounds;                                       // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MinValidDistanceFromBounds;                        // 0x0770(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AnitKOLaunchScalarSide;                            // 0x0774(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AntiKOLaunchScalarUp;                              // 0x0778(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LatestDodgeDuration;                               // 0x077C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsingDodgeStrengthArtifact;                      // 0x0780(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24F5[0x3];                                     // 0x0781(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_781[0x3];                                      // 0x0781(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DodgeStrengthArtifactMultiplier;                   // 0x0784(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AnitKOGeoToBoundsTraceRadius;                      // 0x0788(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24F6[0x4];                                     // 0x078C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_78C[0x4];                                      // 0x078C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      AnitKOGeoToBoundsObjectTypes;                      // 0x0790(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UClass*>                         MoveAffectingEffects;                              // 0x07A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<class UClass*>                         PredictiveEffects;                                 // 0x07B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                          UseEnhancedDirectionality;                         // 0x07C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24F7[0x3];                                     // 0x07C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7C1[0x3];                                      // 0x07C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AimUpMoveBack_MaxLaunchAngle_AimZ_Range;           // 0x07C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AimUpMoveBack_MinLaunchAngle_AimZ_Range;           // 0x07C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         DodgeDownStrengthMulltiplier;                      // 0x07CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugPrintEnhancedDirectionalityInfo;              // 0x07D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24F8[0x3];                                     // 0x07D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7D1[0x3];                                      // 0x07D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DownwardAimVector_Grounded_ZClamp;                 // 0x07D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bUseClientPredictiveDodge;                         // 0x07D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bEnableDebugSwitchDodgeSystemsOnReload;            // 0x07D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24F9[0x2];                                     // 0x07DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7DA[0x2];                                      // 0x07DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AntiKOLaunchScalarFloor;                           // 0x07DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            DodgeDownwardLaunchStrengthCurve;                  // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         EnhancedDodgeMinValidDistanceFromBounds;           // 0x07E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         AntiKOBoundsFloorFailsafeCheckDistance;            // 0x07EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsUsingDamageIncreaseOnNoCooldownArtifact;         // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24FA[0x3];                                     // 0x07F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7F1[0x3];                                      // 0x07F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DamageIncreaseArtifactCooldownIncrease;            // 0x07F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -96,7 +96,7 @@ public:
 	void DodgeFinished();
 	void GetOwningController(class AMarinerPlayerController** OwningControlller);
 	void GetNormalizedAcceleration(struct FVector* Acceleration);
-	void GetDodgeStrength(float* Param_DodgeStrength);
+	void GetDodgeStrength(float* DodgeStrength_0);
 	struct FVector GetDodgeLaunchVelocity();
 	void GetDodgeMinLaunchAngle(float* MinLaunchAngle);
 	void ApplyActiveEffects_MoveAffecting();
@@ -134,9 +134,9 @@ public:
 	void GetNonFloorKOBoundsLaunchScalar(bool IsDodgeInPlace, const struct FVector& ClosestBoundsNormal, float* LaunchScalar);
 	void DebugDrawAntiKOBoundsChecks(const struct FVector& PointOnClosestBoundsSurface, const struct FVector& ModifiedEndLocationWithBuffer, const struct FVector& ClosestBoundsNormal);
 	void GetIsPointOnClosestBoundsValidForProtection(const struct FVector& PointOnClosestBoundsSurface, bool* IsValid);
-	void GetArenaBoundsRef(class AMarinerFastArenaBounds** Param_ArenaBounds);
+	void GetArenaBoundsRef(class AMarinerFastArenaBounds** ArenaBounds_0);
 
-	void IsNinjaHeadbandActive(bool* Param_IsActive) const;
+	void IsNinjaHeadbandActive(bool* IsActive_0) const;
 	void GetNinjaHeadbandAbility(class UItem_NinjaHeadband_ItemAbility_C** NinjaHeadbandAbility, bool* CastSuccess) const;
 	float GetCooldownDuration() const;
 	void GetDodgeDuration(float* DodgeDuration) const;

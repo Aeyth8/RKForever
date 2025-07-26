@@ -25,7 +25,7 @@ namespace SDK
 class UChaosDebugDrawComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_1D5C[0x8];                                     // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -45,7 +45,7 @@ static_assert(sizeof(UChaosDebugDrawComponent) == 0x0000B8, "Wrong size on UChao
 class UChaosEventListenerComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_1D5D[0x8];                                     // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -65,10 +65,10 @@ static_assert(sizeof(UChaosEventListenerComponent) == 0x0000B8, "Wrong size on U
 class UChaosGameplayEventDispatcher final : public UChaosEventListenerComponent
 {
 public:
-	uint8                                         Pad_1D5E[0x110];                                   // 0x00B8(0x0110)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B8[0x110];                                     // 0x00B8(0x0110)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class UPrimitiveComponent*, struct FChaosHandlerSet> CollisionEventRegistrations;                       // 0x01C8(0x0050)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TMap<class UPrimitiveComponent*, struct FBreakEventCallbackWrapper> BreakEventRegistrations;                           // 0x0218(0x0050)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D5F[0x8];                                     // 0x0268(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -151,22 +151,22 @@ public:
 	float                                         ClusterConnectionFactor;                           // 0x0228(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EClusterConnectionTypeEnum                    ClusterUnionConnectionType;                        // 0x022C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          DoGenerateCollisionData;                           // 0x022D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D60[0x2];                                     // 0x022E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22E[0x2];                                      // 0x022E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSolverCollisionFilterSettings         CollisionFilterSettings;                           // 0x0230(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          DoGenerateBreakingData;                            // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D61[0x3];                                     // 0x0241(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_241[0x3];                                      // 0x0241(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSolverBreakingFilterSettings          BreakingFilterSettings;                            // 0x0244(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          DoGenerateTrailingData;                            // 0x0254(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D62[0x3];                                     // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_255[0x3];                                      // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSolverTrailingFilterSettings          TrailingFilterSettings;                            // 0x0258(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bHasFloor;                                         // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D63[0x3];                                     // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_269[0x3];                                      // 0x0269(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FloorHeight;                                       // 0x026C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MassScale;                                         // 0x0270(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FChaosDebugSubstepControl              ChaosDebugSubstepControl;                          // 0x0274(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D64[0x1];                                     // 0x0277(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_277[0x1];                                      // 0x0277(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBillboardComponent*                    SpriteComponent;                                   // 0x0278(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D65[0x18];                                    // 0x0280(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_280[0x18];                                     // 0x0280(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class UChaosGameplayEventDispatcher*          GameplayEventDispatcherComponent;                  // 0x0298(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -209,7 +209,7 @@ static_assert(offsetof(AChaosSolverActor, GameplayEventDispatcherComponent) == 0
 class UChaosSolverSettings final : public UDeveloperSettings
 {
 public:
-	uint8                                         Pad_1D66[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftClassPath                         DefaultChaosSolverActorClass;                      // 0x0040(0x0018)(Edit, ZeroConstructor, Config, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:

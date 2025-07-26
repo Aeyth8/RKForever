@@ -23,11 +23,11 @@ namespace SDK::Params
 struct DefaultStoreNativeOfferButton_C_SetNativeOffer final
 {
 public:
-	struct FMangoNativeOffer                      Param_Nativeoffer;                                 // 0x0000(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FMangoNativeOffer                      Nativeoffer_0;                                     // 0x0000(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(DefaultStoreNativeOfferButton_C_SetNativeOffer) == 0x000008, "Wrong alignment on DefaultStoreNativeOfferButton_C_SetNativeOffer");
 static_assert(sizeof(DefaultStoreNativeOfferButton_C_SetNativeOffer) == 0x0000C0, "Wrong size on DefaultStoreNativeOfferButton_C_SetNativeOffer");
-static_assert(offsetof(DefaultStoreNativeOfferButton_C_SetNativeOffer, Param_Nativeoffer) == 0x000000, "Member 'DefaultStoreNativeOfferButton_C_SetNativeOffer::Param_Nativeoffer' has a wrong offset!");
+static_assert(offsetof(DefaultStoreNativeOfferButton_C_SetNativeOffer, Nativeoffer_0) == 0x000000, "Member 'DefaultStoreNativeOfferButton_C_SetNativeOffer::Nativeoffer_0' has a wrong offset!");
 
 // Function DefaultStoreNativeOfferButton.DefaultStoreNativeOfferButton_C.Refresh
 // 0x0118 (0x0118 - 0x0000)
@@ -42,10 +42,10 @@ public:
 	class FText                                   CallFunc_GetPricingInformationForNativeOfferId_OutRegularPrice; // 0x0038(0x0018)()
 	bool                                          CallFunc_GetPricingInformationForNativeOfferId_OutIsOnSale; // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GetPricingInformationForNativeOfferId_ReturnValue; // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2416[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_GetImage_ImageBrushOut;                   // 0x0058(0x0088)()
 	bool                                          CallFunc_GetImage_ReturnValue;                     // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2417[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00E8(0x0018)()
 	class FText                                   CallFunc_GetDisplayPriceForNativeOfferId_ReturnValue; // 0x0100(0x0018)()
 };

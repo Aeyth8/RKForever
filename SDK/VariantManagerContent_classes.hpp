@@ -26,7 +26,7 @@ class ULevelVariantSets final : public UObject
 public:
 	class UClass*                                 DirectorClass;                                     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class UVariantSet*>                    VariantSets;                                       // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12AD[0x50];                                    // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 GetNumVariantSets();
@@ -80,7 +80,7 @@ static_assert(offsetof(ALevelVariantSetsActor, LevelVariantSets) == 0x000218, "M
 class ULevelVariantSetsFunctionDirector final : public UObject
 {
 public:
-	uint8                                         Pad_12B2[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -100,7 +100,7 @@ static_assert(sizeof(ULevelVariantSetsFunctionDirector) == 0x000040, "Wrong size
 class UPropertyValue : public UObject
 {
 public:
-	uint8                                         Pad_12B3[0x58];                                    // 0x0028(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x58];                                      // 0x0028(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UProperty*>                      Properties;                                        // 0x0080(0x0010)(ZeroConstructor, Deprecated, Protected, NativeAccessSpecifierProtected)
 	TArray<int32>                                 PropertyIndices;                                   // 0x0090(0x0010)(ZeroConstructor, Deprecated, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FCapturedPropSegment>           CapturedPropSegments;                              // 0x00A0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
@@ -108,11 +108,11 @@ public:
 	class FName                                   PropertySetterName;                                // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TMap<class FString, class FString>            PropertySetterParameterDefaults;                   // 0x00C8(0x0050)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	bool                                          bHasRecordedData;                                  // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_12B4[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 LeafPropertyClass;                                 // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<uint8>                                 ValueBytes;                                        // 0x0128(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	EPropertyValueCategory                        PropCategory;                                      // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_12B5[0x6F];                                    // 0x0139(0x006F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_139[0x6F];                                     // 0x0139(0x006F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class FString GetFullDisplayString() const;
@@ -232,7 +232,7 @@ static_assert(sizeof(UPropertyValueOption) == 0x0001A8, "Wrong size on UProperty
 class ASwitchActor final : public AActor
 {
 public:
-	uint8                                         Pad_12B6[0x18];                                    // 0x0218(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_218[0x18];                                     // 0x0218(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        SceneComponent;                                    // 0x0230(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
@@ -261,7 +261,7 @@ class UVariant final : public UObject
 {
 public:
 	class FText                                   DisplayText;                                       // 0x0028(0x0018)(Deprecated, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12B7[0x18];                                    // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UVariantObjectBinding*>          ObjectBindings;                                    // 0x0058(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
@@ -294,7 +294,7 @@ class UVariantObjectBinding final : public UObject
 public:
 	struct FSoftObjectPath                        ObjectPtr;                                         // 0x0028(0x0018)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TLazyObjectPtr<class UObject>                 LazyObjectPtr;                                     // 0x0040(0x001C)(IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12B9[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UPropertyValue*>                 CapturedProperties;                                // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<struct FFunctionCaller>                FunctionCallers;                                   // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
@@ -321,9 +321,9 @@ class UVariantSet final : public UObject
 {
 public:
 	class FText                                   DisplayText;                                       // 0x0028(0x0018)(Deprecated, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12BA[0x18];                                    // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bExpanded;                                         // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12BB[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UVariant*>                       Variants;                                          // 0x0060(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:

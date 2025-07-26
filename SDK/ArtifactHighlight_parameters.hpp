@@ -21,23 +21,23 @@ namespace SDK::Params
 struct ArtifactHighlight_C_SetArtifact final
 {
 public:
-	class UMarinerArtifactDataAsset*              Param_Artifact;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UItemLoadResponse*                      Param_ItemLoadResponse;                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerArtifactDataAsset*              Artifact_0;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UItemLoadResponse*                      ItemLoadResponse_0;                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   CurrentCharacterClass;                             // 0x0010(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	bool                                          Param_AllowState;                                  // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F5C[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          AllowState_0;                                      // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x003C(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
-	uint8                                         Pad_1F5D[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0058(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ArtifactHighlight_C_SetArtifact) == 0x000008, "Wrong alignment on ArtifactHighlight_C_SetArtifact");
 static_assert(sizeof(ArtifactHighlight_C_SetArtifact) == 0x000070, "Wrong size on ArtifactHighlight_C_SetArtifact");
-static_assert(offsetof(ArtifactHighlight_C_SetArtifact, Param_Artifact) == 0x000000, "Member 'ArtifactHighlight_C_SetArtifact::Param_Artifact' has a wrong offset!");
-static_assert(offsetof(ArtifactHighlight_C_SetArtifact, Param_ItemLoadResponse) == 0x000008, "Member 'ArtifactHighlight_C_SetArtifact::Param_ItemLoadResponse' has a wrong offset!");
+static_assert(offsetof(ArtifactHighlight_C_SetArtifact, Artifact_0) == 0x000000, "Member 'ArtifactHighlight_C_SetArtifact::Artifact_0' has a wrong offset!");
+static_assert(offsetof(ArtifactHighlight_C_SetArtifact, ItemLoadResponse_0) == 0x000008, "Member 'ArtifactHighlight_C_SetArtifact::ItemLoadResponse_0' has a wrong offset!");
 static_assert(offsetof(ArtifactHighlight_C_SetArtifact, CurrentCharacterClass) == 0x000010, "Member 'ArtifactHighlight_C_SetArtifact::CurrentCharacterClass' has a wrong offset!");
-static_assert(offsetof(ArtifactHighlight_C_SetArtifact, Param_AllowState) == 0x000038, "Member 'ArtifactHighlight_C_SetArtifact::Param_AllowState' has a wrong offset!");
+static_assert(offsetof(ArtifactHighlight_C_SetArtifact, AllowState_0) == 0x000038, "Member 'ArtifactHighlight_C_SetArtifact::AllowState_0' has a wrong offset!");
 static_assert(offsetof(ArtifactHighlight_C_SetArtifact, Temp_delegate_Variable) == 0x00003C, "Member 'ArtifactHighlight_C_SetArtifact::Temp_delegate_Variable' has a wrong offset!");
 static_assert(offsetof(ArtifactHighlight_C_SetArtifact, CallFunc_GetOwningPlayer_ReturnValue) == 0x000050, "Member 'ArtifactHighlight_C_SetArtifact::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ArtifactHighlight_C_SetArtifact, Temp_struct_Variable) == 0x000058, "Member 'ArtifactHighlight_C_SetArtifact::Temp_struct_Variable' has a wrong offset!");

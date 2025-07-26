@@ -74,10 +74,10 @@ void UDailyRewardWidget_C::Construct()
 // Function DailyRewardWidget.DailyRewardWidget_C.PopulateReward
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FMangoLoginReward                Param_LoginReward                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FMangoLoginReward                LoginReward_0                                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    IsActiveReward                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UDailyRewardWidget_C::PopulateReward(const struct FMangoLoginReward& Param_LoginReward, bool* IsActiveReward)
+void UDailyRewardWidget_C::PopulateReward(const struct FMangoLoginReward& LoginReward_0, bool* IsActiveReward)
 {
 	static class UFunction* Func = nullptr;
 
@@ -86,7 +86,7 @@ void UDailyRewardWidget_C::PopulateReward(const struct FMangoLoginReward& Param_
 
 	Params::DailyRewardWidget_C_PopulateReward Parms{};
 
-	Parms.Param_LoginReward = std::move(Param_LoginReward);
+	Parms.LoginReward_0 = std::move(LoginReward_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 

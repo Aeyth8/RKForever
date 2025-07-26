@@ -29,11 +29,11 @@ public:
 	class UTextBlock*                             UnlockText;                                        // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FMangoProgressionCharacterItemUnlock   ItemUnlock;                                        // 0x0440(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          IsOwned;                                           // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_236D[0x7];                                     // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_459[0x7];                                      // 0x0459(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UItemLoadResponse*                      ItemLoadResponse;                                  // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetItemUnlock(struct FMangoProgressionCharacterItemUnlock& Param_ItemUnlock, bool Param_IsOwned, class UItemLoadResponse* Param_ItemLoadResponse);
+	void SetItemUnlock(struct FMangoProgressionCharacterItemUnlock& ItemUnlock_0, bool IsOwned_0, class UItemLoadResponse* ItemLoadResponse_0);
 	bool Populate();
 
 public:

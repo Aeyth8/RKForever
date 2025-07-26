@@ -61,7 +61,7 @@ struct FClothConfig final
 {
 public:
 	EClothingWindMethod                           WindMethod;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClothConstraintSetup                  VerticalConstraintConfig;                          // 0x0004(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FClothConstraintSetup                  HorizontalConstraintConfig;                        // 0x0014(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FClothConstraintSetup                  BendConstraintConfig;                              // 0x0024(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
@@ -83,7 +83,7 @@ public:
 	float                                         GravityScale;                                      // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                GravityOverride;                                   // 0x00B0(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseGravityOverride;                               // 0x00BC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D4F[0x3];                                     // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TetherStiffness;                                   // 0x00C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TetherLimit;                                       // 0x00C4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CollisionThickness;                                // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -160,7 +160,7 @@ struct FClothLODData final
 public:
 	struct FClothPhysicalMeshData                 PhysicalMeshData;                                  // 0x0000(0x00A8)(Edit, NativeAccessSpecifierPublic)
 	struct FClothCollisionData                    CollisionData;                                     // 0x00A8(0x0040)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D50[0x20];                                    // 0x00E8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E8[0x20];                                      // 0x00E8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FClothLODData) == 0x000008, "Wrong alignment on FClothLODData");
 static_assert(sizeof(FClothLODData) == 0x000108, "Wrong size on FClothLODData");
@@ -174,13 +174,13 @@ struct FClothParameterMask_PhysMesh final
 public:
 	class FName                                   MaskName;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMaskTarget_PhysMesh                          CurrentTarget;                                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D51[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxValue;                                          // 0x000C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinValue;                                          // 0x0010(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D52[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 Values;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bEnabled;                                          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D53[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FClothParameterMask_PhysMesh) == 0x000008, "Wrong alignment on FClothParameterMask_PhysMesh");
 static_assert(sizeof(FClothParameterMask_PhysMesh) == 0x000030, "Wrong size on FClothParameterMask_PhysMesh");

@@ -84,9 +84,9 @@ void UStoreBundleWidget_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonC
 // Parameters:
 // struct FMangoNativeOffer                InOffer                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    CanPurchase                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    Param_AllowMouseInteraction                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    AllowMouseInteraction_0                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UStoreBundleWidget_C::SetBundleOfferToShow(const struct FMangoNativeOffer& InOffer, bool CanPurchase, bool Param_AllowMouseInteraction)
+void UStoreBundleWidget_C::SetBundleOfferToShow(const struct FMangoNativeOffer& InOffer, bool CanPurchase, bool AllowMouseInteraction_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -97,7 +97,7 @@ void UStoreBundleWidget_C::SetBundleOfferToShow(const struct FMangoNativeOffer& 
 
 	Parms.InOffer = std::move(InOffer);
 	Parms.CanPurchase = CanPurchase;
-	Parms.Param_AllowMouseInteraction = Param_AllowMouseInteraction;
+	Parms.AllowMouseInteraction_0 = AllowMouseInteraction_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

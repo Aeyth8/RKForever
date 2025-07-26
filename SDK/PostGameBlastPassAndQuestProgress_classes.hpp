@@ -45,7 +45,7 @@ public:
 	TArray<struct FMarinerQuestProgress>          QuestsWithProgress;                                // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<struct FMangoReward>                   RewardList;                                        // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	float                                         RewardTimer;                                       // 0x0580(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2295[0x4];                                     // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_584[0x4];                                      // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoBattlePassResult                 PlayerBlastPassResult;                             // 0x0588(0x0068)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
@@ -70,7 +70,7 @@ public:
 	void InitBlastPass();
 	void PresentBlastPassMatchProgress();
 	void HasQuestProgress(bool* HasProgress);
-	void HasRewards(bool* Param_HasRewards);
+	void HasRewards(bool* HasRewards_0);
 	void InitRewards(bool FromQuests);
 	void PresentNextReward(bool* RewardConsumed);
 	void UpdateVisibility(bool ShowBlastPass, bool ShowQuests, bool ShowRewards);

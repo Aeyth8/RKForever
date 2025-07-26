@@ -35,12 +35,12 @@ struct PostGameMapData_C_Update final
 {
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21AB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
 	bool                                          Temp_bool_Variable_1;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21AC[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue_1;                        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FGuid, struct FMangoMap>          CallFunc_GetMaps_ReturnValue;                      // 0x0038(0x0050)(ConstParm, ZeroConstructor)
@@ -49,15 +49,15 @@ public:
 	class UMarinerMenuSequence*                   CallFunc_GetActiveSequence_ReturnValue;            // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerPostGameSequence*               K2Node_DynamicCast_AsMariner_Post_Game_Sequence;   // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21AD[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMatchEnd                              CallFunc_GetMatchEndData_ReturnValue;              // 0x00F8(0x0068)(ConstParm)
 	struct FMangoMap                              CallFunc_Map_Find_Value;                           // 0x0160(0x0060)()
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21AE[0x7];                                     // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoMode                             CallFunc_Map_Find_Value_1;                         // 0x01C8(0x0058)()
 	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21AF[0x6];                                     // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_222[0x6];                                      // 0x0222(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default_1;                           // 0x0228(0x0018)()
 };
 static_assert(alignof(PostGameMapData_C_Update) == 0x000008, "Wrong alignment on PostGameMapData_C_Update");

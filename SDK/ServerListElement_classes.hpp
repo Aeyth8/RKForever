@@ -32,7 +32,7 @@ public:
 
 public:
 	void ExecuteUbergraph_ServerListElement(int32 EntryPoint);
-	void OnServerWidgetCreated(const class FText& Param_Name, const class FText& Ping, const class FText& Param_PlayerCount);
+	void OnServerWidgetCreated(const class FText& Name_0, const class FText& Ping, const class FText& PlayerCount_0);
 	void BndEvt__Button_79_K2Node_ComponentBoundEvent_51_OnButtonClickedEvent__DelegateSignature();
 	bool HandleInput(EMarinerInputActions InInput);
 

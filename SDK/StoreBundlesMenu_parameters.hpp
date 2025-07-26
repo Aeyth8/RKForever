@@ -23,7 +23,7 @@ struct StoreBundlesMenu_C_ExecuteUbergraph_StoreBundlesMenu final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1FAD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_bFromSubMenu;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -62,11 +62,11 @@ public:
 	struct FMangoNativeOffer                      CallFunc_Array_Get_Item;                           // 0x0050(0x00C0)()
 	class UStoreBundleButton_C*                   K2Node_DynamicCast_AsStore_Bundle_Button;          // 0x0110(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1FAE[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1FAF[0x6];                                     // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0128(0x0018)()
 };
 static_assert(alignof(StoreBundlesMenu_C_PopulateOffers) == 0x000008, "Wrong alignment on StoreBundlesMenu_C_PopulateOffers");
@@ -99,7 +99,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CanPurchaseNativeOffer_CanPurchase;       // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1FB0[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoNativeOffer                      CallFunc_GetAssociatedOffer_Offer;                 // 0x0018(0x00C0)()
 };
 static_assert(alignof(StoreBundlesMenu_C_OnItemSelected) == 0x000008, "Wrong alignment on StoreBundlesMenu_C_OnItemSelected");
@@ -117,7 +117,7 @@ struct StoreBundlesMenu_C_UpdatePrompts final
 {
 public:
 	bool                                          CallFunc_CanPurchaseNativeOffer_CanPurchase;       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1FB1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerPromptData                     K2Node_MakeStruct_MarinerPromptData;               // 0x0008(0x0118)()
 	bool                                          CallFunc_AddHostPrompt_ReturnValue;                // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ClearHostPrompts_ReturnValue;             // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -141,7 +141,7 @@ public:
 	bool                                          CallFunc_HandleInput_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_CanPurchaseNativeOffer_CanPurchase;       // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1FB2[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerAsyncUIFlowHandler*             CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAsyncFlowOffers_C*                     K2Node_DynamicCast_AsAsync_Flow_Offers;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

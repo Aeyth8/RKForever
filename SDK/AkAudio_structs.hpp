@@ -525,7 +525,7 @@ public:
 	class UAkAcousticTexture*                     Texture;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Occlusion;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableSurface;                                     // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10B4[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkPoly) == 0x000008, "Wrong alignment on FAkPoly");
 static_assert(sizeof(FAkPoly) == 0x000010, "Wrong size on FAkPoly");
@@ -538,7 +538,7 @@ static_assert(offsetof(FAkPoly, EnableSurface) == 0x00000C, "Member 'FAkPoly::En
 struct alignas(0x08) FAKWaapiJsonObject final
 {
 public:
-	uint8                                         Pad_10B5[0x10];                                    // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAKWaapiJsonObject) == 0x000008, "Wrong alignment on FAKWaapiJsonObject");
 static_assert(sizeof(FAKWaapiJsonObject) == 0x000010, "Wrong size on FAKWaapiJsonObject");
@@ -565,7 +565,7 @@ public:
 	EAkChannelConfigType                          ChannelConfigType;                                 // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        ChannelMask;                                       // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        NumberOfChannels;                                  // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10B6[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkMainOutputSettings) == 0x000008, "Wrong alignment on FAkMainOutputSettings");
 static_assert(sizeof(FAkMainOutputSettings) == 0x000028, "Wrong size on FAkMainOutputSettings");
@@ -588,10 +588,10 @@ public:
 	uint32                                        ReflectionOrder;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableDiffractionOnReflections;                    // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableDirectPathDiffraction;                       // 0x0015(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10B7[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaximumPathLength;                                 // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableTransmission;                                // 0x001C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10B8[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkSpatialAudioSettings) == 0x000004, "Wrong alignment on FAkSpatialAudioSettings");
 static_assert(sizeof(FAkSpatialAudioSettings) == 0x000020, "Wrong size on FAkSpatialAudioSettings");
@@ -617,7 +617,7 @@ public:
 	struct FAkMainOutputSettings                  MainOutputSettings;                                // 0x0010(0x0028)(Edit, NativeAccessSpecifierPublic)
 	float                                         StreamingLookAheadRatio;                           // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        NumberOfRefillsInVoice;                            // 0x003C(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10B9[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkSpatialAudioSettings                SpatialAudioSettings;                              // 0x0040(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAkCommonInitializationSettings) == 0x000008, "Wrong alignment on FAkCommonInitializationSettings");
@@ -636,7 +636,7 @@ static_assert(offsetof(FAkCommonInitializationSettings, SpatialAudioSettings) ==
 struct alignas(0x08) FAkWaapiSubscriptionId final
 {
 public:
-	uint8                                         Pad_10BA[0x8];                                     // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkWaapiSubscriptionId) == 0x000008, "Wrong alignment on FAkWaapiSubscriptionId");
 static_assert(sizeof(FAkWaapiSubscriptionId) == 0x000008, "Wrong size on FAkWaapiSubscriptionId");
@@ -685,15 +685,15 @@ public:
 	uint32                                        IO_Granularity;                                    // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TargetAutoStreamBufferLength;                      // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseStreamCache;                                    // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10BB[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint32                                        MaximumPinnedBytesInCache;                         // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableGameSyncPreparation;                         // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10BC[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint32                                        ContinuousPlaybackLookAhead;                       // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        MonitorQueuePoolSize;                              // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        MaximumHardwareTimeoutMs;                          // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          DebugOutOfRangeCheckEnabled;                       // 0x0024(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10BD[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DebugOutOfRangeLimit;                              // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FAkAdvancedSpatialAudioSettings        SpatialAudioSettings;                              // 0x002C(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
@@ -718,7 +718,7 @@ struct FAkAdvancedInitializationSettingsWithMultiCoreRendering : public FAkAdvan
 {
 public:
 	bool                                          EnableMultiCoreRendering;                          // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10BE[0x3];                                     // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkAdvancedInitializationSettingsWithMultiCoreRendering) == 0x000004, "Wrong alignment on FAkAdvancedInitializationSettingsWithMultiCoreRendering");
 static_assert(sizeof(FAkAdvancedInitializationSettingsWithMultiCoreRendering) == 0x000038, "Wrong size on FAkAdvancedInitializationSettingsWithMultiCoreRendering");
@@ -732,7 +732,7 @@ public:
 	float                                         ArriveTangent;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LeaveTangent;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERichCurveTangentWeightMode                   TangentWeightMode;                                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10BF[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ArriveTangentWeight;                               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LeaveTangentWeight;                                // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -752,7 +752,7 @@ public:
 	float                                         Value;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERichCurveInterpMode                          InterpMode;                                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERichCurveTangentMode                         TangentMode;                                       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C0[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMovieSceneTangentDataSerializationHelper Tangent;                                           // 0x0008(0x0014)(NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMovieSceneFloatValueSerializationHelper) == 0x000004, "Wrong alignment on FMovieSceneFloatValueSerializationHelper");
@@ -797,7 +797,7 @@ struct FAkAndroidAdvancedInitializationSettings final : public FAkAdvancedInitia
 public:
 	uint32                                        AudioAPI;                                          // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          RoundFrameSizeToHardwareSize;                      // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C1[0x3];                                     // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkAndroidAdvancedInitializationSettings) == 0x000004, "Wrong alignment on FAkAndroidAdvancedInitializationSettings");
 static_assert(sizeof(FAkAndroidAdvancedInitializationSettings) == 0x000040, "Wrong size on FAkAndroidAdvancedInitializationSettings");
@@ -852,11 +852,11 @@ struct FAkExternalSourceInfo final
 public:
 	class FString                                 ExternalSrcName;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAkCodecId                                    CodecID;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C2[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Filename;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAkExternalMediaAsset*                  ExternalSourceAsset;                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsStreamed;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C3[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkExternalSourceInfo) == 0x000008, "Wrong alignment on FAkExternalSourceInfo");
 static_assert(sizeof(FAkExternalSourceInfo) == 0x000038, "Wrong size on FAkExternalSourceInfo");
@@ -900,7 +900,7 @@ struct FAkXboxOneAdvancedInitializationSettings final : public FAkAdvancedInitia
 public:
 	uint16                                        MaximumNumberOfXMAVoices;                          // 0x0038(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseHardwareCodecLowLatencyMode;                    // 0x003A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C4[0x1];                                     // 0x003B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B[0x1];                                       // 0x003B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkXboxOneAdvancedInitializationSettings) == 0x000004, "Wrong alignment on FAkXboxOneAdvancedInitializationSettings");
 static_assert(sizeof(FAkXboxOneAdvancedInitializationSettings) == 0x00003C, "Wrong size on FAkXboxOneAdvancedInitializationSettings");
@@ -975,12 +975,12 @@ struct FMovieSceneFloatChannelSerializationHelper final
 public:
 	ERichCurveExtrapolation                       PreInfinityExtrap;                                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERichCurveExtrapolation                       PostInfinityExtrap;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C5[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Times;                                             // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FMovieSceneFloatValueSerializationHelper> Values;                                            // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	float                                         DefaultValue;                                      // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasDefaultValue;                                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C6[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMovieSceneFloatChannelSerializationHelper) == 0x000008, "Wrong alignment on FMovieSceneFloatChannelSerializationHelper");
 static_assert(sizeof(FMovieSceneFloatChannelSerializationHelper) == 0x000030, "Wrong size on FMovieSceneFloatChannelSerializationHelper");
@@ -1026,7 +1026,7 @@ public:
 	uint16                                        DiscoveryBroadcastPort;                            // 0x0004(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        CommandPort;                                       // 0x0006(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        NotificationPort;                                  // 0x0008(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C7[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 NetworkName;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAkCommunicationSettings) == 0x000008, "Wrong alignment on FAkCommunicationSettings");
@@ -1055,7 +1055,7 @@ struct FAkGeometrySurfaceOverride final
 public:
 	class UAkAcousticTexture*                     AcousticTexture;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bEnableOcclusionOverride : 1;                      // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_10C8[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OcclusionValue;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAkGeometrySurfaceOverride) == 0x000008, "Wrong alignment on FAkGeometrySurfaceOverride");
@@ -1069,7 +1069,7 @@ struct FAkCommunicationSettingsWithCommSelection final : public FAkCommunication
 {
 public:
 	EAkCommSystem                                 CommunicationSystem;                               // 0x0020(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C9[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkCommunicationSettingsWithCommSelection) == 0x000008, "Wrong alignment on FAkCommunicationSettingsWithCommSelection");
 static_assert(sizeof(FAkCommunicationSettingsWithCommSelection) == 0x000028, "Wrong size on FAkCommunicationSettingsWithCommSelection");
@@ -1117,7 +1117,7 @@ public:
 	uint32                                        AudioAPI;                                          // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          GlobalFocus;                                       // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10CA[0x2];                                     // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkHololensAdvancedInitializationSettings) == 0x000004, "Wrong alignment on FAkHololensAdvancedInitializationSettings");
 static_assert(sizeof(FAkHololensAdvancedInitializationSettings) == 0x000040, "Wrong size on FAkHololensAdvancedInitializationSettings");
@@ -1132,7 +1132,7 @@ struct FAkPluginInfo final
 public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        PluginID;                                          // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10CB[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Dll;                                               // 0x0018(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAkPluginInfo) == 0x000008, "Wrong alignment on FAkPluginInfo");
@@ -1149,7 +1149,7 @@ public:
 	uint32                                        AudioAPI;                                          // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          GlobalFocus;                                       // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseHeadMountedDisplayAudioDevice;                  // 0x003D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10CC[0x2];                                     // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkWindowsAdvancedInitializationSettings) == 0x000004, "Wrong alignment on FAkWindowsAdvancedInitializationSettings");
 static_assert(sizeof(FAkWindowsAdvancedInitializationSettings) == 0x000040, "Wrong size on FAkWindowsAdvancedInitializationSettings");
@@ -1163,7 +1163,7 @@ struct FAkCommonInitializationSettingsWithSampleRate final : public FAkCommonIni
 {
 public:
 	uint32                                        SampleRate;                                        // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10CD[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkCommonInitializationSettingsWithSampleRate) == 0x000008, "Wrong alignment on FAkCommonInitializationSettingsWithSampleRate");
 static_assert(sizeof(FAkCommonInitializationSettingsWithSampleRate) == 0x000068, "Wrong size on FAkCommonInitializationSettingsWithSampleRate");
@@ -1175,7 +1175,7 @@ struct FAkCommunicationSettingsWithSystemInitialization final : public FAkCommun
 {
 public:
 	bool                                          InitializeSystemComms;                             // 0x0020(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10CE[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkCommunicationSettingsWithSystemInitialization) == 0x000008, "Wrong alignment on FAkCommunicationSettingsWithSystemInitialization");
 static_assert(sizeof(FAkCommunicationSettingsWithSystemInitialization) == 0x000028, "Wrong size on FAkCommunicationSettingsWithSystemInitialization");
@@ -1188,7 +1188,7 @@ struct FAkPS4AdvancedInitializationSettings final : public FAkAdvancedInitializa
 public:
 	uint32                                        ACPBatchBufferSize;                                // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseHardwareCodecLowLatencyMode;                    // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10CF[0x3];                                     // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkPS4AdvancedInitializationSettings) == 0x000004, "Wrong alignment on FAkPS4AdvancedInitializationSettings");
 static_assert(sizeof(FAkPS4AdvancedInitializationSettings) == 0x000040, "Wrong size on FAkPS4AdvancedInitializationSettings");
@@ -1202,7 +1202,7 @@ struct FAkGeometrySurfacePropertiesToMap final
 public:
 	TSoftObjectPtr<class UAkAcousticTexture>      AcousticTexture;                                   // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OcclusionValue;                                    // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10D0[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAkGeometrySurfacePropertiesToMap) == 0x000008, "Wrong alignment on FAkGeometrySurfacePropertiesToMap");
 static_assert(sizeof(FAkGeometrySurfacePropertiesToMap) == 0x000030, "Wrong size on FAkGeometrySurfacePropertiesToMap");
@@ -1267,7 +1267,7 @@ struct FAkAudioEventTrackKey final
 {
 public:
 	float                                         Time;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10D1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          AkAudioEvent;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 EventName;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

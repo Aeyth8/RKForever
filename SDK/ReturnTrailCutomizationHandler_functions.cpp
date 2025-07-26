@@ -88,9 +88,9 @@ void AReturnTrailCutomizationHandler_C::ApplyProfileSkinToCharacter()
 // Function ReturnTrailCutomizationHandler.ReturnTrailCutomizationHandler_C.MenuEntered
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMarinerPlayableCharacter*        Param_CurrentPlayableCharacter                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        CurrentPlayableCharacter_0                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AReturnTrailCutomizationHandler_C::MenuEntered(class UMarinerPlayableCharacter* Param_CurrentPlayableCharacter)
+void AReturnTrailCutomizationHandler_C::MenuEntered(class UMarinerPlayableCharacter* CurrentPlayableCharacter_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -99,7 +99,7 @@ void AReturnTrailCutomizationHandler_C::MenuEntered(class UMarinerPlayableCharac
 
 	Params::ReturnTrailCutomizationHandler_C_MenuEntered Parms{};
 
-	Parms.Param_CurrentPlayableCharacter = Param_CurrentPlayableCharacter;
+	Parms.CurrentPlayableCharacter_0 = CurrentPlayableCharacter_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

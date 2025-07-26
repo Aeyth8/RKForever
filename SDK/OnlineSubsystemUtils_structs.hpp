@@ -105,7 +105,7 @@ enum class ESpectatorReservationResult : uint8
 struct alignas(0x08) FBlueprintSessionResult final
 {
 public:
-	uint8                                         Pad_EDE[0xB8];                                     // 0x0000(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0xB8];                                       // 0x0000(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FBlueprintSessionResult) == 0x000008, "Wrong alignment on FBlueprintSessionResult");
 static_assert(sizeof(FBlueprintSessionResult) == 0x0000B8, "Wrong size on FBlueprintSessionResult");
@@ -119,7 +119,7 @@ public:
 	class FString                                 ValidationStr;                                     // 0x0028(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Platform;                                          // 0x0038(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowCrossplay;                                   // 0x0048(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EDF[0x3];                                      // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ElapsedTime;                                       // 0x004C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPlayerReservation) == 0x000008, "Wrong alignment on FPlayerReservation");
@@ -153,7 +153,7 @@ struct FPartyReservation final
 {
 public:
 	int32                                         TeamNum;                                           // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EE0[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PartyLeader;                                       // 0x0008(0x0028)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPlayerReservation>             PartyMembers;                                      // 0x0030(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	TArray<struct FPlayerReservation>             RemovedPartyMembers;                               // 0x0040(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)

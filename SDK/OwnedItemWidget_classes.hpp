@@ -30,7 +30,7 @@ public:
 
 public:
 	bool Populate();
-	void SetOwnedItem(class UItemLoadResponse* Param_ItemLoadResponse, bool Param_IsOwned);
+	void SetOwnedItem(class UItemLoadResponse* ItemLoadResponse_0, bool IsOwned_0);
 
 public:
 	static class UClass* StaticClass()

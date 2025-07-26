@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "LevelEnums_structs.hpp"
 #include "MangoClient_structs.hpp"
 #include "GameModeEnums_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Mariner_structs.hpp"
 
 
@@ -69,13 +69,13 @@ public:
 	struct FMatchEnd                              MatchEndStruct;                                    // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UObject*                                __WorldContext;                                    // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EGameModeEnums                                GameMode;                                          // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_259B[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FGuid, struct FMangoMode>         CallFunc_GetModes_ReturnValue;                     // 0x0080(0x0050)(ConstParm, ZeroConstructor)
 	class UMarinerModeGlobals*                    CallFunc_GetModeGlobals_ReturnValue;               // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoMode                             CallFunc_Map_Find_Value;                           // 0x00D8(0x0058)()
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_259C[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerModeDataAsset*                  CallFunc_TryAndGetModeDataFromLoadName_ReturnValue; // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMarinerGameMode                              CallFunc_GetLinkedGameMode_ReturnValue;            // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -112,7 +112,7 @@ public:
 	class FString                                 LevelName;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ELevelEnums                                   Level;                                             // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_259D[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue;          // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_StriStri_ReturnValue_1;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

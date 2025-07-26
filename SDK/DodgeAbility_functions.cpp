@@ -308,9 +308,9 @@ void UDodgeAbility_C::GetNormalizedAcceleration(struct FVector* Acceleration)
 // Function DodgeAbility.DodgeAbility_C.GetDodgeStrength
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   Param_DodgeStrength                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DodgeStrength_0                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDodgeAbility_C::GetDodgeStrength(float* Param_DodgeStrength)
+void UDodgeAbility_C::GetDodgeStrength(float* DodgeStrength_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -321,8 +321,8 @@ void UDodgeAbility_C::GetDodgeStrength(float* Param_DodgeStrength)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_DodgeStrength != nullptr)
-		*Param_DodgeStrength = Parms.Param_DodgeStrength;
+	if (DodgeStrength_0 != nullptr)
+		*DodgeStrength_0 = Parms.DodgeStrength_0;
 }
 
 
@@ -1055,9 +1055,9 @@ void UDodgeAbility_C::GetIsPointOnClosestBoundsValidForProtection(const struct F
 // Function DodgeAbility.DodgeAbility_C.GetArenaBoundsRef
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AMarinerFastArenaBounds*          Param_ArenaBounds                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AMarinerFastArenaBounds*          ArenaBounds_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDodgeAbility_C::GetArenaBoundsRef(class AMarinerFastArenaBounds** Param_ArenaBounds)
+void UDodgeAbility_C::GetArenaBoundsRef(class AMarinerFastArenaBounds** ArenaBounds_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1068,17 +1068,17 @@ void UDodgeAbility_C::GetArenaBoundsRef(class AMarinerFastArenaBounds** Param_Ar
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_ArenaBounds != nullptr)
-		*Param_ArenaBounds = Parms.Param_ArenaBounds;
+	if (ArenaBounds_0 != nullptr)
+		*ArenaBounds_0 = Parms.ArenaBounds_0;
 }
 
 
 // Function DodgeAbility.DodgeAbility_C.IsNinjaHeadbandActive
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// bool                                    Param_IsActive                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsActive_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UDodgeAbility_C::IsNinjaHeadbandActive(bool* Param_IsActive) const
+void UDodgeAbility_C::IsNinjaHeadbandActive(bool* IsActive_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -1089,8 +1089,8 @@ void UDodgeAbility_C::IsNinjaHeadbandActive(bool* Param_IsActive) const
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_IsActive != nullptr)
-		*Param_IsActive = Parms.Param_IsActive;
+	if (IsActive_0 != nullptr)
+		*IsActive_0 = Parms.IsActive_0;
 }
 
 

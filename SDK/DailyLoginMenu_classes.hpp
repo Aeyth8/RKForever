@@ -33,7 +33,7 @@ public:
 	class UDailyRewardWidget_C*                   ActiveRewardWidget;                                // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UDailyRewardWidget_C*                   TempRewardWidget;                                  // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShowingBlockingMessageBox;                         // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_211D[0x3];                                     // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_531[0x3];                                      // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ClaimRewardID;                                     // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

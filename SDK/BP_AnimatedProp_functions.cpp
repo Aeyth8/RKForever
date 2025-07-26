@@ -20,11 +20,11 @@ namespace SDK
 // Function BP_AnimatedProp.BP_AnimatedProp_C.SetAndPlay
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USkeletalMesh*                    Param_SkeletalMesh                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMesh*                    SkeletalMesh_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UAnimSequence*                    Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    LoopAnim                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_AnimatedProp_C::SetAndPlay(class USkeletalMesh* Param_SkeletalMesh, class UAnimSequence* Animation, bool LoopAnim)
+void ABP_AnimatedProp_C::SetAndPlay(class USkeletalMesh* SkeletalMesh_0, class UAnimSequence* Animation, bool LoopAnim)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,7 +33,7 @@ void ABP_AnimatedProp_C::SetAndPlay(class USkeletalMesh* Param_SkeletalMesh, cla
 
 	Params::BP_AnimatedProp_C_SetAndPlay Parms{};
 
-	Parms.Param_SkeletalMesh = Param_SkeletalMesh;
+	Parms.SkeletalMesh_0 = SkeletalMesh_0;
 	Parms.Animation = Animation;
 	Parms.LoopAnim = LoopAnim;
 

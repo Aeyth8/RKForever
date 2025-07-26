@@ -21,7 +21,7 @@ namespace SDK
 class USlateWidgetStyleContainerBase : public UObject
 {
 public:
-	uint8                                         Pad_1ABA[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -41,7 +41,7 @@ static_assert(sizeof(USlateWidgetStyleContainerBase) == 0x000030, "Wrong size on
 class UFontBulkData final : public UObject
 {
 public:
-	uint8                                         Pad_1ABB[0xB8];                                    // 0x0028(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0xB8];                                      // 0x0028(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

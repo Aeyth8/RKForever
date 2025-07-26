@@ -21,7 +21,7 @@ namespace SDK
 class UGauntletTestController : public UObject
 {
 public:
-	uint8                                         Pad_F81[0x8];                                      // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -58,7 +58,7 @@ static_assert(sizeof(UGauntletTestControllerBootTest) == 0x000030, "Wrong size o
 class UGauntletTestControllerErrorTest final : public UGauntletTestController
 {
 public:
-	uint8                                         Pad_F82[0x20];                                     // 0x0030(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

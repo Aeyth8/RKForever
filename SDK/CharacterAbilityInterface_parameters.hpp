@@ -23,7 +23,7 @@ struct CharacterAbilityInterface_C_TriggerDodgeFeedback final
 {
 public:
 	EDodgeDirections                              DodgeDirection;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25D9[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DodgeDuration;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(CharacterAbilityInterface_C_TriggerDodgeFeedback) == 0x000004, "Wrong alignment on CharacterAbilityInterface_C_TriggerDodgeFeedback");

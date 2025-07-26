@@ -24,7 +24,7 @@ struct LobbySlotWidget_C_ExecuteUbergraph_LobbySlotWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2327[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0010(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0020(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
@@ -34,7 +34,7 @@ public:
 	int32                                         CallFunc_PostEvent_ReturnValue_1;                  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 K2Node_ComponentBoundEvent_SelectedItem;           // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType;          // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2328[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(LobbySlotWidget_C_ExecuteUbergraph_LobbySlotWidget) == 0x000008, "Wrong alignment on LobbySlotWidget_C_ExecuteUbergraph_LobbySlotWidget");

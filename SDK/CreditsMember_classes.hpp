@@ -21,7 +21,7 @@ namespace SDK
 class UCreditsMember_C final : public UUserWidget
 {
 public:
-	class UTextBlock*                             Name_CreditsMember_C;                              // 0x0230(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x0230(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class USpacer*                                Spacer;                                            // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             Title;                                             // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
@@ -40,7 +40,7 @@ public:
 };
 static_assert(alignof(UCreditsMember_C) == 0x000008, "Wrong alignment on UCreditsMember_C");
 static_assert(sizeof(UCreditsMember_C) == 0x000248, "Wrong size on UCreditsMember_C");
-static_assert(offsetof(UCreditsMember_C, Name_CreditsMember_C) == 0x000230, "Member 'UCreditsMember_C::Name_CreditsMember_C' has a wrong offset!");
+static_assert(offsetof(UCreditsMember_C, Name_0) == 0x000230, "Member 'UCreditsMember_C::Name_0' has a wrong offset!");
 static_assert(offsetof(UCreditsMember_C, Spacer) == 0x000238, "Member 'UCreditsMember_C::Spacer' has a wrong offset!");
 static_assert(offsetof(UCreditsMember_C, Title) == 0x000240, "Member 'UCreditsMember_C::Title' has a wrong offset!");
 

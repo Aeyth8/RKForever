@@ -31,7 +31,7 @@ public:
 	class UButton*                                HitArea;                                           // 0x2FA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class ULoadingSpinner_Simplified_C*           LoadingSpinner_Simplified;                         // 0x2FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Material;                                          // 0x2FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_CharacterFeatureCMSItemButton_C;              // 0x2FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x2FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UUnviewedItemWidget_C*                  UnviewedWidget;                                    // 0x2FC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	EMangoItemType                                ItemType;                                          // 0x2FC8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -64,7 +64,7 @@ static_assert(offsetof(UCharacterFeatureCMSItemButton_C, CMSItemButton) == 0x002
 static_assert(offsetof(UCharacterFeatureCMSItemButton_C, HitArea) == 0x002FA0, "Member 'UCharacterFeatureCMSItemButton_C::HitArea' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureCMSItemButton_C, LoadingSpinner_Simplified) == 0x002FA8, "Member 'UCharacterFeatureCMSItemButton_C::LoadingSpinner_Simplified' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureCMSItemButton_C, Material) == 0x002FB0, "Member 'UCharacterFeatureCMSItemButton_C::Material' has a wrong offset!");
-static_assert(offsetof(UCharacterFeatureCMSItemButton_C, Name_CharacterFeatureCMSItemButton_C) == 0x002FB8, "Member 'UCharacterFeatureCMSItemButton_C::Name_CharacterFeatureCMSItemButton_C' has a wrong offset!");
+static_assert(offsetof(UCharacterFeatureCMSItemButton_C, Name_0) == 0x002FB8, "Member 'UCharacterFeatureCMSItemButton_C::Name_0' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureCMSItemButton_C, UnviewedWidget) == 0x002FC0, "Member 'UCharacterFeatureCMSItemButton_C::UnviewedWidget' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureCMSItemButton_C, ItemType) == 0x002FC8, "Member 'UCharacterFeatureCMSItemButton_C::ItemType' has a wrong offset!");
 

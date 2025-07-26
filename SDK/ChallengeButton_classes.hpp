@@ -58,7 +58,7 @@ public:
 	struct FMangoQuest                            CMSQuest;                                          // 0x06B0(0x0068)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FMangoQuestReward                      CMSQuestReward;                                    // 0x0718(0x00C8)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          DismissActive;                                     // 0x07E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2175[0x7];                                     // 0x07E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7E1[0x7];                                      // 0x07E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 AnimGoalDesc;                                      // 0x07E8(0x0118)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
@@ -72,12 +72,12 @@ public:
 	void ChallengeCompleteEvent(const struct FMangoQuestDescription& Quest);
 	void Init(struct FMangoQuestDescription& Quest, bool AllowInput);
 	bool GetBackgroundColor(struct FLinearColor* OutColor);
-	void OnQuestDismissStarted(EMangoQuestSlot Param_Slot);
-	void OnQuestDismissCompleted(bool WasSuccessful, EMangoQuestSlot Param_Slot, struct FMangoQuestDescription& Quest);
+	void OnQuestDismissStarted(EMangoQuestSlot Slot_0);
+	void OnQuestDismissCompleted(bool WasSuccessful, EMangoQuestSlot Slot_0, struct FMangoQuestDescription& Quest);
 	void ReinitFromDismiss();
 	void IsDismissable(bool* CanDismiss);
 	void IsClaimable(bool* CanClaim);
-	void OnQuestRewardClaimed(bool WasSuccessful, EMangoQuestSlot SlotId, struct FMangoQuestDescription& Param_QuestDesc);
+	void OnQuestRewardClaimed(bool WasSuccessful, EMangoQuestSlot SlotId, struct FMangoQuestDescription& QuestDesc_0);
 	void AnimateToGoal(const struct FMangoQuestDescription& GoalQuestDesc, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationComplete);
 	bool HandleInput(EMarinerInputActions InInput);
 	void DismissChallengeConfirm(struct FKey& KeyPressed);

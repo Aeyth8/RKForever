@@ -31,7 +31,7 @@ public:
 	class UButton*                                HitArea;                                           // 0x2FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_106;                                         // 0x2FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Material;                                          // 0x2FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_CharacterArtifactsButton_C;                   // 0x2FC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x2FC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UUnviewedItemWidget_C*                  UnviewedWidget;                                    // 0x2FC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
@@ -63,7 +63,7 @@ static_assert(offsetof(UCharacterArtifactsButton_C, Cog) == 0x002FA0, "Member 'U
 static_assert(offsetof(UCharacterArtifactsButton_C, HitArea) == 0x002FA8, "Member 'UCharacterArtifactsButton_C::HitArea' has a wrong offset!");
 static_assert(offsetof(UCharacterArtifactsButton_C, Image_106) == 0x002FB0, "Member 'UCharacterArtifactsButton_C::Image_106' has a wrong offset!");
 static_assert(offsetof(UCharacterArtifactsButton_C, Material) == 0x002FB8, "Member 'UCharacterArtifactsButton_C::Material' has a wrong offset!");
-static_assert(offsetof(UCharacterArtifactsButton_C, Name_CharacterArtifactsButton_C) == 0x002FC0, "Member 'UCharacterArtifactsButton_C::Name_CharacterArtifactsButton_C' has a wrong offset!");
+static_assert(offsetof(UCharacterArtifactsButton_C, Name_0) == 0x002FC0, "Member 'UCharacterArtifactsButton_C::Name_0' has a wrong offset!");
 static_assert(offsetof(UCharacterArtifactsButton_C, UnviewedWidget) == 0x002FC8, "Member 'UCharacterArtifactsButton_C::UnviewedWidget' has a wrong offset!");
 
 }

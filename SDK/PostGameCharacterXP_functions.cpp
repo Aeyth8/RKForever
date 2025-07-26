@@ -233,9 +233,9 @@ void UPostGameCharacterXP_C::ConsumeNextReward(bool* IsValid, struct FMangoRewar
 // Function PostGameCharacterXP.PostGameCharacterXP_C.HasRewardItems
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_HasRewardItems                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    HasRewardItems_0                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPostGameCharacterXP_C::HasRewardItems(bool* Param_HasRewardItems)
+void UPostGameCharacterXP_C::HasRewardItems(bool* HasRewardItems_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -246,8 +246,8 @@ void UPostGameCharacterXP_C::HasRewardItems(bool* Param_HasRewardItems)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_HasRewardItems != nullptr)
-		*Param_HasRewardItems = Parms.Param_HasRewardItems;
+	if (HasRewardItems_0 != nullptr)
+		*HasRewardItems_0 = Parms.HasRewardItems_0;
 }
 
 }

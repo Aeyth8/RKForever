@@ -174,10 +174,10 @@ void UChallengeGroup_C::RefreshChallenge(struct FMangoQuestDescription& Quest)
 // Function ChallengeGroup.ChallengeGroup_C.GetChallenge
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EMangoQuestSlot                         Param_Slot                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMangoQuestSlot                         Slot_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UChallengeButton_C*               Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UChallengeGroup_C::GetChallenge(EMangoQuestSlot Param_Slot, class UChallengeButton_C** Widget)
+void UChallengeGroup_C::GetChallenge(EMangoQuestSlot Slot_0, class UChallengeButton_C** Widget)
 {
 	static class UFunction* Func = nullptr;
 
@@ -186,7 +186,7 @@ void UChallengeGroup_C::GetChallenge(EMangoQuestSlot Param_Slot, class UChalleng
 
 	Params::ChallengeGroup_C_GetChallenge Parms{};
 
-	Parms.Param_Slot = Param_Slot;
+	Parms.Slot_0 = Slot_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

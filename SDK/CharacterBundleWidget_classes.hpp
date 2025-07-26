@@ -49,7 +49,7 @@ public:
 public:
 	void ExecuteUbergraph_CharacterBundleWidget(int32 EntryPoint);
 	void Construct();
-	void PopulateCharacter(class UMarinerPlayableCharacter* Param_Character);
+	void PopulateCharacter(class UMarinerPlayableCharacter* Character_0);
 	void GetCurrentCharacterPurchaseOffer(struct FMangoNativeOffer* Nativeoffer);
 	void OnCharacterPurchase(class UMarinerLayeredButton* ButtonInstance);
 

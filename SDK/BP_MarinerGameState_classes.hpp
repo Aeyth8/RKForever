@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "OnRoundTransitionPayload_structs.hpp"
-#include "OnPreroundCountdownPayload_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "OnRoundTransitionPayload_structs.hpp"
 #include "ExtraTimeStates_structs.hpp"
 #include "Mariner_classes.hpp"
+#include "OnPreroundCountdownPayload_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -30,18 +30,18 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x08C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             OnPreroundCountdownChange;                         // 0x08D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         PreroundTimerRemainingTime;                        // 0x08E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2251[0x4];                                     // 0x08E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8E4[0x4];                                      // 0x08E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           PreroundStartTimerHandle;                          // 0x08E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         PreroundTimerMaxTimeToSendUpdates;                 // 0x08F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2252[0x4];                                     // 0x08F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8F4[0x4];                                      // 0x08F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnOvertimeUIBegin;                                 // 0x08F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsInOvertimeTransition;                            // 0x0908(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
 	bool                                          IsInExtraTime;                                     // 0x0909(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	ExtraTimeStates                               ExtraTimeState;                                    // 0x090A(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2253[0x1];                                     // 0x090B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90B[0x1];                                      // 0x090B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ExtraTimeDefaultGraceTime;                         // 0x090C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsExtraTimeTimerActive;                            // 0x0910(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2254[0x3];                                     // 0x0911(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_911[0x3];                                      // 0x0911(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ExtraTimeTimerLength;                              // 0x0914(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             OnExtraTimeChange;                                 // 0x0918(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastInlineDelegateProperty_             OnExtraTimeTimerChange;                            // 0x0928(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -50,7 +50,7 @@ public:
 	int32                                         PreroundStartOfGameCountdownLength;                // 0x094C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             OnRoundTransitionChange;                           // 0x0950(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FOnPreroundCountdownPayload            UpdatePreroundCountdownPayload;                    // 0x0960(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2255[0x4];                                     // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_96C[0x4];                                      // 0x096C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           HitchTimer;                                        // 0x0970(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TMap<class FString, struct FVector>           DebugActorLocationMap;                             // 0x0978(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TMap<class FString, struct FRotator>          DebugActorRotationMap;                             // 0x09C8(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
@@ -62,7 +62,7 @@ public:
 public:
 	void OnPreroundCountdownChange__DelegateSignature(int32 TimeLeft, int32 MaxTimeToShow, bool ShouldEnable);
 	void OnOvertimeUIBegin__DelegateSignature();
-	void OnExtraTimeChange__DelegateSignature(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState);
+	void OnExtraTimeChange__DelegateSignature(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0);
 	void OnExtraTimeTimerChange__DelegateSignature(float TimerLength);
 	void OnClearMiniObjectiveText__DelegateSignature();
 	void OnRoundTransitionChange__DelegateSignature(bool IsEnabled);
@@ -79,11 +79,11 @@ public:
 	void DisableDebugHitching();
 	void EnableDebugHitching();
 	void HitchLoop();
-	void OnExtraTimeChange_Event(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState);
+	void OnExtraTimeChange_Event(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0);
 	void MulticastClearMiniObjectiveText();
 	void MulticastEnableExtraTimeTimer(bool IsEnabled, float TimerLength);
-	void MulticastSetExtraTime(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState);
-	void ServerSetExtraTime(bool Param_IsInExtraTime, ExtraTimeStates Param_ExtraTimeState);
+	void MulticastSetExtraTime(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0);
+	void ServerSetExtraTime(bool IsInExtraTime_0, ExtraTimeStates ExtraTimeState_0);
 	void DisplayOvertimeUI();
 	void OnMaxPreroundTimerSet();
 	void FinishPreroundCountdownTimer();

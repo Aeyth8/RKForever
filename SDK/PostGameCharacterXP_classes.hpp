@@ -66,7 +66,7 @@ public:
 	void ShowNextReward();
 	void PopulatePostGameCharacterXp(bool Init, const struct FMarinerPostGameData& PostGameData);
 	void ConsumeNextReward(bool* IsValid, struct FMangoReward* OutReward);
-	void HasRewardItems(bool* Param_HasRewardItems);
+	void HasRewardItems(bool* HasRewardItems_0);
 
 public:
 	static class UClass* StaticClass()

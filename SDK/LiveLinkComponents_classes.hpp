@@ -44,7 +44,7 @@ class ULiveLinkCameraController final : public ULiveLinkControllerBase
 public:
 	struct FComponentReference                    ComponentToControl;                                // 0x0028(0x0028)(Edit, NativeAccessSpecifierPublic)
 	struct FLiveLinkTransformControllerData       TransformData;                                     // 0x0050(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DE0[0x4];                                      // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -69,9 +69,9 @@ public:
 	struct FLiveLinkSubjectRepresentation         SubjectRepresentation;                             // 0x00B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 	class ULiveLinkControllerBase*                Controller;                                        // 0x00C0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoClear, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUpdateInEditor;                                   // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DE1[0x7];                                      // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnLiveLinkUpdated;                                 // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DE2[0x8];                                      // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -97,7 +97,7 @@ class ULiveLinkLightController final : public ULiveLinkControllerBase
 public:
 	struct FComponentReference                    ComponentToControl;                                // 0x0028(0x0028)(Edit, NativeAccessSpecifierPublic)
 	struct FLiveLinkTransformControllerData       TransformData;                                     // 0x0050(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DE3[0x4];                                      // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -121,7 +121,7 @@ class ULiveLinkTransformController final : public ULiveLinkControllerBase
 public:
 	struct FComponentReference                    ComponentToControl;                                // 0x0028(0x0028)(Edit, NativeAccessSpecifierPublic)
 	struct FLiveLinkTransformControllerData       TransformData;                                     // 0x0050(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DE4[0x4];                                      // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

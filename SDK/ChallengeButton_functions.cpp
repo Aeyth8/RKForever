@@ -198,9 +198,9 @@ bool UChallengeButton_C::GetBackgroundColor(struct FLinearColor* OutColor)
 // Function ChallengeButton.ChallengeButton_C.OnQuestDismissStarted
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EMangoQuestSlot                         Param_Slot                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMangoQuestSlot                         Slot_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UChallengeButton_C::OnQuestDismissStarted(EMangoQuestSlot Param_Slot)
+void UChallengeButton_C::OnQuestDismissStarted(EMangoQuestSlot Slot_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -209,7 +209,7 @@ void UChallengeButton_C::OnQuestDismissStarted(EMangoQuestSlot Param_Slot)
 
 	Params::ChallengeButton_C_OnQuestDismissStarted Parms{};
 
-	Parms.Param_Slot = Param_Slot;
+	Parms.Slot_0 = Slot_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -219,10 +219,10 @@ void UChallengeButton_C::OnQuestDismissStarted(EMangoQuestSlot Param_Slot)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    WasSuccessful                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// EMangoQuestSlot                         Param_Slot                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMangoQuestSlot                         Slot_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FMangoQuestDescription           Quest                                                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UChallengeButton_C::OnQuestDismissCompleted(bool WasSuccessful, EMangoQuestSlot Param_Slot, struct FMangoQuestDescription& Quest)
+void UChallengeButton_C::OnQuestDismissCompleted(bool WasSuccessful, EMangoQuestSlot Slot_0, struct FMangoQuestDescription& Quest)
 {
 	static class UFunction* Func = nullptr;
 
@@ -232,7 +232,7 @@ void UChallengeButton_C::OnQuestDismissCompleted(bool WasSuccessful, EMangoQuest
 	Params::ChallengeButton_C_OnQuestDismissCompleted Parms{};
 
 	Parms.WasSuccessful = WasSuccessful;
-	Parms.Param_Slot = Param_Slot;
+	Parms.Slot_0 = Slot_0;
 	Parms.Quest = std::move(Quest);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -302,9 +302,9 @@ void UChallengeButton_C::IsClaimable(bool* CanClaim)
 // Parameters:
 // bool                                    WasSuccessful                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // EMangoQuestSlot                         SlotId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FMangoQuestDescription           Param_QuestDesc                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FMangoQuestDescription           QuestDesc_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UChallengeButton_C::OnQuestRewardClaimed(bool WasSuccessful, EMangoQuestSlot SlotId, struct FMangoQuestDescription& Param_QuestDesc)
+void UChallengeButton_C::OnQuestRewardClaimed(bool WasSuccessful, EMangoQuestSlot SlotId, struct FMangoQuestDescription& QuestDesc_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -315,11 +315,11 @@ void UChallengeButton_C::OnQuestRewardClaimed(bool WasSuccessful, EMangoQuestSlo
 
 	Parms.WasSuccessful = WasSuccessful;
 	Parms.SlotId = SlotId;
-	Parms.Param_QuestDesc = std::move(Param_QuestDesc);
+	Parms.QuestDesc_0 = std::move(QuestDesc_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_QuestDesc = std::move(Parms.Param_QuestDesc);
+	QuestDesc_0 = std::move(Parms.QuestDesc_0);
 }
 
 

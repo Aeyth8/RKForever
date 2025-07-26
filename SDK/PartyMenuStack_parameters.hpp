@@ -23,11 +23,11 @@ struct PartyMenuStack_C_ExecuteUbergraph_PartyMenuStack final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bToSubLayer;                          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F23[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ActivateStackManager_ReturnValue;         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HasActiveOrPendingRootLayer_ReturnValue;  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F24[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerMenuStackManagerSetup          K2Node_MakeStruct_MarinerMenuStackManagerSetup;    // 0x0018(0x0028)(NoDestructor, ContainsInstancedReference)
 	class UMangoFriendsManager*                   CallFunc_Get_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesPlatformSupportFriendManagement_ReturnValue; // 0x0048(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -60,7 +60,7 @@ struct PartyMenuStack_C_UpdatePlayerHeaderIsOnGameTabs final
 {
 public:
 	bool                                          bGameTabs;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F25[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PartyMenuStack_C_UpdatePlayerHeaderIsOnGameTabs) == 0x000008, "Wrong alignment on PartyMenuStack_C_UpdatePlayerHeaderIsOnGameTabs");

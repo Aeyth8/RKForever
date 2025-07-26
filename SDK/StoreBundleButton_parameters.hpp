@@ -35,7 +35,7 @@ struct StoreBundleButton_C_SetAssociatedOffer final
 public:
 	struct FMangoNativeOffer                      InOffer;                                           // 0x0000(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F50[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoInventoryManager*                 CallFunc_Get_ReturnValue;                          // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsNativeOfferOwned_ReturnValue;           // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };

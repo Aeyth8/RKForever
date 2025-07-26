@@ -88,9 +88,9 @@ void UNewsMenuStack_C::ConstructNewsStacks()
 // Function NewsMenuStack.NewsMenuStack_C.ShowLoading
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsVisible                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsVisible_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UNewsMenuStack_C::ShowLoading(bool Param_IsVisible)
+void UNewsMenuStack_C::ShowLoading(bool IsVisible_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -99,7 +99,7 @@ void UNewsMenuStack_C::ShowLoading(bool Param_IsVisible)
 
 	Params::NewsMenuStack_C_ShowLoading Parms{};
 
-	Parms.Param_IsVisible = Param_IsVisible;
+	Parms.IsVisible_0 = IsVisible_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

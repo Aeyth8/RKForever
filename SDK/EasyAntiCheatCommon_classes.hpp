@@ -21,7 +21,7 @@ namespace SDK
 class UEasyAntiCheatNetComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_10B2[0x8];                                     // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientMessage(const TArray<uint8>& Message);

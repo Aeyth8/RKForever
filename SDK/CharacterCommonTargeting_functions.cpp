@@ -106,9 +106,9 @@ void UCharacterCommonTargeting_C::WidgetAnimationEvt_LockOnStart_K2Node_WidgetAn
 // Function CharacterCommonTargeting.CharacterCommonTargeting_C.CompleteLockOn
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AMarinerCharacter*                Param_LockedCharacter                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AMarinerCharacter*                LockedCharacter_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCharacterCommonTargeting_C::CompleteLockOn(class AMarinerCharacter* Param_LockedCharacter)
+void UCharacterCommonTargeting_C::CompleteLockOn(class AMarinerCharacter* LockedCharacter_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -117,7 +117,7 @@ void UCharacterCommonTargeting_C::CompleteLockOn(class AMarinerCharacter* Param_
 
 	Params::CharacterCommonTargeting_C_CompleteLockOn Parms{};
 
-	Parms.Param_LockedCharacter = Param_LockedCharacter;
+	Parms.LockedCharacter_0 = LockedCharacter_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

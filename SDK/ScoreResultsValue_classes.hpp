@@ -43,7 +43,7 @@ public:
 
 public:
 	void PopulateFromData(int32 Score, bool IsPlayerTeam, EMarinerGameOutcome TeamOutcome);
-	void PopulateFromMatchEnd(const struct FMatchEnd& MatchEnd, int32 Param_TeamIndex, bool IsPlayerTeam, EMarinerGameOutcome TeamOutcome);
+	void PopulateFromMatchEnd(const struct FMatchEnd& MatchEnd, int32 TeamIndex_0, bool IsPlayerTeam, EMarinerGameOutcome TeamOutcome);
 	void SetModeImage(bool bWin, bool bPlayerTeam);
 
 public:

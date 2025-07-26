@@ -163,9 +163,9 @@ void UPostGameRankProgress_C::ConsumeNextReward(bool* IsValid)
 // Function PostGameRankProgress.PostGameRankProgress_C.HasRewardItems
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_HasRewardItems                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    HasRewardItems_0                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPostGameRankProgress_C::HasRewardItems(bool* Param_HasRewardItems)
+void UPostGameRankProgress_C::HasRewardItems(bool* HasRewardItems_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -176,17 +176,17 @@ void UPostGameRankProgress_C::HasRewardItems(bool* Param_HasRewardItems)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_HasRewardItems != nullptr)
-		*Param_HasRewardItems = Parms.Param_HasRewardItems;
+	if (HasRewardItems_0 != nullptr)
+		*HasRewardItems_0 = Parms.HasRewardItems_0;
 }
 
 
 // Function PostGameRankProgress.PostGameRankProgress_C.HasCurrency
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_HasCurrency                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    HasCurrency_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPostGameRankProgress_C::HasCurrency(bool* Param_HasCurrency)
+void UPostGameRankProgress_C::HasCurrency(bool* HasCurrency_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -197,8 +197,8 @@ void UPostGameRankProgress_C::HasCurrency(bool* Param_HasCurrency)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_HasCurrency != nullptr)
-		*Param_HasCurrency = Parms.Param_HasCurrency;
+	if (HasCurrency_0 != nullptr)
+		*HasCurrency_0 = Parms.HasCurrency_0;
 }
 
 }

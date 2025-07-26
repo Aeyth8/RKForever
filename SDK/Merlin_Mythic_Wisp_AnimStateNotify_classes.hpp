@@ -25,7 +25,7 @@ public:
 	TArray<class UMarinerParticleSystemComponent*> Mythic_FX;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          R_FlamesOnly;                                      // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          UseCustomSocket;                                   // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1EAF[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CustomSockets;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
 	struct FVector                                Location;                                          // 0x0058(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

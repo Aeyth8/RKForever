@@ -17,7 +17,7 @@ class alignas(0x01) UMulticastSparseDelegateProperty_
 	unsigned __int8 Pad[0x1];
 };
 
-class alignas(0x01) UMulticastInlineDelegateProperty_
+class alignas(0x08) UMulticastInlineDelegateProperty_
 {
 	unsigned __int8 Pad[0x10];
 };

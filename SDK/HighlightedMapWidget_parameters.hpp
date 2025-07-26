@@ -35,7 +35,7 @@ struct HighlightedMapWidget_C_Populate final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	EMapRecommendedNumberOfPlayers                Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_231B[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
 	class FText                                   Temp_text_Variable_1;                              // 0x0020(0x0018)()
 	class UMarinerMapGlobals*                     CallFunc_GetMapGlobals_ReturnValue;                // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -44,7 +44,7 @@ public:
 	struct FMangoMap                              CallFunc_Map_Find_Value;                           // 0x0098(0x0060)()
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_231C[0x6];                                     // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture2D>              CallFunc_GetSoftImage_ReturnValue;                 // 0x0100(0x0028)(ConstParm, HasGetValueTypeHash)
 	class FText                                   K2Node_Select_Default;                             // 0x0128(0x0018)()
 };

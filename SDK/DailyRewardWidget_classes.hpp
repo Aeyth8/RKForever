@@ -39,7 +39,7 @@ public:
 	void OnButtonSelected__DelegateSignature(class UDailyRewardWidget_C* Widget);
 	void ExecuteUbergraph_DailyRewardWidget(int32 EntryPoint);
 	void Construct();
-	void PopulateReward(const struct FMangoLoginReward& Param_LoginReward, bool* IsActiveReward);
+	void PopulateReward(const struct FMangoLoginReward& LoginReward_0, bool* IsActiveReward);
 	void SetAsActiveReward(bool IsActive);
 	void OnSelected(class UMarinerLayeredButton* Button);
 

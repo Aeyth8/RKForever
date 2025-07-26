@@ -38,7 +38,7 @@ public:
 	void BP_OnEntered(bool bFromSubMenu);
 	void NewsLoaded();
 	void ConstructNewsStacks();
-	void ShowLoading(bool Param_IsVisible);
+	void ShowLoading(bool IsVisible_0);
 	void OnNewsStackActivated(class UMarinerMenuStackButton* Button, int32 StackIndex);
 	void OnNewsStackPopulated();
 	void OnNewsImageLoaded(class FName& ImageId, class UTexture2D* Texture);

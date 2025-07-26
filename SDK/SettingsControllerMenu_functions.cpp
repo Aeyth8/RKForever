@@ -456,9 +456,9 @@ void USettingsControllerMenu_C::DummyCallback(struct FKey& KeyPressed)
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // EMarinerAimAssistState                  AimAssistState                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsControllerMenu_C::AimAssistStateToIndex(EMarinerAimAssistState AimAssistState, int32* Param_Index)
+void USettingsControllerMenu_C::AimAssistStateToIndex(EMarinerAimAssistState AimAssistState, int32* Index_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -471,18 +471,18 @@ void USettingsControllerMenu_C::AimAssistStateToIndex(EMarinerAimAssistState Aim
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Index_0 != nullptr)
+		*Index_0 = Parms.Index_0;
 }
 
 
 // Function SettingsControllerMenu.SettingsControllerMenu_C.IndexToAimAssistState
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Param_Index                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMarinerAimAssistState                  AimAssistState                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USettingsControllerMenu_C::IndexToAimAssistState(int32 Param_Index, EMarinerAimAssistState* AimAssistState)
+void USettingsControllerMenu_C::IndexToAimAssistState(int32 Index_0, EMarinerAimAssistState* AimAssistState)
 {
 	static class UFunction* Func = nullptr;
 
@@ -491,7 +491,7 @@ void USettingsControllerMenu_C::IndexToAimAssistState(int32 Param_Index, EMarine
 
 	Params::SettingsControllerMenu_C_IndexToAimAssistState Parms{};
 
-	Parms.Param_Index = Param_Index;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

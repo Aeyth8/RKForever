@@ -40,7 +40,7 @@ public:
 	static void StartAnalyzingOutput(const class UObject* WorldContextObject, class USoundSubmix* SubmixToAnalyze, EFFTSize FFTSize, EFFTPeakInterpolationMethod InterpolationMethod, EFFTWindowType WindowType, float HopSize);
 	static void StartRecordingOutput(const class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord);
 	static void StopAnalyzingOutput(const class UObject* WorldContextObject, class USoundSubmix* SubmixToStopAnalyzing);
-	static class USoundWave* StopRecordingOutput(const class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const class FString& Param_Name, const class FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite);
+	static class USoundWave* StopRecordingOutput(const class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const class FString& Name_0, const class FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite);
 	static float TrimAudioCache(float InMegabytesToFree);
 
 public:
@@ -65,10 +65,10 @@ public:
 	uint8                                         bStopWhenOwnerDestroyed : 1;                       // 0x01F0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bAllowSpatialization : 1;                          // 0x01F0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverrideAttenuation : 1;                          // 0x01F0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         BitPad_39 : 4;                                     // 0x00F0(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_F74[0x3];                                      // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         BitPad_1F0_4 : 4;                                  // 0x01F0(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
+	uint8                                         Pad_1F1[0x3];                                      // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bOutputToBusOnly : 1;                              // 0x01F4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F75[0x3];                                      // 0x01F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F5[0x3];                                      // 0x01F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundAttenuation*                      AttenuationSettings;                               // 0x01F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoundAttenuationSettings              AttenuationOverrides;                              // 0x0200(0x02F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	class USoundConcurrency*                      ConcurrencySettings;                               // 0x04F0(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -82,15 +82,15 @@ public:
 	TArray<struct FSoundSourceBusSendInfo>        PreEffectBusSends;                                 // 0x0590(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         bIsUISound : 1;                                    // 0x05A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bIsPreviewSound : 1;                               // 0x05A0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F76[0x3];                                      // 0x05A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A1[0x3];                                      // 0x05A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         EnvelopeFollowerAttackTime;                        // 0x05A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EnvelopeFollowerReleaseTime;                       // 0x05A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F77[0x4];                                      // 0x05AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5AC[0x4];                                      // 0x05AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnAudioEnvelopeValue;                              // 0x05B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F78[0x20];                                     // 0x05C0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C0[0x20];                                     // 0x05C0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	class USynthSound*                            Synth;                                             // 0x05E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAudioComponent*                        AudioComponent;                                    // 0x05E8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_F79[0x30];                                     // 0x05F0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5F0[0x30];                                     // 0x05F0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetSubmixSend(class USoundSubmix* Submix, float SendLevel);
@@ -134,7 +134,7 @@ static_assert(offsetof(USynthComponent, AudioComponent) == 0x0005E8, "Member 'US
 class UAudioGenerator final : public UObject
 {
 public:
-	uint8                                         Pad_F7B[0x80];                                     // 0x0028(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x80];                                      // 0x0028(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -154,7 +154,7 @@ static_assert(sizeof(UAudioGenerator) == 0x0000A8, "Wrong size on UAudioGenerato
 class USubmixEffectDynamicsProcessorPreset final : public USoundEffectSubmixPreset
 {
 public:
-	uint8                                         Pad_F7C[0x50];                                     // 0x0040(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubmixEffectDynamicsProcessorSettings Settings;                                          // 0x0090(0x0028)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
@@ -179,7 +179,7 @@ static_assert(offsetof(USubmixEffectDynamicsProcessorPreset, Settings) == 0x0000
 class USubmixEffectSubmixEQPreset final : public USoundEffectSubmixPreset
 {
 public:
-	uint8                                         Pad_F7D[0x38];                                     // 0x0040(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x38];                                      // 0x0040(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubmixEffectSubmixEQSettings          Settings;                                          // 0x0078(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
@@ -204,7 +204,7 @@ static_assert(offsetof(USubmixEffectSubmixEQPreset, Settings) == 0x000078, "Memb
 class USubmixEffectReverbPreset final : public USoundEffectSubmixPreset
 {
 public:
-	uint8                                         Pad_F7E[0x5C];                                     // 0x0040(0x005C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x5C];                                      // 0x0040(0x005C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubmixEffectReverbSettings            Settings;                                          // 0x009C(0x0034)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
@@ -230,7 +230,7 @@ static_assert(offsetof(USubmixEffectReverbPreset, Settings) == 0x00009C, "Member
 class USubmixEffectReverbFastPreset final : public USoundEffectSubmixPreset
 {
 public:
-	uint8                                         Pad_F7F[0x5C];                                     // 0x0040(0x005C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x5C];                                      // 0x0040(0x005C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubmixEffectReverbFastSettings        Settings;                                          // 0x009C(0x0034)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
@@ -257,7 +257,7 @@ class alignas(0x10) USynthSound final : public USoundWaveProcedural
 {
 public:
 	class USynthComponent*                        OwningSynthComponent;                              // 0x03D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F80[0x18];                                     // 0x03D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D8[0x18];                                     // 0x03D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

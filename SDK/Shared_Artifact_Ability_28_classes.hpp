@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "GameplayAwardTypes_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Mariner_structs.hpp"
 #include "Mariner_classes.hpp"
-#include "GameplayAwardTypes_structs.hpp"
 
 
 namespace SDK

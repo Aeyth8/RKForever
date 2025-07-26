@@ -40,9 +40,9 @@ bool UCharacterSelectAbilities_C::Populate()
 // Function CharacterSelectAbilities.CharacterSelectAbilities_C.SetCharacter
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCharacterSelectAbilities_C::SetCharacter(class UMarinerPlayableCharacter* Param_Character)
+void UCharacterSelectAbilities_C::SetCharacter(class UMarinerPlayableCharacter* Character_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,7 +51,7 @@ void UCharacterSelectAbilities_C::SetCharacter(class UMarinerPlayableCharacter* 
 
 	Params::CharacterSelectAbilities_C_SetCharacter Parms{};
 
-	Parms.Param_Character = Param_Character;
+	Parms.Character_0 = Character_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "ItemBoxTypes_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "ECharacterStance_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "DodgeData_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Mariner_structs.hpp"
 #include "Mariner_classes.hpp"
 #include "GameplayAwardTypes_structs.hpp"
@@ -46,53 +46,53 @@ public:
 	float                                         SpeedBoostFadeOut_SpeedBlend_51ED12CD422BEA7B9652F98F5B86E971; // 0x20AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedBoostFadeOut_Radius_51ED12CD422BEA7B9652F98F5B86E971; // 0x20B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            SpeedBoostFadeOut__Direction_51ED12CD422BEA7B9652F98F5B86E971; // 0x20B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2620[0x3];                                     // 0x20B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20B5[0x3];                                     // 0x20B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     SpeedBoostFadeOut;                                 // 0x20B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedBoostFadeIn_Weight_F65EA4F645E3D4423D41EB863DF61BA1; // 0x20C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedBoostFadeIn_SpeedBlend_F65EA4F645E3D4423D41EB863DF61BA1; // 0x20C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedBoostFadeIn_Radius_F65EA4F645E3D4423D41EB863DF61BA1; // 0x20C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            SpeedBoostFadeIn__Direction_F65EA4F645E3D4423D41EB863DF61BA1; // 0x20CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2621[0x3];                                     // 0x20CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20CD[0x3];                                     // 0x20CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     SpeedBoostFadeIn;                                  // 0x20D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RevealOutlinePostProcess_Radius_E5AE7BE84134AA9ED8A1889971411B49; // 0x20D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RevealOutlinePostProcess_OpacityMain_E5AE7BE84134AA9ED8A1889971411B49; // 0x20DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            RevealOutlinePostProcess__Direction_E5AE7BE84134AA9ED8A1889971411B49; // 0x20E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2622[0x7];                                     // 0x20E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20E1[0x7];                                     // 0x20E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     RevealOutlinePostProcess;                          // 0x20E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactPostProcessFadeOutTimeline_Weight_1C2DD924474EF820FBF85E90BA63D074; // 0x20F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            ArtifactPostProcessFadeOutTimeline__Direction_1C2DD924474EF820FBF85E90BA63D074; // 0x20F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2623[0x3];                                     // 0x20F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20F5[0x3];                                     // 0x20F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     ArtifactPostProcessFadeOutTimeline;                // 0x20F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactPostProcessFadeInTimeline_Weight_9F468BD5436BFCC893C81EB3972EA3D8; // 0x2100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            ArtifactPostProcessFadeInTimeline__Direction_9F468BD5436BFCC893C81EB3972EA3D8; // 0x2104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2624[0x3];                                     // 0x2105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2105[0x3];                                     // 0x2105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     ArtifactPostProcessFadeInTimeline;                 // 0x2108(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedPostProcessFadeOutTimeline_Weight_AD17075346FE9C53AC27EE8EEB29FA70; // 0x2110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            SpeedPostProcessFadeOutTimeline__Direction_AD17075346FE9C53AC27EE8EEB29FA70; // 0x2114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2625[0x3];                                     // 0x2115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2115[0x3];                                     // 0x2115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     SpeedPostProcessFadeOutTimeline;                   // 0x2118(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedPostProcessFadeInTimeline_Weight_8F68398541B9A80166EAD0A61CEA0C3D; // 0x2120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            SpeedPostProcessFadeInTimeline__Direction_8F68398541B9A80166EAD0A61CEA0C3D; // 0x2124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2626[0x3];                                     // 0x2125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2125[0x3];                                     // 0x2125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     SpeedPostProcessFadeInTimeline;                    // 0x2128(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeInTimeline_FresnelGate3rd_FEEB93D14E8D226537F3E9AE4721CC31; // 0x2130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeInTimeline_FullGlowIntensity3rd_FEEB93D14E8D226537F3E9AE4721CC31; // 0x2134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeInTimeline_FresnelGate1st_FEEB93D14E8D226537F3E9AE4721CC31; // 0x2138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeInTimeline_FullGlowIntensity1st_FEEB93D14E8D226537F3E9AE4721CC31; // 0x213C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            ArtifactFadeInTimeline__Direction_FEEB93D14E8D226537F3E9AE4721CC31; // 0x2140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2627[0x7];                                     // 0x2141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2141[0x7];                                     // 0x2141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     ArtifactFadeInTimeline;                            // 0x2148(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeOutTimeline_FresnelGate3rd_5C623454430A6378544C769F09AA6207; // 0x2150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeOutTimeline_FullGlowIntensity3rd_5C623454430A6378544C769F09AA6207; // 0x2154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeOutTimeline_FresnelGate1st_5C623454430A6378544C769F09AA6207; // 0x2158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactFadeOutTimeline_FullGlowIntensity1st_5C623454430A6378544C769F09AA6207; // 0x215C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            ArtifactFadeOutTimeline__Direction_5C623454430A6378544C769F09AA6207; // 0x2160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2628[0x7];                                     // 0x2161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2161[0x7];                                     // 0x2161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     ArtifactFadeOutTimeline;                           // 0x2168(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         KnockoutTimeline_Return_773FA1534BEEC66A91136BB2D6FD8B0A; // 0x2170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         KnockoutTimeline_ArenaReturnKnockoutDecelerationCurve_773FA1534BEEC66A91136BB2D6FD8B0A; // 0x2174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            KnockoutTimeline__Direction_773FA1534BEEC66A91136BB2D6FD8B0A; // 0x2178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2629[0x7];                                     // 0x2179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2179[0x7];                                     // 0x2179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     KnockoutTimeline;                                  // 0x2180(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         OriginalGroundFriction;                            // 0x2188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         OriginalBrakingDecelerationFalling;                // 0x218C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -100,14 +100,14 @@ public:
 	float                                         Scale;                                             // 0x2194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         IKInterpSpeed;                                     // 0x2198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugIK;                                           // 0x219C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_262A[0x3];                                     // 0x219D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_219D[0x3];                                     // 0x219D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DropShadowMaxDrawDistance;                         // 0x21A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BigLandingImpactVelocity;                          // 0x21A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 BigLandingShake;                                   // 0x21A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 NormalLandingShake;                                // 0x21B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsKnockedOut;                                      // 0x21B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          CanSeeAllyHealth;                                  // 0x21B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_262B[0x2];                                     // 0x21BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21BA[0x2];                                     // 0x21BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NumberOfFreezeFields;                              // 0x21BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FActiveGameplayEffectHandle            FreezeDebuffHandle;                                // 0x21C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FActiveGameplayEffectHandle            FreezeSelfBuffHandle;                              // 0x21C8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -121,9 +121,9 @@ public:
 	struct FActiveGameplayEffectHandle            ShrinkDebuffHandle;                                // 0x21FC(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsShrunk;                                          // 0x2204(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          Unshrinking;                                       // 0x2205(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_262C[0x2];                                     // 0x2206(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2206[0x2];                                     // 0x2206(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                InitialShrinkLocation;                             // 0x2208(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_262D[0x4];                                     // 0x2214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2214[0x4];                                     // 0x2214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           KnockedOutTimer;                                   // 0x2218(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             Landed;                                            // 0x2220(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastInlineDelegateProperty_             Jumped;                                            // 0x2230(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -137,49 +137,49 @@ public:
 	class AController*                            RecentDamageCauser;                                // 0x2298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UsesMegablastSlomo;                                // 0x22A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UsesReducedDamageModifier;                         // 0x22A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_262E[0x6];                                     // 0x22A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22A2[0x6];                                     // 0x22A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             KnockedOutEnemy;                                   // 0x22A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          UsesCritHitThirdPerson;                            // 0x22B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_262F[0x3];                                     // 0x22B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22B9[0x3];                                     // 0x22B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CritHitTrailActivationDelay;                       // 0x22BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CritHitSpeed;                                      // 0x22C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CritHitVector;                                     // 0x22C4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CurrentCritHitBounces;                             // 0x22D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MaxCritHitBounces;                                 // 0x22D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UsesEndMatchSlomo;                                 // 0x22D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2630[0x3];                                     // 0x22D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22D9[0x3];                                     // 0x22D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PreviousBounceLoc;                                 // 0x22DC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PreviousJumpCount;                                 // 0x22E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2631[0x4];                                     // 0x22EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22EC[0x4];                                     // 0x22EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          StunnedEnemySound2D;                               // 0x22F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           TestTimer;                                         // 0x22F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UCurveVector*                           CharacterImpulseMultiplierCurve;                   // 0x2300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             JumpBlocked;                                       // 0x2308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastInlineDelegateProperty_             JumpUnblocked;                                     // 0x2318(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          UsesImpulseJumpBlock;                              // 0x2328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2632[0x7];                                     // 0x2329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2329[0x7];                                     // 0x2329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             SpecialAbilityInputPressed;                        // 0x2330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastInlineDelegateProperty_             OnJumpInputPressed;                                // 0x2340(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          CanRegen;                                          // 0x2350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UsesRegenSystem;                                   // 0x2351(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UsesApexForImpulse;                                // 0x2352(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2633[0x5];                                     // 0x2353(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2353[0x5];                                     // 0x2353(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             AirJump;                                           // 0x2358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FVector_NetQuantizeNormal              NetAcceleration;                                   // 0x2368(0x000C)(Edit, BlueprintVisible, Net, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2634[0x4];                                     // 0x2374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2374[0x4];                                     // 0x2374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            CharacterImpulseTimeCurve;                         // 0x2378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAkAudioEvent*                          DangerZoneLoopBegin;                               // 0x2380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAkAudioEvent*                          DangerZoneLoopEnd;                                 // 0x2388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 DangerZoneLoopRTPC;                                // 0x2390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	ECharacterStance                              ECharacterStance;                                  // 0x23A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2635[0x3];                                     // 0x23A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23A1[0x3];                                     // 0x23A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StaggerThreshold;                                  // 0x23A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             WallBounce;                                        // 0x23A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         MaxComboCountClamp;                                // 0x23B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2636[0x4];                                     // 0x23BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23BC[0x4];                                     // 0x23BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           MegaBlastRegenTimer;                               // 0x23C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          MegaBlastRegenEnabled;                             // 0x23C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2637[0x7];                                     // 0x23C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23C9[0x7];                                     // 0x23C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             MegaBlastBleedThrough;                             // 0x23D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         MegaBlastMeterMin;                                 // 0x23E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MegaBlastMeterMax;                                 // 0x23E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -187,11 +187,11 @@ public:
 	bool                                          HealthRegenActive;                                 // 0x23F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseDamagePercent;                                  // 0x23F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsShieldActive;                                    // 0x23F2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2638[0x1];                                     // 0x23F3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_23F3[0x1];                                     // 0x23F3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CurrentShieldItemHealth;                           // 0x23F4(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	UMulticastInlineDelegateProperty_             ShieldHealthChanged;                               // 0x23F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         ClientShieldItemHealth;                            // 0x2408(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2639[0x4];                                     // 0x240C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_240C[0x4];                                     // 0x240C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             ShieldHealthDepleted;                              // 0x2410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UMarinerParticleSystemComponent*        AttachedShield;                                    // 0x2420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 MegaBlastDangerEffect;                             // 0x2428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -199,36 +199,36 @@ public:
 	float                                         SpawnAdjustHeightDelta;                            // 0x2434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LastMegaBlastRotationTimeStamp;                    // 0x2438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BouncedDuringMegaBlast;                            // 0x243C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_263A[0x3];                                     // 0x243D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_243D[0x3];                                     // 0x243D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             HitStunDebug;                                      // 0x2440(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UClass*                                 KnockedOutEnemyEffect;                             // 0x2450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bCausedDamageDebugReadout;                         // 0x2458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_263B[0x3];                                     // 0x2459(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2459[0x3];                                     // 0x2459(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                KnockoutVelocity;                                  // 0x245C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                KnockoutMeshOffset;                                // 0x2468(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                KnockoutCharacterPosition;                         // 0x2474(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bManCannonInitialEffectDone;                       // 0x2480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_263C[0x7];                                     // 0x2481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2481[0x7];                                     // 0x2481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             ArtifactProcOn;                                    // 0x2488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastInlineDelegateProperty_             ArtifactProcOff;                                   // 0x2498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UClass*                                 ManCannonInitialEffect;                            // 0x24A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                KnockoutMeshBaseOffset;                            // 0x24B0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          InitilizedArtifactGlowColor;                       // 0x24BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_263D[0x3];                                     // 0x24BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24BD[0x3];                                     // 0x24BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           ArtifactGlowOrange;                                // 0x24C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           ArtifactGlowYellow;                                // 0x24D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           ArtifactGlowGreen;                                 // 0x24E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           ArtifactGlowPurple;                                // 0x24F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsArtifactDurationActive;                          // 0x2500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EnableArtifactVisuals;                             // 0x2501(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_263E[0x6];                                     // 0x2502(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2502[0x6];                                     // 0x2502(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstance*                      SpeedPostProcessMaterial;                          // 0x2508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               SpeedPostProcessMaterialDynamic;                   // 0x2510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           ArtifactRemovalDelayTimer;                         // 0x2518(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactGlowFresnelOpacity1stPerson;               // 0x2520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactGlowFresnelOpacity3rdPerson;               // 0x2524(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SpeedPostProcessActive;                            // 0x2528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_263F[0x3];                                     // 0x2529(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2529[0x3];                                     // 0x2529(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SpeedPostProcessDefaultWeight;                     // 0x252C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedPostProcessMaxWeight;                         // 0x2530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SpeedPostProcessMaxSpeed;                          // 0x2534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -237,7 +237,7 @@ public:
 	float                                         SpeedPostProcessSpeedBlend;                        // 0x2540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseSpeedBoostFX;                                   // 0x2544(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          UseSpeedPostProcess;                               // 0x2545(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2640[0x2];                                     // 0x2546(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2546[0x2];                                     // 0x2546(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           SpeedPostProcessDefaultWindColor;                  // 0x2548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           SpeedPostProcessDefaultColor;                      // 0x2558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           SpeedBoostRemovalDelayTimer;                       // 0x2568(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -250,7 +250,7 @@ public:
 	class UMaterialInstance*                      RevealOutlinesPulseMaterialInstance;               // 0x25A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseArtifactPostProcess;                            // 0x25A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ArtifactSpeedPostProcessesFXActive;                // 0x25A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2641[0x2];                                     // 0x25AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25AA[0x2];                                     // 0x25AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ArtifactGlowAdjustScalar1stPerson;                 // 0x25AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactGlowAdjustScalar3rdPerson;                 // 0x25B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ArtifactGlowFresnelScaleY1stPerson;                // 0x25B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -263,7 +263,7 @@ public:
 	bool                                          IsSpawnProtectionFeatureEnabled;                   // 0x25D4(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          SpawnProtectionEnabledLocalPlayer;                 // 0x25D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          SpawnProtectionEnabled;                            // 0x25D6(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
-	uint8                                         Pad_2642[0x1];                                     // 0x25D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25D7[0x1];                                     // 0x25D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           SpawnProtectionTimer;                              // 0x25D8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         SpawnProtectionDuration;                           // 0x25E0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                SpawnProtectionEmitterScale;                       // 0x25E4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -273,13 +273,13 @@ public:
 	float                                         AssistStatTimeLimit;                               // 0x2620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Use3rdPersonCamera;                                // 0x2624(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor)
 	bool                                          ThreerdPersonCameraAdjustmentEnabled;              // 0x2625(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2643[0x2];                                     // 0x2626(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2626[0x2];                                     // 0x2626(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ThirdPersonCameraLocation;                         // 0x2628(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2644[0x4];                                     // 0x2634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2634[0x4];                                     // 0x2634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           TimerHandle_ResetMegablastCount;                   // 0x2638(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            SurvivedMegablastDurationCurve;                    // 0x2640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bVariableMegablastsEnabled;                        // 0x2648(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2645[0x7];                                     // 0x2649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2649[0x7];                                     // 0x2649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           TimerHandle_RemoveMegablast;                       // 0x2650(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         SurvivedMegablastCount;                            // 0x2658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MegablastHealthScalar;                             // 0x265C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -287,42 +287,42 @@ public:
 	class UCurveFloat*                            MegablastImpulseThreshold;                         // 0x2668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            ImpulseMegablastDuration;                          // 0x2670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShowImpulseStrength;                               // 0x2678(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2646[0x7];                                     // 0x2679(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2679[0x7];                                     // 0x2679(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             DodgeStartedNavPin;                                // 0x2680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UCurveFloat*                            DodgeFlashAnim;                                    // 0x2690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SpawnProtectionTeamColorSet;                       // 0x2698(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          InitialGroundedSpeedApplied;                       // 0x2699(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2647[0x6];                                     // 0x269A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_269A[0x6];                                     // 0x269A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 GroundedSpeedEffect;                               // 0x26A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           DebugChosenPlayerstateToView;                      // 0x26A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DebugChosenPlayerstateToViewOffset;                // 0x26B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2648[0x4];                                     // 0x26B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26B4[0x4];                                     // 0x26B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AViewTargetActor_C*                     ViewTargetActor;                                   // 0x26B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LongshotAwardMinDistance;                          // 0x26C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2649[0x4];                                     // 0x26C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26C4[0x4];                                     // 0x26C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnGameplayAwardGiven;                              // 0x26C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          CanGiveMegablastHealsAward;                        // 0x26D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_264A[0x7];                                     // 0x26D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26D9[0x7];                                     // 0x26D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           RecoveryRewardTimer;                               // 0x26E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         BigHitAwardMinimumImpulse;                         // 0x26E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_264B[0x4];                                     // 0x26EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26EC[0x4];                                     // 0x26EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerFastArenaBounds*                ArenaBounds;                                       // 0x26F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RecoveryAwardUpTraceDistance;                      // 0x26F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RecoveryAwardShortDownTraceDistance;               // 0x26FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RecoveryAwardLongDownTraceDistance;                // 0x2700(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RecoveryAwardHorizontalTraceDistance;              // 0x2704(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanGiveRecoveryAward;                              // 0x2708(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_264C[0x3];                                     // 0x2709(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2709[0x3];                                     // 0x2709(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MegablastHealsAwardThreshold;                      // 0x270C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bAllowCharacterEmotes;                             // 0x2710(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_264D[0x7];                                     // 0x2711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2711[0x7];                                     // 0x2711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UClass*>                         DebugGameplayEffectsToWatch;                       // 0x2718(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                          bDebugPrintGameplayEffectLevels;                   // 0x2728(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bDebugItemSpawnSucceeded;                          // 0x2729(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bThrowInputHeld;                                   // 0x272A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bRespondedToABounceSinceLastHostileImpulse;        // 0x272B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          bIsDodging;                                        // 0x272C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_264E[0x3];                                     // 0x272D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_272D[0x3];                                     // 0x272D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 DodgeCameraShake;                                  // 0x2730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<TSoftClassPtr<class UClass>>           DodgeIgnoreActorTypes;                             // 0x2738(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class UForceFeedbackEffect*                   ItemPickupFFE;                                     // 0x2748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -334,11 +334,11 @@ public:
 	class UForceFeedbackEffect*                   BigLandFFE;                                        // 0x2778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShowReturnTravelDebug;                             // 0x2780(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EnableUberCheating;                                // 0x2781(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_264F[0x2];                                     // 0x2782(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2782[0x2];                                     // 0x2782(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DebugPlaySoundLoopFreqency;                        // 0x2784(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 DebugPlaySoundName;                                // 0x2788(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          bDebugPlaySoundLoop;                               // 0x2798(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2650[0x7];                                     // 0x2799(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2799[0x7];                                     // 0x2799(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           DebugPlaySoundLoopTimer;                           // 0x27A0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TMap<class FString, class UAkAudioEvent*>     DebugSoundMap;                                     // 0x27A8(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class UStaticMeshComponent*                   DebugSoundShape;                                   // 0x27F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -348,19 +348,19 @@ public:
 	float                                         CharacterFadeOutAddedRadius;                       // 0x2814(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UForceFeedbackEffect*                   ItemDropFFE;                                       // 0x2818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SpawnProtectionIgnoreInputCancel;                  // 0x2820(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2651[0x3];                                     // 0x2821(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2821[0x3];                                     // 0x2821(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DodgeFlashAnimCycleDuration;                       // 0x2824(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FDodgeData                             DodgeData;                                         // 0x2828(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	float                                         DodgeStartTimeStamp;                               // 0x2834(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DodgeMaterialFlashLoopCount;                       // 0x2838(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2652[0x4];                                     // 0x283C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_283C[0x4];                                     // 0x283C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  BigHitBlockingTags;                                // 0x2840(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FTimerHandle                           Timer_DodgePostProcessInterp;                      // 0x2860(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         LastDodgePostProcessBlend;                         // 0x2868(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         LastDodgePostProcessTime;                          // 0x286C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               DodgePostProcessMaterialDynamic;                   // 0x2870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DodgePostProcessToggle;                            // 0x2878(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2653[0x3];                                     // 0x2879(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2879[0x3];                                     // 0x2879(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DodgePostProcessInterpSpeed;                       // 0x287C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                DebugSavedActorLocation;                           // 0x2880(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               DebugSavedActorRotation;                           // 0x288C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -370,7 +370,7 @@ public:
 	bool                                          bEnableFreeze;                                     // 0x289B(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
 	float                                         FreezeDebuffDuration;                              // 0x289C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SpawnProtectionVFXEnabled;                         // 0x28A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
-	uint8                                         Pad_2654[0x3];                                     // 0x28A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28A1[0x3];                                     // 0x28A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   RecoveriesStatName;                                // 0x28A4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         DefaultIncrementStatValue;                         // 0x28AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   MegablastHealsStatName;                            // 0x28B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -485,7 +485,7 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void SetImpendingMegablastStance(const class UMarinerDamageableComponent* RelevantDamageableComponent, const class AMarinerCharacter* CharacterExpectingMegablast);
 	void OnRegenSuppressionEnd();
-	void ConsoleTestSpawnProtection(bool IsEnabled, float Param_SpawnProtectionDuration);
+	void ConsoleTestSpawnProtection(bool IsEnabled, float SpawnProtectionDuration_0);
 	void OnSpawnProtectionTimerEnd();
 	void ClientBroadcastRemoveSpawnProtection();
 	void OnRoundTransitionChange_Event_0(bool IsEnabled);
@@ -554,7 +554,7 @@ public:
 	void BP_OnEndArenaReturn();
 	void BP_OnBeginArenaReturn();
 	void ResetInputDI();
-	void SetDIServer(int32 Param_InputDI, const struct FRotator& DIRotation);
+	void SetDIServer(int32 InputDI_0, const struct FRotator& DIRotation);
 	void EnableItemInteraction();
 	void BndEvt__ItemInteractionComponent_K2Node_ComponentBoundEvent_0_OnStealSignature__DelegateSignature(class AMarinerCharacter* StealingCharacter, class AMarinerCharacter* VictimCharacter, EMarinerItemSlot ItemSlot);
 	void OnLanded(const struct FHitResult& Hit);
@@ -593,7 +593,7 @@ public:
 	void ArtifactFadeOutTimeline__FinishedFunc();
 	void KnockoutTimeline__UpdateFunc();
 	void KnockoutTimeline__FinishedFunc();
-	void FreezeFieldCounter(bool& EnterZone, class APawn*& Param_Instigator);
+	void FreezeFieldCounter(bool& EnterZone, class APawn*& Instigator_0);
 	void GetKnockoutHealthRecovery(float* HealthToRecover);
 	void UpdateStockTimeSinceKnockedOutStat();
 	void SetStockKnockedOutTimer();
@@ -612,7 +612,7 @@ public:
 	class UParticleSystemComponent* GetJumpFXParticleSystemComponent(int32 CurrentJumpCount);
 	void HandleMoveAffectingGameplayEffectApplied(class UClass* Effect);
 	void HandleKnockedOutEnemyEffectApplied();
-	void DebugDamageCaused(const class UObject* Object, bool InBool, bool InBool2, class UClass* Param_Class, const struct FVector& InVec, float InFloat);
+	void DebugDamageCaused(const class UObject* Object, bool InBool, bool InBool2, class UClass* Class_0, const struct FVector& InVec, float InFloat);
 	void EnableManCannonChangeDirection();
 	void HandleManCannonEffectAdded(class UClass* GameplayEffect);
 	void HandleManCannonEffectRemoved(class UClass* GameplayEffect);
@@ -639,10 +639,10 @@ public:
 	void WasRecentlyDamagedByPlayer(class AController* ControllerToCheck, float TimeLimit, bool* RecentlyDamaged);
 	void UpdateRecentlyDamagedOnMegablast();
 	void HandleGroundedSpeedEffect(EMovementMode MovementMode);
-	void GetGroundedSpeedEffect(class UClass** Param_GroundedSpeedEffect);
+	void GetGroundedSpeedEffect(class UClass** GroundedSpeedEffect_0);
 	void ActiveGameplayEffectQuerySignature_Cooldown(const struct FActiveGameplayEffect& GameplayEffect, bool* Bool);
 	void GetNextDebugViewTarget();
-	void GetDebugViewTargetActor(class AViewTargetActor_C** Param_ViewTargetActor);
+	void GetDebugViewTargetActor(class AViewTargetActor_C** ViewTargetActor_0);
 	void DebugPrintAllOfActorType(class UClass* ActorClass);
 	void UpdateAwardsOnDamageCaused(const class AActor* DamagedActor, bool DamageWasAoE, bool DamageWasMegablast, class UClass* DamageType, const struct FVector& ImpulseVector, float Damage);
 	void UpdateRecoveryAwardOnHitStunRemoved();
@@ -661,11 +661,11 @@ public:
 	void StopMegablastFFE();
 	void ApplyItemPickupFFE();
 	struct FMarinerCameraPerspective BP_OnChangePerspective(const class FName& PerspectiveName, struct FMarinerCameraPerspective& Perspective);
-	void GetOrCreateDebugSoundShape(class UStaticMeshComponent** Param_DebugSoundShape);
+	void GetOrCreateDebugSoundShape(class UStaticMeshComponent** DebugSoundShape_0);
 	void GetOrCreateDebugSoundHolder(class USceneComponent** DebugSoundHolder);
 	void ApplyItemDropFFE();
 	void OnRep_DodgeData();
-	void SetDodgeData(const struct FDodgeData& Param_DodgeData);
+	void SetDodgeData(const struct FDodgeData& DodgeData_0);
 	void DebugTryToSpawnItem(const class FString& DesiredItem);
 	void DebugGetFullValidItemTypeArray(TArray<EItemBoxTypes>* ValidItemArray);
 	void DebugGetFullValidItemPickupArray(TArray<TSoftClassPtr<class UClass>>* ItemPickupArray);

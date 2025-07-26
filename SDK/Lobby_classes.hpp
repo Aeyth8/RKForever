@@ -26,9 +26,9 @@ class ALobbyBeaconClient final : public AOnlineBeaconClient
 public:
 	class ALobbyBeaconState*                      LobbyState;                                        // 0x02A8(0x0008)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ALobbyBeaconPlayerState*                PlayerState;                                       // 0x02B0(0x0008)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F56[0x1];                                      // 0x02B8(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B8[0x1];                                      // 0x02B8(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	ELobbyBeaconJoinState                         LobbyJoinServerState;                              // 0x02B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F57[0x76];                                     // 0x02BA(0x0076)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2BA[0x76];                                     // 0x02BA(0x0076)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientAckJoiningServer();
@@ -66,7 +66,7 @@ static_assert(offsetof(ALobbyBeaconClient, LobbyJoinServerState) == 0x0002B9, "M
 class ALobbyBeaconHost final : public AOnlineBeaconHostObject
 {
 public:
-	uint8                                         Pad_F59[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_240[0x8];                                      // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   LobbyStateClass;                                   // 0x0248(0x0028)(Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class ALobbyBeaconState*                      LobbyState;                                        // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
@@ -94,9 +94,9 @@ public:
 	struct FUniqueNetIdRepl                       UniqueId;                                          // 0x0230(0x0028)(Net, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FUniqueNetIdRepl                       PartyOwnerUniqueId;                                // 0x0258(0x0028)(Net, RepNotify, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInLobby;                                          // 0x0280(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F5A[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AOnlineBeaconClient*                    ClientActor;                                       // 0x0288(0x0008)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F5B[0x48];                                     // 0x0290(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_290[0x48];                                     // 0x0290(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRep_InLobby();
@@ -127,14 +127,14 @@ class ALobbyBeaconState final : public AInfo
 {
 public:
 	int32                                         MaxPlayers;                                        // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F5C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class ALobbyBeaconPlayerState>    LobbyBeaconPlayerStateClass;                       // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F5D[0x8];                                      // 0x0228(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bLobbyStarted;                                     // 0x0230(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F5E[0x3];                                      // 0x0231(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_231[0x3];                                      // 0x0231(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         WaitForPlayersTimeRemaining;                       // 0x0234(0x0004)(Net, ZeroConstructor, Config, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FLobbyPlayerStateInfoArray             Players;                                           // 0x0238(0x0120)(Net, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F5F[0x68];                                     // 0x0358(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_358[0x68];                                     // 0x0358(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRep_LobbyStarted();

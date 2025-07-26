@@ -31,10 +31,10 @@ public:
 	class UButton*                                HitArea;                                           // 0x2FA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_106;                                         // 0x2FB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Material;                                          // 0x2FB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_CharacterFeatureEmotesButton_C;               // 0x2FC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x2FC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UUnviewedItemWidget_C*                  UnviewedItemWidget;                                // 0x2FC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          NewVar_0;                                          // 0x2FD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2076[0x7];                                     // 0x2FD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2FD1[0x7];                                     // 0x2FD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerPlayableCharacter*              NewVar_1;                                          // 0x2FD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -66,7 +66,7 @@ static_assert(offsetof(UCharacterFeatureEmotesButton_C, Cog) == 0x002FA0, "Membe
 static_assert(offsetof(UCharacterFeatureEmotesButton_C, HitArea) == 0x002FA8, "Member 'UCharacterFeatureEmotesButton_C::HitArea' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureEmotesButton_C, Image_106) == 0x002FB0, "Member 'UCharacterFeatureEmotesButton_C::Image_106' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureEmotesButton_C, Material) == 0x002FB8, "Member 'UCharacterFeatureEmotesButton_C::Material' has a wrong offset!");
-static_assert(offsetof(UCharacterFeatureEmotesButton_C, Name_CharacterFeatureEmotesButton_C) == 0x002FC0, "Member 'UCharacterFeatureEmotesButton_C::Name_CharacterFeatureEmotesButton_C' has a wrong offset!");
+static_assert(offsetof(UCharacterFeatureEmotesButton_C, Name_0) == 0x002FC0, "Member 'UCharacterFeatureEmotesButton_C::Name_0' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureEmotesButton_C, UnviewedItemWidget) == 0x002FC8, "Member 'UCharacterFeatureEmotesButton_C::UnviewedItemWidget' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureEmotesButton_C, NewVar_0) == 0x002FD0, "Member 'UCharacterFeatureEmotesButton_C::NewVar_0' has a wrong offset!");
 static_assert(offsetof(UCharacterFeatureEmotesButton_C, NewVar_1) == 0x002FD8, "Member 'UCharacterFeatureEmotesButton_C::NewVar_1' has a wrong offset!");

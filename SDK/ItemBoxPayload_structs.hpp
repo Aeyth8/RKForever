@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ItemBoxTypes_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +23,7 @@ struct FItemBoxPayload final
 {
 public:
 	EItemBoxTypes                                 ItemBoxType_2_08B0345C4832F3219B084AB2AC58FC1E;    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2493[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMesh*                            OriginalStaticMesh_5_2CF849C443EA702188AA449D0AF77406; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                OriginalScale_8_FFF8E3794076DF06746536AAF10E8CC5;  // 0x0010(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

@@ -46,7 +46,7 @@ class UCableComponent final : public UMeshComponent
 public:
 	bool                                          bAttachStart;                                      // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAttachEnd;                                        // 0x0401(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1347[0x6];                                     // 0x0402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_402[0x6];                                      // 0x0402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FComponentReference                    AttachEndTo;                                       // 0x0408(0x0028)(Edit, NativeAccessSpecifierPublic)
 	class FName                                   AttachEndToSocketName;                             // 0x0430(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                EndLocation;                                       // 0x0438(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -56,14 +56,14 @@ public:
 	int32                                         SolverIterations;                                  // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableStiffness;                                  // 0x0454(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableCollision;                                  // 0x0455(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1348[0x2];                                     // 0x0456(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_456[0x2];                                      // 0x0456(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CollisionFriction;                                 // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                CableForce;                                        // 0x045C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CableGravityScale;                                 // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CableWidth;                                        // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumSides;                                          // 0x0470(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TileMaterial;                                      // 0x0474(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1349[0x18];                                    // 0x0478(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_478[0x18];                                     // 0x0478(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetAttachEndTo(class AActor* Actor, class FName ComponentProperty, class FName SocketName);

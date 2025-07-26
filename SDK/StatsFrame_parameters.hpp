@@ -26,29 +26,29 @@ struct StatsFrame_C_ExecuteUbergraph_StatsFrame final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2197[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0008(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	class UMarinerUIGlobals*                      CallFunc_GetUIGlobals_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMatchEnd                              K2Node_Event_MatchEndData;                         // 0x0020(0x0068)(ConstParm)
 	struct FMatchEndPlayer                        K2Node_Event_MatchEndPlayerData;                   // 0x0088(0x00E8)()
 	bool                                          K2Node_Event_bIsLocalPlayer;                       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_Event_bIsClientTeam;                        // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2198[0x2];                                     // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_172[0x2];                                      // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_Rank;                                 // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IMarinerInputInterface> CallFunc_SetActiveInputWidget_InputWidget_CastInput; // 0x0178(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2199[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0190(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_SelectedIndex;          // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219A[0x4];                                     // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_219B[0x1];                                     // 0x01BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BB[0x1];                                      // 0x01BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x01BC(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219C[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CD[0x3];                                      // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(StatsFrame_C_ExecuteUbergraph_StatsFrame) == 0x000008, "Wrong alignment on StatsFrame_C_ExecuteUbergraph_StatsFrame");
@@ -93,8 +93,8 @@ public:
 	struct FMatchEndPlayer                        MatchEndPlayerData;                                // 0x0068(0x00E8)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          bIsLocalPlayer;                                    // 0x0150(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bIsClientTeam;                                     // 0x0151(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_219D[0x2];                                     // 0x0152(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Param_Rank;                                        // 0x0154(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_152[0x2];                                      // 0x0152(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Rank_0;                                            // 0x0154(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(StatsFrame_C_PopulatePlayerStats) == 0x000008, "Wrong alignment on StatsFrame_C_PopulatePlayerStats");
 static_assert(sizeof(StatsFrame_C_PopulatePlayerStats) == 0x000158, "Wrong size on StatsFrame_C_PopulatePlayerStats");
@@ -102,7 +102,7 @@ static_assert(offsetof(StatsFrame_C_PopulatePlayerStats, MatchEndData) == 0x0000
 static_assert(offsetof(StatsFrame_C_PopulatePlayerStats, MatchEndPlayerData) == 0x000068, "Member 'StatsFrame_C_PopulatePlayerStats::MatchEndPlayerData' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_PopulatePlayerStats, bIsLocalPlayer) == 0x000150, "Member 'StatsFrame_C_PopulatePlayerStats::bIsLocalPlayer' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_PopulatePlayerStats, bIsClientTeam) == 0x000151, "Member 'StatsFrame_C_PopulatePlayerStats::bIsClientTeam' has a wrong offset!");
-static_assert(offsetof(StatsFrame_C_PopulatePlayerStats, Param_Rank) == 0x000154, "Member 'StatsFrame_C_PopulatePlayerStats::Param_Rank' has a wrong offset!");
+static_assert(offsetof(StatsFrame_C_PopulatePlayerStats, Rank_0) == 0x000154, "Member 'StatsFrame_C_PopulatePlayerStats::Rank_0' has a wrong offset!");
 
 // Function StatsFrame.StatsFrame_C.PopulatePlayer
 // 0x0170 (0x0170 - 0x0000)
@@ -113,7 +113,7 @@ public:
 	struct FMatchEndPlayer                        MatchEndPlayer;                                    // 0x0068(0x00E8)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          IsLocalPlayer;                                     // 0x0150(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsClientTeam;                                      // 0x0151(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_219E[0x6];                                     // 0x0152(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_152[0x6];                                      // 0x0152(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0158(0x0018)()
 };
 static_assert(alignof(StatsFrame_C_PopulatePlayer) == 0x000008, "Wrong alignment on StatsFrame_C_PopulatePlayer");
@@ -151,10 +151,10 @@ static_assert(offsetof(StatsFrame_C_SetBackground, IsClientTeam) == 0x000000, "M
 struct StatsFrame_C_SetPlayerName final
 {
 public:
-	class FText                                   Param_PlayerName;                                  // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   PlayerName_0;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          IsLocalPlayer;                                     // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMarinerGameOutcome                           GameOutcome;                                       // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219F[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            CallFunc_GetColor_Color;                           // 0x0020(0x0028)()
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetTruncatedUserName_ReturnValue;         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -162,7 +162,7 @@ public:
 };
 static_assert(alignof(StatsFrame_C_SetPlayerName) == 0x000008, "Wrong alignment on StatsFrame_C_SetPlayerName");
 static_assert(sizeof(StatsFrame_C_SetPlayerName) == 0x000080, "Wrong size on StatsFrame_C_SetPlayerName");
-static_assert(offsetof(StatsFrame_C_SetPlayerName, Param_PlayerName) == 0x000000, "Member 'StatsFrame_C_SetPlayerName::Param_PlayerName' has a wrong offset!");
+static_assert(offsetof(StatsFrame_C_SetPlayerName, PlayerName_0) == 0x000000, "Member 'StatsFrame_C_SetPlayerName::PlayerName_0' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetPlayerName, IsLocalPlayer) == 0x000018, "Member 'StatsFrame_C_SetPlayerName::IsLocalPlayer' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetPlayerName, GameOutcome) == 0x000019, "Member 'StatsFrame_C_SetPlayerName::GameOutcome' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetPlayerName, CallFunc_GetColor_Color) == 0x000020, "Member 'StatsFrame_C_SetPlayerName::CallFunc_GetColor_Color' has a wrong offset!");
@@ -178,7 +178,7 @@ public:
 	struct FMatchEndPlayer                        MatchEndPlayer;                                    // 0x0000(0x00E8)(BlueprintVisible, BlueprintReadOnly, Parm)
 	TDelegate<void(struct FSlateBrush& Brush)>    K2Node_CreateDelegate_OutputDelegate;              // 0x00E8(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_GetMarinerGlobals_IsValid;                // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21A0[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGlobals*                        CallFunc_GetMarinerGlobals_ReturnValue;            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameGlobals*                    CallFunc_GetGameGlobals_ReturnValue;               // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerPlayableCharacter*              CallFunc_GetCharacterDataByEngineID_ReturnValue;   // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -202,22 +202,22 @@ public:
 	struct FMatchEnd                              MatchEnd;                                          // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FMatchEndPlayer                        MatchEndPlayer;                                    // 0x0068(0x00E8)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          IsLocalPlayer;                                     // 0x0150(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21A1[0x3];                                     // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateChildSize                        K2Node_MakeStruct_SlateChildSize;                  // 0x0154(0x0008)(NoDestructor)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            CallFunc_GetColor_Color;                           // 0x0160(0x0028)()
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21A2[0x4];                                     // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, class FText>                CallFunc_GetPostGameModeStats_Stats;               // 0x0190(0x0050)(ZeroConstructor)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21A3[0x4];                                     // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_Map_Keys_Keys;                            // 0x01E8(0x0010)(ZeroConstructor, ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Map_Find_Value;                           // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21A4[0x6];                                     // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0210(0x0018)()
 	class UStatData_C*                            CallFunc_Create_ReturnValue;                       // 0x0228(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0230(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -248,14 +248,14 @@ static_assert(offsetof(StatsFrame_C_SetStats, CallFunc_AddChildToHorizontalBox_R
 struct StatsFrame_C_SetCharacterLevel final
 {
 public:
-	int32                                         Param_CharacterLevel;                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CharacterLevel_0;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsLocalPlayer;                                     // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsClientTeam;                                      // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsRanked;                                          // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(StatsFrame_C_SetCharacterLevel) == 0x000004, "Wrong alignment on StatsFrame_C_SetCharacterLevel");
 static_assert(sizeof(StatsFrame_C_SetCharacterLevel) == 0x000008, "Wrong size on StatsFrame_C_SetCharacterLevel");
-static_assert(offsetof(StatsFrame_C_SetCharacterLevel, Param_CharacterLevel) == 0x000000, "Member 'StatsFrame_C_SetCharacterLevel::Param_CharacterLevel' has a wrong offset!");
+static_assert(offsetof(StatsFrame_C_SetCharacterLevel, CharacterLevel_0) == 0x000000, "Member 'StatsFrame_C_SetCharacterLevel::CharacterLevel_0' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetCharacterLevel, IsLocalPlayer) == 0x000004, "Member 'StatsFrame_C_SetCharacterLevel::IsLocalPlayer' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetCharacterLevel, IsClientTeam) == 0x000005, "Member 'StatsFrame_C_SetCharacterLevel::IsClientTeam' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetCharacterLevel, IsRanked) == 0x000006, "Member 'StatsFrame_C_SetCharacterLevel::IsRanked' has a wrong offset!");
@@ -268,7 +268,7 @@ public:
 	struct FSlateBrush                            Brush;                                             // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21A5[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(StatsFrame_C_OnLoadSmallPortrait) == 0x000008, "Wrong alignment on StatsFrame_C_OnLoadSmallPortrait");
@@ -285,20 +285,20 @@ struct StatsFrame_C_GetColor final
 public:
 	bool                                          IsLocalPlayer;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMarinerGameOutcome                           GameOutcome;                                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21A6[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            Color;                                             // 0x0008(0x0028)(Parm, OutParm)
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21A7[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0044(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21A8[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable_2;                            // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21A9[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x006C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default_1;                           // 0x007C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21AA[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0090(0x0028)()
 };
 static_assert(alignof(StatsFrame_C_GetColor) == 0x000008, "Wrong alignment on StatsFrame_C_GetColor");
@@ -321,7 +321,7 @@ static_assert(offsetof(StatsFrame_C_GetColor, K2Node_MakeStruct_SlateColor) == 0
 struct StatsFrame_C_SetRank final
 {
 public:
-	int32                                         Param_Rank;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Rank_0;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsRankedSession;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -330,7 +330,7 @@ public:
 };
 static_assert(alignof(StatsFrame_C_SetRank) == 0x000004, "Wrong alignment on StatsFrame_C_SetRank");
 static_assert(sizeof(StatsFrame_C_SetRank) == 0x00000C, "Wrong size on StatsFrame_C_SetRank");
-static_assert(offsetof(StatsFrame_C_SetRank, Param_Rank) == 0x000000, "Member 'StatsFrame_C_SetRank::Param_Rank' has a wrong offset!");
+static_assert(offsetof(StatsFrame_C_SetRank, Rank_0) == 0x000000, "Member 'StatsFrame_C_SetRank::Rank_0' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetRank, IsRankedSession) == 0x000004, "Member 'StatsFrame_C_SetRank::IsRankedSession' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetRank, Temp_byte_Variable) == 0x000005, "Member 'StatsFrame_C_SetRank::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(StatsFrame_C_SetRank, Temp_byte_Variable_1) == 0x000006, "Member 'StatsFrame_C_SetRank::Temp_byte_Variable_1' has a wrong offset!");

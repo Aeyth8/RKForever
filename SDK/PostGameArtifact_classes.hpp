@@ -52,7 +52,7 @@ public:
 	void UpdateArtifactLevel(int32 Level, EMangoItemType ArtifactType, const class FString& ItemID, bool bJustUnlocked);
 	void SetSize(float Size);
 	void GetArtifactImprovementText(float ImprovementNumber, const class FString& ImprovementSymbol, class FText* ImprovementText);
-	void Get_Artifact_Progress_Bar(class UArtifactProgressBar_C** Param_ArtifactProgressBar);
+	void Get_Artifact_Progress_Bar(class UArtifactProgressBar_C** ArtifactProgressBar_0);
 
 public:
 	static class UClass* StaticClass()

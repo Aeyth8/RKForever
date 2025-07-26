@@ -43,7 +43,7 @@ public:
 	struct FMangoNativeOffer                      Nativeoffer;                                       // 0x3008(0x00C0)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void SetNativeOffer(const struct FMangoNativeOffer& Param_Nativeoffer);
+	void SetNativeOffer(const struct FMangoNativeOffer& Nativeoffer_0);
 	void Refresh();
 
 	struct FMarinerLayeredButtonAssets GetAssets() const;

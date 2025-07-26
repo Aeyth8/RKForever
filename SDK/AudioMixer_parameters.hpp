@@ -81,7 +81,7 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundEffectSourcePresetChain*          PresetChain;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F6E[0x4];                                      // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain) == 0x000008, "Wrong alignment on AudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain");
 static_assert(sizeof(AudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain) == 0x000018, "Wrong size on AudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain");
@@ -164,7 +164,7 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundEffectSourcePresetChain*          PresetChain;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EntryIndex;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F6F[0x4];                                      // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain) == 0x000008, "Wrong alignment on AudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain");
 static_assert(sizeof(AudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain) == 0x000018, "Wrong size on AudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain");
@@ -194,7 +194,7 @@ public:
 	class USoundEffectSourcePresetChain*          PresetChain;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EntryIndex;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBypassed;                                         // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F70[0x3];                                      // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry) == 0x000008, "Wrong alignment on AudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry");
 static_assert(sizeof(AudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry) == 0x000018, "Wrong size on AudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry");
@@ -213,7 +213,7 @@ public:
 	EFFTSize                                      FFTSize;                                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFFTPeakInterpolationMethod                   InterpolationMethod;                               // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFFTWindowType                                WindowType;                                        // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F71[0x1];                                      // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         HopSize;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AudioMixerBlueprintLibrary_StartAnalyzingOutput) == 0x000008, "Wrong alignment on AudioMixerBlueprintLibrary_StartAnalyzingOutput");
@@ -232,7 +232,7 @@ struct AudioMixerBlueprintLibrary_StartRecordingOutput final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ExpectedDuration;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F72[0x4];                                      // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundSubmix*                           SubmixToRecord;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AudioMixerBlueprintLibrary_StartRecordingOutput) == 0x000008, "Wrong alignment on AudioMixerBlueprintLibrary_StartRecordingOutput");
@@ -261,8 +261,8 @@ struct AudioMixerBlueprintLibrary_StopRecordingOutput final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAudioRecordingExportType                     ExportType;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F73[0x7];                                      // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Param_Name;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Name_0;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Path;                                              // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToRecord;                                    // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundWave*                             ExistingSoundWaveToOverwrite;                      // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -272,7 +272,7 @@ static_assert(alignof(AudioMixerBlueprintLibrary_StopRecordingOutput) == 0x00000
 static_assert(sizeof(AudioMixerBlueprintLibrary_StopRecordingOutput) == 0x000048, "Wrong size on AudioMixerBlueprintLibrary_StopRecordingOutput");
 static_assert(offsetof(AudioMixerBlueprintLibrary_StopRecordingOutput, WorldContextObject) == 0x000000, "Member 'AudioMixerBlueprintLibrary_StopRecordingOutput::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(AudioMixerBlueprintLibrary_StopRecordingOutput, ExportType) == 0x000008, "Member 'AudioMixerBlueprintLibrary_StopRecordingOutput::ExportType' has a wrong offset!");
-static_assert(offsetof(AudioMixerBlueprintLibrary_StopRecordingOutput, Param_Name) == 0x000010, "Member 'AudioMixerBlueprintLibrary_StopRecordingOutput::Param_Name' has a wrong offset!");
+static_assert(offsetof(AudioMixerBlueprintLibrary_StopRecordingOutput, Name_0) == 0x000010, "Member 'AudioMixerBlueprintLibrary_StopRecordingOutput::Name_0' has a wrong offset!");
 static_assert(offsetof(AudioMixerBlueprintLibrary_StopRecordingOutput, Path) == 0x000020, "Member 'AudioMixerBlueprintLibrary_StopRecordingOutput::Path' has a wrong offset!");
 static_assert(offsetof(AudioMixerBlueprintLibrary_StopRecordingOutput, SubmixToRecord) == 0x000030, "Member 'AudioMixerBlueprintLibrary_StopRecordingOutput::SubmixToRecord' has a wrong offset!");
 static_assert(offsetof(AudioMixerBlueprintLibrary_StopRecordingOutput, ExistingSoundWaveToOverwrite) == 0x000038, "Member 'AudioMixerBlueprintLibrary_StopRecordingOutput::ExistingSoundWaveToOverwrite' has a wrong offset!");
@@ -298,7 +298,7 @@ struct SynthComponent_SetSubmixSend final
 public:
 	class USoundSubmix*                           Submix;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SendLevel;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F7A[0x4];                                      // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(SynthComponent_SetSubmixSend) == 0x000008, "Wrong alignment on SynthComponent_SetSubmixSend");
 static_assert(sizeof(SynthComponent_SetSubmixSend) == 0x000010, "Wrong size on SynthComponent_SetSubmixSend");

@@ -19,11 +19,11 @@ namespace SDK::Params
 struct AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature final
 {
 public:
-	class FText                                   Param_ActorName;                                   // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   ActorName_0;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature) == 0x000008, "Wrong alignment on AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature");
 static_assert(sizeof(AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature) == 0x000018, "Wrong size on AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature");
-static_assert(offsetof(AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature, Param_ActorName) == 0x000000, "Member 'AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature::Param_ActorName' has a wrong offset!");
+static_assert(offsetof(AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature, ActorName_0) == 0x000000, "Member 'AOEDamageCandidatesListEntry_C_OnAOEDamageCandidatesListEntryClicked__DelegateSignature::ActorName_0' has a wrong offset!");
 
 // Function AOEDamageCandidatesListEntry.AOEDamageCandidatesListEntry_C.ExecuteUbergraph_AOEDamageCandidatesListEntry
 // 0x0020 (0x0020 - 0x0000)
@@ -31,7 +31,7 @@ struct AOEDamageCandidatesListEntry_C_ExecuteUbergraph_AOEDamageCandidatesListEn
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F21[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0008(0x0018)()
 };
 static_assert(alignof(AOEDamageCandidatesListEntry_C_ExecuteUbergraph_AOEDamageCandidatesListEntry) == 0x000008, "Wrong alignment on AOEDamageCandidatesListEntry_C_ExecuteUbergraph_AOEDamageCandidatesListEntry");

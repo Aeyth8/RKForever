@@ -27,15 +27,15 @@ public:
 	class UImage*                                 ProgressBarImage;                                  // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FSlateBrush                            Brush;                                             // 0x0240(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
 	float                                         Progress;                                          // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2058[0x4];                                     // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             Image_Override;                                    // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                     Material_Base;                                     // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_RadialFillProgressBar(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
-	void Set_Progress(float Param_Progress);
-	void Get_Progress(float* Param_Progress);
+	void Set_Progress(float Progress_0);
+	void Get_Progress(float* Progress_0);
 
 public:
 	static class UClass* StaticClass()

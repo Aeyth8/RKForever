@@ -84,7 +84,7 @@ class UClass;
 class UObject;
 class UFunction;
 
-struct FName;
+class FName;
 
 namespace BasicFilesImpleUtils
 {
@@ -94,6 +94,9 @@ namespace BasicFilesImpleUtils
 
 	std::string GetObjectName(class UClass* Class);
 	int32 GetObjectIndex(class UClass* Class);
+
+	/* FName represented as a uint64. */
+	uint64 GetObjFNameAsUInt64(class UClass* Class);
 
 	UObject* GetObjectByIndex(int32 Index);
 
@@ -122,40 +125,44 @@ template<StringLiteral Name, bool bIsFullName = false, StringLiteral NonFullName
 class UClass* StaticBPGeneratedClassImpl()
 {
 	/* Could be external function, not really unique to this StaticClass functon */
-	static auto SetClassIndex = [](UClass* Class, int32& Index) -> UClass*
+	static auto SetClassIndex = [](UClass* Class, int32& Index, uint64& ClassName) -> UClass*
 	{
 		if (Class)
+		{
 			Index = BasicFilesImpleUtils::GetObjectIndex(Class);
+			ClassName = BasicFilesImpleUtils::GetObjFNameAsUInt64(Class);
+		}
 
 		return Class;
 	};
 
 	static int32 ClassIdx = 0x0;
+	static uint64 ClassName = 0x0;
 
 	/* Use the full name to find an object */
 	if constexpr (bIsFullName)
 	{
-		if (ClassIdx == 0x0)
-			return SetClassIndex(BasicFilesImpleUtils::FindClassByFullName(Name), ClassIdx);
+		if (ClassIdx == 0x0) [[unlikely]]
+			return SetClassIndex(BasicFilesImpleUtils::FindClassByFullName(Name), ClassIdx, ClassName);
 
 		UClass* ClassObj = static_cast<UClass*>(BasicFilesImpleUtils::GetObjectByIndex(ClassIdx));
 
 		/* Could use cast flags too to save some string comparisons */
-		if (!ClassObj || BasicFilesImpleUtils::GetObjectName(ClassObj) != static_cast<std::string>(Name))
-			return SetClassIndex(BasicFilesImpleUtils::FindClassByFullName(Name), ClassIdx);
+		if (!ClassObj || BasicFilesImpleUtils::GetObjFNameAsUInt64(ClassObj) != ClassName)
+			return SetClassIndex(BasicFilesImpleUtils::FindClassByFullName(Name), ClassIdx, ClassName);
 
 		return ClassObj;
 	}
 	else /* Default, use just the name to find an object*/
 	{
-		if (ClassIdx == 0x0)
-			return SetClassIndex(BasicFilesImpleUtils::FindClassByName(Name), ClassIdx);
+		if (ClassIdx == 0x0) [[unlikely]]
+			return SetClassIndex(BasicFilesImpleUtils::FindClassByName(Name), ClassIdx, ClassName);
 
 		UClass* ClassObj = static_cast<UClass*>(BasicFilesImpleUtils::GetObjectByIndex(ClassIdx));
 
 		/* Could use cast flags too to save some string comparisons */
-		if (!ClassObj || BasicFilesImpleUtils::GetObjectName(ClassObj) != static_cast<std::string>(Name))
-			return SetClassIndex(BasicFilesImpleUtils::FindClassByName(Name), ClassIdx);
+		if (!ClassObj || BasicFilesImpleUtils::GetObjFNameAsUInt64(ClassObj) != ClassName)
+			return SetClassIndex(BasicFilesImpleUtils::FindClassByName(Name), ClassIdx, ClassName);
 
 		return ClassObj;
 	}
@@ -174,7 +181,7 @@ struct FUObjectItem final
 {
 public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_0[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FUObjectItem) == 0x000008, "Wrong alignment on FUObjectItem");
 static_assert(sizeof(FUObjectItem) == 0x000018, "Wrong size on FUObjectItem");
@@ -410,26 +417,28 @@ public:
 		return ClassPtr != Other;
 	}
 };
-
+namespace FTextImpl
+{
 // Predefined struct FTextData
 // 0x0038 (0x0038 - 0x0000)
 class FTextData final
 {
 public:
-	uint8                                         Pad_1[0x28];                                       // 0x0000(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 TextSource;                                        // 0x0028(0x0010)(NOT AUTO-GENERATED PROPERTY)
 };
 static_assert(alignof(FTextData) == 0x000008, "Wrong alignment on FTextData");
 static_assert(sizeof(FTextData) == 0x000038, "Wrong size on FTextData");
 static_assert(offsetof(FTextData, TextSource) == 0x000028, "Member 'FTextData::TextSource' has a wrong offset!");
+}
 
 // Predefined struct FText
 // 0x0018 (0x0018 - 0x0000)
 class FText final
 {
 public:
-	class FTextData*                              TextData;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_2[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FTextImpl::FTextData*                   TextData;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	const class FString& GetStringRef() const
@@ -499,7 +508,7 @@ static_assert(offsetof(FUniqueObjectGuid, C) == 0x000008, "Member 'FUniqueObject
 static_assert(offsetof(FUniqueObjectGuid, D) == 0x00000C, "Member 'FUniqueObjectGuid::D' has a wrong offset!");
 
 // Predefined struct TPersistentObjectPtr
-// 0x0008 (0x0008 - 0x0000)
+// 0x0000 (0x0000 - 0x0000)
 template<typename TObjectID>
 class TPersistentObjectPtr
 {
@@ -616,12 +625,13 @@ class TScriptInterface final : public FScriptInterface
 };
 
 // Predefined struct TDelegate
-// 0x0000 (0x0000 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 template<typename FunctionSignature>
 class TDelegate
 {
 public:
 	struct InvalidUseOfTDelegate                  TemplateParamIsNotAFunctionSignature;              // 0x0000(0x0000)(NOT AUTO-GENERATED PROPERTY)
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // Predefined struct TDelegate<Ret(Args...)>
@@ -726,7 +736,7 @@ enum class EFunctionFlags : uint32
 	AllFlags						= 0xFFFFFFFF,
 };
 
-enum class EClassFlags : int32
+enum class EClassFlags : uint32
 {
 	CLASS_None						= 0x00000000u,
 	Abstract						= 0x00000001u,

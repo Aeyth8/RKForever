@@ -46,7 +46,7 @@ struct MatchmakingIntermissionMenu_C_UpdatePrompts final
 {
 public:
 	bool                                          CallFunc_CanCancelIntermission_CanCancel;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DD9[0x7];                                      // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerPromptData                     K2Node_MakeStruct_MarinerPromptData;               // 0x0008(0x0118)()
 	bool                                          CallFunc_AddHostPrompt_ReturnValue;                // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ClearHostPrompts_ReturnValue;             // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -69,7 +69,7 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HandleInput_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DDA[0x2];                                      // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoMatchmakingManager*               CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MatchmakingIntermissionMenu_C_HandleInput) == 0x000008, "Wrong alignment on MatchmakingIntermissionMenu_C_HandleInput");
@@ -88,7 +88,7 @@ struct MatchmakingIntermissionMenu_C_CanCancelIntermission final
 {
 public:
 	bool                                          CanCancel;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DDB[0x7];                                      // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoPartyManager*                     CallFunc_Get_ReturnValue;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AreWePartyLeader_ReturnValue;             // 0x0010(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

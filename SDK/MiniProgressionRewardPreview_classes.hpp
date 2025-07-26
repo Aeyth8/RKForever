@@ -49,7 +49,7 @@ public:
 	void PopulateItem(const struct FMangoItem& Item);
 	void PopulateNativeOffer(const struct FMangoNativeOffer& Nativeoffer);
 	void PopulateProgressionReward(const struct FMangoReward& Reward);
-	void PopulateUIItemData(const struct FMarinerUIItemButtonData& Param_UIItemButtonData);
+	void PopulateUIItemData(const struct FMarinerUIItemButtonData& UIItemButtonData_0);
 	void PopulateBPXPBonusPersonal(int32 BonusPct);
 	void PopulateBPXPBonusParty(int32 BonusPct);
 	void PopulateMangoReward(const struct FMangoReward& MangoReward);

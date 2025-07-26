@@ -30,7 +30,7 @@ public:
 	struct FBlackboardKeySelector                 FlightResultKey;                                   // 0x0098(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FBlackboardKeySelector                 KeyToFlipFlopWhenTaskExits;                        // 0x00C0(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	float                                         MinimumProximityRequired;                          // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1097[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDoNNavigationQueryParams              QueryParams;                                       // 0x00F0(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBT_FlyToTarget_DebugParams            DebugParams;                                       // 0x0110(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	class ADonNavigationManager*                  NavigationManager;                                 // 0x0120(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -108,7 +108,7 @@ static_assert(sizeof(IDonNavigator) == 0x000028, "Wrong size on IDonNavigator");
 class alignas(0x10) ADonNavigationManager final : public AActor
 {
 public:
-	uint8                                         Pad_1098[0x1B8];                                   // 0x0218(0x01B8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_218[0x1B8];                                    // 0x0218(0x01B8)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        SceneComponent;                                    // 0x03D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UBillboardComponent*                    Billboard;                                         // 0x03D8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDonNavVoxelXYZ                        NAVVolumeData;                                     // 0x03E0(0x0010)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
@@ -125,7 +125,7 @@ public:
 	int32                                         MaxPathSolverIterationsPerTick;                    // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxCollisionSolverIterationsPerTick;               // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMultiThreadingEnabled;                            // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1099[0x3];                                     // 0x0461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_461[0x3];                                      // 0x0461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxPathSolverIterationsOnThread;                   // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxCollisionSolverIterationsOnThread;              // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         VoxelCollisionShapeInflation;                      // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -134,10 +134,10 @@ public:
 	class UBoxComponent*                          WorldBoundaryVisualizer;                           // 0x0478(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisplayWorldBoundary;                             // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisplayWorldBoundaryInGame;                       // 0x0481(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109A[0x2];                                     // 0x0482(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_482[0x2];                                      // 0x0482(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DebugVoxelsLineThickness;                          // 0x0484(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRunDebugValidationsForDynamicCollisions;          // 0x0488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109B[0x4157];                                  // 0x0489(0x4157)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_489[0x4157];                                   // 0x0489(0x4157)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AbortPathfindingTask(class AActor* Actor);
@@ -211,7 +211,7 @@ class UMarinerDoNNavigationBlocker final : public UActorComponent
 public:
 	float                                         TickInterval;                                      // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bDebugDraw;                                        // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_10B1[0x3];                                     // 0x00B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

@@ -95,13 +95,13 @@ public:
 	int32                                         MaxProgress;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0008(0x0040)(HasGetValueTypeHash)
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_215E[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0050(0x0040)(HasGetValueTypeHash)
 	float                                         CallFunc_Conv_IntToFloat_ReturnValue_1;            // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_215F[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ZeroConstructor, ReferenceParm)
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2160[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00B0(0x0018)()
 };
 static_assert(alignof(ChallengeProgress_C_SetProgress) == 0x000008, "Wrong alignment on ChallengeProgress_C_SetProgress");
@@ -121,9 +121,9 @@ static_assert(offsetof(ChallengeProgress_C_SetProgress, CallFunc_Format_ReturnVa
 struct ChallengeProgress_C_Init final
 {
 public:
-	struct FMangoQuestDescription                 Param_QuestDesc;                                   // 0x0000(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FMangoQuestDescription                 QuestDesc_0;                                       // 0x0000(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          AllowInput;                                        // 0x0118(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2161[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0120(0x0018)()
 	class FText                                   Temp_text_Variable_1;                              // 0x0138(0x0018)()
 	class FText                                   Temp_text_Variable_2;                              // 0x0150(0x0018)()
@@ -131,18 +131,18 @@ public:
 	class FText                                   Temp_text_Variable_4;                              // 0x0180(0x0018)()
 	class FText                                   Temp_text_Variable_5;                              // 0x0198(0x0018)()
 	EMangoQuestSlot                               Temp_byte_Variable;                                // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2162[0x7];                                     // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FDateTime                              CallFunc_DateTimeFromIsoString_Result;             // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DateTimeFromIsoString_ReturnValue;        // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2163[0x7];                                     // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue;    // 0x01D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2164[0x3];                                     // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetTotalSeconds_ReturnValue;              // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2165[0x6];                                     // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x01E8(0x0018)()
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -150,7 +150,7 @@ public:
 };
 static_assert(alignof(ChallengeProgress_C_Init) == 0x000008, "Wrong alignment on ChallengeProgress_C_Init");
 static_assert(sizeof(ChallengeProgress_C_Init) == 0x000208, "Wrong size on ChallengeProgress_C_Init");
-static_assert(offsetof(ChallengeProgress_C_Init, Param_QuestDesc) == 0x000000, "Member 'ChallengeProgress_C_Init::Param_QuestDesc' has a wrong offset!");
+static_assert(offsetof(ChallengeProgress_C_Init, QuestDesc_0) == 0x000000, "Member 'ChallengeProgress_C_Init::QuestDesc_0' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_Init, AllowInput) == 0x000118, "Member 'ChallengeProgress_C_Init::AllowInput' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_Init, Temp_text_Variable) == 0x000120, "Member 'ChallengeProgress_C_Init::Temp_text_Variable' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_Init, Temp_text_Variable_1) == 0x000138, "Member 'ChallengeProgress_C_Init::Temp_text_Variable_1' has a wrong offset!");
@@ -178,16 +178,16 @@ struct ChallengeProgress_C_UpdateResetPanelVisibility final
 {
 public:
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2166[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_UtcNow_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2167[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              CallFunc_DateTimeFromIsoString_Result;             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DateTimeFromIsoString_ReturnValue;        // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2168[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              CallFunc_Subtract_DateTimeDateTime_ReturnValue;    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetTotalSeconds_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -216,7 +216,7 @@ public:
 	struct FMangoQuestDescription                 QuestGoal;                                         // 0x0000(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm)
 	TDelegate<void(const struct FMangoQuestDescription& Quest)> AnimationCompleteEvent1;                           // 0x0118(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
 	TDelegate<void(const struct FMangoQuestDescription& Quest)> AnimationCompleteEvent2;                           // 0x0128(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-	TDelegate<void(const struct FMangoQuestDescription& Quest)> Param_ChallengeCompleteEvent;                      // 0x0138(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+	TDelegate<void(const struct FMangoQuestDescription& Quest)> ChallengeCompleteEvent_0;                          // 0x0138(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0150(0x0010)(ZeroConstructor, NoDestructor)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0160(0x0008)(NoDestructor, HasGetValueTypeHash)
@@ -226,7 +226,7 @@ static_assert(sizeof(ChallengeProgress_C_AnimateToGoal) == 0x000168, "Wrong size
 static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, QuestGoal) == 0x000000, "Member 'ChallengeProgress_C_AnimateToGoal::QuestGoal' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, AnimationCompleteEvent1) == 0x000118, "Member 'ChallengeProgress_C_AnimateToGoal::AnimationCompleteEvent1' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, AnimationCompleteEvent2) == 0x000128, "Member 'ChallengeProgress_C_AnimateToGoal::AnimationCompleteEvent2' has a wrong offset!");
-static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, Param_ChallengeCompleteEvent) == 0x000138, "Member 'ChallengeProgress_C_AnimateToGoal::Param_ChallengeCompleteEvent' has a wrong offset!");
+static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, ChallengeCompleteEvent_0) == 0x000138, "Member 'ChallengeProgress_C_AnimateToGoal::ChallengeCompleteEvent_0' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, CallFunc_PlayAnimation_ReturnValue) == 0x000148, "Member 'ChallengeProgress_C_AnimateToGoal::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, K2Node_CreateDelegate_OutputDelegate) == 0x000150, "Member 'ChallengeProgress_C_AnimateToGoal::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(ChallengeProgress_C_AnimateToGoal, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000160, "Member 'ChallengeProgress_C_AnimateToGoal::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
@@ -257,7 +257,7 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0010(0x0040)(HasGetValueTypeHash)
 	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2169[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0058(0x0040)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ZeroConstructor, ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0018)()

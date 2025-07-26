@@ -38,7 +38,7 @@ public:
 	class UImage*                                 TransitionWhite;                                   // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 WhiteFadeIn;                                       // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          HasInitialized;                                    // 0x0558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F66[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_559[0x7];                                      // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnSlideOutComplete;                                // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
@@ -49,7 +49,7 @@ public:
 	void Destruct();
 	class FText GetGameModeText();
 	void Initialize();
-	void InitializeCustom(const class FText& Param_GameModeText, class UMarinerModeDataAsset* GameModeData);
+	void InitializeCustom(const class FText& GameModeText_0, class UMarinerModeDataAsset* GameModeData);
 	void RemoveCustom();
 
 public:

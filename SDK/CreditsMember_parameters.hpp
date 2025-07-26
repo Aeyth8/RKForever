@@ -23,7 +23,7 @@ struct CreditsMember_C_SetMember final
 public:
 	struct FMarinerCreditMember                   Member;                                            // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20C9[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0030(0x0018)()
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_TextIsEmpty_ReturnValue_1;                // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

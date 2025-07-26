@@ -40,10 +40,10 @@ bool UOwnedItemWidget_C::Populate()
 // Function OwnedItemWidget.OwnedItemWidget_C.SetOwnedItem
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UItemLoadResponse*                Param_ItemLoadResponse                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsOwned                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UItemLoadResponse*                ItemLoadResponse_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsOwned_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UOwnedItemWidget_C::SetOwnedItem(class UItemLoadResponse* Param_ItemLoadResponse, bool Param_IsOwned)
+void UOwnedItemWidget_C::SetOwnedItem(class UItemLoadResponse* ItemLoadResponse_0, bool IsOwned_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -52,8 +52,8 @@ void UOwnedItemWidget_C::SetOwnedItem(class UItemLoadResponse* Param_ItemLoadRes
 
 	Params::OwnedItemWidget_C_SetOwnedItem Parms{};
 
-	Parms.Param_ItemLoadResponse = Param_ItemLoadResponse;
-	Parms.Param_IsOwned = Param_IsOwned;
+	Parms.ItemLoadResponse_0 = ItemLoadResponse_0;
+	Parms.IsOwned_0 = IsOwned_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

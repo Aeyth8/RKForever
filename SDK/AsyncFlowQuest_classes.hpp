@@ -27,7 +27,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0030(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FMangoQuestReward                      PendingQuestReward;                                // 0x0038(0x00C8)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          PendingQuestRewardIsOwned;                         // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2031[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ClaimRewardID;                                     // 0x0104(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMangoQuestSlot                               PendingQuestSlot;                                  // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

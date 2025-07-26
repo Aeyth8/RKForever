@@ -39,7 +39,7 @@ public:
 	void IntermissionEnded();
 	void IntermissionStarted();
 	void Construct();
-	void UpdateIntermissionWidgets(bool Param_IsActive);
+	void UpdateIntermissionWidgets(bool IsActive_0);
 
 public:
 	static class UClass* StaticClass()

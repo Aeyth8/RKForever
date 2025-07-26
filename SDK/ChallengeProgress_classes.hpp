@@ -40,16 +40,16 @@ public:
 	class UWidgetSwitcher*                        RootSwitcher;                                      // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           TimerRoot;                                         // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          Highlighted;                                       // 0x02A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_215B[0x7];                                     // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 QuestDesc;                                         // 0x02B0(0x0118)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FMangoQuestDescription                 GoalDesc;                                          // 0x03C8(0x0118)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FTimerHandle                           AnimTimerHandle;                                   // 0x04E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	float                                         AnimationDuration;                                 // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_215C[0x4];                                     // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             AnimationCompleteEvent;                            // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         FinalDelayDuration;                                // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AnimationActive;                                   // 0x0504(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_215D[0x3];                                     // 0x0505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_505[0x3];                                      // 0x0505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             ChallengeCompleteEvent;                            // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
@@ -59,11 +59,11 @@ public:
 	void Destruct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void SetProgress(int32 CurrentProgress, int32 MaxProgress);
-	void Init(struct FMangoQuestDescription& Param_QuestDesc, bool AllowInput);
+	void Init(struct FMangoQuestDescription& QuestDesc_0, bool AllowInput);
 	void OnHighlight();
 	void OnUnhighlight();
 	void UpdateResetPanelVisibility();
-	void AnimateToGoal(const struct FMangoQuestDescription& QuestGoal, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent1, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent2, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& Param_ChallengeCompleteEvent);
+	void AnimateToGoal(const struct FMangoQuestDescription& QuestGoal, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent1, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& AnimationCompleteEvent2, const TDelegate<void(const struct FMangoQuestDescription& Quest)>& ChallengeCompleteEvent_0);
 	void AnimationComplete();
 	void SetProgressFromAnimation(float CurrentProgress, float MaxProgress);
 	void FinalDelayComplete();

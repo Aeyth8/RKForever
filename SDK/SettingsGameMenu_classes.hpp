@@ -75,8 +75,8 @@ public:
 	void UpdateCopyBtnVisibility();
 	void HandleCrossPlatformOption();
 	void GetMesssageBoxManager(class UMarinerMessageBoxManager** MessageBoxManager);
-	void CrossplayStateToComboIndex(EMarinerCrossplayState CrossplayState, int32* Param_Index);
-	void ComboIndexToCrossplayState(int32 Param_Index, EMarinerCrossplayState* CrossplayState);
+	void CrossplayStateToComboIndex(EMarinerCrossplayState CrossplayState, int32* Index_0);
+	void ComboIndexToCrossplayState(int32 Index_0, EMarinerCrossplayState* CrossplayState);
 	void HandleRegionOption();
 
 public:

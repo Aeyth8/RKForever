@@ -679,10 +679,10 @@ void ULiveLinkBlueprintLibrary::GetTransformByIndex(struct FSubjectFrameHandle& 
 // (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle              SubjectFrameHandle                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName                             Param_TransformName                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             TransformName_0                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLiveLinkTransform               LiveLinkTransform                                      (Parm, OutParm, NativeAccessSpecifierPublic)
 
-void ULiveLinkBlueprintLibrary::GetTransformByName(struct FSubjectFrameHandle& SubjectFrameHandle, class FName Param_TransformName, struct FLiveLinkTransform* LiveLinkTransform)
+void ULiveLinkBlueprintLibrary::GetTransformByName(struct FSubjectFrameHandle& SubjectFrameHandle, class FName TransformName_0, struct FLiveLinkTransform* LiveLinkTransform)
 {
 	static class UFunction* Func = nullptr;
 
@@ -692,7 +692,7 @@ void ULiveLinkBlueprintLibrary::GetTransformByName(struct FSubjectFrameHandle& S
 	Params::LiveLinkBlueprintLibrary_GetTransformByName Parms{};
 
 	Parms.SubjectFrameHandle = std::move(SubjectFrameHandle);
-	Parms.Param_TransformName = Param_TransformName;
+	Parms.TransformName_0 = TransformName_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -863,9 +863,9 @@ bool ULiveLinkBlueprintLibrary::RemoveSource(struct FLiveLinkSourceHandle& Sourc
 // (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLiveLinkTransform               LiveLinkTransform                                      (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FName                             Param_Name                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             Name_0                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ULiveLinkBlueprintLibrary::TransformName(struct FLiveLinkTransform& LiveLinkTransform, class FName* Param_Name)
+void ULiveLinkBlueprintLibrary::TransformName(struct FLiveLinkTransform& LiveLinkTransform, class FName* Name_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -885,8 +885,8 @@ void ULiveLinkBlueprintLibrary::TransformName(struct FLiveLinkTransform& LiveLin
 
 	LiveLinkTransform = std::move(Parms.LiveLinkTransform);
 
-	if (Param_Name != nullptr)
-		*Param_Name = Parms.Param_Name;
+	if (Name_0 != nullptr)
+		*Name_0 = Parms.Name_0;
 }
 
 
@@ -894,9 +894,9 @@ void ULiveLinkBlueprintLibrary::TransformName(struct FLiveLinkTransform& LiveLin
 // (Final, Native, Static, Private, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSubjectFrameHandle              SubjectFrameHandle                                     (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class FName>                     Param_TransformNames                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class FName>                     TransformNames_0                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
-void ULiveLinkBlueprintLibrary::TransformNames(struct FSubjectFrameHandle& SubjectFrameHandle, TArray<class FName>* Param_TransformNames)
+void ULiveLinkBlueprintLibrary::TransformNames(struct FSubjectFrameHandle& SubjectFrameHandle, TArray<class FName>* TransformNames_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -916,8 +916,8 @@ void ULiveLinkBlueprintLibrary::TransformNames(struct FSubjectFrameHandle& Subje
 
 	SubjectFrameHandle = std::move(Parms.SubjectFrameHandle);
 
-	if (Param_TransformNames != nullptr)
-		*Param_TransformNames = std::move(Parms.Param_TransformNames);
+	if (TransformNames_0 != nullptr)
+		*TransformNames_0 = std::move(Parms.TransformNames_0);
 }
 
 

@@ -22,13 +22,13 @@ struct AsyncCharacterSpawner_C_ExecuteUbergraph_AsyncCharacterSpawner final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_209F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A0[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerSkinCollectionDataAsset*        K2Node_DynamicCast_AsMariner_Skin_Collection_Data_Asset; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A1[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0030(0x0010)(ZeroConstructor, NoDestructor)
 	class UMangoPlayerManager*                    CallFunc_Get_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -38,15 +38,15 @@ public:
 	class AMarinerCharacterSpawner*               K2Node_CustomEvent_CharacterSpawner;               // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A2[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACharacterCustomizationPedestalInterior_C* CallFunc_SetInteriorPedestal_AsCharacter_Customization_Pedestal_Interior; // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A3[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACharacterCustomizationPedestalInterior_C* K2Node_Select_Default;                             // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMarinerCharacterSpawner*               CallFunc_SetCharacterSpawner_AsMariner_Character_Spawner; // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20A4[0x6];                                     // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B2[0x6];                                       // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacterSpawner*               K2Node_Select_Default_1;                           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoPlayerManager*                    CallFunc_Get_ReturnValue_1;                        // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoProfile                          CallFunc_GetMangoProfile_ReturnValue;              // 0x00C8(0x02E0)(ConstParm)
@@ -84,15 +84,15 @@ static_assert(offsetof(AsyncCharacterSpawner_C_ExecuteUbergraph_AsyncCharacterSp
 struct AsyncCharacterSpawner_C_SpawnCharacter final
 {
 public:
-	class UMarinerPlayableCharacter*              Param_Character;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ACharacterCustomizationPedestalInterior_C* Param_InteriorPedestal;                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AMarinerCharacterSpawner*               Param_CharacterSpawner;                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerPlayableCharacter*              Character_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACharacterCustomizationPedestalInterior_C* InteriorPedestal_0;                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AMarinerCharacterSpawner*               CharacterSpawner_0;                                // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(AsyncCharacterSpawner_C_SpawnCharacter) == 0x000008, "Wrong alignment on AsyncCharacterSpawner_C_SpawnCharacter");
 static_assert(sizeof(AsyncCharacterSpawner_C_SpawnCharacter) == 0x000018, "Wrong size on AsyncCharacterSpawner_C_SpawnCharacter");
-static_assert(offsetof(AsyncCharacterSpawner_C_SpawnCharacter, Param_Character) == 0x000000, "Member 'AsyncCharacterSpawner_C_SpawnCharacter::Param_Character' has a wrong offset!");
-static_assert(offsetof(AsyncCharacterSpawner_C_SpawnCharacter, Param_InteriorPedestal) == 0x000008, "Member 'AsyncCharacterSpawner_C_SpawnCharacter::Param_InteriorPedestal' has a wrong offset!");
-static_assert(offsetof(AsyncCharacterSpawner_C_SpawnCharacter, Param_CharacterSpawner) == 0x000010, "Member 'AsyncCharacterSpawner_C_SpawnCharacter::Param_CharacterSpawner' has a wrong offset!");
+static_assert(offsetof(AsyncCharacterSpawner_C_SpawnCharacter, Character_0) == 0x000000, "Member 'AsyncCharacterSpawner_C_SpawnCharacter::Character_0' has a wrong offset!");
+static_assert(offsetof(AsyncCharacterSpawner_C_SpawnCharacter, InteriorPedestal_0) == 0x000008, "Member 'AsyncCharacterSpawner_C_SpawnCharacter::InteriorPedestal_0' has a wrong offset!");
+static_assert(offsetof(AsyncCharacterSpawner_C_SpawnCharacter, CharacterSpawner_0) == 0x000010, "Member 'AsyncCharacterSpawner_C_SpawnCharacter::CharacterSpawner_0' has a wrong offset!");
 
 // Function AsyncCharacterSpawner.AsyncCharacterSpawner_C.OnLoaded_F8D3428441E64AA3B00A23A70D7A2FF4
 // 0x0008 (0x0008 - 0x0000)

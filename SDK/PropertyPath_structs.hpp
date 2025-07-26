@@ -21,7 +21,7 @@ struct FPropertyPathSegment final
 public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ArrayIndex;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E6F[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStruct*                                Struct;                                            // 0x0010(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UField*                                 Field;                                             // 0x0018(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
@@ -38,9 +38,9 @@ struct FCachedPropertyPath
 {
 public:
 	TArray<struct FPropertyPathSegment>           Segments;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E70[0x8];                                     // 0x0010(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFunction*                              CachedFunction;                                    // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1E71[0x8];                                     // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCachedPropertyPath) == 0x000008, "Wrong alignment on FCachedPropertyPath");
 static_assert(sizeof(FCachedPropertyPath) == 0x000028, "Wrong size on FCachedPropertyPath");

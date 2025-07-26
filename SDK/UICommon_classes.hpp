@@ -22,7 +22,7 @@ class UUICommon_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static class UMarinerGameUserSettings* GetUserSettings(class UObject* __WorldContext);
-	static void ConvertCharacterIndexToRowCol(int32 NumColumns, int32 Param_Index, class UObject* __WorldContext, int32* Row, int32* Column);
+	static void ConvertCharacterIndexToRowCol(int32 NumColumns, int32 Index_0, class UObject* __WorldContext, int32* Row, int32* Column);
 	static void LootIconMaterialSetup(class UMarinerCMSItemWithIcon* CMSItem, bool LootCardMode, const struct FVector2D& Brush_Size, class UMarinerLootCardDataAsset* LootCardData, class UObject* __WorldContext, struct FSlateBrush* ResultingBrush);
 	static void ApplyTextOutlineColor(class UTextBlock* Textfield, const struct FLinearColor& OutlineColor, class UObject* __WorldContext);
 	static void ParseSpecialCharacters(const class FString& Input, class UObject* __WorldContext, class FString* Output);

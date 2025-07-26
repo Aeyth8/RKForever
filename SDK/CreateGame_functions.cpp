@@ -524,9 +524,9 @@ bool UCreateGame_C::HandleInput(EMarinerInputActions InInput)
 // Function CreateGame.CreateGame_C.ChangeBotOptionVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ESlateVisibility                        Param_Visibility                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESlateVisibility                        Visibility_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCreateGame_C::ChangeBotOptionVisibility(ESlateVisibility Param_Visibility)
+void UCreateGame_C::ChangeBotOptionVisibility(ESlateVisibility Visibility_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -535,7 +535,7 @@ void UCreateGame_C::ChangeBotOptionVisibility(ESlateVisibility Param_Visibility)
 
 	Params::CreateGame_C_ChangeBotOptionVisibility Parms{};
 
-	Parms.Param_Visibility = Param_Visibility;
+	Parms.Visibility_0 = Visibility_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

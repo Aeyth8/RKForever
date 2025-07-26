@@ -22,7 +22,7 @@ namespace SDK
 class USignificanceManager final : public UObject
 {
 public:
-	uint8                                         Pad_1284[0xD8];                                    // 0x0028(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0xD8];                                      // 0x0028(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftClassPath                         SignificanceManagerClassName;                      // 0x0100(0x0018)(Edit, ZeroConstructor, Config, GlobalConfig, NoClear, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:

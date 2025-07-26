@@ -82,9 +82,9 @@ void UPostGameMenuStack_C::Construct()
 // Function PostGameMenuStack.PostGameMenuStack_C.UpdateIntermissionWidgets
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Param_IsActive                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsActive_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPostGameMenuStack_C::UpdateIntermissionWidgets(bool Param_IsActive)
+void UPostGameMenuStack_C::UpdateIntermissionWidgets(bool IsActive_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -93,7 +93,7 @@ void UPostGameMenuStack_C::UpdateIntermissionWidgets(bool Param_IsActive)
 
 	Params::PostGameMenuStack_C_UpdateIntermissionWidgets Parms{};
 
-	Parms.Param_IsActive = Param_IsActive;
+	Parms.IsActive_0 = IsActive_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

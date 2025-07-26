@@ -22,7 +22,7 @@ public:
 	class FText                                   OutDisabledText;                                   // 0x0000(0x0018)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsPracticeModeAllowed_ReturnValue;        // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_22F7[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_ShouldBeEnabled_OutDisabledText;          // 0x0020(0x0018)()
 	bool                                          CallFunc_ShouldBeEnabled_ReturnValue;              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

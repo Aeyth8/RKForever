@@ -45,11 +45,11 @@ void UScoreResultsValue_C::PopulateFromData(int32 Score, bool IsPlayerTeam, EMar
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FMatchEnd                        MatchEnd                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Param_TeamIndex                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    IsPlayerTeam                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // EMarinerGameOutcome                     TeamOutcome                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UScoreResultsValue_C::PopulateFromMatchEnd(const struct FMatchEnd& MatchEnd, int32 Param_TeamIndex, bool IsPlayerTeam, EMarinerGameOutcome TeamOutcome)
+void UScoreResultsValue_C::PopulateFromMatchEnd(const struct FMatchEnd& MatchEnd, int32 TeamIndex_0, bool IsPlayerTeam, EMarinerGameOutcome TeamOutcome)
 {
 	static class UFunction* Func = nullptr;
 
@@ -59,7 +59,7 @@ void UScoreResultsValue_C::PopulateFromMatchEnd(const struct FMatchEnd& MatchEnd
 	Params::ScoreResultsValue_C_PopulateFromMatchEnd Parms{};
 
 	Parms.MatchEnd = std::move(MatchEnd);
-	Parms.Param_TeamIndex = Param_TeamIndex;
+	Parms.TeamIndex_0 = TeamIndex_0;
 	Parms.IsPlayerTeam = IsPlayerTeam;
 	Parms.TeamOutcome = TeamOutcome;
 

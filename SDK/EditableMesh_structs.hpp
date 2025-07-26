@@ -86,7 +86,7 @@ enum class EMeshModificationType : uint8
 struct alignas(0x10) FMeshElementAttributeValue final
 {
 public:
-	uint8                                         Pad_E86[0x50];                                     // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMeshElementAttributeValue) == 0x000010, "Wrong alignment on FMeshElementAttributeValue");
 static_assert(sizeof(FMeshElementAttributeValue) == 0x000050, "Wrong size on FMeshElementAttributeValue");
@@ -98,7 +98,7 @@ struct FMeshElementAttributeData final
 public:
 	class FName                                   AttributeName;                                     // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AttributeIndex;                                    // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E87[0x4];                                      // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMeshElementAttributeValue             AttributeValue;                                    // 0x0010(0x0050)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMeshElementAttributeData) == 0x000010, "Wrong alignment on FMeshElementAttributeData");
@@ -125,7 +125,7 @@ struct FPolygonGroupToCreate final
 public:
 	struct FMeshElementAttributeList              PolygonGroupAttributes;                            // 0x0000(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FPolygonGroupID                        OriginalPolygonGroupID;                            // 0x0010(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E88[0x4];                                      // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPolygonGroupToCreate) == 0x000008, "Wrong alignment on FPolygonGroupToCreate");
 static_assert(sizeof(FPolygonGroupToCreate) == 0x000018, "Wrong size on FPolygonGroupToCreate");
@@ -140,7 +140,7 @@ public:
 	uint32                                        RenderingSectionIndex;                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialIndex;                                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxTriangles;                                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E89[0x3C];                                     // 0x000C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x3C];                                       // 0x000C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAdaptorPolygon2Group) == 0x000008, "Wrong alignment on FAdaptorPolygon2Group");
 static_assert(sizeof(FAdaptorPolygon2Group) == 0x000048, "Wrong size on FAdaptorPolygon2Group");
@@ -190,7 +190,7 @@ struct FAdaptorPolygon final
 {
 public:
 	struct FPolygonGroupID                        PolygonGroupID;                                    // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8A[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAdaptorTriangleID>             TriangulatedPolygonTriangleIndices;                // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAdaptorPolygon) == 0x000008, "Wrong alignment on FAdaptorPolygon");
@@ -204,10 +204,10 @@ struct FVertexInstanceToCreate final
 {
 public:
 	struct FVertexID                              VertexID;                                          // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8B[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMeshElementAttributeList              VertexInstanceAttributes;                          // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FVertexInstanceID                      OriginalVertexInstanceID;                          // 0x0018(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8C[0x4];                                      // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FVertexInstanceToCreate) == 0x000008, "Wrong alignment on FVertexInstanceToCreate");
 static_assert(sizeof(FVertexInstanceToCreate) == 0x000020, "Wrong size on FVertexInstanceToCreate");
@@ -258,7 +258,7 @@ struct FChangeVertexInstancesForPolygon final
 {
 public:
 	struct FPolygonID                             PolygonID;                                         // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8D[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVertexIndexAndInstanceID>      PerimeterVertexIndicesAndInstanceIDs;              // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FVertexInstancesForPolygonHole> VertexIndicesAndInstanceIDsForEachHole;            // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
@@ -336,7 +336,7 @@ struct FVertexAttributesForPolygon final
 {
 public:
 	struct FPolygonID                             PolygonID;                                         // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8E[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMeshElementAttributeList>      PerimeterVertexAttributeLists;                     // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FVertexAttributesForPolygonHole> VertexAttributeListsForEachHole;                   // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
@@ -352,7 +352,7 @@ struct FAttributesForEdge final
 {
 public:
 	struct FEdgeID                                EdgeID;                                            // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8F[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMeshElementAttributeList              EdgeAttributes;                                    // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAttributesForEdge) == 0x000008, "Wrong alignment on FAttributesForEdge");
@@ -366,7 +366,7 @@ struct FAttributesForVertexInstance final
 {
 public:
 	struct FVertexInstanceID                      VertexInstanceID;                                  // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E90[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMeshElementAttributeList              VertexInstanceAttributes;                          // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAttributesForVertexInstance) == 0x000008, "Wrong alignment on FAttributesForVertexInstance");
@@ -380,7 +380,7 @@ struct FAttributesForVertex final
 {
 public:
 	struct FVertexID                              VertexID;                                          // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E91[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMeshElementAttributeList              VertexAttributes;                                  // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FAttributesForVertex) == 0x000008, "Wrong alignment on FAttributesForVertex");
@@ -407,7 +407,7 @@ struct FPolygonToSplit final
 {
 public:
 	struct FPolygonID                             PolygonID;                                         // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E92[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVertexPair>                    VertexPairsToSplitAt;                              // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPolygonToSplit) == 0x000008, "Wrong alignment on FPolygonToSplit");
@@ -421,11 +421,11 @@ struct FPolygonToCreate final
 {
 public:
 	struct FPolygonGroupID                        PolygonGroupID;                                    // 0x0000(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E93[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVertexAndAttributes>           PerimeterVertices;                                 // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FPolygonID                             OriginalPolygonID;                                 // 0x0018(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EPolygonEdgeHardness                          PolygonEdgeHardness;                               // 0x001C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E94[0x3];                                      // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPolygonToCreate) == 0x000008, "Wrong alignment on FPolygonToCreate");
 static_assert(sizeof(FPolygonToCreate) == 0x000020, "Wrong size on FPolygonToCreate");
@@ -443,7 +443,7 @@ public:
 	struct FVertexID                              VertexID1;                                         // 0x0004(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMeshElementAttributeList              EdgeAttributes;                                    // 0x0008(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FEdgeID                                OriginalEdgeID;                                    // 0x0018(0x0004)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E95[0x4];                                      // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FEdgeToCreate) == 0x000008, "Wrong alignment on FEdgeToCreate");
 static_assert(sizeof(FEdgeToCreate) == 0x000020, "Wrong size on FEdgeToCreate");
@@ -459,7 +459,7 @@ struct FVertexToCreate final
 public:
 	struct FMeshElementAttributeList              VertexAttributes;                                  // 0x0000(0x0010)(BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FVertexID                              OriginalVertexID;                                  // 0x0010(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E96[0x4];                                      // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FVertexToCreate) == 0x000008, "Wrong alignment on FVertexToCreate");
 static_assert(sizeof(FVertexToCreate) == 0x000018, "Wrong size on FVertexToCreate");
@@ -473,7 +473,7 @@ struct FSubdividedWireEdge final
 public:
 	int32                                         EdgeVertex0PositionIndex;                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EdgeVertex1PositionIndex;                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E97[0x4];                                      // 0x0008(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x4];                                        // 0x0008(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSubdividedWireEdge) == 0x000004, "Wrong alignment on FSubdividedWireEdge");
 static_assert(sizeof(FSubdividedWireEdge) == 0x00000C, "Wrong size on FSubdividedWireEdge");
@@ -503,7 +503,7 @@ public:
 	uint32                                        RenderingSectionIndex;                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialIndex;                                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxTriangles;                                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E98[0x3C];                                     // 0x000C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x3C];                                       // 0x000C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRenderingPolygonGroup) == 0x000008, "Wrong alignment on FRenderingPolygonGroup");
 static_assert(sizeof(FRenderingPolygonGroup) == 0x000048, "Wrong size on FRenderingPolygonGroup");
@@ -517,7 +517,7 @@ struct FRenderingPolygon final
 {
 public:
 	struct FPolygonGroupID                        PolygonGroupID;                                    // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E99[0x4];                                      // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FTriangleID>                    TriangulatedPolygonTriangleIndices;                // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FRenderingPolygon) == 0x000008, "Wrong alignment on FRenderingPolygon");

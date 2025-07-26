@@ -60,9 +60,9 @@ void UCharacterPurchaseMenu_C::BndEvt__PromotionButton_K2Node_ComponentBoundEven
 // Function CharacterPurchaseMenu.CharacterPurchaseMenu_C.PopulateCharacter
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCharacterPurchaseMenu_C::PopulateCharacter(class UMarinerPlayableCharacter* Param_Character)
+void UCharacterPurchaseMenu_C::PopulateCharacter(class UMarinerPlayableCharacter* Character_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -71,7 +71,7 @@ void UCharacterPurchaseMenu_C::PopulateCharacter(class UMarinerPlayableCharacter
 
 	Params::CharacterPurchaseMenu_C_PopulateCharacter Parms{};
 
-	Parms.Param_Character = Param_Character;
+	Parms.Character_0 = Character_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -223,11 +223,11 @@ void UCharacterPurchaseMenu_C::UpdatePrompts()
 // Function CharacterPurchaseMenu.CharacterPurchaseMenu_C.GetCharacterPurchaseOffer
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FMangoPurchaseOffer              PurchaseOffer                                          (Parm, OutParm)
 // bool                                    IsValid                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UCharacterPurchaseMenu_C::GetCharacterPurchaseOffer(class UMarinerPlayableCharacter* Param_Character, struct FMangoPurchaseOffer* PurchaseOffer, bool* IsValid)
+void UCharacterPurchaseMenu_C::GetCharacterPurchaseOffer(class UMarinerPlayableCharacter* Character_0, struct FMangoPurchaseOffer* PurchaseOffer, bool* IsValid)
 {
 	static class UFunction* Func = nullptr;
 
@@ -236,7 +236,7 @@ void UCharacterPurchaseMenu_C::GetCharacterPurchaseOffer(class UMarinerPlayableC
 
 	Params::CharacterPurchaseMenu_C_GetCharacterPurchaseOffer Parms{};
 
-	Parms.Param_Character = Param_Character;
+	Parms.Character_0 = Character_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 

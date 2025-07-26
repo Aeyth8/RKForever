@@ -46,7 +46,7 @@ public:
 	class UImage*                                 RaritySymbol;                                      // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             RarityText;                                        // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          UseDirectPurchase;                                 // 0x04C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_234F[0x7];                                     // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C9[0x7];                                      // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnPurchaseGenericSelected;                         // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UMarinerPlayableCharacter*              Character;                                         // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UItemLoadResponse*                      ItemLoadResponse;                                  // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -57,7 +57,7 @@ public:
 	void BndEvt__PurchaseCollectionButton_K2Node_ComponentBoundEvent_1_OnLayeredButtonEvent__DelegateSignature(class UMarinerLayeredButton* Instance);
 	void Destruct();
 	void BndEvt__PurchaseGeneric_K2Node_ComponentBoundEvent_0_OnLayeredButtonEvent__DelegateSignature(class UMarinerLayeredButton* Instance);
-	void SetOfferAndTier(class UItemLoadResponse* Param_ItemLoadResponse, bool Param_UseDirectPurchase, class UMarinerPlayableCharacter* Param_Character);
+	void SetOfferAndTier(class UItemLoadResponse* ItemLoadResponse_0, bool UseDirectPurchase_0, class UMarinerPlayableCharacter* Character_0);
 	bool Populate();
 	void GetOfferItemFullName(const struct FMangoPurchaseOffer& MangoPurchaseOffer, class FText* Result);
 	void UpdateLimitedTimeWidgets();

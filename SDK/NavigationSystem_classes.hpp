@@ -45,7 +45,7 @@ public:
 	uint8                                         bSupportsAgent13 : 1;                              // 0x0041(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bSupportsAgent14 : 1;                              // 0x0041(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bSupportsAgent15 : 1;                              // 0x0041(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1AC6[0x6];                                     // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -86,7 +86,7 @@ static_assert(sizeof(UNavArea_Null) == 0x000048, "Wrong size on UNavArea_Null");
 class ANavigationData : public AActor
 {
 public:
-	uint8                                         Pad_1AC7[0x8];                                     // 0x0218(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    RenderingComp;                                     // 0x0220(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FNavDataConfig                         NavDataConfig;                                     // 0x0228(0x0078)(Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         bEnableDrawing : 1;                                // 0x02A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
@@ -95,14 +95,14 @@ public:
 	uint8                                         bCanBeMainNavData : 1;                             // 0x02A0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, Config, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bCanSpawnOnRebuild : 1;                            // 0x02A0(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, Config, EditConst, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bRebuildAtRuntime : 1;                             // 0x02A0(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Config, Deprecated, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_1AC8[0x3];                                     // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A1[0x3];                                      // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	ERuntimeGenerationType                        RuntimeGeneration;                                 // 0x02A4(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1AC9[0x3];                                     // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A5[0x3];                                      // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ObservedPathsTickInterval;                         // 0x02A8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint32                                        DataVersion;                                       // 0x02AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1ACA[0xE0];                                    // 0x02B0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B0[0xE0];                                     // 0x02B0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSupportedAreaData>             SupportedAreas;                                    // 0x0390(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1ACB[0x58];                                    // 0x03A0(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A0[0x58];                                     // 0x03A0(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -281,13 +281,13 @@ static_assert(offsetof(UNavAreaMeta_SwitchByAgent, Agent15Area) == 0x0000C0, "Me
 class UNavCollision final : public UNavCollisionBase
 {
 public:
-	uint8                                         Pad_1ACC[0x10];                                    // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FNavCollisionCylinder>          CylinderCollision;                                 // 0x0080(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FNavCollisionBox>               BoxCollision;                                      // 0x0090(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TSubclassOf<class UNavArea>                   AreaClass;                                         // 0x00A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bGatherConvexGeometry : 1;                         // 0x00A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bCreateOnClient : 1;                               // 0x00A8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1ACD[0x2F];                                    // 0x00A9(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x2F];                                      // 0x00A9(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -347,7 +347,7 @@ public:
 	struct FNavGraphNode                          Node;                                              // 0x01F0(0x0018)(NativeAccessSpecifierPublic)
 	class UNavigationGraphNodeComponent*          NextNodeComponent;                                 // 0x0208(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UNavigationGraphNodeComponent*          PrevNodeComponent;                                 // 0x0210(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ACE[0x8];                                     // 0x0218(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -396,7 +396,7 @@ public:
 	UMulticastInlineDelegateProperty_             PathUpdatedNotifier;                               // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        PathPoints;                                        // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	ENavigationOptionFlag                         RecalculateOnInvalidation;                         // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1ACF[0x3F];                                    // 0x0049(0x003F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x3F];                                      // 0x0049(0x003F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void EnableDebugDrawing(bool bShouldDrawDebugData, const struct FLinearColor& PathColor);
@@ -450,7 +450,7 @@ public:
 	TArray<struct FNavigationFilterArea>          Areas;                                             // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FNavigationFilterFlags                 IncludeFlags;                                      // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FNavigationFilterFlags                 ExcludeFlags;                                      // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AD1[0x8];                                     // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -484,27 +484,27 @@ public:
 	uint8                                         bTickWhilePaused : 1;                              // 0x0068(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, Config, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bSupportRebuilding : 1;                            // 0x0068(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bInitialBuildingLocked : 1;                        // 0x0068(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         BitPad_40 : 1;                                     // 0x0068(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
+	uint8                                         BitPad_68_7 : 1;                                   // 0x0068(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
 	uint8                                         bSkipAgentHeightCheckWhenPickingNavData : 1;       // 0x0069(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1AD2[0x2];                                     // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	ENavDataGatheringModeConfig                   DataGatheringMode;                                 // 0x006C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1AD3[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bGenerateNavigationOnlyAroundNavigationInvokers : 1; // 0x0070(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_1AD4[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ActiveTilesUpdateInterval;                         // 0x0074(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FNavDataConfig>                 SupportedAgents;                                   // 0x0078(0x0010)(Edit, ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
 	struct FNavAgentSelector                      SupportedAgentsMask;                               // 0x0088(0x0004)(Edit, Config, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1AD5[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class ANavigationData*>                NavDataSet;                                        // 0x0090(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class ANavigationData*>                NavDataRegistrationQueue;                          // 0x00A0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AD6[0x10];                                    // 0x00B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnNavDataRegisteredEvent;                          // 0x00C0(0x0010)(ZeroConstructor, Transient, InstancedReference, NativeAccessSpecifierPublic)
 	UMulticastInlineDelegateProperty_             OnNavigationGenerationFinishedDelegate;            // 0x00D0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AD7[0xDC];                                    // 0x00E0(0x00DC)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E0[0xDC];                                      // 0x00E0(0x00DC)(Fixing Size After Last Property [ Dumper-7 ])
 	EFNavigationSystemRunMode                     OperationMode;                                     // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1AD8[0x357];                                   // 0x01BD(0x0357)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BD[0x357];                                    // 0x01BD(0x0357)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DirtyAreasUpdateFreq;                              // 0x0514(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AD9[0x20];                                    // 0x0518(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_518[0x20];                                     // 0x0518(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UNavigationPath* FindPathToActorSynchronously(class UObject* WorldContextObject, const struct FVector& PathStart, class AActor* GoalActor, float TetherDistance, class AActor* PathfindingContext, TSubclassOf<class UNavigationQueryFilter> FilterClass);
@@ -569,7 +569,7 @@ public:
 	uint8                                         bCreateOnClient : 1;                               // 0x0050(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bAutoSpawnMissingNavData : 1;                      // 0x0050(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bSpawnNavDataInNavBoundsLevel : 1;                 // 0x0050(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_1AF0[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -589,14 +589,14 @@ static_assert(sizeof(UNavigationSystemModuleConfig) == 0x000058, "Wrong size on 
 class ANavigationTestingActor final : public AActor
 {
 public:
-	uint8                                         Pad_1AF1[0x10];                                    // 0x0218(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_218[0x10];                                     // 0x0218(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCapsuleComponent*                      CapsuleComponent;                                  // 0x0228(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UNavigationInvokerComponent*            InvokerComponent;                                  // 0x0230(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         bActAsNavigationInvoker : 1;                       // 0x0238(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_1AF2[0x7];                                     // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FNavAgentProperties                    NavAgentProps;                                     // 0x0240(0x0030)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                QueryingExtent;                                    // 0x0270(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AF3[0x4];                                     // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ANavigationData*                        MyNavData;                                         // 0x0280(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ProjectedLocation;                                 // 0x0288(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bProjectedLocationValid : 1;                       // 0x0294(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
@@ -609,23 +609,23 @@ public:
 	uint8                                         bShowBestPath : 1;                                 // 0x0294(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bShowDiffWithPreviousStep : 1;                     // 0x0295(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bShouldBeVisibleInGame : 1;                        // 0x0295(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1AF4[0x2];                                     // 0x0296(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_296[0x2];                                      // 0x0296(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	ENavCostDisplay                               CostDisplayMode;                                   // 0x0298(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AF5[0x3];                                     // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_299[0x3];                                      // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              TextCanvasOffset;                                  // 0x029C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bPathExist : 1;                                    // 0x02A4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bPathIsPartial : 1;                                // 0x02A4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bPathSearchOutOfNodes : 1;                         // 0x02A4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1AF6[0x3];                                     // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2A5[0x3];                                      // 0x02A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PathfindingTime;                                   // 0x02A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PathCost;                                          // 0x02AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PathfindingSteps;                                  // 0x02B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AF7[0x4];                                     // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ANavigationTestingActor*                OtherActor;                                        // 0x02B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x02C0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ShowStepIndex;                                     // 0x02C8(0x0004)(Edit, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OffsetFromCornersDistance;                         // 0x02CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AF8[0x30];                                    // 0x02D0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0[0x30];                                     // 0x02D0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -660,7 +660,7 @@ static_assert(offsetof(ANavigationTestingActor, OffsetFromCornersDistance) == 0x
 class UNavLinkComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_1AF9[0x8];                                     // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D8[0x8];                                      // 0x03D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FNavigationLink>                Links;                                             // 0x03E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
@@ -682,9 +682,9 @@ static_assert(offsetof(UNavLinkComponent, Links) == 0x0003E0, "Member 'UNavLinkC
 class UNavRelevantComponent : public UActorComponent
 {
 public:
-	uint8                                         Pad_1AFA[0x24];                                    // 0x00B0(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x24];                                      // 0x00B0(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bAttachToOwnersRoot : 1;                           // 0x00D4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_1AFB[0x3];                                     // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CachedNavParent;                                   // 0x00D8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -709,29 +709,29 @@ static_assert(offsetof(UNavRelevantComponent, CachedNavParent) == 0x0000D8, "Mem
 class UNavLinkCustomComponent final : public UNavRelevantComponent
 {
 public:
-	uint8                                         Pad_1AFC[0x8];                                     // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	uint32                                        NavLinkUserId;                                     // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1AFD[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UNavArea>                   EnabledAreaClass;                                  // 0x00F0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class UNavArea>                   DisabledAreaClass;                                 // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FNavAgentSelector                      SupportedAgents;                                   // 0x0100(0x0004)(Edit, NoDestructor, Protected, NativeAccessSpecifierProtected)
 	struct FVector                                LinkRelativeStart;                                 // 0x0104(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                                LinkRelativeEnd;                                   // 0x0110(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ENavLinkDirection                             LinkDirection;                                     // 0x011C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1AFE[0x3];                                     // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bLinkEnabled : 1;                                  // 0x0120(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bNotifyWhenEnabled : 1;                            // 0x0120(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bNotifyWhenDisabled : 1;                           // 0x0120(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         bCreateBoxObstacle : 1;                            // 0x0120(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_1AFF[0x3];                                     // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ObstacleOffset;                                    // 0x0124(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FVector                                ObstacleExtent;                                    // 0x0130(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1B00[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UNavArea>                   ObstacleAreaClass;                                 // 0x0140(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         BroadcastRadius;                                   // 0x0148(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         BroadcastInterval;                                 // 0x014C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ECollisionChannel                             BroadcastChannel;                                  // 0x0150(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1B01[0x3F];                                    // 0x0151(0x003F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_151[0x3F];                                     // 0x0151(0x003F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -833,7 +833,7 @@ class ANavMeshBoundsVolume final : public AVolume
 {
 public:
 	struct FNavAgentSelector                      SupportedAgents;                                   // 0x0250(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B02[0x4];                                     // 0x0254(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -854,7 +854,7 @@ static_assert(offsetof(ANavMeshBoundsVolume, SupportedAgents) == 0x000250, "Memb
 class UNavMeshRenderingComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_1B03[0x18];                                    // 0x03D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D8[0x18];                                     // 0x03D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -877,7 +877,7 @@ public:
 	TSubclassOf<class UNavArea>                   AreaClass;                                         // 0x00E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                FailsafeExtent;                                    // 0x00E8(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bIncludeAgentHeight : 1;                           // 0x00F4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1B04[0x4B];                                    // 0x00F5(0x004B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F5[0x4B];                                      // 0x00F5(0x004B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetAreaClass(TSubclassOf<class UNavArea> NewAreaClass);
@@ -902,7 +902,7 @@ static_assert(offsetof(UNavModifierComponent, FailsafeExtent) == 0x0000E8, "Memb
 class ANavModifierVolume final : public AVolume
 {
 public:
-	uint8                                         Pad_1B05[0x8];                                     // 0x0250(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_250[0x8];                                      // 0x0250(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UNavArea>                   AreaClass;                                         // 0x0258(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -947,7 +947,7 @@ public:
 	class UNavigationSystemConfig*                NavigationSystemConfig;                            // 0x0218(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ENavSystemOverridePolicy                      OverridePolicy;                                    // 0x0220(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         bLoadOnClient : 1;                                 // 0x0221(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_1B06[0x6];                                     // 0x0222(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_222[0x6];                                      // 0x0222(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1021,10 +1021,10 @@ public:
 	uint8                                         bDrawMarkedForbiddenPolys : 1;                     // 0x03F9(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bDistinctlyDrawTilesBeingBuilt : 1;                // 0x03FA(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bDrawNavMesh : 1;                                  // 0x03FA(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1B07[0x1];                                     // 0x03FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3FB[0x1];                                      // 0x03FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DrawOffset;                                        // 0x03FC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bFixedTilePoolSize : 1;                            // 0x0400(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1B08[0x3];                                     // 0x0401(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_401[0x3];                                      // 0x0401(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TilePoolSize;                                      // 0x0404(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TileSizeUU;                                        // 0x0408(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CellSize;                                          // 0x040C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1048,7 +1048,7 @@ public:
 	float                                         DefaultMaxHierarchicalSearchNodes;                 // 0x045C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERecastPartitioning                           RegionPartitioning;                                // 0x0460(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERecastPartitioning                           LayerPartitioning;                                 // 0x0461(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B09[0x2];                                     // 0x0462(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_462[0x2];                                      // 0x0462(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RegionChunkSplits;                                 // 0x0464(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LayerChunkSplits;                                  // 0x0468(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bSortNavigationAreasByCost : 1;                    // 0x046C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
@@ -1062,11 +1062,11 @@ public:
 	uint8                                         bUseVirtualFilters : 1;                            // 0x046D(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bAllowNavLinkAsPathEnd : 1;                        // 0x046D(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bUseVoxelCache : 1;                                // 0x046D(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_1B0A[0x2];                                     // 0x046E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46E[0x2];                                      // 0x046E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TileSetUpdateInterval;                             // 0x0470(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         HeuristicScale;                                    // 0x0474(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         VerticalDeviationFromGroundCompensation;           // 0x0478(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0B[0x34];                                    // 0x047C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47C[0x34];                                     // 0x047C(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool K2_ReplaceAreaInTileBounds(const struct FBox& Bounds, TSubclassOf<class UNavArea> OldArea, TSubclassOf<class UNavArea> NewArea, bool ReplaceLinks);
@@ -1118,7 +1118,7 @@ static_assert(offsetof(ARecastNavMesh, VerticalDeviationFromGroundCompensation) 
 class URecastNavMeshDataChunk final : public UNavigationDataChunk
 {
 public:
-	uint8                                         Pad_1B0E[0x10];                                    // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

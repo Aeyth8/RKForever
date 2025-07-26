@@ -130,10 +130,10 @@ void UModeSummary_C::Initialize()
 // Function ModeSummary.ModeSummary_C.InitializeCustom
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Param_GameModeText                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// class FText                             GameModeText_0                                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UMarinerModeDataAsset*            GameModeData                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UModeSummary_C::InitializeCustom(const class FText& Param_GameModeText, class UMarinerModeDataAsset* GameModeData)
+void UModeSummary_C::InitializeCustom(const class FText& GameModeText_0, class UMarinerModeDataAsset* GameModeData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -142,7 +142,7 @@ void UModeSummary_C::InitializeCustom(const class FText& Param_GameModeText, cla
 
 	Params::ModeSummary_C_InitializeCustom Parms{};
 
-	Parms.Param_GameModeText = std::move(Param_GameModeText);
+	Parms.GameModeText_0 = std::move(GameModeText_0);
 	Parms.GameModeData = GameModeData;
 
 	UObject::ProcessEvent(Func, &Parms);

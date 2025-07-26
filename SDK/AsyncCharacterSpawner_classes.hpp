@@ -32,7 +32,7 @@ public:
 public:
 	void ExecuteUbergraph_AsyncCharacterSpawner(int32 EntryPoint);
 	void RemoveCharacter();
-	void SpawnCharacter(class UMarinerPlayableCharacter* Param_Character, class ACharacterCustomizationPedestalInterior_C* Param_InteriorPedestal, class AMarinerCharacterSpawner* Param_CharacterSpawner);
+	void SpawnCharacter(class UMarinerPlayableCharacter* Character_0, class ACharacterCustomizationPedestalInterior_C* InteriorPedestal_0, class AMarinerCharacterSpawner* CharacterSpawner_0);
 	void ApplySkinToCharacter();
 	void OnLoaded_F8D3428441E64AA3B00A23A70D7A2FF4(class UObject* Loaded);
 	void SetCharacterSpawner(class AMarinerCharacterSpawner** AsMariner_Character_Spawner);

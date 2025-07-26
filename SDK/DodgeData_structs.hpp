@@ -22,7 +22,7 @@ struct FDodgeData final
 {
 public:
 	EDodgeDirections                              DodgeDirection_2_E55B6DEE436430078C00638DDCD45DE2; // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2316[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DodgeDuration_5_875A03394914A2068F35EEB6239E8194;  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnsureReplicationTrigger_13_9B8E3DF64C5F691A4BFA0D9B4E129D21; // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

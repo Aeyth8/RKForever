@@ -55,7 +55,7 @@ static_assert(offsetof(FDoNNavigationDebugParams, LineDuration) == 0x000008, "Me
 struct FDonNavigationVoxel final
 {
 public:
-	uint8                                         Pad_108A[0x4];                                     // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDonNavigationVoxel) == 0x000001, "Wrong alignment on FDonNavigationVoxel");
 static_assert(sizeof(FDonNavigationVoxel) == 0x000004, "Wrong size on FDonNavigationVoxel");
@@ -99,7 +99,7 @@ struct FBT_FlyToTarget_DebugParams final : public FDoNNavigationDebugParams
 {
 public:
 	bool                                          bVisualizePawnAsVoxels;                            // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FBT_FlyToTarget_DebugParams) == 0x000004, "Wrong alignment on FBT_FlyToTarget_DebugParams");
 static_assert(sizeof(FBT_FlyToTarget_DebugParams) == 0x000010, "Wrong size on FBT_FlyToTarget_DebugParams");
@@ -110,7 +110,7 @@ static_assert(offsetof(FBT_FlyToTarget_DebugParams, bVisualizePawnAsVoxels) == 0
 struct alignas(0x08) FDonNavigationTask
 {
 public:
-	uint8                                         Pad_108C[0x8];                                     // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDonNavigationTask) == 0x000008, "Wrong alignment on FDonNavigationTask");
 static_assert(sizeof(FDonNavigationTask) == 0x000008, "Wrong size on FDonNavigationTask");
@@ -120,7 +120,7 @@ static_assert(sizeof(FDonNavigationTask) == 0x000008, "Wrong size on FDonNavigat
 struct FDonNavigationDynamicCollisionTask final : public FDonNavigationTask
 {
 public:
-	uint8                                         Pad_108D[0x118];                                   // 0x0008(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8[0x118];                                      // 0x0008(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDonNavigationDynamicCollisionTask) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionTask");
 static_assert(sizeof(FDonNavigationDynamicCollisionTask) == 0x000120, "Wrong size on FDonNavigationDynamicCollisionTask");
@@ -133,13 +133,13 @@ public:
 	float                                         QueryTimeout;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFlexibleOriginGoal;                               // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSkipSmoothingPass;                                // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108E[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         IdealArchHeightHeuristic;                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPreciseDynamicCollisionRepathing;                 // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_108F[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CollisionShapeInflation;                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bForceRescheduleQuery;                             // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1090[0xB];                                     // 0x0015(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDoNNavigationQueryParams) == 0x000008, "Wrong alignment on FDoNNavigationQueryParams");
 static_assert(sizeof(FDoNNavigationQueryParams) == 0x000020, "Wrong size on FDoNNavigationQueryParams");
@@ -161,10 +161,10 @@ public:
 	struct FVector                                Origin;                                            // 0x0010(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Destination;                                       // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDoNNavigationQueryParams              QueryParams;                                       // 0x0028(0x0020)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1091[0x210];                                   // 0x0048(0x0210)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_48[0x210];                                     // 0x0048(0x0210)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        PathSolutionSmoothed;                              // 0x0258(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	EDonNavigationQueryStatus                     QueryStatus;                                       // 0x0268(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1092[0x7];                                     // 0x0269(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDoNNavigationQueryData) == 0x000008, "Wrong alignment on FDoNNavigationQueryData");
 static_assert(sizeof(FDoNNavigationQueryData) == 0x000270, "Wrong size on FDoNNavigationQueryData");
@@ -182,7 +182,7 @@ struct FDonNavigationQueryTask final : public FDonNavigationTask
 {
 public:
 	struct FDoNNavigationQueryData                Data;                                              // 0x0008(0x0270)(BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1093[0x10];                                    // 0x0278(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_278[0x10];                                     // 0x0278(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDonNavigationQueryTask) == 0x000008, "Wrong alignment on FDonNavigationQueryTask");
 static_assert(sizeof(FDonNavigationQueryTask) == 0x000288, "Wrong size on FDonNavigationQueryTask");
@@ -193,9 +193,9 @@ static_assert(offsetof(FDonNavigationQueryTask, Data) == 0x000008, "Member 'FDon
 struct alignas(0x08) FDonNavigationDynamicCollisionPayload final
 {
 public:
-	uint8                                         Pad_1094[0x8];                                     // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDonNavigationVoxel                    Voxel;                                             // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1095[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDonNavigationDynamicCollisionPayload) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionPayload");
 static_assert(sizeof(FDonNavigationDynamicCollisionPayload) == 0x000010, "Wrong size on FDonNavigationDynamicCollisionPayload");
@@ -206,7 +206,7 @@ static_assert(offsetof(FDonNavigationDynamicCollisionPayload, Voxel) == 0x000008
 struct alignas(0x08) FDonVoxelCollisionProfile final
 {
 public:
-	uint8                                         Pad_1096[0x20];                                    // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDonVoxelCollisionProfile) == 0x000008, "Wrong alignment on FDonVoxelCollisionProfile");
 static_assert(sizeof(FDonVoxelCollisionProfile) == 0x000020, "Wrong size on FDonVoxelCollisionProfile");

@@ -359,9 +359,9 @@ void UPostGameBlastPassAndQuestProgress_C::HasQuestProgress(bool* HasProgress)
 // Function PostGameBlastPassAndQuestProgress.PostGameBlastPassAndQuestProgress_C.HasRewards
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Param_HasRewards                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    HasRewards_0                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UPostGameBlastPassAndQuestProgress_C::HasRewards(bool* Param_HasRewards)
+void UPostGameBlastPassAndQuestProgress_C::HasRewards(bool* HasRewards_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -372,8 +372,8 @@ void UPostGameBlastPassAndQuestProgress_C::HasRewards(bool* Param_HasRewards)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Param_HasRewards != nullptr)
-		*Param_HasRewards = Parms.Param_HasRewards;
+	if (HasRewards_0 != nullptr)
+		*HasRewards_0 = Parms.HasRewards_0;
 }
 
 

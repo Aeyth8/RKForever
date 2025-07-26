@@ -22,7 +22,7 @@ struct CharacterSelectAbilities_C_Populate final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F71[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   NewLocalVar_0;                                     // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -37,12 +37,12 @@ static_assert(offsetof(CharacterSelectAbilities_C_Populate, CallFunc_IsValid_Ret
 struct CharacterSelectAbilities_C_SetCharacter final
 {
 public:
-	class UMarinerPlayableCharacter*              Param_Character;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMarinerPlayableCharacter*              Character_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Populate_ReturnValue;                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(CharacterSelectAbilities_C_SetCharacter) == 0x000008, "Wrong alignment on CharacterSelectAbilities_C_SetCharacter");
 static_assert(sizeof(CharacterSelectAbilities_C_SetCharacter) == 0x000010, "Wrong size on CharacterSelectAbilities_C_SetCharacter");
-static_assert(offsetof(CharacterSelectAbilities_C_SetCharacter, Param_Character) == 0x000000, "Member 'CharacterSelectAbilities_C_SetCharacter::Param_Character' has a wrong offset!");
+static_assert(offsetof(CharacterSelectAbilities_C_SetCharacter, Character_0) == 0x000000, "Member 'CharacterSelectAbilities_C_SetCharacter::Character_0' has a wrong offset!");
 static_assert(offsetof(CharacterSelectAbilities_C_SetCharacter, CallFunc_Populate_ReturnValue) == 0x000008, "Member 'CharacterSelectAbilities_C_SetCharacter::CallFunc_Populate_ReturnValue' has a wrong offset!");
 
 // Function CharacterSelectAbilities.CharacterSelectAbilities_C.HandleInput

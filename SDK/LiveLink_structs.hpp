@@ -39,7 +39,7 @@ public:
 	struct FLiveLinkSubjectName                   LiveLinkSubjectName;                               // 0x0020(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class ULiveLinkRetargetAsset>     RetargetAsset;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoClear, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULiveLinkRetargetAsset*                 CurrentRetargetAsset;                              // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DB5[0x18];                                     // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_LiveLinkPose) == 0x000008, "Wrong alignment on FAnimNode_LiveLinkPose");
 static_assert(sizeof(FAnimNode_LiveLinkPose) == 0x000050, "Wrong size on FAnimNode_LiveLinkPose");
@@ -81,7 +81,7 @@ static_assert(offsetof(FLiveLinkInstanceProxy, PoseNode) == 0x0006E0, "Member 'F
 struct FProviderPollResult final
 {
 public:
-	uint8                                         Pad_DB6[0x10];                                     // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Name;                                              // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MachineName;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        MachineTimeOffset;                                 // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -97,7 +97,7 @@ static_assert(offsetof(FProviderPollResult, MachineTimeOffset) == 0x000030, "Mem
 struct FLiveLinkRetargetAssetReference final
 {
 public:
-	uint8                                         Pad_DB7[0x1];                                      // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FLiveLinkRetargetAssetReference) == 0x000001, "Wrong alignment on FLiveLinkRetargetAssetReference");
 static_assert(sizeof(FLiveLinkRetargetAssetReference) == 0x000001, "Wrong size on FLiveLinkRetargetAssetReference");

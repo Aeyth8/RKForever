@@ -25,7 +25,7 @@ public:
 	class UImage*                                 DeadZonedInput;                                    // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 FinalInput;                                        // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Inner;                                             // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Outer_ThumbStickDebug_C;                           // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Outer_0;                                           // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 RawInput;                                          // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	float                                         RadiusWidth;                                       // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -51,7 +51,7 @@ static_assert(offsetof(UThumbStickDebug_C, Center) == 0x000230, "Member 'UThumbS
 static_assert(offsetof(UThumbStickDebug_C, DeadZonedInput) == 0x000238, "Member 'UThumbStickDebug_C::DeadZonedInput' has a wrong offset!");
 static_assert(offsetof(UThumbStickDebug_C, FinalInput) == 0x000240, "Member 'UThumbStickDebug_C::FinalInput' has a wrong offset!");
 static_assert(offsetof(UThumbStickDebug_C, Inner) == 0x000248, "Member 'UThumbStickDebug_C::Inner' has a wrong offset!");
-static_assert(offsetof(UThumbStickDebug_C, Outer_ThumbStickDebug_C) == 0x000250, "Member 'UThumbStickDebug_C::Outer_ThumbStickDebug_C' has a wrong offset!");
+static_assert(offsetof(UThumbStickDebug_C, Outer_0) == 0x000250, "Member 'UThumbStickDebug_C::Outer_0' has a wrong offset!");
 static_assert(offsetof(UThumbStickDebug_C, RawInput) == 0x000258, "Member 'UThumbStickDebug_C::RawInput' has a wrong offset!");
 static_assert(offsetof(UThumbStickDebug_C, RadiusWidth) == 0x000260, "Member 'UThumbStickDebug_C::RadiusWidth' has a wrong offset!");
 

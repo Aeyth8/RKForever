@@ -20,11 +20,11 @@ namespace SDK
 // Function ItemProgressionWidget.ItemProgressionWidget_C.SetItemUnlock
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FMangoProgressionCharacterItemUnlockParam_ItemUnlock                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    Param_IsOwned                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class UItemLoadResponse*                Param_ItemLoadResponse                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FMangoProgressionCharacterItemUnlockItemUnlock_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    IsOwned_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UItemLoadResponse*                ItemLoadResponse_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UItemProgressionWidget_C::SetItemUnlock(struct FMangoProgressionCharacterItemUnlock& Param_ItemUnlock, bool Param_IsOwned, class UItemLoadResponse* Param_ItemLoadResponse)
+void UItemProgressionWidget_C::SetItemUnlock(struct FMangoProgressionCharacterItemUnlock& ItemUnlock_0, bool IsOwned_0, class UItemLoadResponse* ItemLoadResponse_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,13 +33,13 @@ void UItemProgressionWidget_C::SetItemUnlock(struct FMangoProgressionCharacterIt
 
 	Params::ItemProgressionWidget_C_SetItemUnlock Parms{};
 
-	Parms.Param_ItemUnlock = std::move(Param_ItemUnlock);
-	Parms.Param_IsOwned = Param_IsOwned;
-	Parms.Param_ItemLoadResponse = Param_ItemLoadResponse;
+	Parms.ItemUnlock_0 = std::move(ItemUnlock_0);
+	Parms.IsOwned_0 = IsOwned_0;
+	Parms.ItemLoadResponse_0 = ItemLoadResponse_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Param_ItemUnlock = std::move(Parms.Param_ItemUnlock);
+	ItemUnlock_0 = std::move(Parms.ItemUnlock_0);
 }
 
 

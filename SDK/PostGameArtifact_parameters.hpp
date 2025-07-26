@@ -25,13 +25,13 @@ struct PostGameArtifact_C_ExecuteUbergraph_PostGameArtifact final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_214F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMangoItemType                                K2Node_CustomEvent_ItemType;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2150[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_ItemID;                         // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2151[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMangoItemResult                       K2Node_CustomEvent_ItemResult;                     // 0x0038(0x0030)()
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -100,7 +100,7 @@ struct PostGameArtifact_C_PresentUnlock final
 {
 public:
 	EMangoItemType                                ItemType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2152[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ItemID;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PostGameArtifact_C_PresentUnlock) == 0x000008, "Wrong alignment on PostGameArtifact_C_PresentUnlock");
@@ -126,10 +126,10 @@ struct PostGameArtifact_C_UpdateArtifactLevel final
 public:
 	int32                                         Level;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMangoItemType                                ArtifactType;                                      // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2153[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ItemID;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          bJustUnlocked;                                     // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2154[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0020(0x0018)()
 	class UMarinerUIGlobals*                      CallFunc_GetUIGlobals_ReturnValue;                 // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerArtifactDataAsset*              CallFunc_GetArtifactUIDataAsset_ReturnValue;       // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -189,7 +189,7 @@ struct PostGameArtifact_C_GetArtifactImprovementText final
 {
 public:
 	float                                         ImprovementNumber;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2155[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ImprovementSymbol;                                 // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   ImprovementText;                                   // 0x0018(0x0018)(Parm, OutParm)
 	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -212,11 +212,11 @@ static_assert(offsetof(PostGameArtifact_C_GetArtifactImprovementText, CallFunc_M
 struct PostGameArtifact_C_Get_Artifact_Progress_Bar final
 {
 public:
-	class UArtifactProgressBar_C*                 Param_ArtifactProgressBar;                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UArtifactProgressBar_C*                 ArtifactProgressBar_0;                             // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PostGameArtifact_C_Get_Artifact_Progress_Bar) == 0x000008, "Wrong alignment on PostGameArtifact_C_Get_Artifact_Progress_Bar");
 static_assert(sizeof(PostGameArtifact_C_Get_Artifact_Progress_Bar) == 0x000008, "Wrong size on PostGameArtifact_C_Get_Artifact_Progress_Bar");
-static_assert(offsetof(PostGameArtifact_C_Get_Artifact_Progress_Bar, Param_ArtifactProgressBar) == 0x000000, "Member 'PostGameArtifact_C_Get_Artifact_Progress_Bar::Param_ArtifactProgressBar' has a wrong offset!");
+static_assert(offsetof(PostGameArtifact_C_Get_Artifact_Progress_Bar, ArtifactProgressBar_0) == 0x000000, "Member 'PostGameArtifact_C_Get_Artifact_Progress_Bar::ArtifactProgressBar_0' has a wrong offset!");
 
 }
 

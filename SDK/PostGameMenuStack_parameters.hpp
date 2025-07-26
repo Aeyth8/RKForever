@@ -25,7 +25,7 @@ struct PostGameMenuStack_C_ExecuteUbergraph_PostGameMenuStack final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_227B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMarinerMenuStackManagerSetup          K2Node_MakeStruct_MarinerMenuStackManagerSetup;    // 0x0020(0x0028)(NoDestructor, ContainsInstancedReference)
 	class UMarinerMenuSequence*                   CallFunc_GetActiveSequence_ReturnValue;            // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -33,19 +33,19 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsRequestComplete_bResultSuccess;         // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsRequestComplete_ReturnValue;            // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_227C[0x5];                                     // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPostGameSequence_C*                    K2Node_DynamicCast_AsPost_Game_Sequence;           // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_227D[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMatchEnd                              CallFunc_GetMatchEndData_ReturnValue;              // 0x0070(0x0068)(ConstParm)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_227E[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoMatchmakingManager*               CallFunc_Get_ReturnValue;                          // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_227F[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoMatchmakingManager*               CallFunc_Get_ReturnValue_1;                        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsIntermissionActive_ReturnValue;         // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2280[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x00FC(0x0010)(ZeroConstructor, NoDestructor)
 };
 static_assert(alignof(PostGameMenuStack_C_ExecuteUbergraph_PostGameMenuStack) == 0x000008, "Wrong alignment on PostGameMenuStack_C_ExecuteUbergraph_PostGameMenuStack");
@@ -74,7 +74,7 @@ static_assert(offsetof(PostGameMenuStack_C_ExecuteUbergraph_PostGameMenuStack, K
 struct PostGameMenuStack_C_UpdateIntermissionWidgets final
 {
 public:
-	bool                                          Param_IsActive;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsActive_0;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -82,7 +82,7 @@ public:
 };
 static_assert(alignof(PostGameMenuStack_C_UpdateIntermissionWidgets) == 0x000001, "Wrong alignment on PostGameMenuStack_C_UpdateIntermissionWidgets");
 static_assert(sizeof(PostGameMenuStack_C_UpdateIntermissionWidgets) == 0x000005, "Wrong size on PostGameMenuStack_C_UpdateIntermissionWidgets");
-static_assert(offsetof(PostGameMenuStack_C_UpdateIntermissionWidgets, Param_IsActive) == 0x000000, "Member 'PostGameMenuStack_C_UpdateIntermissionWidgets::Param_IsActive' has a wrong offset!");
+static_assert(offsetof(PostGameMenuStack_C_UpdateIntermissionWidgets, IsActive_0) == 0x000000, "Member 'PostGameMenuStack_C_UpdateIntermissionWidgets::IsActive_0' has a wrong offset!");
 static_assert(offsetof(PostGameMenuStack_C_UpdateIntermissionWidgets, Temp_bool_Variable) == 0x000001, "Member 'PostGameMenuStack_C_UpdateIntermissionWidgets::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(PostGameMenuStack_C_UpdateIntermissionWidgets, Temp_byte_Variable) == 0x000002, "Member 'PostGameMenuStack_C_UpdateIntermissionWidgets::Temp_byte_Variable' has a wrong offset!");
 static_assert(offsetof(PostGameMenuStack_C_UpdateIntermissionWidgets, Temp_byte_Variable_1) == 0x000003, "Member 'PostGameMenuStack_C_UpdateIntermissionWidgets::Temp_byte_Variable_1' has a wrong offset!");

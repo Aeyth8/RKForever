@@ -54,11 +54,11 @@ void UAsyncCharacterSpawner_C::RemoveCharacter()
 // Function AsyncCharacterSpawner.AsyncCharacterSpawner_C.SpawnCharacter
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMarinerPlayableCharacter*        Param_Character                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ACharacterCustomizationPedestalInterior_C*Param_InteriorPedestal                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AMarinerCharacterSpawner*         Param_CharacterSpawner                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMarinerPlayableCharacter*        Character_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ACharacterCustomizationPedestalInterior_C*InteriorPedestal_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AMarinerCharacterSpawner*         CharacterSpawner_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAsyncCharacterSpawner_C::SpawnCharacter(class UMarinerPlayableCharacter* Param_Character, class ACharacterCustomizationPedestalInterior_C* Param_InteriorPedestal, class AMarinerCharacterSpawner* Param_CharacterSpawner)
+void UAsyncCharacterSpawner_C::SpawnCharacter(class UMarinerPlayableCharacter* Character_0, class ACharacterCustomizationPedestalInterior_C* InteriorPedestal_0, class AMarinerCharacterSpawner* CharacterSpawner_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -67,9 +67,9 @@ void UAsyncCharacterSpawner_C::SpawnCharacter(class UMarinerPlayableCharacter* P
 
 	Params::AsyncCharacterSpawner_C_SpawnCharacter Parms{};
 
-	Parms.Param_Character = Param_Character;
-	Parms.Param_InteriorPedestal = Param_InteriorPedestal;
-	Parms.Param_CharacterSpawner = Param_CharacterSpawner;
+	Parms.Character_0 = Character_0;
+	Parms.InteriorPedestal_0 = InteriorPedestal_0;
+	Parms.CharacterSpawner_0 = CharacterSpawner_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

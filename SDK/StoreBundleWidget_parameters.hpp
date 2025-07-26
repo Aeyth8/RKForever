@@ -24,7 +24,7 @@ struct StoreBundleWidget_C_ExecuteUbergraph_StoreBundleWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F4C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMenuManager*                    CallFunc_GetMenuManager_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IMarinerInputInterface> CallFunc_HandleInput_self_CastInput;               // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -51,13 +51,13 @@ struct StoreBundleWidget_C_SetBundleOfferToShow final
 public:
 	struct FMangoNativeOffer                      InOffer;                                           // 0x0000(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CanPurchase;                                       // 0x00C0(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Param_AllowMouseInteraction;                       // 0x00C1(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          AllowMouseInteraction_0;                           // 0x00C1(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(StoreBundleWidget_C_SetBundleOfferToShow) == 0x000008, "Wrong alignment on StoreBundleWidget_C_SetBundleOfferToShow");
 static_assert(sizeof(StoreBundleWidget_C_SetBundleOfferToShow) == 0x0000C8, "Wrong size on StoreBundleWidget_C_SetBundleOfferToShow");
 static_assert(offsetof(StoreBundleWidget_C_SetBundleOfferToShow, InOffer) == 0x000000, "Member 'StoreBundleWidget_C_SetBundleOfferToShow::InOffer' has a wrong offset!");
 static_assert(offsetof(StoreBundleWidget_C_SetBundleOfferToShow, CanPurchase) == 0x0000C0, "Member 'StoreBundleWidget_C_SetBundleOfferToShow::CanPurchase' has a wrong offset!");
-static_assert(offsetof(StoreBundleWidget_C_SetBundleOfferToShow, Param_AllowMouseInteraction) == 0x0000C1, "Member 'StoreBundleWidget_C_SetBundleOfferToShow::Param_AllowMouseInteraction' has a wrong offset!");
+static_assert(offsetof(StoreBundleWidget_C_SetBundleOfferToShow, AllowMouseInteraction_0) == 0x0000C1, "Member 'StoreBundleWidget_C_SetBundleOfferToShow::AllowMouseInteraction_0' has a wrong offset!");
 
 // Function StoreBundleWidget.StoreBundleWidget_C.Populate
 // 0x01C8 (0x01C8 - 0x0000)
@@ -66,11 +66,11 @@ struct StoreBundleWidget_C_Populate final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F4D[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F4E[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Temp_text_Variable;                                // 0x0028(0x0018)()
 	struct FLinearColor                           Temp_struct_Variable_2;                            // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -82,7 +82,7 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00C8(0x0018)()
 	class FText                                   CallFunc_GetDisplayPriceForNativeOfferId_ReturnValue; // 0x00E0(0x0018)()
 	bool                                          Temp_bool_Variable_2;                              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F4F[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default_1;                           // 0x0100(0x0018)()
 	struct FLinearColor                           K2Node_Select_Default_2;                           // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerFrontEndGlobals*                CallFunc_GetFrontEndGlobals_ReturnValue;           // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

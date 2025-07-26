@@ -142,9 +142,9 @@ class ULiveLinkSourceSettings : public UObject
 {
 public:
 	ELiveLinkSourceMode                           Mode;                                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DB1[0x3];                                      // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLiveLinkSourceBufferManagementSettings BufferSettings;                                    // 0x002C(0x0030)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DB2[0x4];                                      // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ConnectionString;                                  // 0x0060(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class ULiveLinkSourceFactory>     Factory;                                           // 0x0070(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -187,11 +187,11 @@ static_assert(sizeof(ULiveLinkSourceFactory) == 0x000028, "Wrong size on ULiveLi
 class ULiveLinkVirtualSubject : public UObject
 {
 public:
-	uint8                                         Pad_DB3[0x8];                                      // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FLiveLinkSubjectName>           Subjects;                                          // 0x0038(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<class ULiveLinkFrameTranslator*>       FrameTranslators;                                  // 0x0048(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_DB4[0x80];                                     // 0x0058(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58[0x80];                                      // 0x0058(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

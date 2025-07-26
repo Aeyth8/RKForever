@@ -27,12 +27,12 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(EMangoQuestSlot SlotId)>       K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void(bool bWasSuccessful, EMangoQuestSlot SlotId, struct FMangoQuestDescription& NewQuest)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2032[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMangoQuestManager*                     CallFunc_Get_ReturnValue;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMangoQuestSlot                               K2Node_CustomEvent_SlotId_1;                       // 0x0030(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bWasSuccessful;                 // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMangoQuestSlot                               K2Node_CustomEvent_SlotId;                         // 0x0032(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2033[0x5];                                     // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 K2Node_CustomEvent_NewQuest;                       // 0x0038(0x0118)(ConstParm)
 };
 static_assert(alignof(AsyncFlowQuest_C_ExecuteUbergraph_AsyncFlowQuest) == 0x000008, "Wrong alignment on AsyncFlowQuest_C_ExecuteUbergraph_AsyncFlowQuest");
@@ -53,7 +53,7 @@ struct AsyncFlowQuest_C_ClaimCompleted final
 public:
 	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EMangoQuestSlot                               SlotId;                                            // 0x0001(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2034[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoQuestDescription                 NewQuest;                                          // 0x0008(0x0118)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
 static_assert(alignof(AsyncFlowQuest_C_ClaimCompleted) == 0x000008, "Wrong alignment on AsyncFlowQuest_C_ClaimCompleted");
@@ -90,14 +90,14 @@ struct AsyncFlowQuest_C_OnClaimRewardStarted final
 {
 public:
 	EMangoQuestSlot                               SlotId;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2035[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameInstance*                   CallFunc_GetMarinerGameInstance_ReturnValue;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerMessageBoxManager*              CallFunc_GetMessageBoxManager_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMangoQuestManager*                     CallFunc_Get_ReturnValue;                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(struct FKey& KeyPressed)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor)
 	struct FMangoQuestReward                      CallFunc_GetQuestReward_OutReward;                 // 0x0030(0x00C8)()
 	bool                                          CallFunc_GetQuestReward_ReturnValue;               // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2036[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMarinerMessageBoxData                 K2Node_MakeStruct_MarinerMessageBoxData;           // 0x0100(0x0170)(ContainsInstancedReference)
 	int32                                         CallFunc_ShowMessageBox_ReturnValue;               // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -135,7 +135,7 @@ struct AsyncFlowQuest_C_OnClaimRewardCompleted final
 public:
 	bool                                          WasSuccessful;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 	EMangoQuestSlot                               SlotId;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2037[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerBasePlayerController*           CallFunc_TryAndGetLocalPlayerController_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMarinerGameInstance*                   CallFunc_GetMarinerGameInstance_ReturnValue;       // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(struct FKey& KeyPressed)>      K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor)
@@ -144,7 +144,7 @@ public:
 	struct FMarinerMessageBoxData                 K2Node_MakeStruct_MarinerMessageBoxData;           // 0x0040(0x0170)(ContainsInstancedReference)
 	class UMarinerMessageBoxManager*              CallFunc_GetMessageBoxManager_ReturnValue;         // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_RemoveMessageBox_ReturnValue;             // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2038[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMarinerGameInstance*                   CallFunc_GetMarinerGameInstance_ReturnValue_2;     // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x01C8(0x0010)(ConstParm, ZeroConstructor, NoDestructor)
 	class UMarinerMessageBoxManager*              CallFunc_GetMessageBoxManager_ReturnValue_1;       // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

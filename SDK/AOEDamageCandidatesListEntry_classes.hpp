@@ -28,7 +28,7 @@ public:
 	UMulticastInlineDelegateProperty_             OnAOEDamageCandidatesListEntryClicked;             // 0x0248(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void OnAOEDamageCandidatesListEntryClicked__DelegateSignature(const class FText& Param_ActorName);
+	void OnAOEDamageCandidatesListEntryClicked__DelegateSignature(const class FText& ActorName_0);
 	void ExecuteUbergraph_AOEDamageCandidatesListEntry(int32 EntryPoint);
 	void BndEvt__SelectActorButton_K2Node_ComponentBoundEvent_143_OnButtonClickedEvent__DelegateSignature();
 

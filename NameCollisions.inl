@@ -9,13 +9,13 @@
 // FORWARD DECLARATIONS
 
 
-namespace CharacterUpsellWidget_0 { class UCharacterUpsellWidget_C; }
-
 namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
+
+namespace CharacterUpsellWidget { class UCharacterUpsellWidget_C; }
 
 namespace ProfileMenu_0 { class UProfileMenu_C; }
 
-namespace CharacterUpsellWidget { class UCharacterUpsellWidget_C; }
+namespace CharacterUpsellWidget_0 { class UCharacterUpsellWidget_C; }
 
 namespace ProfileMenu { class UProfileMenu_C; }
 

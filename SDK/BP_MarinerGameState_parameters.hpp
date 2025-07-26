@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "OnRoundTransitionPayload_structs.hpp"
-#include "Engine_structs.hpp"
 #include "OnPreroundCountdownPayload_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ExtraTimeStates_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -40,13 +40,13 @@ static_assert(offsetof(BP_MarinerGameState_C_OnPreroundCountdownChange__Delegate
 struct BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature final
 {
 public:
-	bool                                          Param_IsInExtraTime;                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	ExtraTimeStates                               Param_ExtraTimeState;                              // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInExtraTime_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ExtraTimeStates                               ExtraTimeState_0;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature) == 0x000001, "Wrong alignment on BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature");
 static_assert(sizeof(BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature) == 0x000002, "Wrong size on BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature");
-static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature, Param_IsInExtraTime) == 0x000000, "Member 'BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature::Param_IsInExtraTime' has a wrong offset!");
-static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature, Param_ExtraTimeState) == 0x000001, "Member 'BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature::Param_ExtraTimeState' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature, IsInExtraTime_0) == 0x000000, "Member 'BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature::IsInExtraTime_0' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature, ExtraTimeState_0) == 0x000001, "Member 'BP_MarinerGameState_C_OnExtraTimeChange__DelegateSignature::ExtraTimeState_0' has a wrong offset!");
 
 // Function BP_MarinerGameState.BP_MarinerGameState_C.OnExtraTimeTimerChange__DelegateSignature
 // 0x0004 (0x0004 - 0x0000)
@@ -78,11 +78,11 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2256[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_CustomEvent_TimerLength_1;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_MaxNumberToShow;                // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_ShouldEnable;                   // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2257[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_CustomEvent_PreRoundCountdownEndTimeStamp;  // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -92,18 +92,18 @@ public:
 	TDelegate<void(float PreRoundCountdownEndTimeStamp)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x003C(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2258[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetServerWorldTimeSeconds_ReturnValue;    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2259[0x3];                                     // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0060(0x0008)(NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_K2_GetTimerElapsedTimeHandle_ReturnValue_1; // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_3;        // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Percent_FloatFloat_ReturnValue;           // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_225A[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NearlyEqual_FloatFloat_ReturnValue;       // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -112,7 +112,7 @@ public:
 	bool                                          K2Node_CustomEvent_IsInExtraTime_1;                // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ExtraTimeStates                               K2Node_CustomEvent_ExtraTimeState_1;               // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_IsEnabled;                      // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_225B[0x1];                                     // 0x0083(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_83[0x1];                                       // 0x0083(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_CustomEvent_TimerLength;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -122,7 +122,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMusicManager_C*                        CallFunc_GetMusicManager_MusicManager;             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_225C[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x00A8(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	bool                                          CallFunc_IsBuildShipping_ReturnValue;              // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsBuildShipping_ReturnValue_1;            // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -134,7 +134,7 @@ public:
 	class FString                                 K2Node_CustomEvent_ID_6;                           // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class AMarinerBasePlayerController*           CallFunc_TryAndGetLocalPlayerController_ReturnValue; // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_GetControlRotation_ReturnValue;           // 0x00E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_225D[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Conv_RotatorToString_ReturnValue;         // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetPlayerName_ReturnValue;                // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_CustomEvent_ID_5;                           // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
@@ -143,116 +143,116 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class APlayerState*                           CallFunc_Array_Get_Item;                           // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_225E[0x4];                                     // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerPlayerState*                    K2Node_DynamicCast_AsMariner_Player_State;         // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_225F[0x6];                                     // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacter*                      CallFunc_TryAndGetControlledCharacter_ReturnValue; // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0170(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2260[0x4];                                     // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerName_ReturnValue_1;              // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_VectorToString_ReturnValue;          // 0x0190(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2261[0x7];                                     // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x01A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_1;               // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Map_Find_Value;                           // 0x01C4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2262[0x7];                                     // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_ID_4;                           // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_CustomEvent_ID_3;                           // 0x01E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x01F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2263[0x7];                                     // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0220(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class AMarinerBasePlayerController*           CallFunc_TryAndGetLocalPlayerController_ReturnValue_1; // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetPlayerName_ReturnValue_2;              // 0x0238(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2264[0x3];                                     // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_249[0x3];                                      // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2265[0x3];                                     // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_251[0x3];                                      // 0x0251(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2266[0x3];                                     // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_25D[0x3];                                      // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue_3;               // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2267[0x2];                                     // 0x026A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26A[0x2];                                      // 0x026A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAuthority_ReturnValue_4;               // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2268[0x3];                                     // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_271[0x3];                                      // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0274(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2269[0x4];                                     // 0x0284(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_284[0x4];                                      // 0x0284(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_1;        // 0x0288(0x0008)(NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_2;        // 0x0290(0x0008)(NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_3;        // 0x0298(0x0008)(NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x02A0(0x0010)(ZeroConstructor, NoDestructor)
 	bool                                          CallFunc_HasAuthority_ReturnValue_5;               // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_226A[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_4;        // 0x02B8(0x0008)(NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_226B[0x4];                                     // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_ID_2;                           // 0x02C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_X;                              // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Y;                              // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Z;                              // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_226C[0x4];                                     // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E4[0x4];                                      // 0x02E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           CallFunc_Array_Get_Item_1;                         // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_226D[0x4];                                     // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2FC[0x4];                                      // 0x02FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerPlayerState*                    K2Node_DynamicCast_AsMariner_Player_State_1;       // 0x0300(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_226E[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacter*                      CallFunc_TryAndGetControlledCharacter_ReturnValue_1; // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetPlayerName_ReturnValue_3;              // 0x0318(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0328(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x03B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HasAuthority_ReturnValue_6;               // 0x03B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_226F[0x5];                                     // 0x03B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B3[0x5];                                      // 0x03B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue_2;               // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerState*                           CallFunc_Array_Get_Item_2;                         // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2270[0x4];                                     // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerPlayerState*                    K2Node_DynamicCast_AsMariner_Player_State_2;       // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x03D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2271[0x6];                                     // 0x03DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DA[0x6];                                      // 0x03DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerCharacter*                      CallFunc_TryAndGetControlledCharacter_ReturnValue_2; // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult_1;     // 0x03E8(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_K2_SetActorLocation_ReturnValue_1;        // 0x0470(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2272[0x7];                                     // 0x0471(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_471[0x7];                                      // 0x0471(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerName_ReturnValue_4;              // 0x0478(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_CustomEvent_ID_1;                           // 0x0488(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Pitch_1;                        // 0x0498(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Yaw_1;                          // 0x049C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Roll_1;                         // 0x04A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_4;          // 0x04A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2273[0x3];                                     // 0x04A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A5[0x3];                                      // 0x04A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_ID;                             // 0x04A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Pitch;                          // 0x04B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Yaw;                            // 0x04BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_CustomEvent_Roll;                           // 0x04C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2274[0x4];                                     // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMarinerBasePlayerController*           CallFunc_TryAndGetLocalPlayerController_ReturnValue_2; // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x04D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2275[0x4];                                     // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetPlayerName_ReturnValue_5;              // 0x04E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x04F0(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_5;          // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2276[0x7];                                     // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_501[0x7];                                      // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FHitResult>                     CallFunc_BoxTraceMultiForObjects_OutHits;          // 0x0508(0x0010)(ZeroConstructor, ReferenceParm, ContainsInstancedReference)
 	bool                                          CallFunc_BoxTraceMultiForObjects_ReturnValue;      // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2277[0x3];                                     // 0x0519(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_519[0x3];                                      // 0x0519(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x051C(0x0010)(ZeroConstructor, NoDestructor)
 	TDelegate<void(bool IsInExtraTime, ExtraTimeStates ExtraTimeState)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x052C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_2278[0x4];                                     // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53C[0x4];                                      // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue_5;        // 0x0540(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MarinerGameState_C_ExecuteUbergraph_BP_MarinerGameState) == 0x000008, "Wrong alignment on BP_MarinerGameState_C_ExecuteUbergraph_BP_MarinerGameState");
@@ -502,13 +502,13 @@ static_assert(offsetof(BP_MarinerGameState_C_DebugMoveActorToSavedLocation, ID) 
 struct BP_MarinerGameState_C_OnExtraTimeChange_Event final
 {
 public:
-	bool                                          Param_IsInExtraTime;                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	ExtraTimeStates                               Param_ExtraTimeState;                              // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInExtraTime_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ExtraTimeStates                               ExtraTimeState_0;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MarinerGameState_C_OnExtraTimeChange_Event) == 0x000001, "Wrong alignment on BP_MarinerGameState_C_OnExtraTimeChange_Event");
 static_assert(sizeof(BP_MarinerGameState_C_OnExtraTimeChange_Event) == 0x000002, "Wrong size on BP_MarinerGameState_C_OnExtraTimeChange_Event");
-static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange_Event, Param_IsInExtraTime) == 0x000000, "Member 'BP_MarinerGameState_C_OnExtraTimeChange_Event::Param_IsInExtraTime' has a wrong offset!");
-static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange_Event, Param_ExtraTimeState) == 0x000001, "Member 'BP_MarinerGameState_C_OnExtraTimeChange_Event::Param_ExtraTimeState' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange_Event, IsInExtraTime_0) == 0x000000, "Member 'BP_MarinerGameState_C_OnExtraTimeChange_Event::IsInExtraTime_0' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_OnExtraTimeChange_Event, ExtraTimeState_0) == 0x000001, "Member 'BP_MarinerGameState_C_OnExtraTimeChange_Event::ExtraTimeState_0' has a wrong offset!");
 
 // Function BP_MarinerGameState.BP_MarinerGameState_C.MulticastEnableExtraTimeTimer
 // 0x0008 (0x0008 - 0x0000)
@@ -516,7 +516,7 @@ struct BP_MarinerGameState_C_MulticastEnableExtraTimeTimer final
 {
 public:
 	bool                                          IsEnabled;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2279[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TimerLength;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MarinerGameState_C_MulticastEnableExtraTimeTimer) == 0x000004, "Wrong alignment on BP_MarinerGameState_C_MulticastEnableExtraTimeTimer");
@@ -529,26 +529,26 @@ static_assert(offsetof(BP_MarinerGameState_C_MulticastEnableExtraTimeTimer, Time
 struct BP_MarinerGameState_C_MulticastSetExtraTime final
 {
 public:
-	bool                                          Param_IsInExtraTime;                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	ExtraTimeStates                               Param_ExtraTimeState;                              // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInExtraTime_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ExtraTimeStates                               ExtraTimeState_0;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MarinerGameState_C_MulticastSetExtraTime) == 0x000001, "Wrong alignment on BP_MarinerGameState_C_MulticastSetExtraTime");
 static_assert(sizeof(BP_MarinerGameState_C_MulticastSetExtraTime) == 0x000002, "Wrong size on BP_MarinerGameState_C_MulticastSetExtraTime");
-static_assert(offsetof(BP_MarinerGameState_C_MulticastSetExtraTime, Param_IsInExtraTime) == 0x000000, "Member 'BP_MarinerGameState_C_MulticastSetExtraTime::Param_IsInExtraTime' has a wrong offset!");
-static_assert(offsetof(BP_MarinerGameState_C_MulticastSetExtraTime, Param_ExtraTimeState) == 0x000001, "Member 'BP_MarinerGameState_C_MulticastSetExtraTime::Param_ExtraTimeState' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_MulticastSetExtraTime, IsInExtraTime_0) == 0x000000, "Member 'BP_MarinerGameState_C_MulticastSetExtraTime::IsInExtraTime_0' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_MulticastSetExtraTime, ExtraTimeState_0) == 0x000001, "Member 'BP_MarinerGameState_C_MulticastSetExtraTime::ExtraTimeState_0' has a wrong offset!");
 
 // Function BP_MarinerGameState.BP_MarinerGameState_C.ServerSetExtraTime
 // 0x0002 (0x0002 - 0x0000)
 struct BP_MarinerGameState_C_ServerSetExtraTime final
 {
 public:
-	bool                                          Param_IsInExtraTime;                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	ExtraTimeStates                               Param_ExtraTimeState;                              // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInExtraTime_0;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ExtraTimeStates                               ExtraTimeState_0;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MarinerGameState_C_ServerSetExtraTime) == 0x000001, "Wrong alignment on BP_MarinerGameState_C_ServerSetExtraTime");
 static_assert(sizeof(BP_MarinerGameState_C_ServerSetExtraTime) == 0x000002, "Wrong size on BP_MarinerGameState_C_ServerSetExtraTime");
-static_assert(offsetof(BP_MarinerGameState_C_ServerSetExtraTime, Param_IsInExtraTime) == 0x000000, "Member 'BP_MarinerGameState_C_ServerSetExtraTime::Param_IsInExtraTime' has a wrong offset!");
-static_assert(offsetof(BP_MarinerGameState_C_ServerSetExtraTime, Param_ExtraTimeState) == 0x000001, "Member 'BP_MarinerGameState_C_ServerSetExtraTime::Param_ExtraTimeState' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_ServerSetExtraTime, IsInExtraTime_0) == 0x000000, "Member 'BP_MarinerGameState_C_ServerSetExtraTime::IsInExtraTime_0' has a wrong offset!");
+static_assert(offsetof(BP_MarinerGameState_C_ServerSetExtraTime, ExtraTimeState_0) == 0x000001, "Member 'BP_MarinerGameState_C_ServerSetExtraTime::ExtraTimeState_0' has a wrong offset!");
 
 // Function BP_MarinerGameState.BP_MarinerGameState_C.PreroundCountdownTimerBind
 // 0x0004 (0x0004 - 0x0000)
@@ -607,7 +607,7 @@ public:
 	int32                                         MaxTimeToShow;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bShouldEnable;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         CallFunc_Add_ByteByte_ReturnValue;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_227A[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOnPreroundCountdownPayload            K2Node_MakeStruct_OnPreroundCountdownPayload;      // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MarinerGameState_C_SetUpdatePreroundCountdownPayload) == 0x000004, "Wrong alignment on BP_MarinerGameState_C_SetUpdatePreroundCountdownPayload");

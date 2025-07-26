@@ -26,7 +26,7 @@ struct MiniProgressionRewardPreview_C_ExecuteUbergraph_MiniProgressionRewardPrev
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21FA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoReward                           K2Node_Event_Reward;                               // 0x0008(0x0040)(ConstParm)
 };
 static_assert(alignof(MiniProgressionRewardPreview_C_ExecuteUbergraph_MiniProgressionRewardPreview) == 0x000008, "Wrong alignment on MiniProgressionRewardPreview_C_ExecuteUbergraph_MiniProgressionRewardPreview");
@@ -68,7 +68,7 @@ struct MiniProgressionRewardPreview_C_PopulateXP final
 {
 public:
 	int32                                         Xp;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21FB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0008(0x0088)()
 };
 static_assert(alignof(MiniProgressionRewardPreview_C_PopulateXP) == 0x000008, "Wrong alignment on MiniProgressionRewardPreview_C_PopulateXP");
@@ -82,7 +82,7 @@ struct MiniProgressionRewardPreview_C_PopulateRocketbucks final
 {
 public:
 	int32                                         RocketBucks;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21FC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0008(0x0018)()
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0020(0x0040)(HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0060(0x0040)(HasGetValueTypeHash)
@@ -108,16 +108,16 @@ struct MiniProgressionRewardPreview_C_PopulateRocketparts final
 {
 public:
 	int32                                         RocketParts;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21FD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             RocketPartIcon;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0010(0x0018)()
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0028(0x0040)(HasGetValueTypeHash)
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0068(0x0040)(HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21FE[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ZeroConstructor, ReferenceParm)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21FF[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00C8(0x0018)()
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00E0(0x0018)()
 	int32                                         CallFunc_Blueprint_GetSizeY_ReturnValue;           // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -201,7 +201,7 @@ public:
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2200[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoItem                             CallFunc_TryGetItemByCMSID_OutItem;                // 0x0050(0x0050)()
 	bool                                          CallFunc_TryGetItemByCMSID_ReturnValue;            // 0x00A0(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
@@ -219,12 +219,12 @@ static_assert(offsetof(MiniProgressionRewardPreview_C_PopulateProgressionReward,
 struct MiniProgressionRewardPreview_C_PopulateUIItemData final
 {
 public:
-	struct FMarinerUIItemButtonData               Param_UIItemButtonData;                            // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FMarinerUIItemButtonData               UIItemButtonData_0;                                // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(MiniProgressionRewardPreview_C_PopulateUIItemData) == 0x000008, "Wrong alignment on MiniProgressionRewardPreview_C_PopulateUIItemData");
 static_assert(sizeof(MiniProgressionRewardPreview_C_PopulateUIItemData) == 0x000078, "Wrong size on MiniProgressionRewardPreview_C_PopulateUIItemData");
-static_assert(offsetof(MiniProgressionRewardPreview_C_PopulateUIItemData, Param_UIItemButtonData) == 0x000000, "Member 'MiniProgressionRewardPreview_C_PopulateUIItemData::Param_UIItemButtonData' has a wrong offset!");
+static_assert(offsetof(MiniProgressionRewardPreview_C_PopulateUIItemData, UIItemButtonData_0) == 0x000000, "Member 'MiniProgressionRewardPreview_C_PopulateUIItemData::UIItemButtonData_0' has a wrong offset!");
 static_assert(offsetof(MiniProgressionRewardPreview_C_PopulateUIItemData, K2Node_SwitchEnum_CmpSuccess) == 0x000070, "Member 'MiniProgressionRewardPreview_C_PopulateUIItemData::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function MiniProgressionRewardPreview.MiniProgressionRewardPreview_C.PopulateBPXPBonusPersonal
@@ -233,7 +233,7 @@ struct MiniProgressionRewardPreview_C_PopulateBPXPBonusPersonal final
 {
 public:
 	int32                                         BonusPct;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2201[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0008(0x0088)()
 };
 static_assert(alignof(MiniProgressionRewardPreview_C_PopulateBPXPBonusPersonal) == 0x000008, "Wrong alignment on MiniProgressionRewardPreview_C_PopulateBPXPBonusPersonal");
@@ -247,7 +247,7 @@ struct MiniProgressionRewardPreview_C_PopulateBPXPBonusParty final
 {
 public:
 	int32                                         BonusPct;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2202[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0008(0x0088)()
 };
 static_assert(alignof(MiniProgressionRewardPreview_C_PopulateBPXPBonusParty) == 0x000008, "Wrong alignment on MiniProgressionRewardPreview_C_PopulateBPXPBonusParty");
@@ -263,7 +263,7 @@ public:
 	struct FMangoReward                           MangoReward;                                       // 0x0000(0x0040)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UMangoCMSManager*                       CallFunc_Get_ReturnValue;                          // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2203[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMangoItem                             CallFunc_TryGetItemByCMSID_OutItem;                // 0x0050(0x0050)()
 	bool                                          CallFunc_TryGetItemByCMSID_ReturnValue;            // 0x00A0(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)

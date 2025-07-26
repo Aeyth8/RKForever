@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "BP_MarinerGameState_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CaptureZoneStates_structs.hpp"
-#include "BP_MarinerGameState_classes.hpp"
 
 
 namespace SDK
@@ -27,21 +27,21 @@ public:
 	int32                                         Team0PlayersWithStock;                             // 0x0A30(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Team1PlayersWithStock;                             // 0x0A34(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         InGameTime;                                        // 0x0A38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E9C[0x4];                                     // 0x0A3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A3C[0x4];                                      // 0x0A3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OnStockRemovalAnimation;                           // 0x0A40(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         Team0TotalStocksLeft;                              // 0x0A50(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Team1TotalStocksLeft;                              // 0x0A54(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsTeam1UsingPoolOfLives;                           // 0x0A58(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsTeam0UsingPoolOfLives;                           // 0x0A59(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E9D[0x6];                                     // 0x0A5A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A5A[0x6];                                      // 0x0A5A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             Overtime;                                          // 0x0A60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	float                                         SecondsToReset;                                    // 0x0A70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E9E[0x4];                                     // 0x0A74(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A74[0x4];                                      // 0x0A74(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	UMulticastInlineDelegateProperty_             OvertimeUIChanges;                                 // 0x0A78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastInlineDelegateProperty_             OnePlayerWithStockOnTeam;                          // 0x0A88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	UMulticastInlineDelegateProperty_             SetPlayerPinNavpoint;                              // 0x0A98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          BadgeStealMode;                                    // 0x0AA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E9F[0x3];                                     // 0x0AA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_AA9[0x3];                                      // 0x0AA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumKOsToRefillBadge;                               // 0x0AAC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CaptureZoneMode;                                   // 0x0AB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	ECaptureZoneStates                            CurrentCaptureState;                               // 0x0AB1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)

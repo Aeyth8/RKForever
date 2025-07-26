@@ -483,13 +483,13 @@ void UAudioMixerBlueprintLibrary::StopAnalyzingOutput(const class UObject* World
 // Parameters:
 // class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EAudioRecordingExportType               ExportType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundSubmix*                     SubmixToRecord                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundWave*                       ExistingSoundWaveToOverwrite                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USoundWave*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(const class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const class FString& Param_Name, const class FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite)
+class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(const class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const class FString& Name_0, const class FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite)
 {
 	static class UFunction* Func = nullptr;
 
@@ -500,7 +500,7 @@ class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(const class U
 
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.ExportType = ExportType;
-	Parms.Param_Name = std::move(Param_Name);
+	Parms.Name_0 = std::move(Name_0);
 	Parms.Path = std::move(Path);
 	Parms.SubmixToRecord = SubmixToRecord;
 	Parms.ExistingSoundWaveToOverwrite = ExistingSoundWaveToOverwrite;
