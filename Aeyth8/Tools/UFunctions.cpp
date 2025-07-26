@@ -126,7 +126,7 @@ UFunctions::BrowseReturnVal UFunctions::Browse(SDK::UEngine* This, SDK::FWorldCo
 	
 }
 
-bool UFunctions::InitListen(SDK::UIpNetDriver* This, SDK::UObject* InNotify, SDK::FURL& LocalURL, bool bReuseAddressAndPort, SDK::FString& Error)
+bool UFunctions::InitListen(SDK::UIpNetDriver* This, int32_t* InNotify, SDK::FURL& LocalURL, bool bReuseAddressAndPort, SDK::FString& Error)
 {
 	LogA("InitListen", This->GetFullName() + " | " + Helpers::FURLParser(LocalURL));
 	LocalURL.Port = 1170;

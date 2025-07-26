@@ -57,8 +57,12 @@ void Mariner::Init_Hooks()
 		Hooks::CreateAndEnableHooks(HookList);
 
 		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
-		BytePatcher::ReplaceBytes(PB(0xA4CD30), {0xB0, 0x01, RETN, NOP, NOP}); // Removes the EAC failed to initialize popup.
 
+		BYTE ReturnOne[5]{0xB0, 0x01, RETN, NOP, NOP};
+
+		BytePatcher::ReplaceBytes(PB(0xA4CD30), ReturnOne); // Removes the EAC failed to initialize popup.
+		BytePatcher::ReplaceBytes(PB(0x9D9C90), ReturnOne); // UMangoCMSManager::TryGetCMSItemByAssetPath() should give ownership to all cosmetics/characters.		
+		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.
 		
 	}
 }
