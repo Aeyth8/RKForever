@@ -64,6 +64,9 @@
     <ClCompile Include="SDK\Engine_functions.cpp">
       <Filter>SDK\Core</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\UMG_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

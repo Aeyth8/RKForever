@@ -8,6 +8,9 @@ namespace OFF
 {
 	// Basic UE Functions
 
+	extern OFFSET GEngine;
+	extern OFFSET GWorld;
+
 	extern OFFSET FRealloc;
 	extern OFFSET FFree;
 

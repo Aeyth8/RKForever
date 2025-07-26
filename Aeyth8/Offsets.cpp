@@ -6,6 +6,9 @@ namespace OFF
 {
 	// Basic UE Functions
 
+	OFFSET GEngine("GEngine", 0x4AC8278);
+	OFFSET GWorld("GWorld", 0x4ACAAF0);
+
 	OFFSET FRealloc("FMemory::Realloc", 0xE50F10);
 	OFFSET FFree("FMemory::Free", 0xE40660);
 	

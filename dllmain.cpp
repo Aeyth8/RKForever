@@ -26,6 +26,7 @@ static void Init() {
 	LogA("INITIALIZED", "The Global Base Address [GBA] is " + HexToString(GBA));
 
 	Mariner::Init_Hooks();
+	//Mariner::Init_Engine();
 
 	while (UWorld() == nullptr)
 	{
