@@ -16,6 +16,8 @@ namespace SDK
 
 	class UMarinerGameInstance;
 
+	class AMarinerPlayerController;
+	class AMarinerCharacter;
 	class AMarinerPlayerState;
 }
 
@@ -34,6 +36,7 @@ namespace Mariner
 
 	// -- Pointers
 
-	//SDK::* Player(const int& Index = 0);
+	SDK::AMarinerPlayerController* Player(const int& Index = 0);
+	SDK::AMarinerCharacter* Character(const int& Index = 0);
 }
 }

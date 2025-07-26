@@ -28,15 +28,6 @@
     <ClCompile Include="MinHook\src\trampoline.c">
       <Filter>MinHook\src</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Engine_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\CoreUObject_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Basic.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
     <ClCompile Include="Aeyth8\Hooks\Hooks.cpp">
       <Filter>Aeyth8\Hooks</Filter>
     </ClCompile>
@@ -44,9 +35,6 @@
       <Filter>Aeyth8\Tools</Filter>
     </ClCompile>
     <ClCompile Include="Aeyth8\Tools\Pointers.cpp">
-      <Filter>Aeyth8\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="Aeyth8\Tools\Tick.cpp">
       <Filter>Aeyth8\Tools</Filter>
     </ClCompile>
     <ClCompile Include="Aeyth8\Tools\UFunctions.cpp">
@@ -65,7 +53,16 @@
       <Filter>Aeyth8\Logic</Filter>
     </ClCompile>
     <ClCompile Include="SDK\CharacterCustomization_Emote_functions.cpp">
-      <Filter>SDK</Filter>
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Basic.cpp">
+      <Filter>SDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\CoreUObject_functions.cpp">
+      <Filter>SDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\Engine_functions.cpp">
+      <Filter>SDK\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,9 +117,6 @@
     <ClInclude Include="Aeyth8\Tools\Pointers.h">
       <Filter>Aeyth8\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="Aeyth8\Tools\Tick.hpp">
-      <Filter>Aeyth8\Tools</Filter>
-    </ClInclude>
     <ClInclude Include="Aeyth8\Tools\UFunctions.hpp">
       <Filter>Aeyth8\Tools</Filter>
     </ClInclude>
@@ -175,6 +169,9 @@
     </Filter>
     <Filter Include="Aeyth8\Logic">
       <UniqueIdentifier>{06c15d7f-1597-4ca5-9b41-d0cc78986c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Core">
+      <UniqueIdentifier>{17affa11-8aad-4cd6-8cf0-db63ac8164a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

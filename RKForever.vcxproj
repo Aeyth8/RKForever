@@ -155,7 +155,6 @@
     </ClCompile>
     <ClCompile Include="Aeyth8\Tools\BytePatcher.cpp" />
     <ClCompile Include="Aeyth8\Tools\Pointers.cpp" />
-    <ClCompile Include="Aeyth8\Tools\Tick.cpp" />
     <ClCompile Include="Aeyth8\Tools\UFunctions.cpp" />
     <ClCompile Include="dllmain.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
@@ -186,7 +185,6 @@
     <ClInclude Include="Aeyth8\Proxy8\ProxyTypes.h" />
     <ClInclude Include="Aeyth8\Tools\BytePatcher.h" />
     <ClInclude Include="Aeyth8\Tools\Pointers.h" />
-    <ClInclude Include="Aeyth8\Tools\Tick.hpp" />
     <ClInclude Include="Aeyth8\Tools\UFunctions.hpp" />
     <ClInclude Include="MinHook\MinHook.h" />
     <ClInclude Include="MinHook\src\buffer.h" />

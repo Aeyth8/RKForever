@@ -8,12 +8,12 @@ namespace OFF
 {
 	// Basic UE Functions
 
+	extern OFFSET FRealloc;
 	extern OFFSET FFree;
 
 	extern OFFSET UConsole;
 	extern OFFSET Login;
-	extern OFFSET PreLogin;
-	extern OFFSET MarinerPreLogin;
+	extern OFFSET PreLogin;	
 	extern OFFSET Browse;
 	extern OFFSET AppPreExit;
 	extern OFFSET SpawnActor;
@@ -24,12 +24,13 @@ namespace OFF
 
 	// Native Game Functions
 
+	extern OFFSET MarinerPreLogin;
 	extern OFFSET ShowMessageBox;
 	extern OFFSET ShowMessageBoxManager;
+	extern OFFSET StartLogin;
 
 	// Imported DLL Functions
 
-	//OFFSET IsSnapNetLicenseValid;
 
 }
 }
