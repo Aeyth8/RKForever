@@ -67,6 +67,9 @@
     <ClCompile Include="SDK\UMG_functions.cpp">
       <Filter>SDK\CPP</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\DebugPlayMenu_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

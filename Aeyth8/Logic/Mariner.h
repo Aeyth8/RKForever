@@ -16,6 +16,7 @@ namespace SDK
 	class UWorld;
 
 	class UMarinerGameInstance;
+	class UMarinerUIHelpers;
 
 	class AMarinerPlayerController;
 	class AMarinerCharacter;
@@ -29,6 +30,7 @@ namespace Mariner
 	// -- Vars
 
 	extern SDK::UMarinerGameInstance* GameInstance;
+	extern SDK::UMarinerUIHelpers* UIHelpers;
 
 	// -- Initialization
 

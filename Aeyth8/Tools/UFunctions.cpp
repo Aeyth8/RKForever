@@ -3,7 +3,7 @@
 #include "../Global.hpp"
 #include "../Hooks/Hooks.hpp"
 #include "../Offsets.h"
-#include "../../SDK/CharacterCustomization_classes.hpp"
+
 
 /*
 
@@ -104,12 +104,28 @@ using namespace Global;
 		UFunctions
 */
 
+#include "../../SDK/Mariner_classes.hpp"
+#include "../../SDK/CharacterCustomization_classes.hpp"
+#include "../../SDK/DebugPlayMenu_classes.hpp"
+#include "../Logic/Mariner.h"
+
 void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 {
 	std::string StrCommand = Command.ToString();
 
 	LogA("UConsole", StrCommand);
-	if (StrCommand == "char") Pointers::GetLastOf<SDK::UCharacterCustomization_C>(false)->LocalProfile.MangoId = L"Aeyth8";
+	//if (StrCommand == "char") Pointers::GetLastOf<SDK::UCharacterCustomization_C>(false)->LocalProfile.MangoId = L"Aeyth8";
+	if (StrCommand == "debug")
+	{
+		/*SDK::UMarinerPlaylistMenu* Menu = Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>();
+		SDK::UClass* Widget = Menu->DebugPlayMenuType.Get();
+		SDK::UUserWidget* DebugMenu = Mariner::UIHelpers->CreateWidgetWithOwner(Widget, Menu);
+		DebugMenu->SetVisibility(SDK::ESlateVisibility::Visible);*/
+
+		SDK::UMarinerMenuStackManager* Manager = Pointers::GetLastOf<SDK::UMarinerMenuStackManager>();
+		Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get());
+		Manager->PushToActiveStack(Pointers::GetLastOf<SDK::UDebugPlayMenu_C>());
+	}
 	OFF::UConsole.VerifyFC<Decl::UConsole>()(This, Command);
 }
 

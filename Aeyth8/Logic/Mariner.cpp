@@ -9,6 +9,7 @@
 
 #include "../../SDK/Mariner_classes.hpp"
 #include "../../SDK/Mariner_structs.hpp"
+#include "../../SDK/DebugPlayMenu_classes.hpp"
 
 /*
 
@@ -25,6 +26,7 @@ using namespace A8CL; using namespace Global;
 // -- Vars
 
 SDK::UMarinerGameInstance* Mariner::GameInstance{nullptr};
+SDK::UMarinerUIHelpers*    Mariner::UIHelpers{nullptr};
 
 // -- Constants
 
@@ -59,25 +61,6 @@ static constexpr const int32& GetIndex(enum CharacterButtonIndex Character)
 static void OnLoginStarted(SDK::UMangoConnectionManager* This, uint32 NoClue)
 {
 	if (Mariner::GameInstance) Mariner::GameInstance->OnMovieCompleted();
-
-	std::vector<SDK::UMarinerPlayableCharacter*> Characters = Pointers::FindObjects<SDK::UMarinerPlayableCharacter>();
-	for (SDK::UMarinerPlayableCharacter*& Character : Characters)
-	{
-		LogA("Character", Character->GetFullName());
-	}
-
-	/*std::vector<SDK::UMarinerCharacterSelectButton*> Buttons = Pointers::FindObjects<SDK::UMarinerCharacterSelectButton>(true);
-	
-	for (SDK::UMarinerCharacterSelectButton*& Button : Buttons)
-	{
-		if (Button->Name.Number == GetIndex(Topnotch))
-		{
-			Button->SetVisibility(SDK::ESlateVisibility::Hidden);
-		}
-		LogA("Button", std::to_string(Button->Index) + " | " + std::to_string(Button->Name.Number));
-		Button->SetVisibility(SDK::ESlateVisibility::Hidden);
-		
-	}*/
 }
 
 static std::vector<Hooks::HookStructure> HookList =
@@ -91,22 +74,24 @@ static std::vector<Hooks::HookStructure> HookList =
 	{OFF::InitListen, UFunctions::InitListen},
 };
 
+//A8CL::OFFSET ItemOwned("IsItemOwned", 0xA14D90); Never seems to get called when hooked, probably scrapped and swapped to using UMangoInventoryManager::GetInventorySkin()
 
 void Mariner::Init_Hooks()
 {
 	if (Hooks::Init())
 	{
 		Hooks::CreateAndEnableHooks(HookList);
-
 		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
 
 		BYTE ReturnOne[5]{0xB0, 0x01, RETN, NOP, NOP};
 
 		BytePatcher::ReplaceBytes(PB(0xA4CD30), ReturnOne); // Removes the EAC failed to initialize popup.
-		BytePatcher::ReplaceBytes(PB(0x9D9C90), ReturnOne); // UMangoCMSManager::TryGetCMSItemByAssetPath() should give ownership to all cosmetics/characters.		
+		BytePatcher::ReplaceBytes(PB(0x9D9C90), ReturnOne); // UMangoCMSManager::TryGetCMSItemByAssetPath() should give ownership to all cosmetics/characters.
+		BytePatcher::ReplaceBytes(PB(0xA0B1C0), ReturnOne); // UMangoInventoryManager::GetInventorySkin() should allow for all skins to be unlocked.
+		BytePatcher::ReplaceBytes(PB(0xA14180), ReturnOne); // UMangoInventoryManager::IsCharacterOwned() should get rid of the stupid text saying we don't own them.
 		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.
 		BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
-		BytePatcher::ReplaceBytes(PB(0xA14180), ReturnOne); // UMangoInventoryManager::IsCharacterOwned() should get rid of the stupid text saying we don't own them. 
+		
 	}
 }
 
@@ -122,6 +107,7 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 	if (GWorld)
 	{
 		Mariner::GameInstance = static_cast<SDK::UMarinerGameInstance*>(GWorld->OwningGameInstance);
+		Mariner::UIHelpers = static_cast<SDK::UMarinerUIHelpers*>(SDK::UBlueprintFunctionLibrary::GetDefaultObj());
 		LogA("GameInstance", HexToString(*(uintptr_t*)GameInstance));
 		LogA("GameInstancePTR", HexToString((uintptr_t)GameInstance));
 	}
