@@ -124,8 +124,13 @@ void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 
 		SDK::UMarinerMenuStackManager* Manager = Pointers::GetLastOf<SDK::UMarinerMenuStackManager>();
 		Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get());
-		Manager->PushToActiveStack(Pointers::GetLastOf<SDK::UDebugPlayMenu_C>());
+		//Manager->PushToActiveStack(Pointers::GetLastOf<SDK::UDebugPlayMenu_C>());
 	}
+	else if (StrCommand == "name")
+	{
+		LogA("MangoId", Mariner::GetLocalProfile()->MangoId.ToString());
+	}
+
 	OFF::UConsole.VerifyFC<Decl::UConsole>()(This, Command);
 }
 

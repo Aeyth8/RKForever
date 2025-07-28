@@ -9,8 +9,11 @@ namespace OFF
 	OFFSET GEngine("GEngine", 0x4AC8278);
 	OFFSET GWorld("GWorld", 0x4ACAAF0);
 
+	OFFSET FMalloc("FMemory::Malloc", 0xE4ED20);
 	OFFSET FRealloc("FMemory::Realloc", 0xE50F10);
 	OFFSET FFree("FMemory::Free", 0xE40660);
+	OFFSET ProcessMulticastDelegate("ProcessMulticastDelegate", 0x3C1BA0);
+	OFFSET LogFInternalImpl("FMsg::Logf_InternalImpl", 0xE86E90);
 	
 	OFFSET UConsole("UConsole::ConsoleCommand", 0x2439460);
 	OFFSET Login("AGameModeBase::Login", 0x20218B0);

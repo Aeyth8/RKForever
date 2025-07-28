@@ -32,6 +32,7 @@ SDK::UMarinerUIHelpers*    Mariner::UIHelpers{nullptr};
 
 constexpr const BYTE NOP{0x90};
 constexpr const BYTE RETN{0xC3};
+constexpr const BYTE JMP{0xEB}; // Jump short https://www.felixcloutier.com/x86/jmp
 
 // -- Hooks
 
@@ -74,7 +75,46 @@ static std::vector<Hooks::HookStructure> HookList =
 	{OFF::InitListen, UFunctions::InitListen},
 };
 
-//A8CL::OFFSET ItemOwned("IsItemOwned", 0xA14D90); Never seems to get called when hooked, probably scrapped and swapped to using UMangoInventoryManager::GetInventorySkin()
+A8CL::OFFSET HandleEquipRequest("HandleEquipRequest", 0x929D50);
+typedef void(__thiscall* EquipRequestT)(SDK::UMarinerEquipItemToProfile* This, bool bSuccess);
+A8CL::OFFSET oIDK("Idk", 0x908B50);
+typedef void(__thiscall* TIDK)(SDK::UMarinerEquipItemToProfile* This);
+void IDK(SDK::UMarinerEquipItemToProfile* This) // UMarinerEquipItemToProfile::Activate()
+{
+	std::string ItemsToEquip;
+	for (SDK::UMarinerCMSItemDataAsset*& DataAsset : This->ItemsToEquip)
+	{
+		ItemsToEquip += DataAsset->GetFullName() + " | ";
+	}
+	LogA("SDK::UMarinerEquipItemToProfile::Activate", ItemsToEquip);
+	LogA("Some stupid comparison byte", HexToString(OffsetToByte(PB(0x493BD40))));
+
+	
+	/*BYTE JustEQUIPITALREADY[19]{0};
+	memset(&JustEQUIPITALREADY, NOP, 19);
+	BytePatcher::ReplaceBytes(PB(0x929DC4), JustEQUIPITALREADY);
+
+	HandleEquipRequest.VerifyFC<EquipRequestT>()(This, true);*/
+	//This->OnProfileUpdated();
+
+	//This->EquipItemToProfile(This->WorldContextObject.Get(), This->ItemsToEquip, This->PlayableCharacter, false);
+	
+	//OFF::ProcessMulticastDelegate.VerifyFC<UFunctions::Decl::ProcessMulticastDelegate>()((__int64*)(reinterpret_cast<Multicast&>(This->SucceededOnServer).Pad), 0LL);
+	//OFF::ProcessMulticastDelegate.VerifyFC<UFunctions::Decl::ProcessMulticastDelegate>()(This + 0x30, 0LL);
+}
+
+/*
+
+I have spent SO MUCH TIME TRYING TO FIND THIS, so I will post exactly what the issue is.
+
+0x605C70 - UniqueIdValidator
+
+I have no proper name to give this, but this stupid function makes the MangoId 'INVALID' if your AMarinerPlayerState->UniqueId is invalid, so forcing the change does not matter.
+I am patching this worthless function so that it never needs to validate the pointless UniqueId again.
+
+
+*/
+
 
 void Mariner::Init_Hooks()
 {
@@ -82,6 +122,26 @@ void Mariner::Init_Hooks()
 	{
 		Hooks::CreateAndEnableHooks(HookList);
 		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
+		
+		//Hooks::CreateAndEnableHook(oIDK, IDK);
+		//BytePatcher::ReplaceByte(PB(0x908D0D), 0xEB); Removes fail condition for byte 493BD40 which is compared a lot so I am going to just patch *it*
+		//BytePatcher::ReplaceByte(PB(0x493BD40), 0x00); // I have no clue what this byte represents but patching it gets rid of some fail conditions, it doesn't get reverted but I assume it's an enum.
+		//BytePatcher::ReplaceByte(PB(0x493BAD0), 0x00);
+		BytePatcher::ReplaceByte(PB(0x908D04), 0xEB); // SHUTUP I HAVE A VALID MANGO ID
+
+		/*BYTE NoJump[2]{NOP, NOP};
+		BytePatcher::ReplaceBytes(PB(0x605C92), NoJump);
+		BytePatcher::ReplaceBytes(PB(0x605C9C), NoJump);*/
+
+		BytePatcher::ReplaceBytes(PB(0x909305),
+			{
+			 0x48, 0x8B, 0xCB,				// mov rcx, rbx
+			 0xBA, 0x01, 0x00, 0x00, 0x00,	// mov edx, 1
+			 NOP, 							// For easy alignment
+			 0xE8, 0x3D, 0x0A, 0x02, 0x00,	// call "HandleEquipRequest" (That name was guessed)
+			 RETN, NOP						// end function
+			}
+		); // Attempting to completely skip the STUPID API request that checks ownership and whatnot before equipping items, I have been on THIS FOR 9 HOURS
 
 		BYTE ReturnOne[5]{0xB0, 0x01, RETN, NOP, NOP};
 
@@ -89,6 +149,7 @@ void Mariner::Init_Hooks()
 		BytePatcher::ReplaceBytes(PB(0x9D9C90), ReturnOne); // UMangoCMSManager::TryGetCMSItemByAssetPath() should give ownership to all cosmetics/characters.
 		BytePatcher::ReplaceBytes(PB(0xA0B1C0), ReturnOne); // UMangoInventoryManager::GetInventorySkin() should allow for all skins to be unlocked.
 		BytePatcher::ReplaceBytes(PB(0xA14180), ReturnOne); // UMangoInventoryManager::IsCharacterOwned() should get rid of the stupid text saying we don't own them.
+		BytePatcher::ReplaceBytes(PB(0xA14D90), ReturnOne); // UMangoInventoryManager::IsItemOwned() should unlock all emotes.
 		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.
 		BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
 		
@@ -110,6 +171,20 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 		Mariner::UIHelpers = static_cast<SDK::UMarinerUIHelpers*>(SDK::UBlueprintFunctionLibrary::GetDefaultObj());
 		LogA("GameInstance", HexToString(*(uintptr_t*)GameInstance));
 		LogA("GameInstancePTR", HexToString((uintptr_t)GameInstance));
+		//SDK::FMangoProfile& Profile = const_cast<SDK::FMangoProfile&>(GameInstance->MangoManagersInstance->MangoPlayerManager->GetMangoProfile());
+		//Profile->MangoId = L"Aeyth8";
+		Mariner::GetLocalProfile()->MangoId = L"Aeyth8";
+		LogA("MangoId", Mariner::GetLocalProfile()->MangoId.ToString());
+
+		static const uint8 SpecialUniqueId[] = { 0x41, 0x00 , 0x65 , 0x00 , 0x79 , 0x00 , 0x74 , 0x00 , 0x68 , 0x00 , 0x38 , 0x00 , 0x52 , 0x00 , 0x4B , 0x00 , 0x46 , 0x00 , 0x6F , 0x00 , 0x72 , 0x00 , 0x65 , 0x00 , 0x76 , 0x00 , 0x65 , 0x00 , 0x72 , 0x00 };
+		SDK::TArray<uint8>* RepBytes = (SDK::TArray<uint8>*)(FMemory::Malloc(sizeof(SDK::TArray<uint8>)));
+		RepBytes->Data = (uint8*)FMemory::Malloc(30 * sizeof(uint8));
+		memcpy(RepBytes->Data, SpecialUniqueId, sizeof(SpecialUniqueId));
+		RepBytes->NumElements = 30;
+		RepBytes->MaxElements = 30;
+
+
+		if (Player()) Player()->PlayerState->UniqueId.ReplicationBytes = *RepBytes;
 	}
 }
 
@@ -127,7 +202,7 @@ SDK::UEngine* const& Mariner::GEngine(const bool bLog)
 
 SDK::UWorld* const& Mariner::GWorld(const bool bLog)
 {
-	SDK::UWorld*& World = *reinterpret_cast<SDK::UWorld**>(OFF::GEngine.PlusBase());
+	SDK::UWorld*& World = *reinterpret_cast<SDK::UWorld**>(OFF::GWorld.PlusBase());
 	if (bLog && IsNull(World))
 	{
 		LogA("Logic", "GWorld is a null pointer!");
@@ -149,4 +224,55 @@ SDK::AMarinerCharacter* Mariner::Character(const int& Index)
 	}
 
 	return nullptr;
+}
+
+SDK::FMangoProfile* Mariner::GetLocalProfile()
+{
+	if (Mariner::GameInstance)
+	{
+		static SDK::FMangoProfile GMangoProfile = reinterpret_cast<SDK::FMangoProfile&>(PB(0x4937C80));
+		return &GMangoProfile;
+	}
+
+	LogA("Logic", "FMangoProfile local profile is a null pointer!");
+	return nullptr;
+}
+
+// -- Extra
+
+void Mariner::LogFImpl(const char* File, int Line, __int64 Category, unsigned char& VerbosityType, wchar_t* Format)
+{
+	OFF::LogFInternalImpl.VerifyFC<UFunctions::Decl::LogFImpl>()(File, Line, Category, (UFunctions::ELogVerbosity)VerbosityType, Format);
+}
+
+void Mariner::LogFImpl(unsigned char& VerbosityType, wchar_t*& Format)
+{
+	static uintptr_t Category = PB(0x493BD44);
+	//static SDK::FName Category = Pointers::FString2FName(L"A8CL");
+	//static __int64 CategoryIndex = Category.ComparisonIndex;
+
+	Mariner::LogFImpl(0, 0, Category, VerbosityType, Format);
+}
+
+void Mariner::LogFImpl(const wchar_t* Format)
+{
+	static unsigned char Verbosity = UFunctions::ELogVerbosity::Display;
+	Mariner::LogFImpl(Verbosity, (wchar_t*&)Format);
+}
+
+// -- FMemory
+
+void* FMemory::Malloc(size_t Count, uint32 Alignment)
+{
+	return OFF::FMalloc.VerifyFC<Decl::Malloc>()(Count, Alignment);
+}
+
+void* FMemory::Realloc(void* Original, size_t Count, uint32 Alignment)
+{
+	return OFF::FRealloc.VerifyFC<Decl::Realloc>()(Original, Count, Alignment);
+}
+
+void FMemory::Free(void* Original)
+{
+	OFF::FFree.VerifyFC<Decl::Free>()(Original);
 }

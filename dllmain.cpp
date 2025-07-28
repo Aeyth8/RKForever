@@ -26,6 +26,7 @@ static void Init() {
 	LogA("INITIALIZED", "The Global Base Address [GBA] is " + HexToString(GBA));
 
 	Mariner::Init_Hooks();
+	Mariner::LogFImpl(L"Hooks have been fully initialized, this patch was made by Aeyth8, inspired by SyST3MDeV");
 	//Mariner::Init_Engine();
 
 	while (UWorld() == nullptr)

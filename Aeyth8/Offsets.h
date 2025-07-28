@@ -11,8 +11,11 @@ namespace OFF
 	extern OFFSET GEngine;
 	extern OFFSET GWorld;
 
+	extern OFFSET FMalloc;
 	extern OFFSET FRealloc;
 	extern OFFSET FFree;
+	extern OFFSET ProcessMulticastDelegate;
+	extern OFFSET LogFInternalImpl;
 
 	extern OFFSET UConsole;
 	extern OFFSET Login;
