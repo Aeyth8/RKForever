@@ -149,6 +149,8 @@ public:
 
 		//typedef void(__fastcall* LogFImpl)(const char* File, int Line, const SDK::FName& Category, ELogVerbosity VerbosityType, wchar_t* Format);
 		typedef void(__fastcall* LogFImpl)(const char* File, int Line, __int64 Category, ELogVerbosity VerbosityType, wchar_t* Fmt);
+
+		typedef SDK::FText* (__fastcall* FromStringTable)(SDK::FText* This, const SDK::FName& InTableId, SDK::FString& InKey, const unsigned char InLoadingPolicy);
 	};
 
 	

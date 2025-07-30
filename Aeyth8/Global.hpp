@@ -47,6 +47,13 @@ namespace Global
 	// Useful way to construct the console from hooking UEngine::Browse
 	extern bool bConstructedUConsole;
 
+	// Directly call a function at a memory address
+	template <typename T>
+	T Call(const uintptr_t& Address)
+	{
+		return reinterpret_cast<T>(Address);
+	}
+
 	// Return value is true if null.
 	template <typename T>
 	bool IsNull(T* Pointer)

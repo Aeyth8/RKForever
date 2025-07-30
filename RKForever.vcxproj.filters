@@ -70,6 +70,12 @@
     <ClCompile Include="SDK\DebugPlayMenu_functions.cpp">
       <Filter>SDK\CPP</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\PrivateMatchMenu_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\CharacterCustomization_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

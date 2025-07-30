@@ -12,6 +12,11 @@ namespace OFF
 	OFFSET FMalloc("FMemory::Malloc", 0xE4ED20);
 	OFFSET FRealloc("FMemory::Realloc", 0xE50F10);
 	OFFSET FFree("FMemory::Free", 0xE40660);
+	OFFSET FQuantizeSize("FMemory::QuantizeSize", 0xE50A90);
+
+	OFFSET FromStringTable("FText::FromStringTable", 0xE80850);
+	OFFSET FString("FString::FString", 0x3AF6B0);
+
 	OFFSET ProcessMulticastDelegate("ProcessMulticastDelegate", 0x3C1BA0);
 	OFFSET LogFInternalImpl("FMsg::Logf_InternalImpl", 0xE86E90);
 	

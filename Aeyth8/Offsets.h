@@ -14,6 +14,11 @@ namespace OFF
 	extern OFFSET FMalloc;
 	extern OFFSET FRealloc;
 	extern OFFSET FFree;
+	extern OFFSET FQuantizeSize;
+
+	extern OFFSET FromStringTable;
+	extern OFFSET FString;// I believe this is THE FString constructor of all time.
+
 	extern OFFSET ProcessMulticastDelegate;
 	extern OFFSET LogFInternalImpl;
 

@@ -14,13 +14,28 @@ namespace SDK
 {
 	class UEngine;
 	class UWorld;
+	class UBlueprintFunctionLibrary;
 
 	class UMarinerGameInstance;
+	
+	// All game specific subclasses of UBlueprintFunctionLibrary
+	class UMarinerPhysicsLibrary;
+	class UMarinerFastCollisionUtils;
+	class UMarinerGameplayFrameworkBlueprintLibrary;
+	class UMarinerDamageLibrary;
+	class UMarinerEditorFunctionLibrary;
+	class UMarinerGlobalsFunctionLibrary;
+	class UMarinerMathUtils;
+	class UMarinerSkinBlueprintLibrary;
+	class UMarinerUIBlueprintLibrary;
 	class UMarinerUIHelpers;
+	class UMarinerSoundBlueprintUtilities_C;
 
 	class AMarinerPlayerController;
 	class AMarinerCharacter;
 	class AMarinerPlayerState;
+
+	class FText;
 
 	struct FMangoProfile;
 }
@@ -32,7 +47,6 @@ namespace Mariner
 	// -- Vars
 
 	extern SDK::UMarinerGameInstance* GameInstance;
-	extern SDK::UMarinerUIHelpers* UIHelpers;
 
 	// -- Initialization
 
@@ -44,10 +58,17 @@ namespace Mariner
 
 	SDK::UEngine* const& GEngine(const bool bLog = false);
 	SDK::UWorld* const& GWorld(const bool bLog = false);
+	SDK::UBlueprintFunctionLibrary* const& BlueprintFunctionLibrary();
 
 	SDK::AMarinerPlayerController* Player(const int& Index = 0);
 	SDK::AMarinerCharacter* Character(const int& Index = 0);
 	SDK::FMangoProfile* GetLocalProfile();
+
+	template <class Subclass>
+	Subclass* const& GetBlueprintClass()
+	{
+		return static_cast<Subclass*>(BlueprintFunctionLibrary());
+	}
 
 	// -- Extra
 
@@ -56,6 +77,24 @@ namespace Mariner
 	void LogFImpl(const wchar_t* Format);
 }
 }
+
+// -- FText Constructor
+
+class FText
+{
+public:
+	/** Loading policy to use with String Table assets */
+	enum class EStringTableLoadingPolicy : unsigned char
+	{
+		/** Try and find the String Table, but do not attempt to load it */
+		Find,
+		/** Try and find the String Table, or attempt of load it if it cannot be found (note: the string table found may not be fully loaded) */
+		FindOrLoad,
+		/** Try and find the String Table, or attempt to load it if it cannot be found, or if it was found but not fully loaded */
+		FindOrFullyLoad,
+	};
+	//static SDK::FText* FromStringTable(const __int64& InTableId, __int64& InKey, const EStringTableLoadingPolicy InLoadingPolicy = EStringTableLoadingPolicy::FindOrFullyLoad);
+};
 
 // -- FMemory
 
@@ -101,6 +140,6 @@ struct FMemory
 	static void* Malloc(unsigned long long Count, unsigned int Alignment = DEFAULT_ALIGNMENT);
 	static void* Realloc(void* Original, unsigned long long Count, unsigned int Alignment = DEFAULT_ALIGNMENT);
 	static void Free(void* Original);
-	static size_t GetAllocSize(void* Original);
-	static void Trim(bool bTrimThreadCaches = true);
+	//static size_t GetAllocSize(void* Original);
+	//static void Trim(bool bTrimThreadCaches = true);
 };

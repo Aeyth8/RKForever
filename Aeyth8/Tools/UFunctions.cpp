@@ -122,12 +122,13 @@ void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 		SDK::UUserWidget* DebugMenu = Mariner::UIHelpers->CreateWidgetWithOwner(Widget, Menu);
 		DebugMenu->SetVisibility(SDK::ESlateVisibility::Visible);*/
 
-		SDK::UMarinerMenuStackManager* Manager = Pointers::GetLastOf<SDK::UMarinerMenuStackManager>();
+		//SDK::UMarinerMenuStackManager* Manager = Pointers::GetLastOf<SDK::UMarinerMenuStackManager>();
 		Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get());
 		//Manager->PushToActiveStack(Pointers::GetLastOf<SDK::UDebugPlayMenu_C>());
 	}
 	else if (StrCommand == "name")
 	{
+		Mariner::GameInstance->ShowMessageBox(Pointers::GetLastOf<SDK::UMarinerInventoryBaseMenu>()->EquipActiveMessageBox);
 		LogA("MangoId", Mariner::GetLocalProfile()->MangoId.ToString());
 	}
 
