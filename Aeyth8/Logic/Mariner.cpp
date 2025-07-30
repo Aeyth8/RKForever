@@ -88,20 +88,36 @@ typedef void(__thiscall* EquipRequest_T)(SDK::UMarinerEquipItemToProfile* This, 
 typedef void(__thiscall* EquipActivate_T)(SDK::UMarinerEquipItemToProfile* This);
 typedef SDK::FString*(__thiscall* GetAccountName_T)(SDK::UMangoPlayerManager* This, SDK::FString* InString);
 typedef SDK::FMangoProfile*(__fastcall* GetMangoProfile_T)(SDK::UMangoPlayerManager* This);
+typedef wchar_t*(__fastcall* GetMangoId_T)(SDK::UMangoPlayerManager* This);
 typedef SDK::UMarinerLoadEquippedDataForCharacter*(__fastcall* LoadEquippedDataForCharacter_T)(SDK::UMarinerLoadEquippedDataForCharacter* This);
 typedef SDK::FString* (__fastcall* GetBaseURL_T)(SDK::FString* retstr);
+typedef __int64(__fastcall* ChangePerspective_T)(SDK::AMarinerPlayerController* This, SDK::FName PerspectiveName);
 
 A8CL::OFFSET HandleEquipRequest("HandleEquipRequest", 0x929D50);
 A8CL::OFFSET EquipActivate("UMarinerEquipItemToProfile::Activate", 0x908B50);
 A8CL::OFFSET PrivateMatchEH("MarinerMainMenuHUD PrivateMatchErrorHandler", 0xC30E40); // 0xC1F5F0 retrieves the error string
 //A8CL::OFFSET GetAccountName("UMangoManager::GetActiveAccountName", 0xA07DD0); I don't think this gets called anywhere
 A8CL::OFFSET GetMangoProfile("GetMangoProfile", 0xA0C700);
+A8CL::OFFSET GetMangoId("GetMangoId", 0xA0C6D0);
 A8CL::OFFSET LoadEquippedDataForCharacter("UMarinerLoadEquippedDataForCharacter", 0x922870);
+A8CL::OFFSET ChangePerspective("AMarinerPlayerController::ChangePerspective", 0xBD7A20);
+
+static __int64 __fastcall Perspective(SDK::AMarinerPlayerController* This, SDK::FName PerspectiveName)
+{
+	LogA("ChangePerspective", PerspectiveName.ToString());
+	return ChangePerspective.VerifyFC<ChangePerspective_T>()(This, PerspectiveName);
+}
 
 static SDK::UMarinerLoadEquippedDataForCharacter* __fastcall LoadEquip(SDK::UMarinerLoadEquippedDataForCharacter* This)
 {
 	LogA("UMarinerLoadEquippedDataForCharacter", This->EquippedSkinToLoad.Get()->GetFullName());
 	return LoadEquippedDataForCharacter.VerifyFC<LoadEquippedDataForCharacter_T>()(This);
+}
+
+wchar_t* GetMangoIdHook(SDK::UMangoPlayerManager* This)
+{
+	LogA("GetMangoId", "Called");
+	return GetMangoId.VerifyFC<GetMangoId_T>()(This);
 }
 
 SDK::FMangoProfile* GetMangoProfileHook(SDK::UMangoPlayerManager* This)
@@ -115,6 +131,12 @@ SDK::FMangoProfile* GetMangoProfileHook(SDK::UMangoPlayerManager* This)
 	for (SDK::FMangoEquipItem& Progress : Profile->Equipment)
 	{
 		LogA("GetMangoProfile", Progress.ItemID.ToString());
+	}
+
+	if (Mariner::Character())
+	{
+		SDK::FString NewName(L"Aeyth8");
+		Call<CopyString>(PB(0x3AF6B0))(&Mariner::Character()->PlayerState->PlayerName, &NewName);
 	}
 
 	return Profile;
@@ -214,14 +236,23 @@ void Mariner::Init_Hooks()
 {
 	if (Hooks::Init())
 	{
+		const wchar_t* MyMangoId = L"Aeyth8";
+		wchar_t* GMangoId = (wchar_t*)PB(0x4937F70);
+		memmove(GMangoId, MyMangoId, sizeof(wchar_t*));
+		//*GMangoId = *const_cast<wchar_t*>(MyMangoId);
+		BytePatcher::ReplaceBytes(PB(0xA0C6DA), {NOP, NOP});
+
 		Hooks::CreateAndEnableHooks(HookList);
 		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
 		Hooks::CreateAndEnableHook(PrivateMatchEH, PrivateMatchErrorHandler);
 		Hooks::CreateAndEnableHook(GetMangoProfile, GetMangoProfileHook);
+		Hooks::CreateAndEnableHook(ChangePerspective, Perspective);
+		Hooks::CreateAndEnableHook(GetMangoId, GetMangoIdHook);
 		//Hooks::CreateAndEnableHook(LoadEquippedDataForCharacter, LoadEquip); For some reason this causes the profile picture to be infinite loading screen
 
 		BYTE NewName[37]{0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38};
 		BytePatcher::ReplaceBytes(PB(0x3510060), NewName);
+		BytePatcher::ReplaceBytes(PB(0x3053718), {0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38, 0x00, 0x00});
 		//Hooks::CreateAndEnableHook(GetAccountName, GetAccountNameH);
 		
 		Hooks::CreateAndEnableHook(EquipActivate, IDK);
@@ -229,6 +260,7 @@ void Mariner::Init_Hooks()
 		//BytePatcher::ReplaceByte(PB(0x493BD40), 0x00); // I have no clue what this byte represents but patching it gets rid of some fail conditions, it doesn't get reverted but I assume it's an enum.
 		//BytePatcher::ReplaceByte(PB(0x493BAD0), 0x00);
 		BytePatcher::ReplaceByte(PB(0x908D04), 0xEB); // SHUTUP I HAVE A VALID MANGO ID
+		//BytePatcher::ReplaceBytes(PB(0x4937F70), {}); // Some sort of global MangoId account, is referenced in UMangoManager::GetMangoId() disassembly
 
 		/*BYTE NoJump[2]{NOP, NOP};
 		BytePatcher::ReplaceBytes(PB(0x605C92), NoJump);

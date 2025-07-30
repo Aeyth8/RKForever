@@ -128,8 +128,23 @@ void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 	}
 	else if (StrCommand == "name")
 	{
-		Mariner::GameInstance->ShowMessageBox(Pointers::GetLastOf<SDK::UMarinerInventoryBaseMenu>()->EquipActiveMessageBox);
-		LogA("MangoId", Mariner::GetLocalProfile()->MangoId.ToString());
+		//Mariner::GameInstance->ShowMessageBox(Pointers::GetLastOf<SDK::UMarinerInventoryBaseMenu>()->EquipActiveMessageBox);
+		LogA("MangoId", Mariner::GameInstance->MangoManagersInstance->MangoPlayerManager->GetMangoId().MangoIdStr.ToString());
+
+		const wchar_t* Name = (const wchar_t*)PB(0x4937F70);
+		char cName[260]{0};
+		wcstombs_s(0, cName, Name, lstrlenW(Name));
+
+		LogA("GMangoId", std::string(cName));
+		//LogA("MangoId", Mariner::GetLocalProfile()->MangoId.ToString());
+	}
+	else if (StrCommand == "firstperson")
+	{
+		//Mariner::Player()->ChangePerspective(Pointers::FString2FName(L"SpecialAbility"));
+
+		
+		//Mariner::Player()->ApplyPerspective(Pointers::FString2FName(L"Default"), Mariner::Player()->GetDefaultPerspective(SDK::EMarinerCameraPerspectiveType::ThirdPerson));
+		//Mariner::Player()->bInfiniteAmmo = true;
 	}
 
 	OFF::UConsole.VerifyFC<Decl::UConsole>()(This, Command);
