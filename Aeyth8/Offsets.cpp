@@ -19,6 +19,8 @@ namespace OFF
 
 	OFFSET ProcessMulticastDelegate("ProcessMulticastDelegate", 0x3C1BA0);
 	OFFSET LogFInternalImpl("FMsg::Logf_InternalImpl", 0xE86E90);
+	OFFSET IsNonPakFileNameAllowed("FPakPlatformFile::IsNonPakFilenameAllowed", 0x1D0D6E0);
+	OFFSET FindFileInPakFiles("FPakPlatformFile::FindFileInPakFiles", 0x1D09930);
 	
 	OFFSET UConsole("UConsole::ConsoleCommand", 0x2439460);
 	OFFSET Login("AGameModeBase::Login", 0x20218B0);

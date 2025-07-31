@@ -79,6 +79,8 @@ static std::vector<Hooks::HookStructure> HookList =
 	{OFF::MarinerPreLogin, UFunctions::PreLogin},
 	{OFF::Login, UFunctions::Login},
 	{OFF::InitListen, UFunctions::InitListen},
+	{OFF::FindFileInPakFiles, UFunctions::FindFileInPakFiles},
+	{OFF::IsNonPakFileNameAllowed, UFunctions::IsNonPakFilenameAllowed},
 };
 
 typedef SDK::FString*(__thiscall* CopyString)(SDK::FString* This, SDK::FString* NewString);
@@ -245,9 +247,9 @@ void Mariner::Init_Hooks()
 		Hooks::CreateAndEnableHooks(HookList);
 		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
 		Hooks::CreateAndEnableHook(PrivateMatchEH, PrivateMatchErrorHandler);
-		Hooks::CreateAndEnableHook(GetMangoProfile, GetMangoProfileHook);
-		Hooks::CreateAndEnableHook(ChangePerspective, Perspective);
-		Hooks::CreateAndEnableHook(GetMangoId, GetMangoIdHook);
+		//Hooks::CreateAndEnableHook(GetMangoProfile, GetMangoProfileHook);
+		//Hooks::CreateAndEnableHook(ChangePerspective, Perspective);
+		//Hooks::CreateAndEnableHook(GetMangoId, GetMangoIdHook);
 		//Hooks::CreateAndEnableHook(LoadEquippedDataForCharacter, LoadEquip); For some reason this causes the profile picture to be infinite loading screen
 
 		BYTE NewName[37]{0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38};

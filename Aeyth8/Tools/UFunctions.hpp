@@ -47,6 +47,10 @@ public:
 
 	public:
 
+		// Overcomplicated function to check if the first 9 characters of the the wchar_t are equal to "../../../" or "..\..\..\"
+		// And the backslashes can be vice-versa there isn't logic that checks for that nor is it needed. (I hope)
+		static bool CheckForLocalDirectory(const wchar_t* Filename, unsigned char& Byte);
+
 	};
 
 	enum ELogVerbosity : unsigned char
@@ -171,7 +175,9 @@ public:
 
 	static void ProcessEvent(SDK::UObject* This, SDK::UFunction* Function, LPVOID Parms);
 
+	static bool IsNonPakFilenameAllowed(__int64* This, SDK::FString& InFilename);
 
+	static bool FindFileInPakFiles(__int64* This, const wchar_t* Filename, __int64** OutPakFile, __int64* OutEntry);
 
 
 

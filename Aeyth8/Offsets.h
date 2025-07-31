@@ -21,6 +21,8 @@ namespace OFF
 
 	extern OFFSET ProcessMulticastDelegate;
 	extern OFFSET LogFInternalImpl;
+	extern OFFSET IsNonPakFileNameAllowed;
+	extern OFFSET FindFileInPakFiles;
 
 	extern OFFSET UConsole;
 	extern OFFSET Login;
