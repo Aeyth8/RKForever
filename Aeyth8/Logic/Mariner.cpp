@@ -238,11 +238,11 @@ void Mariner::Init_Hooks()
 {
 	if (Hooks::Init())
 	{
-		const wchar_t* MyMangoId = L"Aeyth8";
+		/*const wchar_t* MyMangoId = L"Aeyth8";
 		wchar_t* GMangoId = (wchar_t*)PB(0x4937F70);
 		memmove(GMangoId, MyMangoId, sizeof(wchar_t*));
 		//*GMangoId = *const_cast<wchar_t*>(MyMangoId);
-		BytePatcher::ReplaceBytes(PB(0xA0C6DA), {NOP, NOP});
+		BytePatcher::ReplaceBytes(PB(0xA0C6DA), {NOP, NOP});*/
 
 		Hooks::CreateAndEnableHooks(HookList);
 		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
@@ -252,23 +252,23 @@ void Mariner::Init_Hooks()
 		//Hooks::CreateAndEnableHook(GetMangoId, GetMangoIdHook);
 		//Hooks::CreateAndEnableHook(LoadEquippedDataForCharacter, LoadEquip); For some reason this causes the profile picture to be infinite loading screen
 
-		BYTE NewName[37]{0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38};
+		/*BYTE NewName[37]{0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38};
 		BytePatcher::ReplaceBytes(PB(0x3510060), NewName);
-		BytePatcher::ReplaceBytes(PB(0x3053718), {0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38, 0x00, 0x00});
+		BytePatcher::ReplaceBytes(PB(0x3053718), {0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38, 0x00, 0x00});*/
 		//Hooks::CreateAndEnableHook(GetAccountName, GetAccountNameH);
 		
 		Hooks::CreateAndEnableHook(EquipActivate, IDK);
 		//BytePatcher::ReplaceByte(PB(0x908D0D), 0xEB); Removes fail condition for byte 493BD40 which is compared a lot so I am going to just patch *it*
 		//BytePatcher::ReplaceByte(PB(0x493BD40), 0x00); // I have no clue what this byte represents but patching it gets rid of some fail conditions, it doesn't get reverted but I assume it's an enum.
 		//BytePatcher::ReplaceByte(PB(0x493BAD0), 0x00);
-		BytePatcher::ReplaceByte(PB(0x908D04), 0xEB); // SHUTUP I HAVE A VALID MANGO ID
+		//BytePatcher::ReplaceByte(PB(0x908D04), 0xEB); // SHUTUP I HAVE A VALID MANGO ID
 		//BytePatcher::ReplaceBytes(PB(0x4937F70), {}); // Some sort of global MangoId account, is referenced in UMangoManager::GetMangoId() disassembly
 
 		/*BYTE NoJump[2]{NOP, NOP};
 		BytePatcher::ReplaceBytes(PB(0x605C92), NoJump);
 		BytePatcher::ReplaceBytes(PB(0x605C9C), NoJump);*/
 
-		BytePatcher::ReplaceBytes(PB(0x909305),
+		/*BytePatcher::ReplaceBytes(PB(0x909305),
 			{
 			 0x48, 0x8B, 0xCB,				// mov rcx, rbx
 			 0xBA, 0x01, 0x00, 0x00, 0x00,	// mov edx, 1
@@ -276,7 +276,7 @@ void Mariner::Init_Hooks()
 			 0xE8, 0x3D, 0x0A, 0x02, 0x00,	// call "HandleEquipRequest" (That name was guessed)
 			 RETN, NOP						// end function
 			}
-		); // Attempting to completely skip the STUPID API request that checks ownership and whatnot before equipping items, I have been on THIS FOR 9 HOURS
+		);*/ // Attempting to completely skip the STUPID API request that checks ownership and whatnot before equipping items, I have been on THIS FOR 9 HOURS
 
 		// mov al, 1
 		BYTE ReturnOne[5]{0xB0, 0x01, RETN, NOP, NOP};  
@@ -290,6 +290,7 @@ void Mariner::Init_Hooks()
 		BytePatcher::ReplaceBytes(PB(0xA140F0), ReturnOne); // UMangoInventoryManager::IsBlastPassOwned
 		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.
 		BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
+		BytePatcher::ReplaceBytes(PB(0xA56810), {NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84}); // Patches the stupid PartyErrorReason_AlreadyInSession preventing you from launching a second instance of the game.
 		
 	}
 }
@@ -317,7 +318,7 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 		Profile->MangoId = SDK::FString(L"Aeyth8");
 
 		memmove(Mariner::GameInstance->MangoManagersInstance->MangoPlayerManager + 0x1D8, Profile, sizeof(SDK::FMangoProfile));*/
-		SDK::FString NewName(L"Aeyth8");
+		/*SDK::FString NewName(L"Aeyth8");
 
 		SDK::UMangoPlayerManager& Manager = *Mariner::GameInstance->MangoManagersInstance->MangoPlayerManager;
 		SDK::FString* Name = reinterpret_cast<SDK::FString*>((((uintptr_t)&Manager) + 0x1D8 + 0x10));
@@ -350,7 +351,7 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 			State->CurrentOnlinePlatform = Pointers::FString2FName(L"Steam");
 			Call<CopyString>(PB(0x3AF6B0))(&State->CurrentPlatformID_Insecure, &NewName);
 			LogA("State", "Succeeded");
-		}
+		}*/
 		
 		//static_cast<SDK::AMarinerPlayerState*>(Mariner::Character()->PlayerState);
 		/*unsigned char * Profile = (unsigned char*)Mariner::GameInstance->MangoManagersInstance->MangoPlayerManager + 0x1D8;
