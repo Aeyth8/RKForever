@@ -133,6 +133,7 @@ using namespace Global;
 #include "../../SDK/CharacterCustomization_classes.hpp"
 #include "../../SDK/DebugPlayMenu_classes.hpp"
 #include "../Logic/Mariner.h"
+#include "../../SDK/ServerList_classes.hpp"
 
 void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 {
@@ -149,6 +150,8 @@ void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 
 		//SDK::UMarinerMenuStackManager* Manager = Pointers::GetLastOf<SDK::UMarinerMenuStackManager>();
 		Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get());
+		//Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get())
+		
 		//Manager->PushToActiveStack(Pointers::GetLastOf<SDK::UDebugPlayMenu_C>());
 	}
 	else if (StrCommand == "name")
@@ -206,6 +209,7 @@ SDK::APlayerController* UFunctions::Login(SDK::APlayerController* This, SDK::UPl
 void UFunctions::PreLogin(SDK::AGameModeBase* This, SDK::FString* Options, SDK::FString* Address, SDK::FUniqueNetIdRepl* UniqueId, SDK::FString* ErrorMessage)
 {
 	LogA("PreLogin", std::format("[AGameModeBase]: {} | [Options]: {} | [Address]: {} | [ErrorMessage]: {}", This->GetFullName(), Options->ToString(), Address->ToString(), ErrorMessage->ToString()));
+	//OFF::MarinerPreLogin.VerifyFC<Decl::PreLogin>()(This, Options, Address, UniqueId, ErrorMessage);
 }
 
 void UFunctions::AppPreExit()

@@ -12,6 +12,7 @@
 #include "../../SDK/DebugPlayMenu_classes.hpp"
 #include "../../SDK/PrivateMatchMenu_classes.hpp"
 #include "../../SDK/CharacterCustomization_classes.hpp"
+#include "../../SDK/ServerList_classes.hpp"
 
 /*
 
@@ -84,7 +85,7 @@ static std::vector<Hooks::HookStructure> HookList =
 };
 
 typedef SDK::FString*(__thiscall* CopyString)(SDK::FString* This, SDK::FString* NewString);
-
+typedef __int64(__fastcall* GenericFunc)(__int64* This);
 typedef __int64(__fastcall* PrivateMatchEH_T)(__int64* This, unsigned char IDK);
 typedef void(__thiscall* EquipRequest_T)(SDK::UMarinerEquipItemToProfile* This, bool bSuccess);
 typedef void(__thiscall* EquipActivate_T)(SDK::UMarinerEquipItemToProfile* This);
@@ -94,6 +95,8 @@ typedef wchar_t*(__fastcall* GetMangoId_T)(SDK::UMangoPlayerManager* This);
 typedef SDK::UMarinerLoadEquippedDataForCharacter*(__fastcall* LoadEquippedDataForCharacter_T)(SDK::UMarinerLoadEquippedDataForCharacter* This);
 typedef SDK::FString* (__fastcall* GetBaseURL_T)(SDK::FString* retstr);
 typedef __int64(__fastcall* ChangePerspective_T)(SDK::AMarinerPlayerController* This, SDK::FName PerspectiveName);
+typedef __int64(__fastcall* SelectPrivateMatchOrSmth_T)(SDK::AMarinerHUD* This);
+typedef SDK::UMarinerMenuStackLayer*(__fastcall* PushLayerToActiveStack_T)(SDK::UMarinerMenuStackManager* This, SDK::UMarinerMenuStackLayer* Layer);
 
 A8CL::OFFSET HandleEquipRequest("HandleEquipRequest", 0x929D50);
 A8CL::OFFSET EquipActivate("UMarinerEquipItemToProfile::Activate", 0x908B50);
@@ -103,6 +106,9 @@ A8CL::OFFSET GetMangoProfile("GetMangoProfile", 0xA0C700);
 A8CL::OFFSET GetMangoId("GetMangoId", 0xA0C6D0);
 A8CL::OFFSET LoadEquippedDataForCharacter("UMarinerLoadEquippedDataForCharacter", 0x922870);
 A8CL::OFFSET ChangePerspective("AMarinerPlayerController::ChangePerspective", 0xBD7A20);
+A8CL::OFFSET SelectPrivateMatchOrSmth("SelectPrivateMatchOrSmth", 0xC13860);
+A8CL::OFFSET PushLayerToActiveStack("UMarinerMenuStackManager::PushToActiveStack", 0xC638F0);
+A8CL::OFFSET HandleSelected("UMarinerPlaylistButton::HandleSelected", 0xC88010);
 
 static __int64 __fastcall Perspective(SDK::AMarinerPlayerController* This, SDK::FName PerspectiveName)
 {
@@ -144,8 +150,19 @@ SDK::FMangoProfile* GetMangoProfileHook(SDK::UMangoPlayerManager* This)
 	return Profile;
 }
 
+SDK::UMarinerMenuStackLayer* __fastcall PushToActiveStack(SDK::UMarinerMenuStackManager* This, SDK::UMarinerMenuStackLayer* Layer)
+{
+	LogA(PushLayerToActiveStack.GetName(), Layer->GetFullName());
+	return PushLayerToActiveStack.VerifyFC<PushLayerToActiveStack_T>()(This, Layer);
+}
 
-__int64 __fastcall PrivateMatchErrorHandler(__int64* This, unsigned char IDK)
+__int64 __fastcall SelectPrivateMatch(SDK::AMarinerHUD* This)
+{
+	LogA(SelectPrivateMatchOrSmth.GetName(), This->GetFullName());
+	return SelectPrivateMatchOrSmth.VerifyFC<SelectPrivateMatchOrSmth_T>()(This);
+}
+
+void __fastcall PrivateMatchErrorHandler(__int64* This, unsigned char IDK)
 {
 	static const SDK::TSubclassOf<SDK::UPrivateMatchMenu_C> Class = SDK::UPrivateMatchMenu_C::FindClass("WidgetBlueprintGeneratedClass PrivateMatchMenu.PrivateMatchMenu_C");	
 	Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Class);
@@ -233,6 +250,28 @@ UMangoPlayerManager Pad_98 [Size] Hex 0x6F0 | Decimal 1776 (Bytes) [14208 bits]
 
 */
 
+typedef void(__thiscall* SetUniqueId_T)(SDK::FUniqueNetIdRepl This, SDK::FName Type, const SDK::FString& Contents);
+void SetUniqueId(SDK::FUniqueNetIdRepl This, SDK::FName Type, const SDK::FString& Contents)
+{
+	OFF::UniqueIdFromString.VerifyFC<SetUniqueId_T>()(This, Type, Contents);
+}
+
+A8CL::OFFSET MenuThingy("Idk", 0xBA56D0);
+typedef void(__thiscall* MenuThing_T)(SDK::UMarinerGameInstance* This, SDK::FString* LastPagePath, SDK::FString* CurrentPagePath, int Var4, SDK::FString* ActionType);
+
+void MenuThing(SDK::UMarinerGameInstance* This, SDK::FString* LastPagePath, SDK::FString* CurrentPagePath, int Var4, SDK::FString* ActionType)
+{
+	LogA(MenuThingy.GetName(), std::format("[This]: {} | [LastPagePath]: {} | [CurrentPagePath]: {} | [Var4]: {} | [ActionType] {}", This->GetFullName(), LastPagePath->ToString(), CurrentPagePath->ToString(), std::to_string(Var4), ActionType->ToString()));
+	return MenuThingy.VerifyFC<MenuThing_T>()(This, LastPagePath, CurrentPagePath, Var4, ActionType);
+}
+
+__int64 __fastcall OnHandleSelected(__int64* This)
+{
+	static const SDK::TSubclassOf<SDK::UServerList_C> Class = SDK::UServerList_C::FindClass("WidgetBlueprintGeneratedClass ServerList.ServerList_C");
+	Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Class);
+	//LogA(HandleSelected.GetName(), "Called");
+	//return HandleSelected.VerifyFC<GenericFunc>()(This);
+}
 
 void Mariner::Init_Hooks()
 {
@@ -247,6 +286,10 @@ void Mariner::Init_Hooks()
 		Hooks::CreateAndEnableHooks(HookList);
 		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
 		Hooks::CreateAndEnableHook(PrivateMatchEH, PrivateMatchErrorHandler);
+		Hooks::CreateAndEnableHook(MenuThingy, MenuThing);
+		Hooks::CreateAndEnableHook(SelectPrivateMatchOrSmth, SelectPrivateMatch);
+		Hooks::CreateAndEnableHook(PushLayerToActiveStack, PushToActiveStack);
+		Hooks::CreateAndEnableHook(HandleSelected, OnHandleSelected);
 		//Hooks::CreateAndEnableHook(GetMangoProfile, GetMangoProfileHook);
 		//Hooks::CreateAndEnableHook(ChangePerspective, Perspective);
 		//Hooks::CreateAndEnableHook(GetMangoId, GetMangoIdHook);
@@ -290,8 +333,47 @@ void Mariner::Init_Hooks()
 		BytePatcher::ReplaceBytes(PB(0xA140F0), ReturnOne); // UMangoInventoryManager::IsBlastPassOwned
 		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.
 		BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
-		BytePatcher::ReplaceBytes(PB(0xA56810), {NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84}); // Patches the stupid PartyErrorReason_AlreadyInSession preventing you from launching a second instance of the game.
+
+		BYTE SkipJump[9]{NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84};
 		
+		BytePatcher::ReplaceBytes(PB(0xA56810), SkipJump); // Patches the stupid PartyErrorReason_AlreadyInSession preventing you from launching a second instance of the game.
+	
+
+		const wchar_t* MyTableEntry = L"HELP ME HELPPPPPPPPPPPPPPP";
+
+		wchar_t* MissingStringTableEntry = reinterpret_cast<wchar_t*>(PB(0x376B660));
+
+		/*
+		
+		const wchar_t* MyTableEntry = L"HELP";
+
+		wchar_t* MissingStringTableEntry = reinterpret_cast<wchar_t*>(PB(0x303D4E8));
+
+		Kinda fixes the mangoid but not really
+		*/
+
+		DWORD oldProtect;
+		VirtualProtect(MissingStringTableEntry,
+			sizeof(wchar_t) * (wcslen(MyTableEntry) + 1),
+			PAGE_READWRITE,
+			&oldProtect);
+
+		memcpy(MissingStringTableEntry,
+			MyTableEntry,
+			sizeof(wchar_t) * (wcslen(MyTableEntry) + 1));
+
+		VirtualProtect(MissingStringTableEntry,
+			sizeof(wchar_t) * (wcslen(MyTableEntry) + 1),
+			oldProtect,
+			&oldProtect);
+
+
+		//BytePatcher::ReplaceBytes(PB(0x9C4480), ReturnOne); // Enables "E3 Mode" / Puts you in a limbo state, I've never seen a temp world before but that's a thing
+		//BytePatcher::ReplaceBytes(PB(0x9C3BB0), ReturnOne); // Enables "Demo Mode" / removes the store
+		//BytePatcher::ReplaceBytes(PB(0x9C4B00), ReturnOne); // UMarinerGlobalsFunctionLibrary::IsOSSOrigin
+		//BytePatcher::ReplaceBytes(PB(0x9C4BB0), {0xB0, 0x01, RETN, NOP, NOP, NOP}); // UMarinerGlobalsFunctionLibrary::IsOSSSteam
+		BytePatcher::ReplaceBytes(PB(0x9DAE40), ReturnOne); // UMarinerGameGlobals::ValidateSkin
+		//BytePatcher::ReplaceBytes(PB(0x93A500), ReturnOne);
 	}
 }
 
@@ -310,6 +392,41 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 
 		LogA("GameInstance", HexToString(*(uintptr_t*)GameInstance));
 		LogA("GameInstancePTR", HexToString((uintptr_t)GameInstance));
+
+		SDK::UMarinerMenuGlobals* MenuGlobals = GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetMenuGlobals();
+		for (SDK::FMarinerCulture& Culture : MenuGlobals->CultureList)
+		{
+			LogA("Culture", Culture.LanguageCode.ToString() + " | " + Culture.DisplayName.ToString());
+		}
+		LogA("GetCurrentCulture", GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetCurrentCulture().ToString());
+		
+		
+		SDK::FString NewURL{ L"127.0.0.1:443" };
+		Call<CopyString>(PB(0x3AF6B0))(reinterpret_cast<SDK::FString*>(PB(0x492FCA8)), &NewURL);
+		LogA("URL", reinterpret_cast<SDK::FString*>(PB(0x492FCA8))->ToString());
+		//
+
+		/*SDK::UMarinerDebugProfileDataAsset* Pro = (SDK::UMarinerDebugProfileDataAsset*)FMemory::Malloc(sizeof(SDK::UMarinerDebugProfileDataAsset));
+		SDK::FMangoProfile* Profile = (SDK::FMangoProfile*)FMemory::Malloc(sizeof(SDK::FMangoProfile));
+
+		SDK::FString Name(L"Aeyth8");
+		Call<CopyString>(PB(0x3AF6B0))(&Profile->MangoId, &Name);
+
+
+		Pro->Profile = *Profile;
+
+		GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetUIGlobals()->DebugProfile = Pro;*/
+
+
+		//SetUniqueId(Player()->PlayerState->UniqueId, Pointers::FString2FName(L"STEAM"), L"Aeyth8");
+
+		/*auto H =  Pointers::GetLastOf<SDK::UMarinerProfileObjectManager>();
+		__int64 v9 = *(__int64*)(*(__int64*)&H[1].Pad_F0[32] + 1248LL);
+		LogA("IDK", (SDK::UObject*)v9->GetFullName());*/
+		
+		//static const SDK::TSubclassOf<SDK::UDebugPlayMenu_C> Class = SDK::UDebugPlayMenu_C::FindClass("WidgetBlueprintGeneratedClass DebugPlayMenu.DebugPlayMenu_C");
+		//Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType = Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get();
+
 		//SDK::FMangoProfile& Profile = const_cast<SDK::FMangoProfile&>(GameInstance->MangoManagersInstance->MangoPlayerManager->GetMangoProfile());
 		//Profile->MangoId = L"Aeyth8";
 		//Mariner::GetLocalProfile()->MangoId = L"Aeyth8";

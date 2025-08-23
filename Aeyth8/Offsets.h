@@ -34,6 +34,8 @@ namespace OFF
 	extern OFFSET WorldGetNetMode;
 	extern OFFSET ActorGetNetMode;
 	extern OFFSET InitListen;
+	extern OFFSET UniqueIdFromString;
+	extern OFFSET SetUniqueId;
 
 	// Native Game Functions
 

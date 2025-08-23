@@ -32,6 +32,8 @@ namespace OFF
 	OFFSET WorldGetNetMode("UWorld::InternalGetNetMode", 0x0);
 	OFFSET ActorGetNetMode("AActor::InternalGetNetMode", 0x0);
 	OFFSET InitListen("UIpNetDriver::InitListen", 0x670970);
+	OFFSET UniqueIdFromString("FUniqueNetIdRepl::UniqueIdFromString", 0x2176B60);
+	OFFSET SetUniqueId("FUniqueNetIdRepl::SetUniqueNetId", 0x603B60);
 
 	// Native Game Functions
 

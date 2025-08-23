@@ -177,6 +177,7 @@
     <ClCompile Include="SDK\Engine_functions.cpp" />
     <ClCompile Include="SDK\Mariner_functions.cpp" />
     <ClCompile Include="SDK\PrivateMatchMenu_functions.cpp" />
+    <ClCompile Include="SDK\ServerList_functions.cpp" />
     <ClCompile Include="SDK\UMG_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
