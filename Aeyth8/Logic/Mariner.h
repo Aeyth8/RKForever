@@ -15,6 +15,7 @@ namespace SDK
 	class UEngine;
 	class UWorld;
 	class UBlueprintFunctionLibrary;
+	class UClass;
 
 	class UMarinerGameInstance;
 	
@@ -47,6 +48,9 @@ namespace Mariner
 	// -- Vars
 
 	extern SDK::UMarinerGameInstance* GameInstance;
+	extern SDK::UClass* PrivateMatchMenu;
+	extern SDK::UClass* ServerList;
+	extern SDK::UClass* DebugPlayMenu;
 
 	// -- Initialization
 

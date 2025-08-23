@@ -149,7 +149,8 @@ void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 		DebugMenu->SetVisibility(SDK::ESlateVisibility::Visible);*/
 
 		//SDK::UMarinerMenuStackManager* Manager = Pointers::GetLastOf<SDK::UMarinerMenuStackManager>();
-		Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get());
+		//static const SDK::TSubclassOf<SDK::UServerList_C> Class = SDK::UServerList_C::FindClass("WidgetBlueprintGeneratedClass DebugPlayMenu.DebugPlayMenu_C");
+		if (Mariner::GameInstance) Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::DebugPlayMenu);
 		//Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Pointers::GetLastOf<SDK::UMarinerPlaylistMenu>()->DebugPlayMenuType.Get())
 		
 		//Manager->PushToActiveStack(Pointers::GetLastOf<SDK::UDebugPlayMenu_C>());
