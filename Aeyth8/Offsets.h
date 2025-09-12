@@ -36,6 +36,7 @@ namespace OFF
 	extern OFFSET InitListen;
 	extern OFFSET UniqueIdFromString;
 	extern OFFSET SetUniqueId;
+	extern OFFSET GameMapsSettings;
 
 	// Native Game Functions
 

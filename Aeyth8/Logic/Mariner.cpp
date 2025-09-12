@@ -6,6 +6,9 @@
 #include "../Tools/Pointers.h"
 #include "../Tools/UFunctions.hpp"
 #include "../Tools/BytePatcher.h"
+#include "../CmdArgs/CommandLineArgs.h"
+
+#include "../../SDK/EngineSettings_classes.hpp"
 
 #include "../../SDK/Mariner_classes.hpp"
 #include "../../SDK/Mariner_structs.hpp"
@@ -29,10 +32,14 @@ using namespace A8CL; using namespace Global;
 
 // -- Vars
 
+SDK::UGameMapsSettings*					Mariner::MapSettings{nullptr};
+
 SDK::UMarinerGameInstance*				Mariner::GameInstance{nullptr};
 SDK::UClass*							Mariner::PrivateMatchMenu{nullptr};
 SDK::UClass*							Mariner::DebugPlayMenu{nullptr};
 SDK::UClass*							Mariner::ServerList{nullptr};
+
+bool									Mariner::bIsInitialized{false};
 
 // -- Constants
 
@@ -75,6 +82,16 @@ static void OnLoginStarted(SDK::UMangoConnectionManager* This, uint32 NoClue)
 
 }
 
+static SDK::UGameMapsSettings* __fastcall UGameMapSettings(SDK::UGameMapsSettings* This, void* FObjectInitializer)
+{
+	OFF::GameMapsSettings.VerifyFC<SDK::UGameMapsSettings* (__fastcall*)(SDK::UGameMapsSettings*, void*)>()(This, FObjectInitializer);
+	Mariner::MapSettings = This;
+
+	//LogA(This->GetFullName(), "Constructor");
+
+	return This;
+}
+
 static std::vector<Hooks::HookStructure> HookList =
 {
 	{OFF::UConsole, UFunctions::UConsole},
@@ -86,6 +103,7 @@ static std::vector<Hooks::HookStructure> HookList =
 	{OFF::InitListen, UFunctions::InitListen},
 	{OFF::FindFileInPakFiles, UFunctions::FindFileInPakFiles},
 	{OFF::IsNonPakFileNameAllowed, UFunctions::IsNonPakFilenameAllowed},
+	//{OFF::GameMapsSettings, UGameMapSettings},
 };
 
 typedef SDK::FString*(__thiscall* CopyString)(SDK::FString* This, SDK::FString* NewString);
@@ -240,6 +258,10 @@ void __fastcall OnStartSelected(SDK::UObject* This)
 	if (Mariner::GameInstance) Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::PrivateMatchMenu);
 }
 
+
+
+
+
 void Mariner::Init_Hooks()
 {
 	if (Hooks::Init())
@@ -304,7 +326,7 @@ void Mariner::Init_Hooks()
 		BytePatcher::ReplaceBytes(PB(0xA13F10), ReturnOne); // UMangoInventoryManager::IsActiveBlastPassSeasonOwned
 		BytePatcher::ReplaceBytes(PB(0xA140F0), ReturnOne); // UMangoInventoryManager::IsBlastPassOwned
 		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.
-		BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
+		if (CMLA::SkipMovies.GetAsBool()) BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
 
 		BYTE SkipJump[9]{NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84};
 		
@@ -318,6 +340,8 @@ void Mariner::Init_Hooks()
 		//BytePatcher::ReplaceBytes(PB(0x93A500), ReturnOne);
 		//BytePatcher::ReplaceBytes(PB(0xCE3DF0), ReturnOne); // No idea it's some validation function in AMarinerMainMenuHUD which has no functions exposed in the SDK
 		//BytePatcher::ReplaceBytes(PB(0x9F9920), ReturnOne); // UMangoPartyManager::AreWePartyLeader
+
+		//BytePatcher::ReplaceBytes(PB(0xA797CD), {NOP, NOP, NOP, NOP, NOP}); // UMarinerGameUserSettings::SetSavedCulture patches out the ProcessMulticastDelegate for changing settings
 	}
 }
 
@@ -325,7 +349,12 @@ void Mariner::Init_Engine()
 {
 	while (GEngine() == nullptr) Sleep(25);
 	
-	// May be needed/used in the future for immediate initialization of certain configs.
+	if (!IsNull(Mariner::MapSettings = SDK::UGameMapsSettings::GetDefaultObj()))
+	{
+		Mariner::MapSettings->GameDefaultMap.AssetPathName = Pointers::FString2FName(CMLA::GameDefaultMap.GetArgumentAsString());
+		Mariner::MapSettings->TransitionMap.AssetPathName = Pointers::FString2FName(CMLA::TransitionMap.GetArgumentAsString());
+		Mariner::MapSettings->GlobalDefaultGameMode.AssetPathName = Pointers::FString2FName(CMLA::GlobalDefaultGameMode.GetArgumentAsString());
+	}
 }
 
 void Mariner::Init_Vars(SDK::UWorld* GWorld)
@@ -336,7 +365,7 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 		Mariner::ServerList = SDK::UServerList_C::FindClass("WidgetBlueprintGeneratedClass ServerList.ServerList_C");
 		Mariner::PrivateMatchMenu = SDK::UPrivateMatchMenu_C::FindClass("WidgetBlueprintGeneratedClass PrivateMatchMenu.PrivateMatchMenu_C");
 		Mariner::DebugPlayMenu = SDK::UDebugPlayMenu_C::FindClass("WidgetBlueprintGeneratedClass DebugPlayMenu.DebugPlayMenu_C");
-
+		LogA("Map", Mariner::MapSettings->GameDefaultMap.AssetPathName.ToString());
 		SDK::UMarinerMenuGlobals* MenuGlobals = GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetMenuGlobals();
 		for (SDK::FMarinerCulture& Culture : MenuGlobals->CultureList)
 		{
@@ -347,9 +376,12 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 		
 		SDK::FString NewURL{ L"127.0.0.1:443" };
 		Call<CopyString>(PB(0x3AF6B0))(reinterpret_cast<SDK::FString*>(PB(0x492FCA8)), &NewURL);
-		LogA("URL", reinterpret_cast<SDK::FString*>(PB(0x492FCA8))->ToString());
+		Call<CopyString>(PB(0x3AF6B0))(reinterpret_cast<SDK::FString*>(PB(0x492FD08)), &NewURL);
+
+		LogA("CMS", reinterpret_cast<SDK::FString*>(PB(0x492FCA8))->ToString()); // cms.ops.rocketarena.com
+		LogA("STAGE", reinterpret_cast<SDK::FString*>(PB(0x492FD08))->ToString()); // stage.ops.rocketarena.com
 		
-		//SetUniqueId(Player()->PlayerState->UniqueId, Pointers::FString2FName(L"STEAM"), L"Aeyth8");
+		//SetUniqueId(Player()->PlayerState->UniqueId, Pointers::FString2FName(L"WINDOWS"), L"Aeyth8");
 
 		/*unsigned char * Profile = (unsigned char*)Mariner::GameInstance->MangoManagersInstance->MangoPlayerManager + 0x1D8;
 		SDK::FMangoProfile* LocalProfile = (SDK::FMangoProfile*)(Profile);*/

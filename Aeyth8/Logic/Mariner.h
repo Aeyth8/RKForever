@@ -15,6 +15,7 @@ namespace SDK
 	class UEngine;
 	class UWorld;
 	class UBlueprintFunctionLibrary;
+	class UGameMapsSettings;
 	class UClass;
 
 	class UMarinerGameInstance;
@@ -47,6 +48,7 @@ namespace Mariner
 {
 	// -- Vars
 
+	extern SDK::UGameMapsSettings* MapSettings;
 	extern SDK::UMarinerGameInstance* GameInstance;
 	extern SDK::UClass* PrivateMatchMenu;
 	extern SDK::UClass* ServerList;
@@ -57,6 +59,9 @@ namespace Mariner
 	void Init_Hooks();
 	void Init_Engine();
 	void Init_Vars(SDK::UWorld* GWorld);
+
+	// For some reason this game does not follow the UGameMapsSettings like practically every other game, so I have to force it with a browse hook.
+	extern bool bIsInitialized;
 
 	// -- Pointers
 

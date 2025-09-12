@@ -34,6 +34,7 @@ namespace OFF
 	OFFSET InitListen("UIpNetDriver::InitListen", 0x670970);
 	OFFSET UniqueIdFromString("FUniqueNetIdRepl::UniqueIdFromString", 0x2176B60);
 	OFFSET SetUniqueId("FUniqueNetIdRepl::SetUniqueNetId", 0x603B60);
+	OFFSET GameMapsSettings("UGameMapsSettings::UGameMapsSettings", 0x1776660);
 
 	// Native Game Functions
 

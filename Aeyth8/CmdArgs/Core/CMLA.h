@@ -1,0 +1,204 @@
+#pragma once
+
+
+/*
+
+Written by Aeyth8
+
+https://github.com/Aeyth8
+
+Copyright (C) 2025 Aeyth8
+
+*/
+
+typedef unsigned __int16 uint16;
+typedef unsigned __int32 uint32;
+typedef __int16 int16;
+typedef __int32 int32;
+
+namespace A8CL
+{
+
+// Wrap an array of C-Strings into something usable 
+// (Originally CStr changed to CArray, I did not realize I essentially wrote a unchangable TArray)
+template <class Type>
+struct CArray
+{
+	CArray(const int& Count, Type* Array) : Count(Count), Array(Array) {}
+
+	Type* Array;
+	int Count;
+
+	constexpr Type const* begin() { return Array; }
+	constexpr Type const* end()   { return Array + Count; }
+
+	// Half-baked last-minute implemented function to maintain a clean syntax (INCOMPLETE)
+	void Assign(const int& NewCount, Type*& NewArray)
+	{		
+		Count = NewCount;
+		Array = NewArray;
+	}
+};
+
+// strlen / lstrlenW ripoff
+template <class Integer = uint16, class Encoding>
+constexpr Integer CharacterLength(const Encoding* String)
+{
+	if (!String) return 0;
+
+	constexpr Integer Max = Integer(~0) >> (Integer(-1) < Integer(0) ? 1 : 0); // I don't even know what this does except that it grabs the max length the integer type can be
+	Integer Length{0};
+
+	while (*String++)
+	{
+		if (Length >= Max) break;
+
+		++Length;
+	}
+
+	return Length;
+}
+
+// Poor man's std::tolower / Only works with char/wchar_t
+template <class Encoding>
+Encoding Lowercase(Encoding Char) 
+{
+	return Char >= 'A' && Char <= 'Z' ? Char + 32 : Char;
+}
+
+// Convert an entire C string into lowercase
+template <class Integer = uint16, class Encoding>
+void LowercaseStr(const Encoding* String, Encoding* OutBuffer)
+{
+	Integer Length = CharacterLength<Integer, Encoding>(String);
+	for (Integer i{0}; i < Length; ++i)
+	{
+		OutBuffer[i] = Lowercase(String[i]);
+	}
+}
+
+// Compares two C-Strings, returns true if equal, false if not equal
+// A homemade and templated version of strcmp / wcscmp 
+template <class Integer = uint16, class Encoding>
+constexpr bool StringCompare(Encoding* StringA, Encoding* StringB)
+{
+	Integer SizeA = CharacterLength<Integer, Encoding>(StringA);
+	Integer SizeB = CharacterLength<Integer, Encoding>(StringB);
+
+	if (SizeA != SizeB) return false;
+
+	for (Integer i{0}; i < SizeA; ++i)
+	{
+		if (StringA[i] != StringB[i]) return false;
+	}
+
+	return true;
+}
+
+template <class Integer = uint16, class Encoding>
+Encoding* FindChar(Encoding* String, Encoding Character, bool bReverse, Integer StringLen)
+{
+	if (bReverse)
+	{
+		for (Integer i{StringLen}; i-- > 0;) if (String[i] == Character) return &String[i];
+	}
+	else
+	{
+		for (Integer i{0}; i < StringLen; ++i) if (String[i] == Character) return &String[i];
+	}
+	return nullptr;
+}
+
+template <class Integer = uint16, class Encoding>
+Encoding* FindChar(Encoding* String, Encoding Character, bool bReverse = false)
+{
+	return FindChar(String, Character, bReverse, CharacterLength<Integer, Encoding>(String));
+}
+
+template <class Integer = uint16, class Encoding>
+void Substring(Encoding* InputString, Encoding* InputBuffer, Integer StartPos, Integer Size)
+{
+	Integer SizeOfString = CharacterLength(InputString);
+	for (Integer i{0}; SizeOfString > i && i < Size; ++i)
+	{
+		InputBuffer[i] = InputString[StartPos + i];
+	}
+	InputBuffer[SizeOfString] = '\0';
+}
+
+template <class Encoding>
+class alignas(0x8)CommandLineParameter
+{
+private:
+
+	const Encoding* ParameterName;
+	const Encoding* ParameterArgument;
+
+	uint32 bRequiresArgument : 1;		// If there is no argument required then it is a bool.
+	uint32 bBoolToggled		 : 1;		// This flag is only for booleans and it determines if the name has been invoked.
+	uint32 CharacterCount	 : 16;		// Max is 65,536 characters / uint16
+	// Add other bitflag bools later (maybe)
+
+public:
+
+	// Default constructor
+	CommandLineParameter(const Encoding* ParameterName, const Encoding* ParameterArgument, uint16 CharacterCount)
+	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterCount) {}
+
+	// Default constructor without manual count
+	CommandLineParameter(const Encoding* ParameterName, const Encoding* ParameterArgument)
+	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterLength(ParameterArgument)) {}
+
+	// For booleans
+	CommandLineParameter(const Encoding* ParameterName)
+	: ParameterName(ParameterName), ParameterArgument(nullptr), bRequiresArgument(0), bBoolToggled(0), CharacterCount(0) {}
+
+	uint16 const GetCharacterCount() const
+	{
+		return this->CharacterCount;
+	}
+
+	constexpr bool IsBool() const
+	{
+		return !this->bRequiresArgument;
+	}
+
+	bool GetAsBool() const
+	{
+		return this->IsBool() && bBoolToggled;
+	}
+
+	const Encoding* GetNameAsString() const
+	{
+		return this->ParameterName;
+	}
+
+	const Encoding* GetArgumentAsString() const
+	{
+		return this->ParameterArgument;
+	}
+
+	void SetArgument(const Encoding* NewArgument)
+	{
+		this->ParameterArgument = NewArgument;
+		this->CharacterCount = CharacterLength(NewArgument);
+	}
+
+	void SetBool(const bool NewValue)
+	{
+		this->bBoolToggled = NewValue;
+	}
+};
+
+// Base core class, any game specific configs should be used in a separate file. 
+class CommandLineArguments
+{
+public:
+
+	// I made this because I am too stubborn to make an overloaded function
+	inline static CArray<wchar_t*>* OutCommandLineCache{nullptr};
+
+	static void ParseCommandLine(wchar_t* CommandLineW, CArray<CommandLineParameter<wchar_t>*>& GlobalCommands, CArray<wchar_t*>*& OutCommandLine = OutCommandLineCache);
+};
+
+}

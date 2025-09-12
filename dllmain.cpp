@@ -1,8 +1,11 @@
-#include "pch.h"
-
 #include "Aeyth8/Global.hpp"
-#include "Aeyth8/Tools/Pointers.h"
 #include "Aeyth8/Logic/Mariner.h"
+#include "Aeyth8/Tools/Pointers.h"
+#include "Aeyth8/CmdArgs/CommandLineArgs.h"
+
+#ifdef PROXY
+#include "Aeyth8/Proxy8/ProxyTypes.h"
+#endif
 
 /*
 
@@ -16,39 +19,49 @@ https://github.com/Aeyth8
 // My entire codebase has been designed to use namespaces like this.
 using namespace A8CL; using namespace Global; using namespace Pointers;
 
-static void Init() {
-
+// Called immediately before WinMainCRTStartup (entry), runs in-thread of entry to execute code before anything else begins.
+static void PreInit()
+{
 	// Retrieves the Global Base Address (GBA) by getting the module handle casted as a uintptr_t
 	GBA = (uintptr_t)GetModuleHandleA("Mariner-Win64-Shipping.exe");
 
-	LogWin();
+	CommandLineArguments::ParseCommandLine(GetCommandLineW(), CMLA::GlobalCommandLineArgs, CMLA::GlobalCommandLine);
+
+	if (CMLA::WinCSOut.GetAsBool()) LogWin();
 	LogA("GetCommandLineA", GetCommandLineA());
 	LogA("INITIALIZED", "The Global Base Address [GBA] is " + HexToString(GBA));
 
-	Mariner::Init_Hooks();
-	Mariner::LogFImpl(L"Hooks have been fully initialized, this patch was made by Aeyth8, inspired by SyST3MDeV");
-	//Mariner::Init_Engine();
+	Mariner::Init_Hooks();	
+}
 
-	while (UWorld() == nullptr)
+static void Init() 
+{
+	Mariner::Init_Engine();
+	Mariner::LogFImpl(L"Hooks have been fully initialized, this patch was made by Aeyth8, inspired by SyST3MDeV");
+
+	SDK::UWorld* GWorld{nullptr};
+	while ((GWorld = Mariner::GWorld()) == nullptr)
 	{
-		Sleep(2000);
+		Sleep(100);
 	}
 
-	Mariner::Init_Vars(UWorld());
+	Mariner::Init_Vars(GWorld);
 
-	if (!bConstructedUConsole) bConstructedUConsole = ConstructUConsole();
+	if (!bConstructedUConsole) bConstructedUConsole = ConstructUConsole(CMLA::ConsoleKey.GetArgumentAsString());
 }
 
 int __stdcall DllMain(HMODULE hModule, DWORD ulReasonForCall, LPVOID lpReserved) {
 	DisableThreadLibraryCalls(hModule);
 
-	if (ulReasonForCall != DLL_PROCESS_ATTACH)
-		return 1;
+	if (ulReasonForCall == DLL_PROCESS_ATTACH)
+	{
+		Global::InitLog();
+		PreInit();
 
-	Global::InitLog();
-
-	if (Proxy::Attach(hModule))
-		ConstructThread(Init);
-
+#ifdef PROXY
+		if (Proxy::Attach(hModule))
+#endif
+			ConstructThread(Init);
+	}
 	return 1;
 }

@@ -79,6 +79,16 @@
     <ClCompile Include="SDK\ServerList_functions.cpp">
       <Filter>SDK\CPP</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\DefaultPlaylistButton_functions.cpp" />
+    <ClCompile Include="Aeyth8\CmdArgs\CommandLineArgs.cpp">
+      <Filter>Aeyth8\CmdArgs</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\CmdArgs\Core\CMLA.cpp">
+      <Filter>Aeyth8\CmdArgs\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\EngineSettings_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -147,6 +157,12 @@
     <ClInclude Include="Aeyth8\Logic\Mariner.h">
       <Filter>Aeyth8\Logic</Filter>
     </ClInclude>
+    <ClInclude Include="Aeyth8\CmdArgs\CommandLineArgs.h">
+      <Filter>Aeyth8\CmdArgs</Filter>
+    </ClInclude>
+    <ClInclude Include="Aeyth8\CmdArgs\Core\CMLA.h">
+      <Filter>Aeyth8\CmdArgs\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Aeyth8">
@@ -187,6 +203,12 @@
     </Filter>
     <Filter Include="SDK\Core">
       <UniqueIdentifier>{17affa11-8aad-4cd6-8cf0-db63ac8164a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aeyth8\CmdArgs">
+      <UniqueIdentifier>{293018b1-3797-4f59-a836-71ab031d12e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aeyth8\CmdArgs\Core">
+      <UniqueIdentifier>{f72e8e0b-9517-4eb7-a9d6-b107fcddc4a7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

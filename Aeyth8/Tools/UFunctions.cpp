@@ -129,6 +129,8 @@ using namespace Global;
 		UFunctions
 */
 
+#include "../CmdArgs/CommandLineArgs.h"
+
 #include "../../SDK/Mariner_classes.hpp"
 #include "../../SDK/CharacterCustomization_classes.hpp"
 #include "../../SDK/DebugPlayMenu_classes.hpp"
@@ -181,7 +183,27 @@ void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 
 UFunctions::BrowseReturnVal UFunctions::Browse(SDK::UEngine* This, SDK::FWorldContext& WorldContext, SDK::FURL URL, SDK::FString& Error)
 {
-	if (!Global::bConstructedUConsole) { Global::bConstructedUConsole = Pointers::ConstructUConsole();
+	// Calling GetDefaultObj for this game does not work for overriding the default map, so I made this logic.
+	// And then I ended up hooking the constructor to force grab the instance, it did not work.
+
+	if (!Mariner::bIsInitialized)
+	{
+		Mariner::bIsInitialized = true;
+
+		wchar_t* OverrideMap = const_cast<wchar_t*>(CMLA::GameDefaultMap.GetArgumentAsString());
+
+		wchar_t MapBuffer[150]{0};
+		wchar_t* Period = FindChar(OverrideMap, L'.', true);
+
+		Substring(OverrideMap, MapBuffer, (uint16)0, uint16(Period - OverrideMap));
+		SDK::FString CopyMap{MapBuffer};
+
+		// I don't like the idea of distorting the logic for CMLA in this one game so I'm parsing the period out of the map name as browse does not use it.
+
+		OFF::FString.VerifyFC<Decl::CopyString>()(&URL.Map, &CopyMap);
+	}
+
+	if (!Global::bConstructedUConsole) { Global::bConstructedUConsole = Pointers::ConstructUConsole(CMLA::ConsoleKey.GetArgumentAsString());
 		LogA("Browse", "Constructed UConsole early.");
 	}
 
@@ -195,7 +217,7 @@ UFunctions::BrowseReturnVal UFunctions::Browse(SDK::UEngine* This, SDK::FWorldCo
 bool UFunctions::InitListen(SDK::UIpNetDriver* This, int32_t* InNotify, SDK::FURL& LocalURL, bool bReuseAddressAndPort, SDK::FString& Error)
 {
 	LogA("InitListen", This->GetFullName() + " | " + Helpers::FURLParser(LocalURL));
-	LocalURL.Port = 1170;
+	LocalURL.Port = wcstol(CMLA::ServerPort.GetArgumentAsString(), 0, 10);
 
 	return OFF::InitListen.VerifyFC<Decl::InitListen>()(This, InNotify, LocalURL, bReuseAddressAndPort, Error);
 }

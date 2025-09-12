@@ -149,6 +149,8 @@ public:
 
 		typedef bool(__thiscall* FindFileInPakFiles)(__int64* This, const wchar_t* Filename, __int64** OutPakFile, __int64* OutEntry);
 
+		typedef SDK::FString*(__thiscall* CopyString)(SDK::FString* This, SDK::FString* NewString); // FString::FString
+
 		typedef void(__thiscall* ProcessMulticastDelegate)(__int64* This, void* Parameters);
 
 		//typedef void(__fastcall* LogFImpl)(const char* File, int Line, const SDK::FName& Category, ELogVerbosity VerbosityType, wchar_t* Format);
