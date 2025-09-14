@@ -35,13 +35,14 @@ namespace OFF
 	OFFSET UniqueIdFromString("FUniqueNetIdRepl::UniqueIdFromString", 0x2176B60);
 	OFFSET SetUniqueId("FUniqueNetIdRepl::SetUniqueNetId", 0x603B60);
 	OFFSET GameMapsSettings("UGameMapsSettings::UGameMapsSettings", 0x1776660);
+	OFFSET ReceiveInit("UGameInstance::ReceiveInit", 0x24DF560);
 
 	// Native Game Functions
 
-	OFFSET MarinerPreLogin("AGameModeBase::PreLogin", 0x95E5C0);
-	OFFSET ShowMessageBox("UMarinerGameInstance::ShowMessageBox", 0xA80AF0);
-	OFFSET ShowMessageBoxManager("UMarinerMessageBoxManager::ShowMessageBox", 0xCA1CE0);
+	OFFSET MarinerPreLogin("AMarinerGameMode::PreLogin", 0x95E5C0);
 	OFFSET StartLogin("OnLoginStarted", 0x9CD7B0);
+	OFFSET SelectPrivateMatch("MarinerMainMenuHUD PrivateMatchErrorHandler", 0xC30E40);
+	OFFSET SelectPlaylists("UMarinerPlaylistGroupButton::HandleSelected", 0xC88010);
 
 	// Imported DLL Functions
 

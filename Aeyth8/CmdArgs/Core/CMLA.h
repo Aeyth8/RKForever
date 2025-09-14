@@ -131,6 +131,41 @@ class alignas(0x8)CommandLineParameter
 {
 private:
 
+	inline static CommandLineParameter<Encoding>** GlobalCommandObjects{nullptr};
+	inline static int GlobalCommandMax{4};
+	inline static int GlobalCommandCount{0};
+
+	static void ResizeArray()
+	{
+		if (GlobalCommandCount >= GlobalCommandMax)
+		{
+			int NewSize = GlobalCommandMax * 2;
+			CommandLineParameter** NewArray = new CommandLineParameter<Encoding>*[NewSize];
+
+			for (int i{0}; i < GlobalCommandCount; ++i)
+			{
+				NewArray[i] = GlobalCommandObjects[i];
+			}
+
+			delete[] GlobalCommandObjects;
+
+			GlobalCommandObjects = NewArray;
+			GlobalCommandMax = NewSize;
+		}
+	}
+
+	void Constructor()
+	{
+		if (!GlobalCommandObjects)
+		{
+			GlobalCommandObjects = new CommandLineParameter<Encoding>*[GlobalCommandMax];
+		}
+
+		ResizeArray();
+
+		GlobalCommandObjects[GlobalCommandCount++] = this;
+	}
+
 	const Encoding* ParameterName;
 	const Encoding* ParameterArgument;
 
@@ -141,17 +176,31 @@ private:
 
 public:
 
+	static CArray<CommandLineParameter<Encoding>*> GCommands()
+	{
+		return CArray<CommandLineParameter<Encoding>*>(GlobalCommandCount, GlobalCommandObjects);
+	}
+
 	// Default constructor
 	CommandLineParameter(const Encoding* ParameterName, const Encoding* ParameterArgument, uint16 CharacterCount)
-	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterCount) {}
+	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterCount) 
+	{
+		Constructor();
+	}
 
 	// Default constructor without manual count
 	CommandLineParameter(const Encoding* ParameterName, const Encoding* ParameterArgument)
-	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterLength(ParameterArgument)) {}
+	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterLength(ParameterArgument)) 
+	{
+		Constructor();
+	}
 
-	// For booleans
+	// For booleans, null = false | !null = true
 	CommandLineParameter(const Encoding* ParameterName)
-	: ParameterName(ParameterName), ParameterArgument(nullptr), bRequiresArgument(0), bBoolToggled(0), CharacterCount(0) {}
+	: ParameterName(ParameterName), ParameterArgument(nullptr), bRequiresArgument(0), bBoolToggled(0), CharacterCount(0) 
+	{
+		Constructor();
+	}
 
 	uint16 const GetCharacterCount() const
 	{

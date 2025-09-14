@@ -19,6 +19,8 @@ namespace SDK
 	class UClass;
 
 	class UMarinerGameInstance;
+
+	class UMarinerMenuStackLayer;
 	
 	// All game specific subclasses of UBlueprintFunctionLibrary
 	class UMarinerPhysicsLibrary;
@@ -78,6 +80,10 @@ namespace Mariner
 	{
 		return static_cast<Subclass*>(BlueprintFunctionLibrary());
 	}
+
+	// -- Helpers
+
+	SDK::UMarinerMenuStackLayer* __fastcall PushLayerToActiveStack(SDK::UClass* Layer);
 
 	// -- Extra
 

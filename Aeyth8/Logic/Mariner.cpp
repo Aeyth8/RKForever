@@ -8,15 +8,15 @@
 #include "../Tools/BytePatcher.h"
 #include "../CmdArgs/CommandLineArgs.h"
 
-#include "../../SDK/EngineSettings_classes.hpp"
+#include "../../Dumper-7/SDK/EngineSettings_classes.hpp"
 
-#include "../../SDK/Mariner_classes.hpp"
-#include "../../SDK/Mariner_structs.hpp"
-#include "../../SDK/DebugPlayMenu_classes.hpp"
-#include "../../SDK/PrivateMatchMenu_classes.hpp"
-#include "../../SDK/CharacterCustomization_classes.hpp"
-#include "../../SDK/ServerList_classes.hpp"
-#include "../../SDK/DefaultPlaylistGroupButton_classes.hpp"
+#include "../../Dumper-7/SDK/Mariner_classes.hpp"
+#include "../../Dumper-7/SDK/Mariner_structs.hpp"
+#include "../../Dumper-7/SDK/DebugPlayMenu_classes.hpp"
+#include "../../Dumper-7/SDK/PrivateMatchMenu_classes.hpp"
+#include "../../Dumper-7/SDK/CharacterCustomization_classes.hpp"
+#include "../../Dumper-7/SDK/ServerList_classes.hpp"
+#include "../../Dumper-7/SDK/DefaultPlaylistGroupButton_classes.hpp"
 
 /*
 
@@ -47,8 +47,6 @@ constexpr const BYTE NOP{0x90};
 constexpr const BYTE RETN{0xC3};
 constexpr const BYTE JMP{0xEB}; // Jump short https://www.felixcloutier.com/x86/jmp
 
-// -- Hooks
-
 // These numbers seem to be persistent across games
 enum CharacterButtonIndex : unsigned char 
 {
@@ -72,15 +70,29 @@ static constexpr const int32& GetIndex(enum CharacterButtonIndex Character)
 	return BaseIndex + Character;
 }
 
+// -- UI Hooks
 
 static void OnLoginStarted(SDK::UMangoConnectionManager* This, uint32 NoClue)
 {
-	if (Mariner::GameInstance)
-	{
-		Mariner::GameInstance->OnMovieCompleted();		
-	}
-
+	if (Mariner::GameInstance) Mariner::GameInstance->OnMovieCompleted();		
 }
+
+static void __fastcall OnPrivateMatchSelected(SDK::AMarinerMainMenuHUD* This, unsigned char IDK)
+{
+	Mariner::PushLayerToActiveStack(Mariner::PrivateMatchMenu);	
+}
+
+static void __fastcall OnPlaylistSelected(SDK::UObject* This)
+{
+	Mariner::PushLayerToActiveStack(Mariner::ServerList);	
+}
+
+static std::vector<Hooks::HookStructure> MenuHooks =
+{
+	{OFF::StartLogin, OnLoginStarted},
+	{OFF::SelectPrivateMatch, OnPrivateMatchSelected},
+	{OFF::SelectPlaylists, OnPlaylistSelected},
+};
 
 static SDK::UGameMapsSettings* __fastcall UGameMapSettings(SDK::UGameMapsSettings* This, void* FObjectInitializer)
 {
@@ -91,6 +103,8 @@ static SDK::UGameMapsSettings* __fastcall UGameMapSettings(SDK::UGameMapsSetting
 
 	return This;
 }
+
+// -- Hooks
 
 static std::vector<Hooks::HookStructure> HookList =
 {
@@ -106,7 +120,6 @@ static std::vector<Hooks::HookStructure> HookList =
 	//{OFF::GameMapsSettings, UGameMapSettings},
 };
 
-typedef SDK::FString*(__thiscall* CopyString)(SDK::FString* This, SDK::FString* NewString);
 typedef __int64(__fastcall* GenericFunc)(__int64* This);
 typedef __int64(__fastcall* PrivateMatchEH_T)(__int64* This, unsigned char IDK);
 typedef void(__thiscall* EquipRequest_T)(SDK::UMarinerEquipItemToProfile* This, bool bSuccess);
@@ -122,7 +135,7 @@ typedef SDK::UMarinerMenuStackLayer*(__fastcall* PushLayerToActiveStack_T)(SDK::
 
 A8CL::OFFSET HandleEquipRequest("HandleEquipRequest", 0x929D50);
 A8CL::OFFSET EquipActivate("UMarinerEquipItemToProfile::Activate", 0x908B50);
-A8CL::OFFSET PrivateMatchEH("MarinerMainMenuHUD PrivateMatchErrorHandler", 0xC30E40); // 0xC1F5F0 retrieves the error string
+
 //A8CL::OFFSET GetAccountName("UMangoManager::GetActiveAccountName", 0xA07DD0); I don't think this gets called anywhere
 A8CL::OFFSET GetMangoProfile("GetMangoProfile", 0xA0C700);
 A8CL::OFFSET GetMangoId("GetMangoId", 0xA0C6D0);
@@ -130,7 +143,7 @@ A8CL::OFFSET LoadEquippedDataForCharacter("UMarinerLoadEquippedDataForCharacter"
 A8CL::OFFSET ChangePerspective("AMarinerPlayerController::ChangePerspective", 0xBD7A20);
 A8CL::OFFSET SelectPrivateMatchOrSmth("SelectPrivateMatchOrSmth", 0xC13860);
 A8CL::OFFSET PushLayerToActiveStack("UMarinerMenuStackManager::PushToActiveStack", 0xC638F0);
-A8CL::OFFSET HandleSelected("UMarinerPlaylistGroupButton::HandleSelected", 0xC88010);
+
 A8CL::OFFSET StartSelected("UMarinerPrivateMatchMenu::OnStartSelected", 0xCEDEE0);
 
 static SDK::UMarinerLoadEquippedDataForCharacter* __fastcall LoadEquip(SDK::UMarinerLoadEquippedDataForCharacter* This)
@@ -149,12 +162,6 @@ __int64 __fastcall SelectPrivateMatch(SDK::AMarinerHUD* This)
 {
 	LogA(SelectPrivateMatchOrSmth.GetName(), This->GetFullName());
 	return SelectPrivateMatchOrSmth.VerifyFC<SelectPrivateMatchOrSmth_T>()(This);
-}
-
-void __fastcall PrivateMatchErrorHandler(__int64* This, unsigned char IDK)
-{
-	LogA(PrivateMatchEH.GetName(), reinterpret_cast<SDK::UObject*>(This)->GetFullName());
-	if (Mariner::GameInstance) Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::PrivateMatchMenu);
 }
 
 // So CharacterCustomization_C is persistent across levels, the entire game
@@ -227,66 +234,29 @@ void MenuThing(SDK::UMarinerGameInstance* This, SDK::FString* LastPagePath, SDK:
 	LogA(MenuThingy.GetName(), std::format("[This]: {} | [LastPagePath]: {} | [CurrentPagePath]: {} | [Var4]: {} | [ActionType] {}", This->GetFullName(), LastPagePath->ToString(), CurrentPagePath->ToString(), std::to_string(Var4), ActionType->ToString()));
 	return MenuThingy.VerifyFC<MenuThing_T>()(This, LastPagePath, CurrentPagePath, Var4, ActionType);
 }
-
-void __fastcall OnHandleSelected(SDK::UObject* This)
+#include <intrin.h>
+A8CL::OFFSET Stupid("idiot", 0x242A9E0);
+void IdkYet(SDK::UEngine* This, SDK::FWorldContext& Context, float Idk)
 {
-	if (Mariner::GameInstance && Mariner::GameInstance->MenuManagerInstance)
-	{
-		if (This->IsA(SDK::UDefaultPlaylistGroupButton_C::StaticClass()))
-		{
-			Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::ServerList);
-		}
-		else if (This->IsA(Mariner::PrivateMatchMenu))
-		{
-			Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::PrivateMatchMenu);
-		}
-		else if (This->IsA(Mariner::DebugPlayMenu))
-		{
-			Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::DebugPlayMenu);
-		}
 
-	}
-	//LogA(This->GetFullName(), "Idk");
-	//if (Mariner::GameInstance) Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::ServerList);
-	//LogA(HandleSelected.GetName(), "Called");
-	//return HandleSelected.VerifyFC<GenericFunc>()(This);
+	LogA("Browse", HexToString((uintptr_t)_ReturnAddress() - GBA));
+	LogA(This->GetFullName(), UFunctions::Helpers::FWorldContextParser(Context) + " | Float: " + std::to_string(Idk));
+	Stupid.VerifyFC<void(__thiscall*)(SDK::UEngine* This, SDK::FWorldContext& IDK, float Idk)>()(This, Context, Idk);
 }
 
-void __fastcall OnStartSelected(SDK::UObject* This)
+void __fastcall InitGI(SDK::UMarinerGameInstance* This)
 {
-	LogA(This->GetFullName(), "Idk");
-	if (Mariner::GameInstance) Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Mariner::PrivateMatchMenu);
+	LogA("ReceiveInit", This->GetFullName());
+	OFF::ReceiveInit.VerifyFC<void(__fastcall*)(SDK::UMarinerGameInstance*)>()(This);
 }
-
-
-
-
 
 void Mariner::Init_Hooks()
 {
 	if (Hooks::Init())
 	{
-		/*const wchar_t* MyMangoId = L"Aeyth8";
-		wchar_t* GMangoId = (wchar_t*)PB(0x4937F70);
-		memmove(GMangoId, MyMangoId, sizeof(wchar_t*));
-		//*GMangoId = *const_cast<wchar_t*>(MyMangoId);
-		BytePatcher::ReplaceBytes(PB(0xA0C6DA), {NOP, NOP});*/
-
 		Hooks::CreateAndEnableHooks(HookList);
-		Hooks::CreateAndEnableHook(OFF::StartLogin, OnLoginStarted); // I would rather do a bytepatch but it would rather crash, for now a hook works fine.
-		Hooks::CreateAndEnableHook(PrivateMatchEH, PrivateMatchErrorHandler);
-		
-		
-		//Hooks::CreateAndEnableHook(StartSelected, OnStartSelected); isnt working for some stupid reason I will figure it out later
-
-
-		//Hooks::CreateAndEnableHook(MenuThingy, MenuThing);
-		//Hooks::CreateAndEnableHook(SelectPrivateMatchOrSmth, SelectPrivateMatch);
-		//Hooks::CreateAndEnableHook(PushLayerToActiveStack, PushToActiveStack);
-		Hooks::CreateAndEnableHook(HandleSelected, OnHandleSelected);
-		//Hooks::CreateAndEnableHook(GetMangoProfile, GetMangoProfileHook);
-		//Hooks::CreateAndEnableHook(ChangePerspective, Perspective);
-		//Hooks::CreateAndEnableHook(GetMangoId, GetMangoIdHook);
+		Hooks::CreateAndEnableHooks(MenuHooks);
+		Hooks::CreateAndEnableHook(OFF::ReceiveInit, InitGI);
 		//Hooks::CreateAndEnableHook(LoadEquippedDataForCharacter, LoadEquip); For some reason this causes the profile picture to be infinite loading screen
 
 		/*BYTE NewName[37]{0x41, 0x00, 0x65, 0x00, 0x79, 0x00, 0x74, 0x00, 0x68, 0x00, 0x38};
@@ -325,12 +295,10 @@ void Mariner::Init_Hooks()
 		BytePatcher::ReplaceBytes(PB(0xA14D90), ReturnOne); // UMangoInventoryManager::IsItemOwned() should unlock all emotes.
 		BytePatcher::ReplaceBytes(PB(0xA13F10), ReturnOne); // UMangoInventoryManager::IsActiveBlastPassSeasonOwned
 		BytePatcher::ReplaceBytes(PB(0xA140F0), ReturnOne); // UMangoInventoryManager::IsBlastPassOwned
-		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.
-		if (CMLA::SkipMovies.GetAsBool()) BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
+		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.		
+		BytePatcher::ReplaceBytes(PB(0xA56810), {NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84}); // Patches the stupid PartyErrorReason_AlreadyInSession preventing you from launching a second instance of the game.
 
-		BYTE SkipJump[9]{NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84};
-		
-		BytePatcher::ReplaceBytes(PB(0xA56810), SkipJump); // Patches the stupid PartyErrorReason_AlreadyInSession preventing you from launching a second instance of the game.
+		if (CMLA::SkipMovies.GetAsBool()) BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
 	
 		//BytePatcher::ReplaceBytes(PB(0x9C4480), ReturnOne); // Enables "E3 Mode" / Puts you in a limbo state, I've never seen a temp world before but that's a thing
 		//BytePatcher::ReplaceBytes(PB(0x9C3BB0), ReturnOne); // Enables "Demo Mode" / removes the store
@@ -348,13 +316,19 @@ void Mariner::Init_Hooks()
 void Mariner::Init_Engine()
 {
 	while (GEngine() == nullptr) Sleep(25);
-	
+
 	if (!IsNull(Mariner::MapSettings = SDK::UGameMapsSettings::GetDefaultObj()))
 	{
 		Mariner::MapSettings->GameDefaultMap.AssetPathName = Pointers::FString2FName(CMLA::GameDefaultMap.GetArgumentAsString());
 		Mariner::MapSettings->TransitionMap.AssetPathName = Pointers::FString2FName(CMLA::TransitionMap.GetArgumentAsString());
 		Mariner::MapSettings->GlobalDefaultGameMode.AssetPathName = Pointers::FString2FName(CMLA::GlobalDefaultGameMode.GetArgumentAsString());
 	}
+
+	SDK::UGameMapsSettings* New = (SDK::UGameMapsSettings*)Call<SDK::UClass*(__fastcall*)()>(PB(0x1777850))();
+
+	LogA("Maps", HexToString((uintptr_t)Mariner::MapSettings) + " | " + HexToString((uintptr_t)New));
+	LogA("Map", New->GetFullName());
+	LogA("OldMap", Mariner::MapSettings->GetFullName());
 }
 
 void Mariner::Init_Vars(SDK::UWorld* GWorld)
@@ -365,7 +339,7 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 		Mariner::ServerList = SDK::UServerList_C::FindClass("WidgetBlueprintGeneratedClass ServerList.ServerList_C");
 		Mariner::PrivateMatchMenu = SDK::UPrivateMatchMenu_C::FindClass("WidgetBlueprintGeneratedClass PrivateMatchMenu.PrivateMatchMenu_C");
 		Mariner::DebugPlayMenu = SDK::UDebugPlayMenu_C::FindClass("WidgetBlueprintGeneratedClass DebugPlayMenu.DebugPlayMenu_C");
-		LogA("Map", Mariner::MapSettings->GameDefaultMap.AssetPathName.ToString());
+
 		SDK::UMarinerMenuGlobals* MenuGlobals = GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetMenuGlobals();
 		for (SDK::FMarinerCulture& Culture : MenuGlobals->CultureList)
 		{
@@ -373,10 +347,9 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 		}
 		LogA("GetCurrentCulture", GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetCurrentCulture().ToString());
 		
-		
-		SDK::FString NewURL{ L"127.0.0.1:443" };
-		Call<CopyString>(PB(0x3AF6B0))(reinterpret_cast<SDK::FString*>(PB(0x492FCA8)), &NewURL);
-		Call<CopyString>(PB(0x3AF6B0))(reinterpret_cast<SDK::FString*>(PB(0x492FD08)), &NewURL);
+		SDK::FString NewURL{L"127.0.0.1:443"};
+		OFF::FString.VerifyFC<UFunctions::Decl::CopyString>()(reinterpret_cast<SDK::FString*>(PB(0x492FCA8)), &NewURL);
+		OFF::FString.VerifyFC<UFunctions::Decl::CopyString>()(reinterpret_cast<SDK::FString*>(PB(0x492FD08)), &NewURL);
 
 		LogA("CMS", reinterpret_cast<SDK::FString*>(PB(0x492FCA8))->ToString()); // cms.ops.rocketarena.com
 		LogA("STAGE", reinterpret_cast<SDK::FString*>(PB(0x492FD08))->ToString()); // stage.ops.rocketarena.com
@@ -445,6 +418,17 @@ SDK::FMangoProfile* Mariner::GetLocalProfile()
 	}
 
 	LogA("Logic", "FMangoProfile local profile is a null pointer!");
+	return nullptr;
+}
+
+// -- Helpers
+
+SDK::UMarinerMenuStackLayer* __fastcall Mariner::PushLayerToActiveStack(SDK::UClass* Layer)
+{
+	if (Mariner::GameInstance && Mariner::GameInstance->MenuManagerInstance)
+	{
+		return Mariner::GameInstance->MenuManagerInstance->PushLayerToActiveStack(Layer);
+	}
 	return nullptr;
 }
 

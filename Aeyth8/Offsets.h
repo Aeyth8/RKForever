@@ -37,13 +37,14 @@ namespace OFF
 	extern OFFSET UniqueIdFromString;
 	extern OFFSET SetUniqueId;
 	extern OFFSET GameMapsSettings;
+	extern OFFSET ReceiveInit;
 
 	// Native Game Functions
 
 	extern OFFSET MarinerPreLogin;
-	extern OFFSET ShowMessageBox;
-	extern OFFSET ShowMessageBoxManager;
 	extern OFFSET StartLogin;
+	extern OFFSET SelectPrivateMatch; // 0xC1F5F0 retrieves the error string
+	extern OFFSET SelectPlaylists;
 
 	// Imported DLL Functions
 

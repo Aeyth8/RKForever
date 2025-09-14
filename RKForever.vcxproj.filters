@@ -4,9 +4,6 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Aeyth8\Proxy8\Proxy.cpp">
       <Filter>Aeyth8\Proxy8</Filter>
     </ClCompile>
@@ -46,54 +43,53 @@
     <ClCompile Include="Aeyth8\Offsets.cpp">
       <Filter>Aeyth8</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\Mariner_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
     <ClCompile Include="Aeyth8\Logic\Mariner.cpp">
       <Filter>Aeyth8\Logic</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\CharacterCustomization_Emote_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Basic.cpp">
-      <Filter>SDK\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\CoreUObject_functions.cpp">
-      <Filter>SDK\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\Engine_functions.cpp">
-      <Filter>SDK\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\UMG_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\DebugPlayMenu_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\PrivateMatchMenu_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\CharacterCustomization_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\ServerList_functions.cpp">
-      <Filter>SDK\CPP</Filter>
-    </ClCompile>
-    <ClCompile Include="SDK\DefaultPlaylistButton_functions.cpp" />
     <ClCompile Include="Aeyth8\CmdArgs\CommandLineArgs.cpp">
       <Filter>Aeyth8\CmdArgs</Filter>
     </ClCompile>
     <ClCompile Include="Aeyth8\CmdArgs\Core\CMLA.cpp">
       <Filter>Aeyth8\CmdArgs\Core</Filter>
     </ClCompile>
-    <ClCompile Include="SDK\EngineSettings_functions.cpp">
+    <ClCompile Include="Dumper-7\SDK\CoreUObject_functions.cpp">
+      <Filter>SDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\Basic.cpp">
+      <Filter>SDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\Engine_functions.cpp">
+      <Filter>SDK\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\EngineSettings_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\CharacterCustomization_Emote_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\CharacterCustomization_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\DebugPlayMenu_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\DefaultPlaylistButton_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\Mariner_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\PrivateMatchMenu_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\ServerList_functions.cpp">
+      <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper-7\SDK\UMG_functions.cpp">
       <Filter>SDK\CPP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Aeyth8\Proxy8\Proxy.h">
       <Filter>Aeyth8\Proxy8</Filter>
     </ClInclude>
@@ -124,13 +120,13 @@
     <ClInclude Include="MinHook\MinHook.h">
       <Filter>MinHook</Filter>
     </ClInclude>
-    <ClInclude Include="PropertyFixup.hpp">
+    <ClInclude Include="Dumper-7\PropertyFixup.hpp">
       <Filter>SDK</Filter>
     </ClInclude>
-    <ClInclude Include="SDK.hpp">
+    <ClInclude Include="Dumper-7\SDK.hpp">
       <Filter>SDK</Filter>
     </ClInclude>
-    <ClInclude Include="UnrealContainers.hpp">
+    <ClInclude Include="Dumper-7\UnrealContainers.hpp">
       <Filter>SDK</Filter>
     </ClInclude>
     <ClInclude Include="Aeyth8\Hooks\Hooks.hpp">
@@ -192,17 +188,8 @@
     <Filter Include="SDK">
       <UniqueIdentifier>{2ca5539b-8b88-40a7-9e4f-4568fb3c60b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SDK\CPP">
-      <UniqueIdentifier>{7c3d51ca-368f-456b-94b8-9a79bcb8f5e0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="SDK\Headers">
-      <UniqueIdentifier>{9355856c-3abd-4103-980e-9212b742368b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Aeyth8\Logic">
       <UniqueIdentifier>{06c15d7f-1597-4ca5-9b41-d0cc78986c7b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="SDK\Core">
-      <UniqueIdentifier>{17affa11-8aad-4cd6-8cf0-db63ac8164a6}</UniqueIdentifier>
     </Filter>
     <Filter Include="Aeyth8\CmdArgs">
       <UniqueIdentifier>{293018b1-3797-4f59-a836-71ab031d12e3}</UniqueIdentifier>
@@ -210,9 +197,15 @@
     <Filter Include="Aeyth8\CmdArgs\Core">
       <UniqueIdentifier>{f72e8e0b-9517-4eb7-a9d6-b107fcddc4a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SDK\Core">
+      <UniqueIdentifier>{f4f0a7c0-c414-4354-b057-262e54f11f76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\CPP">
+      <UniqueIdentifier>{2f2d3282-6127-4654-80c6-8bf28d756c69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="NameCollisions.inl">
+    <None Include="Dumper-7\NameCollisions.inl">
       <Filter>SDK</Filter>
     </None>
   </ItemGroup>

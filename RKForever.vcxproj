@@ -187,24 +187,18 @@
     <ClCompile Include="MinHook\src\hde\hde64.c" />
     <ClCompile Include="MinHook\src\hook.c" />
     <ClCompile Include="MinHook\src\trampoline.c" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Proxy|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Injectable|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Proxy|Win32'">pch.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Injectable|Win32'">pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <ClCompile Include="SDK\Basic.cpp" />
-    <ClCompile Include="SDK\CharacterCustomization_Emote_functions.cpp" />
-    <ClCompile Include="SDK\CharacterCustomization_functions.cpp" />
-    <ClCompile Include="SDK\CoreUObject_functions.cpp" />
-    <ClCompile Include="SDK\DebugPlayMenu_functions.cpp" />
-    <ClCompile Include="SDK\DefaultPlaylistButton_functions.cpp" />
-    <ClCompile Include="SDK\EngineSettings_functions.cpp" />
-    <ClCompile Include="SDK\Engine_functions.cpp" />
-    <ClCompile Include="SDK\Mariner_functions.cpp" />
-    <ClCompile Include="SDK\PrivateMatchMenu_functions.cpp" />
-    <ClCompile Include="SDK\ServerList_functions.cpp" />
-    <ClCompile Include="SDK\UMG_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\Basic.cpp" />
+    <ClCompile Include="Dumper-7\SDK\CharacterCustomization_Emote_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\CharacterCustomization_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\DebugPlayMenu_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\DefaultPlaylistButton_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\EngineSettings_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\Engine_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\Mariner_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\PrivateMatchMenu_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\ServerList_functions.cpp" />
+    <ClCompile Include="Dumper-7\SDK\UMG_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aeyth8\CmdArgs\CommandLineArgs.h" />
@@ -231,13 +225,12 @@
     <ClInclude Include="MinHook\src\hde\table32.h" />
     <ClInclude Include="MinHook\src\hde\table64.h" />
     <ClInclude Include="MinHook\src\trampoline.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="PropertyFixup.hpp" />
-    <ClInclude Include="SDK.hpp" />
-    <ClInclude Include="UnrealContainers.hpp" />
+    <ClInclude Include="Dumper-7\PropertyFixup.hpp" />
+    <ClInclude Include="Dumper-7\SDK.hpp" />
+    <ClInclude Include="Dumper-7\UnrealContainers.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NameCollisions.inl" />
+    <None Include="Dumper-7\NameCollisions.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

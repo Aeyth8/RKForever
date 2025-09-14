@@ -131,11 +131,11 @@ using namespace Global;
 
 #include "../CmdArgs/CommandLineArgs.h"
 
-#include "../../SDK/Mariner_classes.hpp"
-#include "../../SDK/CharacterCustomization_classes.hpp"
-#include "../../SDK/DebugPlayMenu_classes.hpp"
+#include "../../Dumper-7/SDK/Mariner_classes.hpp"
+#include "../../Dumper-7/SDK/CharacterCustomization_classes.hpp"
+#include "../../Dumper-7/SDK/DebugPlayMenu_classes.hpp"
 #include "../Logic/Mariner.h"
-#include "../../SDK/ServerList_classes.hpp"
+#include "../../Dumper-7/SDK/ServerList_classes.hpp"
 
 void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 {

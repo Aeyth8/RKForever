@@ -1,6 +1,6 @@
 #pragma once
-#include "../../SDK/Engine_classes.hpp"
-#include "../../SDK/OnlineSubsystemUtils_classes.hpp"
+#include "../../Dumper-7/SDK/Engine_classes.hpp"
+#include "../../Dumper-7/SDK/OnlineSubsystemUtils_classes.hpp"
 
 
 /*
