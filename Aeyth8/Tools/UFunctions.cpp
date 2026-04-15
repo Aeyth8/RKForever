@@ -1,5 +1,6 @@
 #include "UFunctions.hpp"
 #include "Pointers.h"
+#include "UnrealTypes.h"
 #include "../Global.hpp"
 #include "../Hooks/Hooks.hpp"
 #include "../Offsets.h"
@@ -96,29 +97,11 @@ void UFunctions::Helpers::ProcessEnd()
 	Global::CloseLog();
 }
 
-bool UFunctions::Helpers::CheckForLocalDirectory(const wchar_t* Filename, unsigned char& Byte)
+extern "C" bool IsInLocalDirectory(const wchar_t*);
+
+bool UFunctions::Helpers::CheckForLocalDirectory(const wchar_t* Filename)
 {
-	while ((Byte & 0b11) < 3)
-	{
-		// 1,3,6								  // 2,4,7
-		if (Filename[((Byte & 0b11) * 3) + 0] != '.' || Filename[((Byte & 0b11) * 3) + 1] != '.')
-		{
-			break;
-		}
-
-		// 0,5,8 (due to iterators and arrays this is technically 1,6,9)
-		if (Filename[((Byte & 0b11) * 3) + 2] != '/' && Filename[((Byte & 0b11) * 3) + 2] != '\\')
-		{
-			break;
-		}
-
-		Byte |= (1 << ((Byte & 0b11) + 2));
-
-		Byte = (Byte & ~0b11) | ((Byte & 0b11) + 1);
-	}
-
-	// This logic ensures that we are only allowing file overrides from within the game directory, and disallowing from externals such as AppData\Local
-	return ((Byte & 0b00011100) == 0b00011100);
+	return IsInLocalDirectory(Filename);
 }
 
 
@@ -177,6 +160,21 @@ void UFunctions::UConsole(SDK::UConsole* This, SDK::FString& Command)
 		//Mariner::Player()->ApplyPerspective(Pointers::FString2FName(L"Default"), Mariner::Player()->GetDefaultPerspective(SDK::EMarinerCameraPerspectiveType::ThirdPerson));
 		//Mariner::Player()->bInfiniteAmmo = true;
 	}
+	else if (StrCommand == "skin")
+	{
+		std::vector<SDK::UMarinerSkinCollectionDataAsset*> Assets = Pointers::FindObjects<SDK::UMarinerSkinCollectionDataAsset>();
+		for (SDK::UMarinerSkinCollectionDataAsset*& Asset : Assets)
+		{
+			//SDK::UMarinerSkinUIData* Data = Asset->SkinUIData.Get();
+			LogA("Asset", Asset->GetFullName());
+		}
+		/*SDK::AMarinerCharacter* Character = Pointers::Character<SDK::AMarinerCharacter>();
+		if (Character)
+		{
+			//auto Skin = Character->LoadedSkinCollectionData->GetSkinUIData_ForceLoaded();
+			//LogA(Skin->CharacterName.ToString(), Skin->)
+		}*/
+	}
 
 	OFF::UConsole.VerifyFC<Decl::UConsole>()(This, Command);
 }
@@ -203,7 +201,7 @@ UFunctions::BrowseReturnVal UFunctions::Browse(SDK::UEngine* This, SDK::FWorldCo
 		OFF::FString.VerifyFC<Decl::CopyString>()(&URL.Map, &CopyMap);
 	}
 
-	if (!Global::bConstructedUConsole) { Global::bConstructedUConsole = Pointers::ConstructUConsole(CMLA::ConsoleKey.GetArgumentAsString());
+	if (!Global::bConstructedUConsole) { Global::bConstructedUConsole = Pointers::ConstructUConsole(FName::NAME_FindOrAdd(CMLA::ConsoleKey.GetArgumentAsString()));
 		LogA("Browse", "Constructed UConsole early.");
 	}
 
@@ -259,41 +257,22 @@ bool UFunctions::IsNonPakFilenameAllowed(__int64* This, SDK::FString& InFilename
 {
 	if (!InFilename) return false;
 
-	BYTE X{0};
-
-	X |= (OFF::IsNonPakFileNameAllowed.VerifyFC<Decl::IsNonPakFilenameAllowed>()(This, InFilename) << 5);
-
-	if (UFunctions::Helpers::CheckForLocalDirectory(InFilename.CStr(), X) && GetFileAttributesW(InFilename.CStr()) != INVALID_FILE_ATTRIBUTES)
+	if (Helpers::CheckForLocalDirectory(InFilename.Data) && GetFileAttributesW(InFilename.Data) != INVALID_FILE_ATTRIBUTES)
 	{
 		//LogA("IsNonPakFilenameAllowed OVERRIDE", InFilename.ToString());
 		return true;
 	}
-	
-	// Returns the result of the actual function which is stored in the 6th bit.
-	return X & 0b00100000;
+
+	return OFF::IsNonPakFileNameAllowed.VerifyFC<Decl::IsNonPakFilenameAllowed>()(This, InFilename);
 }
 
 bool UFunctions::FindFileInPakFiles(__int64* This, const wchar_t* Filename, __int64** OutPakFile, __int64* OutEntry)
 {
-	// 00000000
-	BYTE X{0};
-
-	// 00[0]00000
-	// The return result of the real function (bool) 0/1 will be crammed into the 6th bit.
-	X |= (OFF::FindFileInPakFiles.VerifyFC<Decl::FindFileInPakFiles>()(This, Filename, OutPakFile, OutEntry) << 5);
-
-	// This logic ensures that we are only allowing file overrides from within the game directory, and disallowing from externals such as AppData\Local
-	if (UFunctions::Helpers::CheckForLocalDirectory(Filename, X))
+	if (Helpers::CheckForLocalDirectory(Filename) && GetFileAttributesW(Filename) != INVALID_FILE_ATTRIBUTES)
 	{
-		// If the file already exists within the pak file
-		if (X & 0b00100000 && GetFileAttributesW(Filename) != INVALID_FILE_ATTRIBUTES)
-		{
-			//std::wstring WFile(Filename);
-			//LogA("FindFileInPakFiles OVERRIDE", std::string(WFile.begin(), WFile.end()));
-			return false;
-		}
+		/*std::wstring WFile(Filename);
+		LogA("FindFileInPakFiles OVERRIDE", std::string(WFile.begin(), WFile.end()));*/
+		return false;
 	}
-
-	// Returns the result of the actual function which is stored in the 6th bit.
-	return X & 0b00100000;
+	return OFF::FindFileInPakFiles.VerifyFC<Decl::FindFileInPakFiles>()(This, Filename, OutPakFile, OutEntry);
 }

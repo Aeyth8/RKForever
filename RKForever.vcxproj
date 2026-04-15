@@ -56,6 +56,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -127,12 +128,14 @@
       <PreprocessorDefinitions>PROXY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>ProxyEntrypoint</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Injectable|x64'">
@@ -144,12 +147,14 @@
       <PreprocessorDefinitions>INJECTABLE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>ProxyEntrypoint</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -159,6 +164,7 @@
     <ClCompile Include="Aeyth8\Hooks\Hooks.cpp" />
     <ClCompile Include="Aeyth8\Logic\Mariner.cpp" />
     <ClCompile Include="Aeyth8\Offsets.cpp" />
+    <ClCompile Include="Aeyth8\Proxy8\Entry\ProxyEntry.cpp" />
     <ClCompile Include="Aeyth8\Proxy8\Proxy.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Proxy|x64'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Injectable|x64'">Use</PrecompiledHeader>
@@ -176,6 +182,7 @@
     <ClCompile Include="Aeyth8\Tools\BytePatcher.cpp" />
     <ClCompile Include="Aeyth8\Tools\Pointers.cpp" />
     <ClCompile Include="Aeyth8\Tools\UFunctions.cpp" />
+    <ClCompile Include="Aeyth8\Tools\UnrealTypes.cpp" />
     <ClCompile Include="dllmain.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Proxy|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Injectable|Win32'">Use</PrecompiledHeader>
@@ -208,6 +215,7 @@
     <ClInclude Include="Aeyth8\Logger.hpp" />
     <ClInclude Include="Aeyth8\Logic\Mariner.h" />
     <ClInclude Include="Aeyth8\Offsets.h" />
+    <ClInclude Include="Aeyth8\Proxy8\Entry\ProxyEntry.hpp" />
     <ClInclude Include="Aeyth8\Proxy8\Proxy.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Injectable|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -217,6 +225,7 @@
     <ClInclude Include="Aeyth8\Tools\BytePatcher.h" />
     <ClInclude Include="Aeyth8\Tools\Pointers.h" />
     <ClInclude Include="Aeyth8\Tools\UFunctions.hpp" />
+    <ClInclude Include="Aeyth8\Tools\UnrealTypes.h" />
     <ClInclude Include="MinHook\MinHook.h" />
     <ClInclude Include="MinHook\src\buffer.h" />
     <ClInclude Include="MinHook\src\hde\hde32.h" />
@@ -230,9 +239,18 @@
     <ClInclude Include="Dumper-7\UnrealContainers.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="Aeyth8\Proxy8\Entry\Entry.asm">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Injectable|x64'">
+      </ExcludedFromBuild>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Proxy|x64'">/D B64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Injectable|x64'">/D B64 %(AdditionalOptions)</AdditionalOptions>
+    </MASM>
+    <MASM Include="Aeyth8\Tools\IsInLocalDirectory.asm" />
     <None Include="Dumper-7\NameCollisions.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>

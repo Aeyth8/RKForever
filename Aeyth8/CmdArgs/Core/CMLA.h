@@ -66,6 +66,21 @@ Encoding Lowercase(Encoding Char)
 	return Char >= 'A' && Char <= 'Z' ? Char + 32 : Char;
 }
 
+/*	Before I realized that the output dies immediately after return -
+// Convert an entire C string into lowercase
+template <class Integer = uint16, class Encoding, unsigned char MaxPath = 260>
+Encoding* LowercaseStr(const Encoding* String)
+{
+	Integer Length = CharacterLength<Integer, Encoding>(String);
+	Encoding StringBuffer[MaxPath]{0};
+	for (Integer i{0}; i < Length; ++i)
+	{
+		StringBuffer[i] = Lowercase(String[i]);
+	}
+	return StringBuffer;
+}
+*/
+
 // Convert an entire C string into lowercase
 template <class Integer = uint16, class Encoding>
 void LowercaseStr(const Encoding* String, Encoding* OutBuffer)
@@ -80,7 +95,7 @@ void LowercaseStr(const Encoding* String, Encoding* OutBuffer)
 // Compares two C-Strings, returns true if equal, false if not equal
 // A homemade and templated version of strcmp / wcscmp 
 template <class Integer = uint16, class Encoding>
-constexpr bool StringCompare(Encoding* StringA, Encoding* StringB)
+constexpr bool StringCompare(Encoding* StringA, Encoding* StringB, bool CaseSensitive = true)
 {
 	Integer SizeA = CharacterLength<Integer, Encoding>(StringA);
 	Integer SizeB = CharacterLength<Integer, Encoding>(StringB);
@@ -89,6 +104,10 @@ constexpr bool StringCompare(Encoding* StringA, Encoding* StringB)
 
 	for (Integer i{0}; i < SizeA; ++i)
 	{
+		if (CaseSensitive)
+		{
+			if (Lowercase(StringA[i]) == Lowercase(StringB[i])) continue;
+		}
 		if (StringA[i] != StringB[i]) return false;
 	}
 
@@ -171,6 +190,7 @@ private:
 
 	uint32 bRequiresArgument : 1;		// If there is no argument required then it is a bool.
 	uint32 bBoolToggled		 : 1;		// This flag is only for booleans and it determines if the name has been invoked.
+	uint32 bHasChanged		 : 1;		// Determines if the current value is default or has been modified in runtime.
 	uint32 CharacterCount	 : 16;		// Max is 65,536 characters / uint16
 	// Add other bitflag bools later (maybe)
 
@@ -183,21 +203,21 @@ public:
 
 	// Default constructor
 	CommandLineParameter(const Encoding* ParameterName, const Encoding* ParameterArgument, uint16 CharacterCount)
-	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterCount) 
+	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), bHasChanged(0), CharacterCount(CharacterCount) 
 	{
 		Constructor();
 	}
 
 	// Default constructor without manual count
 	CommandLineParameter(const Encoding* ParameterName, const Encoding* ParameterArgument)
-	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), CharacterCount(CharacterLength(ParameterArgument)) 
+	: ParameterName(ParameterName), ParameterArgument(ParameterArgument), bRequiresArgument(1), bBoolToggled(0), bHasChanged(0), CharacterCount(CharacterLength(ParameterArgument))
 	{
 		Constructor();
 	}
 
 	// For booleans, null = false | !null = true
 	CommandLineParameter(const Encoding* ParameterName)
-	: ParameterName(ParameterName), ParameterArgument(nullptr), bRequiresArgument(0), bBoolToggled(0), CharacterCount(0) 
+	: ParameterName(ParameterName), ParameterArgument(nullptr), bRequiresArgument(0), bBoolToggled(0), bHasChanged(0), CharacterCount(0)
 	{
 		Constructor();
 	}
@@ -217,6 +237,11 @@ public:
 		return this->IsBool() && bBoolToggled;
 	}
 
+	bool HasChanged() const
+	{
+		return !this->IsBool() && this->bHasChanged;
+	}
+
 	const Encoding* GetNameAsString() const
 	{
 		return this->ParameterName;
@@ -231,6 +256,7 @@ public:
 	{
 		this->ParameterArgument = NewArgument;
 		this->CharacterCount = CharacterLength(NewArgument);
+		this->bHasChanged = true;
 	}
 
 	void SetBool(const bool NewValue)
@@ -247,7 +273,11 @@ public:
 	// I made this because I am too stubborn to make an overloaded function
 	inline static CArray<wchar_t*>* OutCommandLineCache{nullptr};
 
+	//static void ParseCommandLine(wchar_t* CommandLineW, CArray<CommandLineParameter<wchar_t>*>& GlobalCommands, CArray<wchar_t*>*& OutCommandLine = OutCommandLineCache);
 	static void ParseCommandLine(wchar_t* CommandLineW, CArray<CommandLineParameter<wchar_t>*>& GlobalCommands, CArray<wchar_t*>*& OutCommandLine = OutCommandLineCache);
+	//static void ParseCommandLine(wchar_t* CommandLineW, CArray<CommandLineParameter<wchar_t>*>& GlobalCommands);
+
+
 };
 
 }

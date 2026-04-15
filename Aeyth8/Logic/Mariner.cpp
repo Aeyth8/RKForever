@@ -5,6 +5,7 @@
 
 #include "../Tools/Pointers.h"
 #include "../Tools/UFunctions.hpp"
+#include "../Tools/UnrealTypes.h"
 #include "../Tools/BytePatcher.h"
 #include "../CmdArgs/CommandLineArgs.h"
 
@@ -106,7 +107,7 @@ static SDK::UGameMapsSettings* __fastcall UGameMapSettings(SDK::UGameMapsSetting
 
 // -- Hooks
 
-static std::vector<Hooks::HookStructure> HookList =
+std::vector<Hooks::HookStructure> HookList =
 {
 	{OFF::UConsole, UFunctions::UConsole},
 	{OFF::Browse, UFunctions::Browse},
@@ -288,17 +289,17 @@ void Mariner::Init_Hooks()
 		// mov al, 1
 		BYTE ReturnOne[5]{0xB0, 0x01, RETN, NOP, NOP};  
 
-		BytePatcher::ReplaceBytes(PB(0xA4CD30), ReturnOne); // Removes the EAC failed to initialize popup.
-		BytePatcher::ReplaceBytes(PB(0x9D9C90), ReturnOne); // UMangoCMSManager::TryGetCMSItemByAssetPath() should give ownership to all cosmetics/characters.
-		BytePatcher::ReplaceBytes(PB(0xA0B1C0), ReturnOne); // UMangoInventoryManager::GetInventorySkin() should allow for all skins to be unlocked.
-		BytePatcher::ReplaceBytes(PB(0xA14180), ReturnOne); // UMangoInventoryManager::IsCharacterOwned() should get rid of the stupid text saying we don't own them.
-		BytePatcher::ReplaceBytes(PB(0xA14D90), ReturnOne); // UMangoInventoryManager::IsItemOwned() should unlock all emotes.
-		BytePatcher::ReplaceBytes(PB(0xA13F10), ReturnOne); // UMangoInventoryManager::IsActiveBlastPassSeasonOwned
-		BytePatcher::ReplaceBytes(PB(0xA140F0), ReturnOne); // UMangoInventoryManager::IsBlastPassOwned
-		BytePatcher::ReplaceBytes(PB(0x9BC430), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.		
-		BytePatcher::ReplaceBytes(PB(0xA56810), {NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84}); // Patches the stupid PartyErrorReason_AlreadyInSession preventing you from launching a second instance of the game.
+		BytePatcher::ReplaceBytes(PB(OFF::EACFailure), ReturnOne); // Removes the EAC failed to initialize popup.
+		BytePatcher::ReplaceBytes(PB(OFF::TryGetCMSItemByAssetPath), ReturnOne); // UMangoCMSManager::TryGetCMSItemByAssetPath() should give ownership to all cosmetics/characters.
+		BytePatcher::ReplaceBytes(PB(OFF::GetInventorySkin), ReturnOne); // UMangoInventoryManager::GetInventorySkin() should allow for all skins to be unlocked.
+		BytePatcher::ReplaceBytes(PB(OFF::IsCharacterOwned), ReturnOne); // UMangoInventoryManager::IsCharacterOwned() should get rid of the stupid text saying we don't own them.
+		BytePatcher::ReplaceBytes(PB(OFF::IsItemOwned), ReturnOne); // UMangoInventoryManager::IsItemOwned() should unlock all emotes.
+		BytePatcher::ReplaceBytes(PB(OFF::IsActiveBlastPassSeasonOwned), ReturnOne); // UMangoInventoryManager::IsActiveBlastPassSeasonOwned
+		BytePatcher::ReplaceBytes(PB(OFF::IsBlastPassOwned), ReturnOne); // UMangoInventoryManager::IsBlastPassOwned
+		BytePatcher::ReplaceBytes(PB(OFF::GetGameVersion), {0xB0, 0x02, RETN, NOP, NOP}); // UMangoConnectionManager::GetGameVersion() should give us Mythic Edition.		
+		BytePatcher::ReplaceBytes(PB(OFF::PartyErrorReason_AlreadyInSession), {NOP, NOP, NOP, NOP, NOP, NOP, NOP, 0x0F, 0x84}); // Patches the stupid PartyErrorReason_AlreadyInSession preventing you from launching a second instance of the game.
 
-		if (CMLA::SkipMovies.GetAsBool()) BytePatcher::ReplaceBytes(PB(0xA428F5), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
+		if (CMLA::SkipMovies.GetAsBool()) BytePatcher::ReplaceBytes(PB(OFF::StartupMovies), {NOP, NOP, NOP, NOP, NOP}); // Prevents the StartupMovies TArray from being filled with movie names, completely skipping the sequence. [Starts at 0xA42650]
 	
 		//BytePatcher::ReplaceBytes(PB(0x9C4480), ReturnOne); // Enables "E3 Mode" / Puts you in a limbo state, I've never seen a temp world before but that's a thing
 		//BytePatcher::ReplaceBytes(PB(0x9C3BB0), ReturnOne); // Enables "Demo Mode" / removes the store
@@ -315,23 +316,26 @@ void Mariner::Init_Hooks()
 
 void Mariner::Init_Engine()
 {
-	while (GEngine() == nullptr) Sleep(25);
+	byte* LogVerbosity = (byte*)PB(0x49C32F8);
+	*LogVerbosity = 6u;
 
-	if (!IsNull(Mariner::MapSettings = SDK::UGameMapsSettings::GetDefaultObj()))
+	while (GEngine == nullptr) Sleep(25);
+
+	if ((Mariner::MapSettings = SDK::UGameMapsSettings::GetDefaultObj()) != nullptr)
 	{
-		Mariner::MapSettings->GameDefaultMap.AssetPathName = Pointers::FString2FName(CMLA::GameDefaultMap.GetArgumentAsString());
-		Mariner::MapSettings->TransitionMap.AssetPathName = Pointers::FString2FName(CMLA::TransitionMap.GetArgumentAsString());
-		Mariner::MapSettings->GlobalDefaultGameMode.AssetPathName = Pointers::FString2FName(CMLA::GlobalDefaultGameMode.GetArgumentAsString());
+		FName::NAME_FindOrAdd(&MapSettings->GameDefaultMap.AssetPathName, CMLA::GameDefaultMap.GetArgumentAsString());
+		FName::NAME_FindOrAdd(&MapSettings->TransitionMap.AssetPathName, CMLA::TransitionMap.GetArgumentAsString());
+		FName::NAME_FindOrAdd(&MapSettings->GlobalDefaultGameMode.AssetPathName, CMLA::GlobalDefaultGameMode.GetArgumentAsString());
 	}
 
-	SDK::UGameMapsSettings* New = (SDK::UGameMapsSettings*)Call<SDK::UClass*(__fastcall*)()>(PB(0x1777850))();
+	/*SDK::UGameMapsSettings* New = (SDK::UGameMapsSettings*)Call<SDK::UClass*(__fastcall*)()>(PB(0x1777850))();
 
 	LogA("Maps", HexToString((uintptr_t)Mariner::MapSettings) + " | " + HexToString((uintptr_t)New));
 	LogA("Map", New->GetFullName());
-	LogA("OldMap", Mariner::MapSettings->GetFullName());
+	LogA("OldMap", Mariner::MapSettings->GetFullName());*/
 }
 
-void Mariner::Init_Vars(SDK::UWorld* GWorld)
+void Mariner::Init_Vars()
 {
 	if (GWorld)
 	{
@@ -340,12 +344,12 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 		Mariner::PrivateMatchMenu = SDK::UPrivateMatchMenu_C::FindClass("WidgetBlueprintGeneratedClass PrivateMatchMenu.PrivateMatchMenu_C");
 		Mariner::DebugPlayMenu = SDK::UDebugPlayMenu_C::FindClass("WidgetBlueprintGeneratedClass DebugPlayMenu.DebugPlayMenu_C");
 
-		SDK::UMarinerMenuGlobals* MenuGlobals = GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetMenuGlobals();
+		SDK::UMarinerMenuGlobals* MenuGlobals = Pointers::GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetMenuGlobals();
 		for (SDK::FMarinerCulture& Culture : MenuGlobals->CultureList)
 		{
 			LogA("Culture", Culture.LanguageCode.ToString() + " | " + Culture.DisplayName.ToString());
 		}
-		LogA("GetCurrentCulture", GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetCurrentCulture().ToString());
+		LogA("GetCurrentCulture", Pointers::GetBlueprintClass<SDK::UMarinerGlobalsFunctionLibrary>()->GetCurrentCulture().ToString());
 		
 		SDK::FString NewURL{L"127.0.0.1:443"};
 		OFF::FString.VerifyFC<UFunctions::Decl::CopyString>()(reinterpret_cast<SDK::FString*>(PB(0x492FCA8)), &NewURL);
@@ -364,34 +368,6 @@ void Mariner::Init_Vars(SDK::UWorld* GWorld)
 }
 
 // -- Pointers
-
-SDK::UEngine* const& Mariner::GEngine(const bool bLog)
-{
-	SDK::UEngine*& Engine = *reinterpret_cast<SDK::UEngine**>(OFF::GEngine.PlusBase());
-	if (bLog && IsNull(Engine))
-	{
-		LogA("Logic", "GEngine is a null pointer!");
-	}
-	return Engine;
-}
-
-SDK::UWorld* const& Mariner::GWorld(const bool bLog)
-{
-	SDK::UWorld*& World = *reinterpret_cast<SDK::UWorld**>(OFF::GWorld.PlusBase());
-	if (bLog && IsNull(World))
-	{
-		LogA("Logic", "GWorld is a null pointer!");
-	}
-	return World;
-}
-
-SDK::UBlueprintFunctionLibrary* const& Mariner::BlueprintFunctionLibrary()
-{
-	static SDK::UBlueprintFunctionLibrary* Library{nullptr};
-	if (!Library) Library = SDK::UBlueprintFunctionLibrary::GetDefaultObj();
-
-	return Library;
-}
 
 SDK::AMarinerPlayerController* Mariner::Player(const int& Index)
 {
@@ -460,20 +436,3 @@ void Mariner::LogFImpl(const wchar_t* Format)
 //{
 //	return OFF::FromStringTable.VerifyFC<UFunctions::Decl::FromStringTable>()((SDK::FName&)InTableId, (SDK::FString&)InKey, (unsigned char)InLoadingPolicy);
 //}
-
-// -- FMemory
-
-void* FMemory::Malloc(unsigned long long Count, unsigned int Alignment)
-{
-	return OFF::FMalloc.VerifyFC<Decl::Malloc>()(Count, Alignment);
-}
-
-void* FMemory::Realloc(void* Original, unsigned long long Count, unsigned int Alignment)
-{
-	return OFF::FRealloc.VerifyFC<Decl::Realloc>()(Original, Count, Alignment);
-}
-
-void FMemory::Free(void* Original)
-{
-	OFF::FFree.VerifyFC<Decl::Free>()(Original);
-}

@@ -4,12 +4,6 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Aeyth8\Proxy8\Proxy.cpp">
-      <Filter>Aeyth8\Proxy8</Filter>
-    </ClCompile>
-    <ClCompile Include="Aeyth8\Proxy8\ProxyTypes.cpp">
-      <Filter>Aeyth8\Proxy8</Filter>
-    </ClCompile>
     <ClCompile Include="MinHook\src\hde\hde32.c">
       <Filter>MinHook\src\hde</Filter>
     </ClCompile>
@@ -27,15 +21,6 @@
     </ClCompile>
     <ClCompile Include="Aeyth8\Hooks\Hooks.cpp">
       <Filter>Aeyth8\Hooks</Filter>
-    </ClCompile>
-    <ClCompile Include="Aeyth8\Tools\BytePatcher.cpp">
-      <Filter>Aeyth8\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="Aeyth8\Tools\Pointers.cpp">
-      <Filter>Aeyth8\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="Aeyth8\Tools\UFunctions.cpp">
-      <Filter>Aeyth8\Tools</Filter>
     </ClCompile>
     <ClCompile Include="Aeyth8\Global.cpp">
       <Filter>Aeyth8</Filter>
@@ -87,6 +72,27 @@
     </ClCompile>
     <ClCompile Include="Dumper-7\SDK\UMG_functions.cpp">
       <Filter>SDK\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\Proxy8\Proxy.cpp">
+      <Filter>Aeyth8\Proxy8\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\Proxy8\ProxyTypes.cpp">
+      <Filter>Aeyth8\Proxy8\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\Proxy8\Entry\ProxyEntry.cpp">
+      <Filter>Aeyth8\Proxy8\Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\Tools\BytePatcher.cpp">
+      <Filter>Aeyth8\Tools\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\Tools\Pointers.cpp">
+      <Filter>Aeyth8\Tools\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\Tools\UFunctions.cpp">
+      <Filter>Aeyth8\Tools\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Aeyth8\Tools\UnrealTypes.cpp">
+      <Filter>Aeyth8\Tools\CPP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +165,12 @@
     <ClInclude Include="Aeyth8\CmdArgs\Core\CMLA.h">
       <Filter>Aeyth8\CmdArgs\Core</Filter>
     </ClInclude>
+    <ClInclude Include="Aeyth8\Proxy8\Entry\ProxyEntry.hpp">
+      <Filter>Aeyth8\Proxy8\Entry</Filter>
+    </ClInclude>
+    <ClInclude Include="Aeyth8\Tools\UnrealTypes.h">
+      <Filter>Aeyth8\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Aeyth8">
@@ -203,10 +215,27 @@
     <Filter Include="SDK\CPP">
       <UniqueIdentifier>{2f2d3282-6127-4654-80c6-8bf28d756c69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Aeyth8\Proxy8\CPP">
+      <UniqueIdentifier>{d1663c23-27af-425d-8d42-e0c0370336e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aeyth8\Proxy8\Entry">
+      <UniqueIdentifier>{18ef7e10-62af-4524-84ab-6946c3408d79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aeyth8\Tools\CPP">
+      <UniqueIdentifier>{c50ea6ee-ba53-4c64-b8f0-0b894f279d8f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Dumper-7\NameCollisions.inl">
       <Filter>SDK</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="Aeyth8\Proxy8\Entry\Entry.asm">
+      <Filter>Aeyth8\Proxy8\Entry</Filter>
+    </MASM>
+    <MASM Include="Aeyth8\Tools\IsInLocalDirectory.asm">
+      <Filter>Aeyth8\Tools</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

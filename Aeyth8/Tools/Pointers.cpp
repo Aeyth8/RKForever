@@ -18,94 +18,87 @@ using namespace A8CL; using namespace Global;
 		Public
 */
 
-SDK::UEngine* const& Pointers::UEngine(const bool bLog)
+SDK::UEngine* Pointers::UEngine()
 {
 	static SDK::UEngine* Engine{nullptr};
 
-	if (!IsNull(Engine)) return Engine;
-
-	Engine = SDK::UEngine::GetEngine();
-
-	if (bLog) if (IsNull(Engine)) LogA("Pointers", "UEngine is a null pointer!");
-
-	return Engine;
+	return Engine ? Engine : Engine = SDK::UEngine::GetEngine();
 }
 
-SDK::UWorld* Pointers::UWorld(const bool bLog)
+SDK::UWorld* Pointers::UWorld()
 {
-	if (SDK::Offsets::GWorld != 0)
+	if constexpr (SDK::Offsets::GWorld != 0)
 	{
 		static uintptr_t GWorld = SDK::Offsets::GWorld + GBA;
 
-		if (!IsNull(*reinterpret_cast<SDK::UWorld**>(GWorld)))
-		{
-			return *reinterpret_cast<SDK::UWorld**>(GWorld);
-		}
-
-		if (bLog) LogA("Pointers", "GWorld is a null pointer!");
+		return *reinterpret_cast<SDK::UWorld**>(GWorld);
 	}
-
-	SDK::UEngine* Engine = UEngine();
-
-	if (!IsNull(Engine) && !IsNull(Engine->GameViewport) && !IsNull(Engine->GameViewport->World))
+	else
 	{
-		return Engine->GameViewport->World;
-	}
-	
+		SDK::UEngine* Engine = UEngine();
+		if (Engine && Engine->GameViewport)
+		{
+			return Engine->GameViewport->World;
+		}
+	}	
+}
 
-	if (bLog) LogA("Pointers", "UWorld is a null pointer!");
-
-	return nullptr;
-}	
+SDK::AGameModeBase* Pointers::GameMode(SDK::UWorld* InWorld)
+{
+	return InWorld && InWorld->AuthorityGameMode ? InWorld->AuthorityGameMode : nullptr;
+}
 
 SDK::APlayerController* Pointers::Player(const int Index)
 {
-	const SDK::UWorld* World = UWorld();
-
-	if (!IsNull(World) && !IsNull(World->OwningGameInstance) && (World->OwningGameInstance->LocalPlayers.IsValid()))
+	SDK::UWorld* World = UWorld();
+	if (World && World->OwningGameInstance && World->OwningGameInstance->LocalPlayers.IsValid())
 	{
 		return World->OwningGameInstance->LocalPlayers[Index]->PlayerController;
 	}
-	
-	LogA("Pointers", std::format("Player {} is a null pointer!", Index));
 
 	return nullptr;
 }
 
-const SDK::FName& Pointers::FString2FName(const SDK::FString& String)
+SDK::FName Pointers::FString2FName(const SDK::FString& String)
 {
 	return SDK::UKismetStringLibrary::Conv_StringToName(String);
 }
 
-bool Pointers::ConstructUConsole(SDK::UEngine* EngineOverride, const SDK::FString ConsoleKey)
+SDK::UBlueprintFunctionLibrary* A8CL::Pointers::BlueprintFunctionLibrary()
 {
-	SDK::UEngine* Engine = EngineOverride;
+	static SDK::UBlueprintFunctionLibrary* Library{nullptr};
+	if (!Library) Library = SDK::UBlueprintFunctionLibrary::GetDefaultObj();
 
-	if (!EngineOverride) Engine = Pointers::UEngine();
-	if (IsNull(Engine)) return false;
+	return Library;
+}
 
-	if (!IsNull(SDK::UInputSettings::GetDefaultObj()))
+bool Pointers::ConstructUConsole(const SDK::FName& ConsoleKey)
+{
+	if (GEngine)
 	{
-		SDK::UInputSettings::GetDefaultObj()->ConsoleKeys[0].KeyName = Pointers::FString2FName(ConsoleKey);
+		SDK::UInputSettings* InputSettings = SDK::UInputSettings::GetDefaultObj();
+		if (InputSettings)
+		{
+			InputSettings->ConsoleKeys[0].KeyName = ConsoleKey;
 
-		SDK::UObject* ConsoleObj = SDK::UGameplayStatics::SpawnObject(Engine->ConsoleClass, Engine->GameViewport);
+			SDK::UConsole* ConsoleObj = (SDK::UConsole*)SDK::UGameplayStatics::SpawnObject(GEngine->ConsoleClass, GEngine->GameViewport);
 
-		if (IsNull(ConsoleObj)) return false;
-
-		return (!IsNull(Engine->GameViewport->ViewportConsole = static_cast<SDK::UConsole*>(ConsoleObj)));
+			if (ConsoleObj)
+			{
+				return (GEngine->GameViewport->ViewportConsole = ConsoleObj) != nullptr;
+			}
+		}
 	}
-
+	
 	return false;
 }
 
-
-bool Pointers::ConstructUConsole(const SDK::FString ConsoleKey)
+bool Pointers::ObjectHasFlag(SDK::UObject* Object, EObjectFlags Flag)
 {
-	return Pointers::ConstructUConsole(nullptr, ConsoleKey);
+	return (EObjectFlags)Object->Flags & Flag;
 }
-
 
 __int64* Pointers::SpawnActorInternal(SDK::UWorld* This, SDK::UClass* Class, const SDK::FVector& Location, const SDK::FRotator& Rotation, FActorSpawnParameters& SpawnParameters)
 {
-	return OFF::SpawnActor.VerifyFC<SpawnActor_T>()(This, Class, Location, Rotation, SpawnParameters);
+	return OFF::SpawnActor.Call<__int64*(__fastcall*)(SDK::UWorld*, SDK::UClass*, const SDK::FVector&, const SDK::FRotator&, FActorSpawnParameters&)>()(This, Class, Location, Rotation, SpawnParameters);
 }

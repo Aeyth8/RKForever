@@ -1,4 +1,4 @@
-#include "Hooks/Hooks.hpp"
+#include "Offsets.h"
 
 namespace A8CL
 {
@@ -13,6 +13,9 @@ namespace OFF
 	OFFSET FRealloc("FMemory::Realloc", 0xE50F10);
 	OFFSET FFree("FMemory::Free", 0xE40660);
 	OFFSET FQuantizeSize("FMemory::QuantizeSize", 0xE50A90);
+
+	OFFSET FNameW("FName::FName wchar_t", 0xF1B400);
+	OFFSET FNameA("FName::FName char", 0xF1AFC0);
 
 	OFFSET FromStringTable("FText::FromStringTable", 0xE80850);
 	OFFSET FString("FString::FString", 0x3AF6B0);

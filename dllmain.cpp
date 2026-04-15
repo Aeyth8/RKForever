@@ -5,7 +5,11 @@
 
 #ifdef PROXY
 #include "Aeyth8/Proxy8/ProxyTypes.h"
+#include "Aeyth8/Proxy8/Entry/ProxyEntry.hpp"
 #endif
+
+#include "Aeyth8/Tools/UnrealTypes.h"
+#include "Aeyth8/Offsets.h"
 
 /*
 
@@ -22,8 +26,7 @@ using namespace A8CL; using namespace Global; using namespace Pointers;
 // Called immediately before WinMainCRTStartup (entry), runs in-thread of entry to execute code before anything else begins.
 static void PreInit()
 {
-	// Retrieves the Global Base Address (GBA) by getting the module handle casted as a uintptr_t
-	GBA = (uintptr_t)GetModuleHandleA("Mariner-Win64-Shipping.exe");
+	GBA = Proxy8::GBA;
 
 	CommandLineArguments::ParseCommandLine(GetCommandLineW(), CMLA::GlobalCommandLineArgs, CMLA::GlobalCommandLine);
 
@@ -39,15 +42,14 @@ static void Init()
 	Mariner::Init_Engine();
 	Mariner::LogFImpl(L"Hooks have been fully initialized, this patch was made by Aeyth8, inspired by SyST3MDeV");
 
-	SDK::UWorld* GWorld{nullptr};
-	while ((GWorld = Mariner::GWorld()) == nullptr)
+	while (GWorld == nullptr)
 	{
 		Sleep(100);
 	}
 
-	Mariner::Init_Vars(GWorld);
+	Mariner::Init_Vars();
 
-	if (!bConstructedUConsole) bConstructedUConsole = ConstructUConsole(CMLA::ConsoleKey.GetArgumentAsString());
+	if (!bConstructedUConsole) bConstructedUConsole = ConstructUConsole(FName::NAME_FindOrAdd(CMLA::ConsoleKey.GetArgumentAsString()));
 }
 
 int __stdcall DllMain(HMODULE hModule, DWORD ulReasonForCall, LPVOID lpReserved) {
